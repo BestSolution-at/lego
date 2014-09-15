@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<g id="Door" 
+>
+		<g id="DoorBrick_4_6_2_yellow" 
+		 transform="translate(0, 0)"
+		>
+			<rect y="0" width="120" height="5" fill="#ffff00"/>
+			<rect y="115" width="120" height="5" fill="#ffff00"/>
+			<rect x="0" height="120" width="5" fill="#ffff00"/>
+			<rect x="115" height="120" width="5" fill="#ffff00"/>
+		</g>
+		<g id="Door_4_6" 
+		 transform="translate(0, 0)"
+		>
+			<rect x="3" y="3" width="114" height="114" fill="#8b4513" />
+		</g>
+</g>
+</svg>
