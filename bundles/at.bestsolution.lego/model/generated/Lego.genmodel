@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/at.bestsolution.lego/src-gen" editDirectory="/at.bestsolution.lego.edit/src"
+    editorDirectory="/at.bestsolution.lego.editor/src" modelPluginID="at.bestsolution.lego"
+    forceOverwrite="true" modelName="Lego" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="at.bestsolution.lego.edit"
+    editorPluginID="at.bestsolution.lego.editor" runtimeVersion="2.10">
+  <genPackages prefix="Lego" basePackage="at.bestsolution.lego" disposableProviderFactory="true"
+      fileExtensions="lego" ecorePackage="Lego.ecore#/">
+    <genClasses ecoreClass="Lego.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Model/repo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Model/assembly"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//ItemRepository">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//ItemRepository/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//ItemRepository/elementList"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//LegoElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//LegoElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//Item">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Item/xUnits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Item/yUnits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Item/fill"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//Color">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Color/r"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Color/g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Color/b"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//XUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//XUnit/units"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//YUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//YUnit/units"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//ZUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//ZUnit/units"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//Brick">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Brick/zUnits"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//RoundBrick">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//RoundBrick/round"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//RoundBrick/zUnits"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//DoorBrick">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//DoorBrick/zUnits"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//Door"/>
+    <genClasses ecoreClass="Lego.ecore#//Assembly">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Assembly/items"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//AssemblyItem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Lego.ecore#//AssemblyItem/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//AssemblyItem/xUnits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//AssemblyItem/yUnits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//AssemblyItem/zUnits"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

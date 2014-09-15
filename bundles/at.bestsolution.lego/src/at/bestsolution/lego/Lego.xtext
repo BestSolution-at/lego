@@ -1,0 +1,69 @@
+grammar at.bestsolution.lego.Lego with org.eclipse.xtext.common.Terminals
+
+generate lego "http://www.bestsolution.at/lego/Lego"
+
+Model:
+	repo=ItemRepository | assembly=Assembly
+;
+
+ValidID:
+	ID;
+
+QualifiedName:
+  ValidID (=>'.' ValidID)*;
+
+ItemRepository:
+	name=ValidID '{' 
+		elementList+=Item+ 
+	'}'
+;
+
+LegoElement:
+	Item | Assembly
+;
+
+Item:
+	Brick | RoundBrick | DoorBrick | Door
+;
+
+Color:
+	'rgb' r=INT g=INT b=INT
+;
+
+XUnit:
+	units=INT
+;
+
+YUnit:
+	units=INT
+;
+
+ZUnit:
+	units=INT
+;
+
+Brick:
+	'brick' name=ValidID 'units' xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
+;
+
+RoundBrick: 
+	'rbrick' round=('left'|'right') name=ValidID 'units' xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
+;
+
+DoorBrick:
+	'dbrick' name=ValidID 'units' xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
+;
+
+Door:
+	'door' name=ValidID 'units' xUnits=XUnit yUnits=YUnit fill=Color
+;
+
+Assembly:
+	'assembly' name=ValidID '{'
+		items+=AssemblyItem+
+	'}'
+;
+
+AssemblyItem:
+	element=[LegoElement|QualifiedName] 'pos' xUnits=XUnit yUnits=YUnit zUnits=ZUnit
+;

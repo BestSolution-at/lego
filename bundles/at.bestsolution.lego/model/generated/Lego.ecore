@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="lego" nsURI="http://www.bestsolution.at/lego/Lego" nsPrefix="lego">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repo" eType="#//ItemRepository"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assembly" eType="#//Assembly"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ItemRepository">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementList" upperBound="-1"
+        eType="#//Item" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LegoElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="#//LegoElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xUnits" eType="#//XUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="yUnits" eType="#//YUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fill" eType="#//Color"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Color">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="r" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="g" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="b" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XUnit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="units" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YUnit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="units" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ZUnit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="units" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Brick" eSuperTypes="#//Item">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zUnits" eType="#//ZUnit"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoundBrick" eSuperTypes="#//Item">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="round" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zUnits" eType="#//ZUnit"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoorBrick" eSuperTypes="#//Item">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zUnits" eType="#//ZUnit"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Door" eSuperTypes="#//Item"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assembly" eSuperTypes="#//LegoElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//AssemblyItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssemblyItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//LegoElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xUnits" eType="#//XUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="yUnits" eType="#//YUnit"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zUnits" eType="#//ZUnit"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
