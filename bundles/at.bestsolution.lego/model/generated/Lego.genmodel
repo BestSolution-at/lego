@@ -41,7 +41,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Brick/zUnits"/>
     </genClasses>
     <genClasses ecoreClass="Lego.ecore#//RoundBrick">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//RoundBrick/round"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//RoundBrick/zUnits"/>
     </genClasses>
     <genClasses ecoreClass="Lego.ecore#//DoorBrick">
@@ -56,6 +55,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//AssemblyItem/xUnits"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//AssemblyItem/yUnits"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//AssemblyItem/zUnits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//AssemblyItem/transform"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

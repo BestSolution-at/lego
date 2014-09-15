@@ -123,26 +123,10 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (element=[LegoElement|QualifiedName] xUnits=XUnit yUnits=YUnit zUnits=ZUnit)
+	 *     (element=[LegoElement|QualifiedName] xUnits=XUnit yUnits=YUnit zUnits=ZUnit (transform='mirror-x' | transform='mirror-y')?)
 	 */
 	protected void sequence_AssemblyItem(EObject context, AssemblyItem semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ASSEMBLY_ITEM__ELEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ASSEMBLY_ITEM__ELEMENT));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ASSEMBLY_ITEM__XUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ASSEMBLY_ITEM__XUNITS));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ASSEMBLY_ITEM__YUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ASSEMBLY_ITEM__YUNITS));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ASSEMBLY_ITEM__ZUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ASSEMBLY_ITEM__ZUNITS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAssemblyItemAccess().getElementLegoElementQualifiedNameParserRuleCall_0_0_1(), semanticObject.getElement());
-		feeder.accept(grammarAccess.getAssemblyItemAccess().getXUnitsXUnitParserRuleCall_2_0(), semanticObject.getXUnits());
-		feeder.accept(grammarAccess.getAssemblyItemAccess().getYUnitsYUnitParserRuleCall_3_0(), semanticObject.getYUnits());
-		feeder.accept(grammarAccess.getAssemblyItemAccess().getZUnitsZUnitParserRuleCall_4_0(), semanticObject.getZUnits());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -278,17 +262,29 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         (round='left' | round='right') 
-	 *         name=ValidID 
-	 *         xUnits=XUnit 
-	 *         yUnits=YUnit 
-	 *         zUnits=ZUnit 
-	 *         fill=Color
-	 *     )
+	 *     (name=ValidID xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color)
 	 */
 	protected void sequence_RoundBrick(EObject context, RoundBrick semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.LEGO_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.LEGO_ELEMENT__NAME));
+			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__XUNITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__XUNITS));
+			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__YUNITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__YUNITS));
+			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__FILL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__FILL));
+			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ROUND_BRICK__ZUNITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ROUND_BRICK__ZUNITS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getRoundBrickAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getRoundBrickAccess().getXUnitsXUnitParserRuleCall_3_0(), semanticObject.getXUnits());
+		feeder.accept(grammarAccess.getRoundBrickAccess().getYUnitsYUnitParserRuleCall_4_0(), semanticObject.getYUnits());
+		feeder.accept(grammarAccess.getRoundBrickAccess().getZUnitsZUnitParserRuleCall_5_0(), semanticObject.getZUnits());
+		feeder.accept(grammarAccess.getRoundBrickAccess().getFillColorParserRuleCall_6_0(), semanticObject.getFill());
+		feeder.finish();
 	}
 	
 	

@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link at.bestsolution.lego.lego.impl.RoundBrickImpl#getRound <em>Round</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.impl.RoundBrickImpl#getZUnits <em>ZUnits</em>}</li>
  * </ul>
  * </p>
@@ -30,26 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class RoundBrickImpl extends ItemImpl implements RoundBrick
 {
-  /**
-   * The default value of the '{@link #getRound() <em>Round</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRound()
-   * @generated
-   * @ordered
-   */
-  protected static final String ROUND_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getRound() <em>Round</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRound()
-   * @generated
-   * @ordered
-   */
-  protected String round = ROUND_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getZUnits() <em>ZUnits</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -79,29 +58,6 @@ public class RoundBrickImpl extends ItemImpl implements RoundBrick
   protected EClass eStaticClass()
   {
     return LegoPackage.Literals.ROUND_BRICK;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getRound()
-  {
-    return round;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRound(String newRound)
-  {
-    String oldRound = round;
-    round = newRound;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LegoPackage.ROUND_BRICK__ROUND, oldRound, round));
   }
 
   /**
@@ -178,8 +134,6 @@ public class RoundBrickImpl extends ItemImpl implements RoundBrick
   {
     switch (featureID)
     {
-      case LegoPackage.ROUND_BRICK__ROUND:
-        return getRound();
       case LegoPackage.ROUND_BRICK__ZUNITS:
         return getZUnits();
     }
@@ -196,9 +150,6 @@ public class RoundBrickImpl extends ItemImpl implements RoundBrick
   {
     switch (featureID)
     {
-      case LegoPackage.ROUND_BRICK__ROUND:
-        setRound((String)newValue);
-        return;
       case LegoPackage.ROUND_BRICK__ZUNITS:
         setZUnits((ZUnit)newValue);
         return;
@@ -216,9 +167,6 @@ public class RoundBrickImpl extends ItemImpl implements RoundBrick
   {
     switch (featureID)
     {
-      case LegoPackage.ROUND_BRICK__ROUND:
-        setRound(ROUND_EDEFAULT);
-        return;
       case LegoPackage.ROUND_BRICK__ZUNITS:
         setZUnits((ZUnit)null);
         return;
@@ -236,29 +184,10 @@ public class RoundBrickImpl extends ItemImpl implements RoundBrick
   {
     switch (featureID)
     {
-      case LegoPackage.ROUND_BRICK__ROUND:
-        return ROUND_EDEFAULT == null ? round != null : !ROUND_EDEFAULT.equals(round);
       case LegoPackage.ROUND_BRICK__ZUNITS:
         return zUnits != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (round: ");
-    result.append(round);
-    result.append(')');
-    return result.toString();
   }
 
 } //RoundBrickImpl

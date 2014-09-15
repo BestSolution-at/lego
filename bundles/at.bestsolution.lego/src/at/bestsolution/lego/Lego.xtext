@@ -47,7 +47,7 @@ Brick:
 ;
 
 RoundBrick: 
-	'rbrick' round=('left'|'right') name=ValidID 'units' xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
+	'rbrick' name=ValidID 'units' xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
 ;
 
 DoorBrick:
@@ -65,5 +65,5 @@ Assembly:
 ;
 
 AssemblyItem:
-	element=[LegoElement|QualifiedName] 'pos' xUnits=XUnit yUnits=YUnit zUnits=ZUnit
+	element=[LegoElement|QualifiedName] 'pos' xUnits=XUnit yUnits=YUnit zUnits=ZUnit ( 'transform' transform=('mirror-x'|'mirror-y') )?
 ;

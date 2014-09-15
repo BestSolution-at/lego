@@ -662,69 +662,39 @@ ruleRoundBrick returns [EObject current=null]
     }
 (
 (
-(
-		lv_round_1_1=	'left' 
-    {
-        newLeafNode(lv_round_1_1, grammarAccess.getRoundBrickAccess().getRoundLeftKeyword_1_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRoundBrickRule());
-	        }
-       		setWithLastConsumed($current, "round", lv_round_1_1, null);
-	    }
-
-    |		lv_round_1_2=	'right' 
-    {
-        newLeafNode(lv_round_1_2, grammarAccess.getRoundBrickAccess().getRoundRightKeyword_1_0_1());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRoundBrickRule());
-	        }
-       		setWithLastConsumed($current, "round", lv_round_1_2, null);
-	    }
-
-)
-
-)
-)(
-(
 		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getNameValidIDParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getRoundBrickAccess().getNameValidIDParserRuleCall_1_0()); 
 	    }
-		lv_name_2_0=ruleValidID		{
+		lv_name_1_0=ruleValidID		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
 	        }
        		set(
        			$current, 
        			"name",
-        		lv_name_2_0, 
+        		lv_name_1_0, 
         		"ValidID");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_3='units' 
+)	otherlv_2='units' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getRoundBrickAccess().getUnitsKeyword_3());
+    	newLeafNode(otherlv_2, grammarAccess.getRoundBrickAccess().getUnitsKeyword_2());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getXUnitsXUnitParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getRoundBrickAccess().getXUnitsXUnitParserRuleCall_3_0()); 
 	    }
-		lv_xUnits_4_0=ruleXUnit		{
+		lv_xUnits_3_0=ruleXUnit		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
 	        }
        		set(
        			$current, 
        			"xUnits",
-        		lv_xUnits_4_0, 
+        		lv_xUnits_3_0, 
         		"XUnit");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -733,16 +703,16 @@ ruleRoundBrick returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getYUnitsYUnitParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getRoundBrickAccess().getYUnitsYUnitParserRuleCall_4_0()); 
 	    }
-		lv_yUnits_5_0=ruleYUnit		{
+		lv_yUnits_4_0=ruleYUnit		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
 	        }
        		set(
        			$current, 
        			"yUnits",
-        		lv_yUnits_5_0, 
+        		lv_yUnits_4_0, 
         		"YUnit");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -751,16 +721,16 @@ ruleRoundBrick returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getZUnitsZUnitParserRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getRoundBrickAccess().getZUnitsZUnitParserRuleCall_5_0()); 
 	    }
-		lv_zUnits_6_0=ruleZUnit		{
+		lv_zUnits_5_0=ruleZUnit		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
 	        }
        		set(
        			$current, 
        			"zUnits",
-        		lv_zUnits_6_0, 
+        		lv_zUnits_5_0, 
         		"ZUnit");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -769,16 +739,16 @@ ruleRoundBrick returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getFillColorParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getRoundBrickAccess().getFillColorParserRuleCall_6_0()); 
 	    }
-		lv_fill_7_0=ruleColor		{
+		lv_fill_6_0=ruleColor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
 	        }
        		set(
        			$current, 
        			"fill",
-        		lv_fill_7_0, 
+        		lv_fill_6_0, 
         		"Color");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1167,7 +1137,41 @@ ruleAssemblyItem returns [EObject current=null]
 	    }
 
 )
-))
+)(	otherlv_5='transform' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getAssemblyItemAccess().getTransformKeyword_5_0());
+    }
+(
+(
+(
+		lv_transform_6_1=	'mirror-x' 
+    {
+        newLeafNode(lv_transform_6_1, grammarAccess.getAssemblyItemAccess().getTransformMirrorXKeyword_5_1_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAssemblyItemRule());
+	        }
+       		setWithLastConsumed($current, "transform", lv_transform_6_1, null);
+	    }
+
+    |		lv_transform_6_2=	'mirror-y' 
+    {
+        newLeafNode(lv_transform_6_2, grammarAccess.getAssemblyItemAccess().getTransformMirrorYKeyword_5_1_0_1());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAssemblyItemRule());
+	        }
+       		setWithLastConsumed($current, "transform", lv_transform_6_2, null);
+	    }
+
+)
+
+)
+))?)
 ;
 
 

@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link at.bestsolution.lego.lego.impl.AssemblyItemImpl#getXUnits <em>XUnits</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.impl.AssemblyItemImpl#getYUnits <em>YUnits</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.impl.AssemblyItemImpl#getZUnits <em>ZUnits</em>}</li>
+ *   <li>{@link at.bestsolution.lego.lego.impl.AssemblyItemImpl#getTransform <em>Transform</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,6 +76,26 @@ public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements As
    * @ordered
    */
   protected ZUnit zUnits;
+
+  /**
+   * The default value of the '{@link #getTransform() <em>Transform</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransform()
+   * @generated
+   * @ordered
+   */
+  protected static final String TRANSFORM_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTransform() <em>Transform</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransform()
+   * @generated
+   * @ordered
+   */
+  protected String transform = TRANSFORM_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -289,6 +310,29 @@ public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements As
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getTransform()
+  {
+    return transform;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTransform(String newTransform)
+  {
+    String oldTransform = transform;
+    transform = newTransform;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LegoPackage.ASSEMBLY_ITEM__TRANSFORM, oldTransform, transform));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -323,6 +367,8 @@ public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements As
         return getYUnits();
       case LegoPackage.ASSEMBLY_ITEM__ZUNITS:
         return getZUnits();
+      case LegoPackage.ASSEMBLY_ITEM__TRANSFORM:
+        return getTransform();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -348,6 +394,9 @@ public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements As
         return;
       case LegoPackage.ASSEMBLY_ITEM__ZUNITS:
         setZUnits((ZUnit)newValue);
+        return;
+      case LegoPackage.ASSEMBLY_ITEM__TRANSFORM:
+        setTransform((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -375,6 +424,9 @@ public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements As
       case LegoPackage.ASSEMBLY_ITEM__ZUNITS:
         setZUnits((ZUnit)null);
         return;
+      case LegoPackage.ASSEMBLY_ITEM__TRANSFORM:
+        setTransform(TRANSFORM_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -397,8 +449,27 @@ public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements As
         return yUnits != null;
       case LegoPackage.ASSEMBLY_ITEM__ZUNITS:
         return zUnits != null;
+      case LegoPackage.ASSEMBLY_ITEM__TRANSFORM:
+        return TRANSFORM_EDEFAULT == null ? transform != null : !TRANSFORM_EDEFAULT.equals(transform);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (transform: ");
+    result.append(transform);
+    result.append(')');
+    return result.toString();
   }
 
 } //AssemblyItemImpl

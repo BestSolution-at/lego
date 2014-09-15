@@ -454,22 +454,13 @@ public interface LegoPackage extends EPackage
   int ROUND_BRICK__FILL = ITEM__FILL;
 
   /**
-   * The feature id for the '<em><b>Round</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROUND_BRICK__ROUND = ITEM_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>ZUnits</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROUND_BRICK__ZUNITS = ITEM_FEATURE_COUNT + 1;
+  int ROUND_BRICK__ZUNITS = ITEM_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Round Brick</em>' class.
@@ -478,7 +469,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROUND_BRICK_FEATURE_COUNT = ITEM_FEATURE_COUNT + 2;
+  int ROUND_BRICK_FEATURE_COUNT = ITEM_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.bestsolution.lego.lego.impl.DoorBrickImpl <em>Door Brick</em>}' class.
@@ -683,13 +674,22 @@ public interface LegoPackage extends EPackage
   int ASSEMBLY_ITEM__ZUNITS = 3;
 
   /**
+   * The feature id for the '<em><b>Transform</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSEMBLY_ITEM__TRANSFORM = 4;
+
+  /**
    * The number of structural features of the '<em>Assembly Item</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSEMBLY_ITEM_FEATURE_COUNT = 4;
+  int ASSEMBLY_ITEM_FEATURE_COUNT = 5;
 
 
   /**
@@ -958,17 +958,6 @@ public interface LegoPackage extends EPackage
   EClass getRoundBrick();
 
   /**
-   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.RoundBrick#getRound <em>Round</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Round</em>'.
-   * @see at.bestsolution.lego.lego.RoundBrick#getRound()
-   * @see #getRoundBrick()
-   * @generated
-   */
-  EAttribute getRoundBrick_Round();
-
-  /**
    * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.RoundBrick#getZUnits <em>ZUnits</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1084,6 +1073,17 @@ public interface LegoPackage extends EPackage
    * @generated
    */
   EReference getAssemblyItem_ZUnits();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.AssemblyItem#getTransform <em>Transform</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Transform</em>'.
+   * @see at.bestsolution.lego.lego.AssemblyItem#getTransform()
+   * @see #getAssemblyItem()
+   * @generated
+   */
+  EAttribute getAssemblyItem_Transform();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1329,14 +1329,6 @@ public interface LegoPackage extends EPackage
     EClass ROUND_BRICK = eINSTANCE.getRoundBrick();
 
     /**
-     * The meta object literal for the '<em><b>Round</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ROUND_BRICK__ROUND = eINSTANCE.getRoundBrick_Round();
-
-    /**
      * The meta object literal for the '<em><b>ZUnits</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1431,6 +1423,14 @@ public interface LegoPackage extends EPackage
      * @generated
      */
     EReference ASSEMBLY_ITEM__ZUNITS = eINSTANCE.getAssemblyItem_ZUnits();
+
+    /**
+     * The meta object literal for the '<em><b>Transform</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSEMBLY_ITEM__TRANSFORM = eINSTANCE.getAssemblyItem_Transform();
 
   }
 

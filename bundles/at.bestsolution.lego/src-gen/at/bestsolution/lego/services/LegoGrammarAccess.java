@@ -322,76 +322,60 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RoundBrick");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRbrickKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cRoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Alternatives cRoundAlternatives_1_0 = (Alternatives)cRoundAssignment_1.eContents().get(0);
-		private final Keyword cRoundLeftKeyword_1_0_0 = (Keyword)cRoundAlternatives_1_0.eContents().get(0);
-		private final Keyword cRoundRightKeyword_1_0_1 = (Keyword)cRoundAlternatives_1_0.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameValidIDParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cUnitsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cXUnitsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cXUnitsXUnitParserRuleCall_4_0 = (RuleCall)cXUnitsAssignment_4.eContents().get(0);
-		private final Assignment cYUnitsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cYUnitsYUnitParserRuleCall_5_0 = (RuleCall)cYUnitsAssignment_5.eContents().get(0);
-		private final Assignment cZUnitsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cZUnitsZUnitParserRuleCall_6_0 = (RuleCall)cZUnitsAssignment_6.eContents().get(0);
-		private final Assignment cFillAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cFillColorParserRuleCall_7_0 = (RuleCall)cFillAssignment_7.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameValidIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cUnitsKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cXUnitsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cXUnitsXUnitParserRuleCall_3_0 = (RuleCall)cXUnitsAssignment_3.eContents().get(0);
+		private final Assignment cYUnitsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cYUnitsYUnitParserRuleCall_4_0 = (RuleCall)cYUnitsAssignment_4.eContents().get(0);
+		private final Assignment cZUnitsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cZUnitsZUnitParserRuleCall_5_0 = (RuleCall)cZUnitsAssignment_5.eContents().get(0);
+		private final Assignment cFillAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cFillColorParserRuleCall_6_0 = (RuleCall)cFillAssignment_6.eContents().get(0);
 		
 		//RoundBrick:
-		//	"rbrick" round=("left" | "right") name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color;
+		//	"rbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color;
 		public ParserRule getRule() { return rule; }
 
-		//"rbrick" round=("left" | "right") name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
+		//"rbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
 		public Group getGroup() { return cGroup; }
 
 		//"rbrick"
 		public Keyword getRbrickKeyword_0() { return cRbrickKeyword_0; }
 
-		//round=("left" | "right")
-		public Assignment getRoundAssignment_1() { return cRoundAssignment_1; }
-
-		//"left" | "right"
-		public Alternatives getRoundAlternatives_1_0() { return cRoundAlternatives_1_0; }
-
-		//"left"
-		public Keyword getRoundLeftKeyword_1_0_0() { return cRoundLeftKeyword_1_0_0; }
-
-		//"right"
-		public Keyword getRoundRightKeyword_1_0_1() { return cRoundRightKeyword_1_0_1; }
-
 		//name=ValidID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
 		//ValidID
-		public RuleCall getNameValidIDParserRuleCall_2_0() { return cNameValidIDParserRuleCall_2_0; }
+		public RuleCall getNameValidIDParserRuleCall_1_0() { return cNameValidIDParserRuleCall_1_0; }
 
 		//"units"
-		public Keyword getUnitsKeyword_3() { return cUnitsKeyword_3; }
+		public Keyword getUnitsKeyword_2() { return cUnitsKeyword_2; }
 
 		//xUnits=XUnit
-		public Assignment getXUnitsAssignment_4() { return cXUnitsAssignment_4; }
+		public Assignment getXUnitsAssignment_3() { return cXUnitsAssignment_3; }
 
 		//XUnit
-		public RuleCall getXUnitsXUnitParserRuleCall_4_0() { return cXUnitsXUnitParserRuleCall_4_0; }
+		public RuleCall getXUnitsXUnitParserRuleCall_3_0() { return cXUnitsXUnitParserRuleCall_3_0; }
 
 		//yUnits=YUnit
-		public Assignment getYUnitsAssignment_5() { return cYUnitsAssignment_5; }
+		public Assignment getYUnitsAssignment_4() { return cYUnitsAssignment_4; }
 
 		//YUnit
-		public RuleCall getYUnitsYUnitParserRuleCall_5_0() { return cYUnitsYUnitParserRuleCall_5_0; }
+		public RuleCall getYUnitsYUnitParserRuleCall_4_0() { return cYUnitsYUnitParserRuleCall_4_0; }
 
 		//zUnits=ZUnit
-		public Assignment getZUnitsAssignment_6() { return cZUnitsAssignment_6; }
+		public Assignment getZUnitsAssignment_5() { return cZUnitsAssignment_5; }
 
 		//ZUnit
-		public RuleCall getZUnitsZUnitParserRuleCall_6_0() { return cZUnitsZUnitParserRuleCall_6_0; }
+		public RuleCall getZUnitsZUnitParserRuleCall_5_0() { return cZUnitsZUnitParserRuleCall_5_0; }
 
 		//fill=Color
-		public Assignment getFillAssignment_7() { return cFillAssignment_7; }
+		public Assignment getFillAssignment_6() { return cFillAssignment_6; }
 
 		//Color
-		public RuleCall getFillColorParserRuleCall_7_0() { return cFillColorParserRuleCall_7_0; }
+		public RuleCall getFillColorParserRuleCall_6_0() { return cFillColorParserRuleCall_6_0; }
 	}
 
 	public class DoorBrickElements extends AbstractParserRuleElementFinder {
@@ -559,12 +543,20 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cYUnitsYUnitParserRuleCall_3_0 = (RuleCall)cYUnitsAssignment_3.eContents().get(0);
 		private final Assignment cZUnitsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cZUnitsZUnitParserRuleCall_4_0 = (RuleCall)cZUnitsAssignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cTransformKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cTransformAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final Alternatives cTransformAlternatives_5_1_0 = (Alternatives)cTransformAssignment_5_1.eContents().get(0);
+		private final Keyword cTransformMirrorXKeyword_5_1_0_0 = (Keyword)cTransformAlternatives_5_1_0.eContents().get(0);
+		private final Keyword cTransformMirrorYKeyword_5_1_0_1 = (Keyword)cTransformAlternatives_5_1_0.eContents().get(1);
 		
 		//AssemblyItem:
-		//	element=[LegoElement|QualifiedName] "pos" xUnits=XUnit yUnits=YUnit zUnits=ZUnit;
+		//	element=[LegoElement|QualifiedName] "pos" xUnits=XUnit yUnits=YUnit zUnits=ZUnit ("transform" transform=("mirror-x" |
+		//	"mirror-y"))?;
 		public ParserRule getRule() { return rule; }
 
-		//element=[LegoElement|QualifiedName] "pos" xUnits=XUnit yUnits=YUnit zUnits=ZUnit
+		//element=[LegoElement|QualifiedName] "pos" xUnits=XUnit yUnits=YUnit zUnits=ZUnit ("transform" transform=("mirror-x" |
+		//"mirror-y"))?
 		public Group getGroup() { return cGroup; }
 
 		//element=[LegoElement|QualifiedName]
@@ -596,6 +588,24 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ZUnit
 		public RuleCall getZUnitsZUnitParserRuleCall_4_0() { return cZUnitsZUnitParserRuleCall_4_0; }
+
+		//("transform" transform=("mirror-x" | "mirror-y"))?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"transform"
+		public Keyword getTransformKeyword_5_0() { return cTransformKeyword_5_0; }
+
+		//transform=("mirror-x" | "mirror-y")
+		public Assignment getTransformAssignment_5_1() { return cTransformAssignment_5_1; }
+
+		//"mirror-x" | "mirror-y"
+		public Alternatives getTransformAlternatives_5_1_0() { return cTransformAlternatives_5_1_0; }
+
+		//"mirror-x"
+		public Keyword getTransformMirrorXKeyword_5_1_0_0() { return cTransformMirrorXKeyword_5_1_0_0; }
+
+		//"mirror-y"
+		public Keyword getTransformMirrorYKeyword_5_1_0_1() { return cTransformMirrorYKeyword_5_1_0_1; }
 	}
 	
 	
@@ -781,7 +791,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RoundBrick:
-	//	"rbrick" round=("left" | "right") name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color;
+	//	"rbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color;
 	public RoundBrickElements getRoundBrickAccess() {
 		return pRoundBrick;
 	}
@@ -821,7 +831,8 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AssemblyItem:
-	//	element=[LegoElement|QualifiedName] "pos" xUnits=XUnit yUnits=YUnit zUnits=ZUnit;
+	//	element=[LegoElement|QualifiedName] "pos" xUnits=XUnit yUnits=YUnit zUnits=ZUnit ("transform" transform=("mirror-x" |
+	//	"mirror-y"))?;
 	public AssemblyItemElements getAssemblyItemAccess() {
 		return pAssemblyItem;
 	}

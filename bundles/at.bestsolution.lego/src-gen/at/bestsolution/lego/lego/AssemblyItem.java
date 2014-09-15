@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.bestsolution.lego.lego.AssemblyItem#getXUnits <em>XUnits</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.AssemblyItem#getYUnits <em>YUnits</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.AssemblyItem#getZUnits <em>ZUnits</em>}</li>
+ *   <li>{@link at.bestsolution.lego.lego.AssemblyItem#getTransform <em>Transform</em>}</li>
  * </ul>
  * </p>
  *
@@ -128,5 +129,31 @@ public interface AssemblyItem extends EObject
    * @generated
    */
   void setZUnits(ZUnit value);
+
+  /**
+   * Returns the value of the '<em><b>Transform</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Transform</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Transform</em>' attribute.
+   * @see #setTransform(String)
+   * @see at.bestsolution.lego.lego.LegoPackage#getAssemblyItem_Transform()
+   * @model
+   * @generated
+   */
+  String getTransform();
+
+  /**
+   * Sets the value of the '{@link at.bestsolution.lego.lego.AssemblyItem#getTransform <em>Transform</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Transform</em>' attribute.
+   * @see #getTransform()
+   * @generated
+   */
+  void setTransform(String value);
 
 } // AssemblyItem

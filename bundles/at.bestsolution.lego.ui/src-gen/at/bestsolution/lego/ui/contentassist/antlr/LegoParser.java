@@ -40,7 +40,7 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getAlternatives(), "rule__Model__Alternatives");
 					put(grammarAccess.getLegoElementAccess().getAlternatives(), "rule__LegoElement__Alternatives");
 					put(grammarAccess.getItemAccess().getAlternatives(), "rule__Item__Alternatives");
-					put(grammarAccess.getRoundBrickAccess().getRoundAlternatives_1_0(), "rule__RoundBrick__RoundAlternatives_1_0");
+					put(grammarAccess.getAssemblyItemAccess().getTransformAlternatives_5_1_0(), "rule__AssemblyItem__TransformAlternatives_5_1_0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getItemRepositoryAccess().getGroup(), "rule__ItemRepository__Group__0");
@@ -51,6 +51,7 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDoorAccess().getGroup(), "rule__Door__Group__0");
 					put(grammarAccess.getAssemblyAccess().getGroup(), "rule__Assembly__Group__0");
 					put(grammarAccess.getAssemblyItemAccess().getGroup(), "rule__AssemblyItem__Group__0");
+					put(grammarAccess.getAssemblyItemAccess().getGroup_5(), "rule__AssemblyItem__Group_5__0");
 					put(grammarAccess.getModelAccess().getRepoAssignment_0(), "rule__Model__RepoAssignment_0");
 					put(grammarAccess.getModelAccess().getAssemblyAssignment_1(), "rule__Model__AssemblyAssignment_1");
 					put(grammarAccess.getItemRepositoryAccess().getNameAssignment_0(), "rule__ItemRepository__NameAssignment_0");
@@ -66,12 +67,11 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBrickAccess().getYUnitsAssignment_4(), "rule__Brick__YUnitsAssignment_4");
 					put(grammarAccess.getBrickAccess().getZUnitsAssignment_5(), "rule__Brick__ZUnitsAssignment_5");
 					put(grammarAccess.getBrickAccess().getFillAssignment_6(), "rule__Brick__FillAssignment_6");
-					put(grammarAccess.getRoundBrickAccess().getRoundAssignment_1(), "rule__RoundBrick__RoundAssignment_1");
-					put(grammarAccess.getRoundBrickAccess().getNameAssignment_2(), "rule__RoundBrick__NameAssignment_2");
-					put(grammarAccess.getRoundBrickAccess().getXUnitsAssignment_4(), "rule__RoundBrick__XUnitsAssignment_4");
-					put(grammarAccess.getRoundBrickAccess().getYUnitsAssignment_5(), "rule__RoundBrick__YUnitsAssignment_5");
-					put(grammarAccess.getRoundBrickAccess().getZUnitsAssignment_6(), "rule__RoundBrick__ZUnitsAssignment_6");
-					put(grammarAccess.getRoundBrickAccess().getFillAssignment_7(), "rule__RoundBrick__FillAssignment_7");
+					put(grammarAccess.getRoundBrickAccess().getNameAssignment_1(), "rule__RoundBrick__NameAssignment_1");
+					put(grammarAccess.getRoundBrickAccess().getXUnitsAssignment_3(), "rule__RoundBrick__XUnitsAssignment_3");
+					put(grammarAccess.getRoundBrickAccess().getYUnitsAssignment_4(), "rule__RoundBrick__YUnitsAssignment_4");
+					put(grammarAccess.getRoundBrickAccess().getZUnitsAssignment_5(), "rule__RoundBrick__ZUnitsAssignment_5");
+					put(grammarAccess.getRoundBrickAccess().getFillAssignment_6(), "rule__RoundBrick__FillAssignment_6");
 					put(grammarAccess.getDoorBrickAccess().getNameAssignment_1(), "rule__DoorBrick__NameAssignment_1");
 					put(grammarAccess.getDoorBrickAccess().getXUnitsAssignment_3(), "rule__DoorBrick__XUnitsAssignment_3");
 					put(grammarAccess.getDoorBrickAccess().getYUnitsAssignment_4(), "rule__DoorBrick__YUnitsAssignment_4");
@@ -87,6 +87,7 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAssemblyItemAccess().getXUnitsAssignment_2(), "rule__AssemblyItem__XUnitsAssignment_2");
 					put(grammarAccess.getAssemblyItemAccess().getYUnitsAssignment_3(), "rule__AssemblyItem__YUnitsAssignment_3");
 					put(grammarAccess.getAssemblyItemAccess().getZUnitsAssignment_4(), "rule__AssemblyItem__ZUnitsAssignment_4");
+					put(grammarAccess.getAssemblyItemAccess().getTransformAssignment_5_1(), "rule__AssemblyItem__TransformAssignment_5_1");
 				}
 			};
 		}

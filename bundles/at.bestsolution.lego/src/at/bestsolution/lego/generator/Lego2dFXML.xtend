@@ -42,6 +42,7 @@ class Lego2dFXML implements IGenerator {
 	<?import javafx.scene.shape.*?>
 	<?import javafx.scene.layout.*?>
 	<?import javafx.scene.*?>
+	<?import javafx.scene.transform.*?>
 	«IF m.assembly != null»
 	«m.assembly.handleLegoElementStart(true)»
 	«m.assembly.handleLegoElementEnd»
@@ -62,6 +63,7 @@ class Lego2dFXML implements IGenerator {
 	<?import javafx.scene.shape.*?>
 	<?import javafx.scene.layout.*?>
 	<?import javafx.scene.*?>
+	<?import javafx.scene.transform.*?>
 	«item.handleLegoElementStart(true)»
 	«item.handleLegoElementEnd»
 	'''
@@ -89,19 +91,11 @@ class Lego2dFXML implements IGenerator {
 	def dispatch CharSequence handleLegoElementEnd(RoundBrick brick) '''
 	>
 	<elements>
-			«IF brick.round == "right"»
 			<MoveTo x="0" y="0" />
 			<LineTo x="0" y="«brick.YUnits.toPixel*-1»" />
 			<LineTo x="«brick.XUnits.toPixel»" y="«brick.YUnits.toPixel*-1»" />
 			<LineTo x="«brick.XUnits.toPixel+1.toXPixel»" y="0" />
 			<ClosePath />
-			«ELSE»
-			<MoveTo x="«brick.XUnits.toPixel+1.toXPixel»" y="0" />
-			<LineTo x="«brick.XUnits.toPixel+1.toXPixel»" y="«brick.YUnits.toPixel*-1»" />
-			<LineTo x="«1.toXPixel»" y="«brick.YUnits.toPixel*-1»"/>
-			<LineTo x="0" y="0"/>
-			<ClosePath />
-			«ENDIF»
 		</elements>
 	</Path>
 	'''
@@ -136,8 +130,19 @@ class Lego2dFXML implements IGenerator {
 	def dispatch CharSequence handleLegoElementEnd(Assembly assembly) '''
 	>
 		«FOR i : assembly.items»
-			«i.element.handleLegoElementStart(false)» layoutX="«i.XUnits.toPixel»" layoutY="«i.YUnits.toPixel»"
-			«i.element.handleLegoElementEnd()»
+			«IF i.transform != null»
+			<Group>
+			«ENDIF»
+				«i.element.handleLegoElementStart(false)» layoutX="«i.XUnits.toPixel»" layoutY="«i.YUnits.toPixel»"
+				«i.element.handleLegoElementEnd()»
+			«IF i.transform != null»
+				<transforms>
+					«IF i.transform == "mirror-x"»
+					<Affine mxx="-1" myx="0" mxy="0" myy="1" tx="90" ty="0" />
+					«ENDIF»
+				</transforms>
+			</Group>
+			«ENDIF»
 		«ENDFOR»
 	</Group>
 	'''

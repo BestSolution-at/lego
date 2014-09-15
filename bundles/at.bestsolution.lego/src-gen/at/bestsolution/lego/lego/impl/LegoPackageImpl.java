@@ -450,19 +450,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRoundBrick_Round()
-  {
-    return (EAttribute)roundBrickEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getRoundBrick_ZUnits()
   {
-    return (EReference)roundBrickEClass.getEStructuralFeatures().get(1);
+    return (EReference)roundBrickEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -570,6 +560,16 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getAssemblyItem_Transform()
+  {
+    return (EAttribute)assemblyItemEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LegoFactory getLegoFactory()
   {
     return (LegoFactory)getEFactoryInstance();
@@ -629,7 +629,6 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     createEReference(brickEClass, BRICK__ZUNITS);
 
     roundBrickEClass = createEClass(ROUND_BRICK);
-    createEAttribute(roundBrickEClass, ROUND_BRICK__ROUND);
     createEReference(roundBrickEClass, ROUND_BRICK__ZUNITS);
 
     doorBrickEClass = createEClass(DOOR_BRICK);
@@ -645,6 +644,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     createEReference(assemblyItemEClass, ASSEMBLY_ITEM__XUNITS);
     createEReference(assemblyItemEClass, ASSEMBLY_ITEM__YUNITS);
     createEReference(assemblyItemEClass, ASSEMBLY_ITEM__ZUNITS);
+    createEAttribute(assemblyItemEClass, ASSEMBLY_ITEM__TRANSFORM);
   }
 
   /**
@@ -718,7 +718,6 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     initEReference(getBrick_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, Brick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(roundBrickEClass, RoundBrick.class, "RoundBrick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRoundBrick_Round(), ecorePackage.getEString(), "round", null, 0, 1, RoundBrick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRoundBrick_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, RoundBrick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(doorBrickEClass, DoorBrick.class, "DoorBrick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -734,6 +733,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     initEReference(getAssemblyItem_XUnits(), this.getXUnit(), null, "xUnits", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAssemblyItem_YUnits(), this.getYUnit(), null, "yUnits", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAssemblyItem_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssemblyItem_Transform(), ecorePackage.getEString(), "transform", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
