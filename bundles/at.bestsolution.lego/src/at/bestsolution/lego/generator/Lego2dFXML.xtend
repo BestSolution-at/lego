@@ -31,10 +31,10 @@ class Lego2dFXML implements IGenerator {
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		val m = input.contents.head as Model
 		if( m.assembly != null ) {
-			
+			fsa.generateFile(m.assembly.name+".fxml",m.assembly.generateFXML)
 		} else {
 			m.repo.elementList.forEach[
-				fsa.generateFile(it.name+".fxml",generateFXML)
+				fsa.generateFile(it.name+".fxml",it.generateFXML)
 			]
 		}		
 	}
@@ -68,6 +68,16 @@ class Lego2dFXML implements IGenerator {
 	«ENDIF»
 	'''
 	
+	def generateFXML(Assembly assembly) '''
+	<?xml version="1.0" encoding="UTF-8"?>
+	<?import javafx.scene.shape.*?>
+	<?import javafx.scene.layout.*?>
+	<?import javafx.scene.*?>
+	<?import javafx.scene.transform.*?>
+	«assembly.handleLegoElementStart(true)»
+	«assembly.handleLegoElementEnd»
+	'''
+	
 	def generateFXML(Item item) '''
 	<?xml version="1.0" encoding="UTF-8"?>
 	<?import javafx.scene.shape.*?>
@@ -87,7 +97,7 @@ class Lego2dFXML implements IGenerator {
 	'''
 	
 	def dispatch CharSequence handleLegoElementStart(Brick brick, boolean includeNS) '''
-	<Rectangle «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» width="«brick.XUnits.toPixel»" height="«brick.YUnits.toPixel»" fill="«brick.fill.toHex»"
+	<Rectangle «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» id="«brick.name»" width="«brick.XUnits.toPixel»" height="«brick.YUnits.toPixel»" fill="«brick.fill.toHex»"
 	'''
 	
 	def dispatch CharSequence handleLegoElementEnd(Brick brick) '''
@@ -95,23 +105,23 @@ class Lego2dFXML implements IGenerator {
 	'''
 	
 	def dispatch CharSequence handleLegoElementStart(RoundBrick brick, boolean includeNS) '''
-	<Path «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» fill="«brick.fill.toHex»" strokeWidth="0"
+	<Path «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» id="«brick.name»" fill="«brick.fill.toHex»" strokeWidth="0"
 	'''
 	
 	def dispatch CharSequence handleLegoElementEnd(RoundBrick brick) '''
 	>
 	<elements>
 			<MoveTo x="0" y="0" />
-			<LineTo x="0" y="«brick.YUnits.toPixel*-1»" />
-			<LineTo x="«brick.XUnits.toPixel»" y="«brick.YUnits.toPixel*-1»" />
-			<LineTo x="«brick.XUnits.toPixel+1.toXPixel»" y="0" />
+			<LineTo x="«brick.XUnits.toPixel»" y="0" />
+			<LineTo x="«brick.XUnits.toPixel+1.toXPixel»" y="«brick.YUnits.toPixel»" />
+			<LineTo x="0" y="«brick.YUnits.toPixel»" />
 			<ClosePath />
 		</elements>
 	</Path>
 	'''
 	
 	def dispatch CharSequence handleLegoElementStart(DoorBrick brick, boolean includeNS) '''
-	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF»
+	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» id="«brick.name»"
 	'''
 	
 	def dispatch CharSequence handleLegoElementEnd(DoorBrick brick) '''
@@ -124,7 +134,7 @@ class Lego2dFXML implements IGenerator {
 	'''
 	
 	def dispatch CharSequence handleLegoElementStart(Door brick, boolean includeNS) '''
-	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF»
+	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» id="«brick.name»"
 	'''
 	
 	def dispatch CharSequence handleLegoElementEnd(Door brick) '''
@@ -133,8 +143,8 @@ class Lego2dFXML implements IGenerator {
 	</Group>
 	'''
 	
-	def dispatch CharSequence handleLegoElementStart(Assembly brick, boolean includeNS) '''
-	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF»
+	def dispatch CharSequence handleLegoElementStart(Assembly assembly, boolean includeNS) '''
+	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» id="«assembly.name»"
 	'''
 	
 	def dispatch CharSequence handleLegoElementEnd(Assembly assembly) '''
@@ -148,7 +158,7 @@ class Lego2dFXML implements IGenerator {
 			«IF i.transform != null»
 				<transforms>
 					«IF i.transform == "mirror-x"»
-					<Affine mxx="-1" myx="0" mxy="0" myy="1" tx="90" ty="0" />
+					<Affine mxx="-1" myx="0" mxy="0" myy="1" tx="«i.element.width»" ty="0" />
 					«ENDIF»
 				</transforms>
 			</Group>

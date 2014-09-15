@@ -13,8 +13,33 @@ package at.bestsolution.lego.generator
 import at.bestsolution.lego.lego.XUnit
 import at.bestsolution.lego.lego.YUnit
 import at.bestsolution.lego.lego.Color
+import at.bestsolution.lego.lego.LegoElement
+import at.bestsolution.lego.lego.Brick
+import at.bestsolution.lego.lego.RoundBrick
+import at.bestsolution.lego.lego.DoorBrick
+import at.bestsolution.lego.lego.Door
 
 class Util {
+	def dispatch width(LegoElement e) {
+		return 0
+	}
+	
+	def dispatch width(Brick e) {
+		return e.XUnits.toPixel
+	}
+	
+	def dispatch width(RoundBrick e) {
+		return e.XUnits.toPixel + 1.toXPixel
+	}
+	
+	def dispatch width(DoorBrick e) {
+		return e.XUnits.toPixel
+	}
+	
+	def dispatch width(Door e) {
+		return e.XUnits.toPixel
+	}
+	
 	def toPixel(XUnit u) {
 		return u.units.toXPixel
 	}

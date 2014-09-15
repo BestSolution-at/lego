@@ -13,6 +13,7 @@ package at.bestsolution.lego.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import com.google.inject.Inject
 
 /**
  * Generates code from your model files on save.
@@ -20,12 +21,10 @@ import org.eclipse.xtext.generator.IFileSystemAccess
  * see http://www.eclipse.org/Xtext/documentation.html#TutorialCodeGeneration
  */
 class LegoGenerator implements IGenerator {
+	@Inject
+	Lego2dSVG lego2dsvg
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+		lego2dsvg.doGenerate(resource,fsa)
 	}
 }
