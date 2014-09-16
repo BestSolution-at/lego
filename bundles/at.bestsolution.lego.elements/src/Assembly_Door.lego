@@ -1,4 +1,4 @@
 assembly Door {
-	DuploItems.DoorBrick_4_6_2_yellow pos 0 0 0  
-	DuploItems.Door_4_6 pos 0 0 0 
+	DuploItems.DoorBrick_4_6_2_yellow 	pos 0 0 0  
+	DuploItems.Door_4_6 				pos 0 0 0 
 } 
