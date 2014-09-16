@@ -278,7 +278,7 @@ class Lego3dFXML implements IGenerator {
 	'''
 	
 	def load(FxmlInclude include) {
-		return new FileReader(include.source).readLines.filter[x|!x.startsWith("<?xml")].join("\n")
+		return new FileReader(include.source).readLines.filter[x|!x.startsWith("<?")].map[x|x.replace('diffuseColor="#ff0000"','diffuseColor="'+(include.eContainer as Brick).fill.toHex+'"')].join("\n")
 	} 
 	
 	def createBrick(Brick brick) '''
