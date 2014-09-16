@@ -284,7 +284,7 @@ class Lego3dFXML implements IGenerator {
 	def createBrick(Brick brick) '''
 	«IF brick.source instanceof FxmlInclude»
 	«val fxml = brick.source as FxmlInclude»
-	<Group>
+	<Group id="«brick.name»">
 		«load(fxml)»
 		<transforms>
 			««« to origin
@@ -292,7 +292,7 @@ class Lego3dFXML implements IGenerator {
 		</transforms>
 	</Group>
 	«ELSE»
-	<Group>
+	<Group id="«brick.name»">
 		<Box width="«brick.width»" depth="«brick.depth»" height="«brick.height»">
 			<material>
 				<PhongMaterial diffuseColor="«brick.toColor()»"/>
@@ -348,85 +348,6 @@ class Lego3dFXML implements IGenerator {
 	«IF item instanceof Brick»
 		«createBrick(item as Brick)»
 	«ENDIF»
-	</Group>
-	'''
-	
-	def dispatch CharSequence handleLegoElementStart(LegoElement brick, boolean includeNS) '''
-		<!-- START: Unsupported type «brick» 
-	'''
-	
-	def dispatch CharSequence handleLegoElementEnd(LegoElement brick) '''
-		END: Unsupported type «brick» -->
-	'''
-	
-	def dispatch CharSequence handleLegoElementStart(Brick brick, boolean includeNS) '''
-	<Rectangle «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» width="«brick.XUnits.toPixel»" height="«brick.YUnits.toPixel»" fill="«brick.fill.toHex»"
-	'''
-	
-	def dispatch CharSequence handleLegoElementEnd(Brick brick) '''
-	/>
-	'''
-	
-	def dispatch CharSequence handleLegoElementStart(RoundBrick brick, boolean includeNS) '''
-	<Path «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF» fill="«brick.fill.toHex»" strokeWidth="0"
-	'''
-	
-	def dispatch CharSequence handleLegoElementEnd(RoundBrick brick) '''
-	>
-	<elements>
-			<MoveTo x="0" y="0" />
-			<LineTo x="0" y="«brick.YUnits.toPixel*-1»" />
-			<LineTo x="«brick.XUnits.toPixel»" y="«brick.YUnits.toPixel*-1»" />
-			<LineTo x="«brick.XUnits.toPixel+1.toXPixel»" y="0" />
-			<ClosePath />
-		</elements>
-	</Path>
-	'''
-	
-	def dispatch CharSequence handleLegoElementStart(DoorBrick brick, boolean includeNS) '''
-	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF»
-	'''
-	
-	def dispatch CharSequence handleLegoElementEnd(DoorBrick brick) '''
-	>
-		<Rectangle layoutY="0" width="«brick.XUnits.toPixel»" height="5" fill="«brick.fill.toHex»"/>
-		<Rectangle layoutY="«brick.YUnits.toPixel-5»" width="«brick.XUnits.toPixel»" height="5" fill="«brick.fill.toHex»"/>
-		<Rectangle layoutX="0" height="«brick.YUnits.toPixel»" width="5" fill="«brick.fill.toHex»"/>
-		<Rectangle layoutX="«brick.XUnits.toPixel-5»" height="«brick.YUnits.toPixel»" width="5" fill="«brick.fill.toHex»"/>
-	</Group>
-	'''
-	
-	def dispatch CharSequence handleLegoElementStart(Door brick, boolean includeNS) '''
-	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF»
-	'''
-	
-	def dispatch CharSequence handleLegoElementEnd(Door brick) '''
-	>
-		<Rectangle layoutX="3" layoutY="3" width="«brick.XUnits.toPixel - 2 * 3»" height="«brick.YUnits.toPixel - 2 * 3»" fill="«brick.fill.toHex»" />
-	</Group>
-	'''
-	
-	def dispatch CharSequence handleLegoElementStart(Assembly brick, boolean includeNS) '''
-	<Group «IF includeNS»xmlns:fx="http://javafx.com/fxml/1"«ENDIF»
-	'''
-	
-	def dispatch CharSequence handleLegoElementEnd(Assembly assembly) '''
-	>
-		«FOR i : assembly.items»
-			«IF i.transform != null»
-			<Group>
-			«ENDIF»
-				«i.element.handleLegoElementStart(false)» layoutX="«i.XUnits.toPixel»" layoutY="«i.YUnits.toPixel»"
-				«i.element.handleLegoElementEnd()»
-			«IF i.transform != null»
-				<transforms>
-					«IF i.transform == "mirror-x"»
-					<Affine mxx="-1" myx="0" mxy="0" myy="1" tx="90" ty="0" />
-					«ENDIF»
-				</transforms>
-			</Group>
-			«ENDIF»
-		«ENDFOR»
 	</Group>
 	'''
 }
