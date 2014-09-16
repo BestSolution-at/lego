@@ -10,25 +10,17 @@
  *******************************************************************************/
 package at.bestsolution.lego.generator
 
-import org.eclipse.xtext.generator.IGenerator
+import at.bestsolution.lego.lego.Assembly
+import at.bestsolution.lego.lego.Brick
+import at.bestsolution.lego.lego.FxmlInclude
+import at.bestsolution.lego.lego.Item
+import at.bestsolution.lego.lego.ItemRepository
+import at.bestsolution.lego.lego.Model
+import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
-import at.bestsolution.lego.lego.Model
-import at.bestsolution.lego.lego.Brick
-import at.bestsolution.lego.lego.LegoElement
-import com.google.inject.Inject
-import at.bestsolution.lego.lego.RoundBrick
-import at.bestsolution.lego.lego.Item
-import at.bestsolution.lego.lego.DoorBrick
-import at.bestsolution.lego.lego.Door
-import at.bestsolution.lego.lego.Assembly
-import at.bestsolution.lego.lego.FxmlInclude
-import java.io.File
+import org.eclipse.xtext.generator.IGenerator
 import java.io.FileReader
-
-import static extension com.google.common.io.CharStreams.*
-import org.eclipse.xtext.parser.packrat.tokens.AssignmentToken.End
-import at.bestsolution.lego.lego.ItemRepository
 
 class Lego3dFXML implements IGenerator {
 	@Inject
@@ -107,15 +99,7 @@ class Lego3dFXML implements IGenerator {
 	
 	def generateAssemblyPreview(Assembly a) '''
 		«var scale = 2»
-		<?xml version="1.0" encoding="UTF-8"?>
-		<?import javafx.scene.shape.*?>
-		<?import javafx.scene.layout.*?>
-		<?import javafx.scene.*?>
-		<?import javafx.scene.transform.*?>
-		<?import javafx.geometry.*?>
-		<?import javafx.scene.paint.*?>
-		
-		<BorderPane  xmlns:fx="http://javafx.com/fxml/1">
+		<BorderPane>
 		<center>
 		
 			<SubScene width="400" height="400" depthBuffer="true">
@@ -166,15 +150,7 @@ class Lego3dFXML implements IGenerator {
 		}
 	}
 	def generateRepo(ItemRepository m) '''
-	<?xml version="1.0" encoding="UTF-8"?>
-	<?import javafx.scene.shape.*?>
-	<?import javafx.scene.layout.*?>
-	<?import javafx.scene.*?>
-	<?import javafx.scene.transform.*?>
-	<?import javafx.geometry.*?>
-	<?import javafx.scene.paint.*?>
-	
-	<BorderPane  xmlns:fx="http://javafx.com/fxml/1">
+	<BorderPane>
 	<center>
 	<GridPane vgap="10" hgap="10" >
 	«var scale = 2»
@@ -277,15 +253,11 @@ class Lego3dFXML implements IGenerator {
 						</Group>
 	'''
 	
-	def load(FxmlInclude include) {
-		return new FileReader(include.source).readLines.filter[x|!x.startsWith("<?")].map[x|x.replace('diffuseColor="#ff0000"','diffuseColor="'+(include.eContainer as Brick).fill.toHex+'"')].join("\n")
-	} 
-	
 	def createBrick(Brick brick) '''
 	«IF brick.source instanceof FxmlInclude»
 	«val fxml = brick.source as FxmlInclude»
 	<Group id="«brick.name»">
-		«load(fxml)»
+		«fxml.load(new FileReader(fxml.source3d))»
 		<transforms>
 			««« to origin
 			<Translate x="«fxml.originX»" y="«fxml.originY»" z="«fxml.originZ»" />

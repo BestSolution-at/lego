@@ -6,16 +6,17 @@ import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
 import at.bestsolution.lego.lego.Door;
-import at.bestsolution.lego.lego.DoorBrick;
+import at.bestsolution.lego.lego.FxmlInclude;
 import at.bestsolution.lego.lego.Item;
 import at.bestsolution.lego.lego.ItemRepository;
 import at.bestsolution.lego.lego.LegoElement;
 import at.bestsolution.lego.lego.Model;
-import at.bestsolution.lego.lego.RoundBrick;
+import at.bestsolution.lego.lego.Source;
 import at.bestsolution.lego.lego.XUnit;
 import at.bestsolution.lego.lego.YUnit;
 import com.google.common.base.Objects;
 import com.google.inject.Inject;
+import java.io.FileReader;
 import java.util.Arrays;
 import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
+import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
@@ -113,146 +115,55 @@ public class Lego2dSVG implements IGenerator {
   
   protected CharSequence _handleLegoElementStart(final Brick brick) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("<rect id=\"");
+    _builder.append("<g id=\"");
     String _name = brick.getName();
     _builder.append(_name, "");
-    _builder.append("\" width=\"");
-    XUnit _xUnits = brick.getXUnits();
-    int _pixel = this.util.toPixel(_xUnits);
-    _builder.append(_pixel, "");
-    _builder.append("\" height=\"");
-    YUnit _yUnits = brick.getYUnits();
-    int _pixel_1 = this.util.toPixel(_yUnits);
-    _builder.append(_pixel_1, "");
-    _builder.append("\" fill=\"");
-    Color _fill = brick.getFill();
-    String _hex = this.util.toHex(_fill);
-    _builder.append(_hex, "");
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
     return _builder;
   }
   
   protected CharSequence _handleLegoElementEnd(final Brick brick) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("/>");
-    _builder.newLine();
-    return _builder;
-  }
-  
-  protected CharSequence _handleLegoElementStart(final RoundBrick brick) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("<path id=\"");
-    String _name = brick.getName();
-    _builder.append(_name, "");
-    _builder.append("\" fill=\"");
-    Color _fill = brick.getFill();
-    String _hex = this.util.toHex(_fill);
-    _builder.append(_hex, "");
-    _builder.append("\" stroke-width=\"0\" ");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("d=\"M 0 0 L ");
-    XUnit _xUnits = brick.getXUnits();
-    int _pixel = this.util.toPixel(_xUnits);
-    _builder.append(_pixel, "\t");
-    _builder.append(" 0 L ");
-    XUnit _xUnits_1 = brick.getXUnits();
-    int _pixel_1 = this.util.toPixel(_xUnits_1);
-    int _xPixel = this.util.toXPixel(1);
-    int _plus = (_pixel_1 + _xPixel);
-    _builder.append(_plus, "\t");
-    _builder.append(" ");
-    YUnit _yUnits = brick.getYUnits();
-    int _pixel_2 = this.util.toPixel(_yUnits);
-    _builder.append(_pixel_2, "\t");
-    _builder.append(" L 0 ");
-    YUnit _yUnits_1 = brick.getYUnits();
-    int _pixel_3 = this.util.toPixel(_yUnits_1);
-    _builder.append(_pixel_3, "\t");
-    _builder.append(" z\"");
-    _builder.newLineIfNotEmpty();
-    return _builder;
-  }
-  
-  protected CharSequence _handleLegoElementEnd(final RoundBrick brick) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("/>");
-    _builder.newLine();
-    return _builder;
-  }
-  
-  protected CharSequence _handleLegoElementStart(final DoorBrick brick) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("<g id=\"");
-    String _name = brick.getName();
-    _builder.append(_name, "");
-    _builder.append("\" ");
-    _builder.newLineIfNotEmpty();
-    return _builder;
-  }
-  
-  protected CharSequence _handleLegoElementEnd(final DoorBrick brick) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append(">");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("<rect y=\"0\" width=\"");
-    XUnit _xUnits = brick.getXUnits();
-    int _pixel = this.util.toPixel(_xUnits);
-    _builder.append(_pixel, "\t");
-    _builder.append("\" height=\"5\" fill=\"");
-    Color _fill = brick.getFill();
-    String _hex = this.util.toHex(_fill);
-    _builder.append(_hex, "\t");
-    _builder.append("\"/>");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("<rect y=\"");
-    YUnit _yUnits = brick.getYUnits();
-    int _pixel_1 = this.util.toPixel(_yUnits);
-    int _minus = (_pixel_1 - 5);
-    _builder.append(_minus, "\t");
-    _builder.append("\" width=\"");
-    XUnit _xUnits_1 = brick.getXUnits();
-    int _pixel_2 = this.util.toPixel(_xUnits_1);
-    _builder.append(_pixel_2, "\t");
-    _builder.append("\" height=\"5\" fill=\"");
-    Color _fill_1 = brick.getFill();
-    String _hex_1 = this.util.toHex(_fill_1);
-    _builder.append(_hex_1, "\t");
-    _builder.append("\"/>");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("<rect x=\"0\" height=\"");
-    YUnit _yUnits_1 = brick.getYUnits();
-    int _pixel_3 = this.util.toPixel(_yUnits_1);
-    _builder.append(_pixel_3, "\t");
-    _builder.append("\" width=\"5\" fill=\"");
-    Color _fill_2 = brick.getFill();
-    String _hex_2 = this.util.toHex(_fill_2);
-    _builder.append(_hex_2, "\t");
-    _builder.append("\"/>");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("<rect x=\"");
-    XUnit _xUnits_2 = brick.getXUnits();
-    int _pixel_4 = this.util.toPixel(_xUnits_2);
-    int _minus_1 = (_pixel_4 - 5);
-    _builder.append(_minus_1, "\t");
-    _builder.append("\" height=\"");
-    YUnit _yUnits_2 = brick.getYUnits();
-    int _pixel_5 = this.util.toPixel(_yUnits_2);
-    _builder.append(_pixel_5, "\t");
-    _builder.append("\" width=\"5\" fill=\"");
-    Color _fill_3 = brick.getFill();
-    String _hex_3 = this.util.toHex(_fill_3);
-    _builder.append(_hex_3, "\t");
-    _builder.append("\"/>");
-    _builder.newLineIfNotEmpty();
-    _builder.append("</g>");
-    _builder.newLine();
-    return _builder;
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append(">");
+      _builder.newLine();
+      {
+        Source _source = brick.getSource();
+        if ((_source instanceof FxmlInclude)) {
+          _builder.append("\t");
+          Source _source_1 = brick.getSource();
+          Source _source_2 = brick.getSource();
+          String _source2d = ((FxmlInclude) _source_2).getSource2d();
+          String _replace = _source2d.replace(".fxml", ".svg");
+          FileReader _fileReader = new FileReader(_replace);
+          String _load = this.util.load(((FxmlInclude) _source_1), _fileReader);
+          _builder.append(_load, "\t");
+          _builder.newLineIfNotEmpty();
+        } else {
+          _builder.append("\t");
+          _builder.append("<rect width=\"");
+          XUnit _xUnits = brick.getXUnits();
+          int _pixel = this.util.toPixel(_xUnits);
+          _builder.append(_pixel, "\t");
+          _builder.append("\" height=\"");
+          YUnit _yUnits = brick.getYUnits();
+          int _pixel_1 = this.util.toPixel(_yUnits);
+          _builder.append(_pixel_1, "\t");
+          _builder.append("\" fill=\"");
+          Color _fill = brick.getFill();
+          String _hex = this.util.toHex(_fill);
+          _builder.append(_hex, "\t");
+          _builder.append("\" />");
+          _builder.newLineIfNotEmpty();
+        }
+      }
+      _builder.append("</g>");
+      _builder.newLine();
+      return _builder;
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
   }
   
   protected CharSequence _handleLegoElementStart(final Door brick) {
@@ -363,10 +274,6 @@ public class Lego2dSVG implements IGenerator {
       return _handleLegoElementStart((Brick)brick);
     } else if (brick instanceof Door) {
       return _handleLegoElementStart((Door)brick);
-    } else if (brick instanceof DoorBrick) {
-      return _handleLegoElementStart((DoorBrick)brick);
-    } else if (brick instanceof RoundBrick) {
-      return _handleLegoElementStart((RoundBrick)brick);
     } else if (brick instanceof Assembly) {
       return _handleLegoElementStart((Assembly)brick);
     } else if (brick != null) {
@@ -382,10 +289,6 @@ public class Lego2dSVG implements IGenerator {
       return _handleLegoElementEnd((Brick)brick);
     } else if (brick instanceof Door) {
       return _handleLegoElementEnd((Door)brick);
-    } else if (brick instanceof DoorBrick) {
-      return _handleLegoElementEnd((DoorBrick)brick);
-    } else if (brick instanceof RoundBrick) {
-      return _handleLegoElementEnd((RoundBrick)brick);
     } else if (brick instanceof Assembly) {
       return _handleLegoElementEnd((Assembly)brick);
     } else if (brick != null) {

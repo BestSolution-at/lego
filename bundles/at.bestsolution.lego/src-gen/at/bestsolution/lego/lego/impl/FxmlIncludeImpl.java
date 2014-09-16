@@ -18,7 +18,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl#getSource2d <em>Source2d</em>}</li>
+ *   <li>{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl#getSource3d <em>Source3d</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl#getOriginX <em>Origin X</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl#getOriginY <em>Origin Y</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl#getOriginZ <em>Origin Z</em>}</li>
@@ -30,24 +31,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class FxmlIncludeImpl extends SourceImpl implements FxmlInclude
 {
   /**
-   * The default value of the '{@link #getSource() <em>Source</em>}' attribute.
+   * The default value of the '{@link #getSource2d() <em>Source2d</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSource()
+   * @see #getSource2d()
    * @generated
    * @ordered
    */
-  protected static final String SOURCE_EDEFAULT = null;
+  protected static final String SOURCE2D_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getSource() <em>Source</em>}' attribute.
+   * The cached value of the '{@link #getSource2d() <em>Source2d</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSource()
+   * @see #getSource2d()
    * @generated
    * @ordered
    */
-  protected String source = SOURCE_EDEFAULT;
+  protected String source2d = SOURCE2D_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getSource3d() <em>Source3d</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSource3d()
+   * @generated
+   * @ordered
+   */
+  protected static final String SOURCE3D_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSource3d() <em>Source3d</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSource3d()
+   * @generated
+   * @ordered
+   */
+  protected String source3d = SOURCE3D_EDEFAULT;
 
   /**
    * The default value of the '{@link #getOriginX() <em>Origin X</em>}' attribute.
@@ -135,9 +156,9 @@ public class FxmlIncludeImpl extends SourceImpl implements FxmlInclude
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSource()
+  public String getSource2d()
   {
-    return source;
+    return source2d;
   }
 
   /**
@@ -145,12 +166,35 @@ public class FxmlIncludeImpl extends SourceImpl implements FxmlInclude
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSource(String newSource)
+  public void setSource2d(String newSource2d)
   {
-    String oldSource = source;
-    source = newSource;
+    String oldSource2d = source2d;
+    source2d = newSource2d;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LegoPackage.FXML_INCLUDE__SOURCE, oldSource, source));
+      eNotify(new ENotificationImpl(this, Notification.SET, LegoPackage.FXML_INCLUDE__SOURCE2D, oldSource2d, source2d));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getSource3d()
+  {
+    return source3d;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSource3d(String newSource3d)
+  {
+    String oldSource3d = source3d;
+    source3d = newSource3d;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LegoPackage.FXML_INCLUDE__SOURCE3D, oldSource3d, source3d));
   }
 
   /**
@@ -232,8 +276,10 @@ public class FxmlIncludeImpl extends SourceImpl implements FxmlInclude
   {
     switch (featureID)
     {
-      case LegoPackage.FXML_INCLUDE__SOURCE:
-        return getSource();
+      case LegoPackage.FXML_INCLUDE__SOURCE2D:
+        return getSource2d();
+      case LegoPackage.FXML_INCLUDE__SOURCE3D:
+        return getSource3d();
       case LegoPackage.FXML_INCLUDE__ORIGIN_X:
         return getOriginX();
       case LegoPackage.FXML_INCLUDE__ORIGIN_Y:
@@ -254,8 +300,11 @@ public class FxmlIncludeImpl extends SourceImpl implements FxmlInclude
   {
     switch (featureID)
     {
-      case LegoPackage.FXML_INCLUDE__SOURCE:
-        setSource((String)newValue);
+      case LegoPackage.FXML_INCLUDE__SOURCE2D:
+        setSource2d((String)newValue);
+        return;
+      case LegoPackage.FXML_INCLUDE__SOURCE3D:
+        setSource3d((String)newValue);
         return;
       case LegoPackage.FXML_INCLUDE__ORIGIN_X:
         setOriginX((Float)newValue);
@@ -280,8 +329,11 @@ public class FxmlIncludeImpl extends SourceImpl implements FxmlInclude
   {
     switch (featureID)
     {
-      case LegoPackage.FXML_INCLUDE__SOURCE:
-        setSource(SOURCE_EDEFAULT);
+      case LegoPackage.FXML_INCLUDE__SOURCE2D:
+        setSource2d(SOURCE2D_EDEFAULT);
+        return;
+      case LegoPackage.FXML_INCLUDE__SOURCE3D:
+        setSource3d(SOURCE3D_EDEFAULT);
         return;
       case LegoPackage.FXML_INCLUDE__ORIGIN_X:
         setOriginX(ORIGIN_X_EDEFAULT);
@@ -306,8 +358,10 @@ public class FxmlIncludeImpl extends SourceImpl implements FxmlInclude
   {
     switch (featureID)
     {
-      case LegoPackage.FXML_INCLUDE__SOURCE:
-        return SOURCE_EDEFAULT == null ? source != null : !SOURCE_EDEFAULT.equals(source);
+      case LegoPackage.FXML_INCLUDE__SOURCE2D:
+        return SOURCE2D_EDEFAULT == null ? source2d != null : !SOURCE2D_EDEFAULT.equals(source2d);
+      case LegoPackage.FXML_INCLUDE__SOURCE3D:
+        return SOURCE3D_EDEFAULT == null ? source3d != null : !SOURCE3D_EDEFAULT.equals(source3d);
       case LegoPackage.FXML_INCLUDE__ORIGIN_X:
         return originX != ORIGIN_X_EDEFAULT;
       case LegoPackage.FXML_INCLUDE__ORIGIN_Y:
@@ -329,8 +383,10 @@ public class FxmlIncludeImpl extends SourceImpl implements FxmlInclude
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (source: ");
-    result.append(source);
+    result.append(" (source2d: ");
+    result.append(source2d);
+    result.append(", source3d: ");
+    result.append(source3d);
     result.append(", originX: ");
     result.append(originX);
     result.append(", originY: ");

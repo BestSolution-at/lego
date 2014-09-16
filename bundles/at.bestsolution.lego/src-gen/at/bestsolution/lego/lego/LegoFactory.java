@@ -122,24 +122,6 @@ public interface LegoFactory extends EFactory
   FxmlInclude createFxmlInclude();
 
   /**
-   * Returns a new object of class '<em>Round Brick</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Round Brick</em>'.
-   * @generated
-   */
-  RoundBrick createRoundBrick();
-
-  /**
-   * Returns a new object of class '<em>Door Brick</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Door Brick</em>'.
-   * @generated
-   */
-  DoorBrick createDoorBrick();
-
-  /**
    * Returns a new object of class '<em>Door</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -5,12 +5,10 @@ import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
 import at.bestsolution.lego.lego.Door;
-import at.bestsolution.lego.lego.DoorBrick;
 import at.bestsolution.lego.lego.FxmlInclude;
 import at.bestsolution.lego.lego.ItemRepository;
 import at.bestsolution.lego.lego.LegoPackage;
 import at.bestsolution.lego.lego.Model;
-import at.bestsolution.lego.lego.RoundBrick;
 import at.bestsolution.lego.lego.XUnit;
 import at.bestsolution.lego.lego.YUnit;
 import at.bestsolution.lego.lego.ZUnit;
@@ -72,14 +70,6 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case LegoPackage.DOOR_BRICK:
-				if(context == grammarAccess.getDoorBrickRule() ||
-				   context == grammarAccess.getItemRule() ||
-				   context == grammarAccess.getLegoElementRule()) {
-					sequence_DoorBrick(context, (DoorBrick) semanticObject); 
-					return; 
-				}
-				else break;
 			case LegoPackage.FXML_INCLUDE:
 				if(context == grammarAccess.getFxmlIncludeRule() ||
 				   context == grammarAccess.getSourceRule()) {
@@ -96,14 +86,6 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case LegoPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
-					return; 
-				}
-				else break;
-			case LegoPackage.ROUND_BRICK:
-				if(context == grammarAccess.getItemRule() ||
-				   context == grammarAccess.getLegoElementRule() ||
-				   context == grammarAccess.getRoundBrickRule()) {
-					sequence_RoundBrick(context, (RoundBrick) semanticObject); 
 					return; 
 				}
 				else break;
@@ -215,34 +197,6 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ValidID xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color)
-	 */
-	protected void sequence_DoorBrick(EObject context, DoorBrick semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.LEGO_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.LEGO_ELEMENT__NAME));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__XUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__XUNITS));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__YUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__YUNITS));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__FILL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__FILL));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.DOOR_BRICK__ZUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.DOOR_BRICK__ZUNITS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDoorBrickAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getDoorBrickAccess().getXUnitsXUnitParserRuleCall_3_0(), semanticObject.getXUnits());
-		feeder.accept(grammarAccess.getDoorBrickAccess().getYUnitsYUnitParserRuleCall_4_0(), semanticObject.getYUnits());
-		feeder.accept(grammarAccess.getDoorBrickAccess().getZUnitsZUnitParserRuleCall_5_0(), semanticObject.getZUnits());
-		feeder.accept(grammarAccess.getDoorBrickAccess().getFillColorParserRuleCall_6_0(), semanticObject.getFill());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (name=ValidID xUnits=XUnit yUnits=YUnit fill=Color)
 	 */
 	protected void sequence_Door(EObject context, Door semanticObject) {
@@ -268,7 +222,7 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (source=STRING (originX=FLOAT originY=FLOAT originZ=FLOAT)?)
+	 *     (source2d=STRING source3d=STRING (originX=FLOAT originY=FLOAT originZ=FLOAT)?)
 	 */
 	protected void sequence_FxmlInclude(EObject context, FxmlInclude semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -290,34 +244,6 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=ValidID xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color)
-	 */
-	protected void sequence_RoundBrick(EObject context, RoundBrick semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.LEGO_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.LEGO_ELEMENT__NAME));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__XUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__XUNITS));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__YUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__YUNITS));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ITEM__FILL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__FILL));
-			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.ROUND_BRICK__ZUNITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ROUND_BRICK__ZUNITS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRoundBrickAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getRoundBrickAccess().getXUnitsXUnitParserRuleCall_3_0(), semanticObject.getXUnits());
-		feeder.accept(grammarAccess.getRoundBrickAccess().getYUnitsYUnitParserRuleCall_4_0(), semanticObject.getYUnits());
-		feeder.accept(grammarAccess.getRoundBrickAccess().getZUnitsZUnitParserRuleCall_5_0(), semanticObject.getZUnits());
-		feeder.accept(grammarAccess.getRoundBrickAccess().getFillColorParserRuleCall_6_0(), semanticObject.getFill());
-		feeder.finish();
 	}
 	
 	

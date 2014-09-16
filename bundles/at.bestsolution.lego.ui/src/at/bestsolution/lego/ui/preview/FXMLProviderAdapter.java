@@ -50,9 +50,8 @@ public class FXMLProviderAdapter implements IFXMLProviderAdapter {
 
 			@Override
 			public String exec(XtextResource resource) throws Exception {
-				System.err.println("GENERATING 3d");
 				Injector injector = LegoActivator.getInstance().getInjector("at.bestsolution.lego.Lego");
-				Lego3dFXML generator = injector.getInstance(Lego3dFXML.class);
+				PreviewGenerator generator = injector.getInstance(PreviewGenerator.class);
 				return generator.generatePreview((Model) resource.getContents().get(0)).toString();
 			}
 			 

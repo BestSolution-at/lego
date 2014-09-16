@@ -75,8 +75,6 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
       case LegoPackage.BRICK: return createBrick();
       case LegoPackage.SOURCE: return createSource();
       case LegoPackage.FXML_INCLUDE: return createFxmlInclude();
-      case LegoPackage.ROUND_BRICK: return createRoundBrick();
-      case LegoPackage.DOOR_BRICK: return createDoorBrick();
       case LegoPackage.DOOR: return createDoor();
       case LegoPackage.ASSEMBLY: return createAssembly();
       case LegoPackage.ASSEMBLY_ITEM: return createAssemblyItem();
@@ -204,28 +202,6 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
   {
     FxmlIncludeImpl fxmlInclude = new FxmlIncludeImpl();
     return fxmlInclude;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RoundBrick createRoundBrick()
-  {
-    RoundBrickImpl roundBrick = new RoundBrickImpl();
-    return roundBrick;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public DoorBrick createDoorBrick()
-  {
-    DoorBrickImpl doorBrick = new DoorBrickImpl();
-    return doorBrick;
   }
 
   /**

@@ -446,13 +446,22 @@ public interface LegoPackage extends EPackage
   int FXML_INCLUDE = 10;
 
   /**
-   * The feature id for the '<em><b>Source</b></em>' attribute.
+   * The feature id for the '<em><b>Source2d</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE__SOURCE = SOURCE_FEATURE_COUNT + 0;
+  int FXML_INCLUDE__SOURCE2D = SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Source3d</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FXML_INCLUDE__SOURCE3D = SOURCE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Origin X</b></em>' attribute.
@@ -461,7 +470,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE__ORIGIN_X = SOURCE_FEATURE_COUNT + 1;
+  int FXML_INCLUDE__ORIGIN_X = SOURCE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Origin Y</b></em>' attribute.
@@ -470,7 +479,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE__ORIGIN_Y = SOURCE_FEATURE_COUNT + 2;
+  int FXML_INCLUDE__ORIGIN_Y = SOURCE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Origin Z</b></em>' attribute.
@@ -479,7 +488,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE__ORIGIN_Z = SOURCE_FEATURE_COUNT + 3;
+  int FXML_INCLUDE__ORIGIN_Z = SOURCE_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Fxml Include</em>' class.
@@ -488,135 +497,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 4;
-
-  /**
-   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.RoundBrickImpl <em>Round Brick</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see at.bestsolution.lego.lego.impl.RoundBrickImpl
-   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRoundBrick()
-   * @generated
-   */
-  int ROUND_BRICK = 11;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROUND_BRICK__NAME = ITEM__NAME;
-
-  /**
-   * The feature id for the '<em><b>XUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROUND_BRICK__XUNITS = ITEM__XUNITS;
-
-  /**
-   * The feature id for the '<em><b>YUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROUND_BRICK__YUNITS = ITEM__YUNITS;
-
-  /**
-   * The feature id for the '<em><b>Fill</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROUND_BRICK__FILL = ITEM__FILL;
-
-  /**
-   * The feature id for the '<em><b>ZUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROUND_BRICK__ZUNITS = ITEM_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Round Brick</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROUND_BRICK_FEATURE_COUNT = ITEM_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.DoorBrickImpl <em>Door Brick</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see at.bestsolution.lego.lego.impl.DoorBrickImpl
-   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getDoorBrick()
-   * @generated
-   */
-  int DOOR_BRICK = 12;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR_BRICK__NAME = ITEM__NAME;
-
-  /**
-   * The feature id for the '<em><b>XUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR_BRICK__XUNITS = ITEM__XUNITS;
-
-  /**
-   * The feature id for the '<em><b>YUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR_BRICK__YUNITS = ITEM__YUNITS;
-
-  /**
-   * The feature id for the '<em><b>Fill</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR_BRICK__FILL = ITEM__FILL;
-
-  /**
-   * The feature id for the '<em><b>ZUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR_BRICK__ZUNITS = ITEM_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Door Brick</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR_BRICK_FEATURE_COUNT = ITEM_FEATURE_COUNT + 1;
+  int FXML_INCLUDE_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link at.bestsolution.lego.lego.impl.DoorImpl <em>Door</em>}' class.
@@ -626,7 +507,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getDoor()
    * @generated
    */
-  int DOOR = 13;
+  int DOOR = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -681,7 +562,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAssembly()
    * @generated
    */
-  int ASSEMBLY = 14;
+  int ASSEMBLY = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -718,7 +599,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAssemblyItem()
    * @generated
    */
-  int ASSEMBLY_ITEM = 15;
+  int ASSEMBLY_ITEM = 13;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' reference.
@@ -1062,15 +943,26 @@ public interface LegoPackage extends EPackage
   EClass getFxmlInclude();
 
   /**
-   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getSource <em>Source</em>}'.
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getSource2d <em>Source2d</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Source</em>'.
-   * @see at.bestsolution.lego.lego.FxmlInclude#getSource()
+   * @return the meta object for the attribute '<em>Source2d</em>'.
+   * @see at.bestsolution.lego.lego.FxmlInclude#getSource2d()
    * @see #getFxmlInclude()
    * @generated
    */
-  EAttribute getFxmlInclude_Source();
+  EAttribute getFxmlInclude_Source2d();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getSource3d <em>Source3d</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Source3d</em>'.
+   * @see at.bestsolution.lego.lego.FxmlInclude#getSource3d()
+   * @see #getFxmlInclude()
+   * @generated
+   */
+  EAttribute getFxmlInclude_Source3d();
 
   /**
    * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getOriginX <em>Origin X</em>}'.
@@ -1104,48 +996,6 @@ public interface LegoPackage extends EPackage
    * @generated
    */
   EAttribute getFxmlInclude_OriginZ();
-
-  /**
-   * Returns the meta object for class '{@link at.bestsolution.lego.lego.RoundBrick <em>Round Brick</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Round Brick</em>'.
-   * @see at.bestsolution.lego.lego.RoundBrick
-   * @generated
-   */
-  EClass getRoundBrick();
-
-  /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.RoundBrick#getZUnits <em>ZUnits</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>ZUnits</em>'.
-   * @see at.bestsolution.lego.lego.RoundBrick#getZUnits()
-   * @see #getRoundBrick()
-   * @generated
-   */
-  EReference getRoundBrick_ZUnits();
-
-  /**
-   * Returns the meta object for class '{@link at.bestsolution.lego.lego.DoorBrick <em>Door Brick</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Door Brick</em>'.
-   * @see at.bestsolution.lego.lego.DoorBrick
-   * @generated
-   */
-  EClass getDoorBrick();
-
-  /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.DoorBrick#getZUnits <em>ZUnits</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>ZUnits</em>'.
-   * @see at.bestsolution.lego.lego.DoorBrick#getZUnits()
-   * @see #getDoorBrick()
-   * @generated
-   */
-  EReference getDoorBrick_ZUnits();
 
   /**
    * Returns the meta object for class '{@link at.bestsolution.lego.lego.Door <em>Door</em>}'.
@@ -1505,12 +1355,20 @@ public interface LegoPackage extends EPackage
     EClass FXML_INCLUDE = eINSTANCE.getFxmlInclude();
 
     /**
-     * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Source2d</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FXML_INCLUDE__SOURCE = eINSTANCE.getFxmlInclude_Source();
+    EAttribute FXML_INCLUDE__SOURCE2D = eINSTANCE.getFxmlInclude_Source2d();
+
+    /**
+     * The meta object literal for the '<em><b>Source3d</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FXML_INCLUDE__SOURCE3D = eINSTANCE.getFxmlInclude_Source3d();
 
     /**
      * The meta object literal for the '<em><b>Origin X</b></em>' attribute feature.
@@ -1535,42 +1393,6 @@ public interface LegoPackage extends EPackage
      * @generated
      */
     EAttribute FXML_INCLUDE__ORIGIN_Z = eINSTANCE.getFxmlInclude_OriginZ();
-
-    /**
-     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.RoundBrickImpl <em>Round Brick</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see at.bestsolution.lego.lego.impl.RoundBrickImpl
-     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRoundBrick()
-     * @generated
-     */
-    EClass ROUND_BRICK = eINSTANCE.getRoundBrick();
-
-    /**
-     * The meta object literal for the '<em><b>ZUnits</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ROUND_BRICK__ZUNITS = eINSTANCE.getRoundBrick_ZUnits();
-
-    /**
-     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.DoorBrickImpl <em>Door Brick</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see at.bestsolution.lego.lego.impl.DoorBrickImpl
-     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getDoorBrick()
-     * @generated
-     */
-    EClass DOOR_BRICK = eINSTANCE.getDoorBrick();
-
-    /**
-     * The meta object literal for the '<em><b>ZUnits</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DOOR_BRICK__ZUNITS = eINSTANCE.getDoorBrick_ZUnits();
 
     /**
      * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.DoorImpl <em>Door</em>}' class.

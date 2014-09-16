@@ -7,7 +7,6 @@ import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
 import at.bestsolution.lego.lego.Door;
-import at.bestsolution.lego.lego.DoorBrick;
 import at.bestsolution.lego.lego.FxmlInclude;
 import at.bestsolution.lego.lego.Item;
 import at.bestsolution.lego.lego.ItemRepository;
@@ -15,7 +14,6 @@ import at.bestsolution.lego.lego.LegoElement;
 import at.bestsolution.lego.lego.LegoFactory;
 import at.bestsolution.lego.lego.LegoPackage;
 import at.bestsolution.lego.lego.Model;
-import at.bestsolution.lego.lego.RoundBrick;
 import at.bestsolution.lego.lego.Source;
 import at.bestsolution.lego.lego.XUnit;
 import at.bestsolution.lego.lego.YUnit;
@@ -112,20 +110,6 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * @generated
    */
   private EClass fxmlIncludeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass roundBrickEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass doorBrickEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -486,7 +470,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFxmlInclude_Source()
+  public EAttribute getFxmlInclude_Source2d()
   {
     return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(0);
   }
@@ -496,7 +480,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFxmlInclude_OriginX()
+  public EAttribute getFxmlInclude_Source3d()
   {
     return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(1);
   }
@@ -506,7 +490,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFxmlInclude_OriginY()
+  public EAttribute getFxmlInclude_OriginX()
   {
     return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(2);
   }
@@ -516,7 +500,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFxmlInclude_OriginZ()
+  public EAttribute getFxmlInclude_OriginY()
   {
     return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(3);
   }
@@ -526,39 +510,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getRoundBrick()
+  public EAttribute getFxmlInclude_OriginZ()
   {
-    return roundBrickEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRoundBrick_ZUnits()
-  {
-    return (EReference)roundBrickEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getDoorBrick()
-  {
-    return doorBrickEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDoorBrick_ZUnits()
-  {
-    return (EReference)doorBrickEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -718,16 +672,11 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     sourceEClass = createEClass(SOURCE);
 
     fxmlIncludeEClass = createEClass(FXML_INCLUDE);
-    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__SOURCE);
+    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__SOURCE2D);
+    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__SOURCE3D);
     createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_X);
     createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_Y);
     createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_Z);
-
-    roundBrickEClass = createEClass(ROUND_BRICK);
-    createEReference(roundBrickEClass, ROUND_BRICK__ZUNITS);
-
-    doorBrickEClass = createEClass(DOOR_BRICK);
-    createEReference(doorBrickEClass, DOOR_BRICK__ZUNITS);
 
     doorEClass = createEClass(DOOR);
 
@@ -774,8 +723,6 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     itemEClass.getESuperTypes().add(this.getLegoElement());
     brickEClass.getESuperTypes().add(this.getItem());
     fxmlIncludeEClass.getESuperTypes().add(this.getSource());
-    roundBrickEClass.getESuperTypes().add(this.getItem());
-    doorBrickEClass.getESuperTypes().add(this.getItem());
     doorEClass.getESuperTypes().add(this.getItem());
     assemblyEClass.getESuperTypes().add(this.getLegoElement());
 
@@ -817,16 +764,11 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     initEClass(sourceEClass, Source.class, "Source", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(fxmlIncludeEClass, FxmlInclude.class, "FxmlInclude", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFxmlInclude_Source(), ecorePackage.getEString(), "source", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFxmlInclude_Source2d(), ecorePackage.getEString(), "source2d", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFxmlInclude_Source3d(), ecorePackage.getEString(), "source3d", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFxmlInclude_OriginX(), ecorePackage.getEFloat(), "originX", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFxmlInclude_OriginY(), ecorePackage.getEFloat(), "originY", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFxmlInclude_OriginZ(), ecorePackage.getEFloat(), "originZ", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(roundBrickEClass, RoundBrick.class, "RoundBrick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRoundBrick_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, RoundBrick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(doorBrickEClass, DoorBrick.class, "DoorBrick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDoorBrick_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, DoorBrick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(doorEClass, Door.class, "Door", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

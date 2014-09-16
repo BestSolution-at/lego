@@ -153,24 +153,6 @@ public class LegoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case LegoPackage.ROUND_BRICK:
-      {
-        RoundBrick roundBrick = (RoundBrick)theEObject;
-        T result = caseRoundBrick(roundBrick);
-        if (result == null) result = caseItem(roundBrick);
-        if (result == null) result = caseLegoElement(roundBrick);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case LegoPackage.DOOR_BRICK:
-      {
-        DoorBrick doorBrick = (DoorBrick)theEObject;
-        T result = caseDoorBrick(doorBrick);
-        if (result == null) result = caseItem(doorBrick);
-        if (result == null) result = caseLegoElement(doorBrick);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case LegoPackage.DOOR:
       {
         Door door = (Door)theEObject;
@@ -371,38 +353,6 @@ public class LegoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFxmlInclude(FxmlInclude object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Round Brick</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Round Brick</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRoundBrick(RoundBrick object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Door Brick</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Door Brick</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDoorBrick(DoorBrick object)
   {
     return null;
   }

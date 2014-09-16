@@ -130,16 +130,6 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
         return createFxmlIncludeAdapter();
       }
       @Override
-      public Adapter caseRoundBrick(RoundBrick object)
-      {
-        return createRoundBrickAdapter();
-      }
-      @Override
-      public Adapter caseDoorBrick(DoorBrick object)
-      {
-        return createDoorBrickAdapter();
-      }
-      @Override
       public Adapter caseDoor(Door object)
       {
         return createDoorAdapter();
@@ -337,36 +327,6 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFxmlIncludeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.RoundBrick <em>Round Brick</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see at.bestsolution.lego.lego.RoundBrick
-   * @generated
-   */
-  public Adapter createRoundBrickAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.DoorBrick <em>Door Brick</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see at.bestsolution.lego.lego.DoorBrick
-   * @generated
-   */
-  public Adapter createDoorBrickAdapter()
   {
     return null;
   }

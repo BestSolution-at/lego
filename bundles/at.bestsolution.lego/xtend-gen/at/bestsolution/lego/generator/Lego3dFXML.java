@@ -25,10 +25,8 @@ import at.bestsolution.lego.lego.XUnit;
 import at.bestsolution.lego.lego.YUnit;
 import at.bestsolution.lego.lego.ZUnit;
 import com.google.common.base.Objects;
-import com.google.common.io.CharStreams;
 import com.google.inject.Inject;
 import java.io.FileReader;
-import java.util.List;
 import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -38,7 +36,6 @@ import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IntegerRange;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
@@ -256,22 +253,7 @@ public class Lego3dFXML implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     int scale = 2;
     _builder.newLineIfNotEmpty();
-    _builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.shape.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.layout.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.transform.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.geometry.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.paint.*?>");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("<BorderPane  xmlns:fx=\"http://javafx.com/fxml/1\">");
+    _builder.append("<BorderPane>");
     _builder.newLine();
     _builder.append("<center>");
     _builder.newLine();
@@ -396,22 +378,7 @@ public class Lego3dFXML implements IGenerator {
   
   public CharSequence generateRepo(final ItemRepository m) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.shape.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.layout.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.transform.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.geometry.*?>");
-    _builder.newLine();
-    _builder.append("<?import javafx.scene.paint.*?>");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("<BorderPane  xmlns:fx=\"http://javafx.com/fxml/1\">");
+    _builder.append("<BorderPane>");
     _builder.newLine();
     _builder.append("<center>");
     _builder.newLine();
@@ -707,207 +674,184 @@ public class Lego3dFXML implements IGenerator {
     return _builder;
   }
   
-  public String load(final FxmlInclude include) {
-    try {
-      String _source = include.getSource();
-      FileReader _fileReader = new FileReader(_source);
-      List<String> _readLines = CharStreams.readLines(_fileReader);
-      final Function1<String, Boolean> _function = new Function1<String, Boolean>() {
-        public Boolean apply(final String x) {
-          boolean _startsWith = x.startsWith("<?");
-          return Boolean.valueOf((!_startsWith));
-        }
-      };
-      Iterable<String> _filter = IterableExtensions.<String>filter(_readLines, _function);
-      final Function1<String, String> _function_1 = new Function1<String, String>() {
-        public String apply(final String x) {
-          EObject _eContainer = include.eContainer();
-          Color _fill = ((Brick) _eContainer).getFill();
-          String _hex = Lego3dFXML.this.util.toHex(_fill);
-          String _plus = ("diffuseColor=\"" + _hex);
-          String _plus_1 = (_plus + "\"");
-          return x.replace("diffuseColor=\"#ff0000\"", _plus_1);
-        }
-      };
-      Iterable<String> _map = IterableExtensions.<String, String>map(_filter, _function_1);
-      return IterableExtensions.join(_map, "\n");
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
-  }
-  
   public CharSequence createBrick(final Brick brick) {
-    StringConcatenation _builder = new StringConcatenation();
-    {
-      Source _source = brick.getSource();
-      if ((_source instanceof FxmlInclude)) {
-        Source _source_1 = brick.getSource();
-        final FxmlInclude fxml = ((FxmlInclude) _source_1);
-        _builder.newLineIfNotEmpty();
-        _builder.append("<Group id=\"");
-        String _name = brick.getName();
-        _builder.append(_name, "");
-        _builder.append("\">");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        String _load = this.load(fxml);
-        _builder.append(_load, "\t");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("<transforms>");
-        _builder.newLine();
-        _builder.append("\t\t\t\t\t");
-        _builder.append("<Translate x=\"");
-        float _originX = fxml.getOriginX();
-        _builder.append(_originX, "\t\t\t\t\t");
-        _builder.append("\" y=\"");
-        float _originY = fxml.getOriginY();
-        _builder.append(_originY, "\t\t\t\t\t");
-        _builder.append("\" z=\"");
-        float _originZ = fxml.getOriginZ();
-        _builder.append(_originZ, "\t\t\t\t\t");
-        _builder.append("\" />");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("</transforms>");
-        _builder.newLine();
-        _builder.append("</Group>");
-        _builder.newLine();
-      } else {
-        _builder.append("<Group id=\"");
-        String _name_1 = brick.getName();
-        _builder.append(_name_1, "");
-        _builder.append("\">");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("<Box width=\"");
-        double _width = this.width(brick);
-        _builder.append(_width, "\t");
-        _builder.append("\" depth=\"");
-        double _depth = this.depth(brick);
-        _builder.append(_depth, "\t");
-        _builder.append("\" height=\"");
-        double _height = this.height(brick);
-        _builder.append(_height, "\t");
-        _builder.append("\">");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t");
-        _builder.append("<material>");
-        _builder.newLine();
-        _builder.append("\t\t\t");
-        _builder.append("<PhongMaterial diffuseColor=\"");
-        CharSequence _color = this.toColor(brick);
-        _builder.append(_color, "\t\t\t");
-        _builder.append("\"/>");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t");
-        _builder.append("</material>");
-        _builder.newLine();
-        _builder.append("\t\t");
-        _builder.append("<transforms>");
-        _builder.newLine();
-        _builder.append("\t\t\t\t\t\t\t");
-        _builder.append("<Translate x=\"");
-        double _width_1 = this.width(brick);
-        double _divide = (_width_1 / 2.0);
-        _builder.append(_divide, "\t\t\t\t\t\t\t");
-        _builder.append("\" y=\"");
-        double _height_1 = this.height(brick);
-        double _minus = (-_height_1);
-        double _divide_1 = (_minus / 2.0);
-        _builder.append(_divide_1, "\t\t\t\t\t\t\t");
-        _builder.append("\" z=\"");
-        double _depth_1 = this.depth(brick);
-        double _divide_2 = (_depth_1 / 2.0);
-        _builder.append(_divide_2, "\t\t\t\t\t\t\t");
-        _builder.append("\" />");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t\t\t\t\t");
-        _builder.append("<Translate x=\"");
-        _builder.append((-((this.P / 2.0) - this.off)), "\t\t\t\t\t\t\t");
-        _builder.append("\" z=\"");
-        _builder.append((-((this.P / 2.0) - this.off)), "\t\t\t\t\t\t\t");
-        _builder.append("\" />");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t");
-        _builder.append("</transforms>");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("</Box>");
-        _builder.newLine();
-        {
-          XUnit _xUnits = brick.getXUnits();
-          int _units = _xUnits.getUnits();
-          IntegerRange _upTo = new IntegerRange(1, _units);
-          for(final Integer iX : _upTo) {
-            {
-              ZUnit _zUnits = brick.getZUnits();
-              int _units_1 = _zUnits.getUnits();
-              IntegerRange _upTo_1 = new IntegerRange(1, _units_1);
-              for(final Integer iZ : _upTo_1) {
-                _builder.append("\t");
-                _builder.append("<Cylinder radius=\"");
-                _builder.append(this.r, "\t");
-                _builder.append("\" height=\"");
-                _builder.append(this.rh, "\t");
-                _builder.append("\">");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t");
-                _builder.append("\t");
-                _builder.append("<material>");
-                _builder.newLine();
-                _builder.append("\t");
-                _builder.append("\t\t");
-                _builder.append("<PhongMaterial diffuseColor=\"");
-                CharSequence _color_1 = this.toColor(brick);
-                _builder.append(_color_1, "\t\t\t");
-                _builder.append("\"/>");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t");
-                _builder.append("\t");
-                _builder.append("</material>");
-                _builder.newLine();
-                _builder.append("\t");
-                _builder.append("\t");
-                _builder.append("<transforms>");
-                _builder.newLine();
-                _builder.append("\t");
-                _builder.append("\t\t");
-                _builder.append("<Translate x=\"");
-                _builder.append((((this.P / 2.0) + (((iX).intValue() - 1) * this.P)) - this.off), "\t\t\t");
-                _builder.append("\" y=\"");
-                double _height_2 = this.height(brick);
-                double _minus_1 = (-_height_2);
-                double _minus_2 = (_minus_1 - (this.rh / 2));
-                _builder.append(_minus_2, "\t\t\t");
-                _builder.append("\" z=\"");
-                _builder.append((((this.P / 2.0) + (((iZ).intValue() - 1) * 16)) - this.off), "\t\t\t");
-                _builder.append("\" />");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t");
-                _builder.append("\t\t\t\t\t\t\t\t");
-                _builder.append("<Translate x=\"");
-                _builder.append((-((this.P / 2.0) - this.off)), "\t\t\t\t\t\t\t\t\t");
-                _builder.append("\" z=\"");
-                _builder.append((-((this.P / 2.0) - this.off)), "\t\t\t\t\t\t\t\t\t");
-                _builder.append("\" />");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t");
-                _builder.append("\t");
-                _builder.append("</transforms>");
-                _builder.newLine();
-                _builder.append("\t");
-                _builder.append("</Cylinder>");
-                _builder.newLine();
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      {
+        Source _source = brick.getSource();
+        if ((_source instanceof FxmlInclude)) {
+          Source _source_1 = brick.getSource();
+          final FxmlInclude fxml = ((FxmlInclude) _source_1);
+          _builder.newLineIfNotEmpty();
+          _builder.append("<Group id=\"");
+          String _name = brick.getName();
+          _builder.append(_name, "");
+          _builder.append("\">");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          String _source3d = fxml.getSource3d();
+          FileReader _fileReader = new FileReader(_source3d);
+          String _load = this.util.load(fxml, _fileReader);
+          _builder.append(_load, "\t");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          _builder.append("<transforms>");
+          _builder.newLine();
+          _builder.append("\t\t\t\t\t");
+          _builder.append("<Translate x=\"");
+          float _originX = fxml.getOriginX();
+          _builder.append(_originX, "\t\t\t\t\t");
+          _builder.append("\" y=\"");
+          float _originY = fxml.getOriginY();
+          _builder.append(_originY, "\t\t\t\t\t");
+          _builder.append("\" z=\"");
+          float _originZ = fxml.getOriginZ();
+          _builder.append(_originZ, "\t\t\t\t\t");
+          _builder.append("\" />");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          _builder.append("</transforms>");
+          _builder.newLine();
+          _builder.append("</Group>");
+          _builder.newLine();
+        } else {
+          _builder.append("<Group id=\"");
+          String _name_1 = brick.getName();
+          _builder.append(_name_1, "");
+          _builder.append("\">");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          _builder.append("<Box width=\"");
+          double _width = this.width(brick);
+          _builder.append(_width, "\t");
+          _builder.append("\" depth=\"");
+          double _depth = this.depth(brick);
+          _builder.append(_depth, "\t");
+          _builder.append("\" height=\"");
+          double _height = this.height(brick);
+          _builder.append(_height, "\t");
+          _builder.append("\">");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t\t");
+          _builder.append("<material>");
+          _builder.newLine();
+          _builder.append("\t\t\t");
+          _builder.append("<PhongMaterial diffuseColor=\"");
+          CharSequence _color = this.toColor(brick);
+          _builder.append(_color, "\t\t\t");
+          _builder.append("\"/>");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t\t");
+          _builder.append("</material>");
+          _builder.newLine();
+          _builder.append("\t\t");
+          _builder.append("<transforms>");
+          _builder.newLine();
+          _builder.append("\t\t\t\t\t\t\t");
+          _builder.append("<Translate x=\"");
+          double _width_1 = this.width(brick);
+          double _divide = (_width_1 / 2.0);
+          _builder.append(_divide, "\t\t\t\t\t\t\t");
+          _builder.append("\" y=\"");
+          double _height_1 = this.height(brick);
+          double _minus = (-_height_1);
+          double _divide_1 = (_minus / 2.0);
+          _builder.append(_divide_1, "\t\t\t\t\t\t\t");
+          _builder.append("\" z=\"");
+          double _depth_1 = this.depth(brick);
+          double _divide_2 = (_depth_1 / 2.0);
+          _builder.append(_divide_2, "\t\t\t\t\t\t\t");
+          _builder.append("\" />");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t\t\t\t\t\t\t");
+          _builder.append("<Translate x=\"");
+          _builder.append((-((this.P / 2.0) - this.off)), "\t\t\t\t\t\t\t");
+          _builder.append("\" z=\"");
+          _builder.append((-((this.P / 2.0) - this.off)), "\t\t\t\t\t\t\t");
+          _builder.append("\" />");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t\t");
+          _builder.append("</transforms>");
+          _builder.newLine();
+          _builder.append("\t");
+          _builder.append("</Box>");
+          _builder.newLine();
+          {
+            XUnit _xUnits = brick.getXUnits();
+            int _units = _xUnits.getUnits();
+            IntegerRange _upTo = new IntegerRange(1, _units);
+            for(final Integer iX : _upTo) {
+              {
+                ZUnit _zUnits = brick.getZUnits();
+                int _units_1 = _zUnits.getUnits();
+                IntegerRange _upTo_1 = new IntegerRange(1, _units_1);
+                for(final Integer iZ : _upTo_1) {
+                  _builder.append("\t");
+                  _builder.append("<Cylinder radius=\"");
+                  _builder.append(this.r, "\t");
+                  _builder.append("\" height=\"");
+                  _builder.append(this.rh, "\t");
+                  _builder.append("\">");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("<material>");
+                  _builder.newLine();
+                  _builder.append("\t");
+                  _builder.append("\t\t");
+                  _builder.append("<PhongMaterial diffuseColor=\"");
+                  CharSequence _color_1 = this.toColor(brick);
+                  _builder.append(_color_1, "\t\t\t");
+                  _builder.append("\"/>");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("</material>");
+                  _builder.newLine();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("<transforms>");
+                  _builder.newLine();
+                  _builder.append("\t");
+                  _builder.append("\t\t");
+                  _builder.append("<Translate x=\"");
+                  _builder.append((((this.P / 2.0) + (((iX).intValue() - 1) * this.P)) - this.off), "\t\t\t");
+                  _builder.append("\" y=\"");
+                  double _height_2 = this.height(brick);
+                  double _minus_1 = (-_height_2);
+                  double _minus_2 = (_minus_1 - (this.rh / 2));
+                  _builder.append(_minus_2, "\t\t\t");
+                  _builder.append("\" z=\"");
+                  _builder.append((((this.P / 2.0) + (((iZ).intValue() - 1) * 16)) - this.off), "\t\t\t");
+                  _builder.append("\" />");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                  _builder.append("\t\t\t\t\t\t\t\t");
+                  _builder.append("<Translate x=\"");
+                  _builder.append((-((this.P / 2.0) - this.off)), "\t\t\t\t\t\t\t\t\t");
+                  _builder.append("\" z=\"");
+                  _builder.append((-((this.P / 2.0) - this.off)), "\t\t\t\t\t\t\t\t\t");
+                  _builder.append("\" />");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("</transforms>");
+                  _builder.newLine();
+                  _builder.append("\t");
+                  _builder.append("</Cylinder>");
+                  _builder.newLine();
+                }
               }
             }
           }
+          _builder.append("</Group>");
+          _builder.newLine();
         }
-        _builder.append("</Group>");
-        _builder.newLine();
       }
+      return _builder;
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
     }
-    return _builder;
   }
   
   public CharSequence generateFXML(final Assembly a) {

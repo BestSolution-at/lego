@@ -15,24 +15,22 @@ import at.bestsolution.lego.lego.YUnit
 import at.bestsolution.lego.lego.Color
 import at.bestsolution.lego.lego.LegoElement
 import at.bestsolution.lego.lego.Brick
-import at.bestsolution.lego.lego.RoundBrick
-import at.bestsolution.lego.lego.DoorBrick
 import at.bestsolution.lego.lego.Door
+import java.io.FileReader
+
+import static extension com.google.common.io.CharStreams.*
+import at.bestsolution.lego.lego.FxmlInclude
 
 class Util {
+	def load(FxmlInclude include, FileReader f) {
+		return f.readLines.filter[x|!x.trim.startsWith("<?") && ! x.trim.startsWith("<svg") && ! x.trim.startsWith("</svg")].map[x|x.replace('diffuseColor="#ff0000"','diffuseColor="'+(include.eContainer as Brick).fill.toHex+'"').replace('fill="#ff0000"','fill="'+(include.eContainer as Brick).fill.toHex+'"')].join("\n")
+	}
+	
 	def dispatch width(LegoElement e) {
 		return 0
 	}
 	
 	def dispatch width(Brick e) {
-		return e.XUnits.toPixel
-	}
-	
-	def dispatch width(RoundBrick e) {
-		return e.XUnits.toPixel + 1.toXPixel
-	}
-	
-	def dispatch width(DoorBrick e) {
 		return e.XUnits.toPixel
 	}
 	

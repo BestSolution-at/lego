@@ -9,9 +9,9 @@ import at.bestsolution.lego.lego.Item
 import at.bestsolution.lego.lego.Assembly
 import at.bestsolution.lego.lego.LegoElement
 import at.bestsolution.lego.lego.Brick
-import at.bestsolution.lego.lego.RoundBrick
-import at.bestsolution.lego.lego.DoorBrick
 import at.bestsolution.lego.lego.Door
+import at.bestsolution.lego.lego.FxmlInclude
+import java.io.FileReader
 
 class Lego2dSVG implements IGenerator {
 	@Inject
@@ -54,32 +54,16 @@ class Lego2dSVG implements IGenerator {
 	'''
 	
 	def dispatch CharSequence handleLegoElementStart(Brick brick) '''
-	<rect id="«brick.name»" width="«brick.XUnits.toPixel»" height="«brick.YUnits.toPixel»" fill="«brick.fill.toHex»"
+	<g id="«brick.name»"
 	'''
 	
 	def dispatch CharSequence handleLegoElementEnd(Brick brick) '''
-	/>
-	'''
-	
-	def dispatch CharSequence handleLegoElementStart(RoundBrick brick) '''
-	<path id="«brick.name»" fill="«brick.fill.toHex»" stroke-width="0" 
-		d="M 0 0 L «brick.XUnits.toPixel» 0 L «brick.XUnits.toPixel+1.toXPixel» «brick.YUnits.toPixel» L 0 «brick.YUnits.toPixel» z"
-	'''
-	
-	def dispatch CharSequence handleLegoElementEnd(RoundBrick brick) '''
-	/>
-	'''
-	
-	def dispatch CharSequence handleLegoElementStart(DoorBrick brick) '''
-	<g id="«brick.name»" 
-	'''
-
-	def dispatch CharSequence handleLegoElementEnd(DoorBrick brick) '''
 	>
-		<rect y="0" width="«brick.XUnits.toPixel»" height="5" fill="«brick.fill.toHex»"/>
-		<rect y="«brick.YUnits.toPixel-5»" width="«brick.XUnits.toPixel»" height="5" fill="«brick.fill.toHex»"/>
-		<rect x="0" height="«brick.YUnits.toPixel»" width="5" fill="«brick.fill.toHex»"/>
-		<rect x="«brick.XUnits.toPixel-5»" height="«brick.YUnits.toPixel»" width="5" fill="«brick.fill.toHex»"/>
+		«IF brick.source instanceof FxmlInclude»
+			«(brick.source as FxmlInclude).load(new FileReader((brick.source as FxmlInclude).source2d.replace(".fxml",".svg")))»
+		«ELSE»
+			<rect width="«brick.XUnits.toPixel»" height="«brick.YUnits.toPixel»" fill="«brick.fill.toHex»" />
+		«ENDIF»
 	</g>
 	'''
 	

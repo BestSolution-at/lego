@@ -293,31 +293,11 @@ ruleItem returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getItemAccess().getRoundBrickParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getItemAccess().getDoorParserRuleCall_1()); 
     }
-    this_RoundBrick_1=ruleRoundBrick
+    this_Door_1=ruleDoor
     { 
-        $current = $this_RoundBrick_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getItemAccess().getDoorBrickParserRuleCall_2()); 
-    }
-    this_DoorBrick_2=ruleDoorBrick
-    { 
-        $current = $this_DoorBrick_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getItemAccess().getDoorParserRuleCall_3()); 
-    }
-    this_Door_3=ruleDoor
-    { 
-        $current = $this_Door_3.current; 
+        $current = $this_Door_1.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -744,11 +724,19 @@ ruleFxmlInclude returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getFxmlIncludeAccess().getFxmlKeyword_0());
     }
+	otherlv_1='2d' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getFxmlIncludeAccess().getDKeyword_1());
+    }
+	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getFxmlIncludeAccess().getLeftCurlyBracketKeyword_2());
+    }
 (
 (
-		lv_source_1_0=RULE_STRING
+		lv_source2d_3_0=RULE_STRING
 		{
-			newLeafNode(lv_source_1_0, grammarAccess.getFxmlIncludeAccess().getSourceSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_source2d_3_0, grammarAccess.getFxmlIncludeAccess().getSource2dSTRINGTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -756,21 +744,51 @@ ruleFxmlInclude returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"source",
-        		lv_source_1_0, 
+       			"source2d",
+        		lv_source2d_3_0, 
         		"STRING");
 	    }
 
 )
-)(	otherlv_2='origin' 
+)	otherlv_4='}' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getFxmlIncludeAccess().getOriginKeyword_2_0());
+    	newLeafNode(otherlv_4, grammarAccess.getFxmlIncludeAccess().getRightCurlyBracketKeyword_4());
+    }
+	otherlv_5='3d' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getFxmlIncludeAccess().getDKeyword_5());
+    }
+	otherlv_6='{' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getFxmlIncludeAccess().getLeftCurlyBracketKeyword_6());
     }
 (
 (
-		lv_originX_3_0=RULE_FLOAT
+		lv_source3d_7_0=RULE_STRING
 		{
-			newLeafNode(lv_originX_3_0, grammarAccess.getFxmlIncludeAccess().getOriginXFLOATTerminalRuleCall_2_1_0()); 
+			newLeafNode(lv_source3d_7_0, grammarAccess.getFxmlIncludeAccess().getSource3dSTRINGTerminalRuleCall_7_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFxmlIncludeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"source3d",
+        		lv_source3d_7_0, 
+        		"STRING");
+	    }
+
+)
+)(	otherlv_8='origin' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getFxmlIncludeAccess().getOriginKeyword_8_0());
+    }
+(
+(
+		lv_originX_9_0=RULE_FLOAT
+		{
+			newLeafNode(lv_originX_9_0, grammarAccess.getFxmlIncludeAccess().getOriginXFLOATTerminalRuleCall_8_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -779,16 +797,16 @@ ruleFxmlInclude returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"originX",
-        		lv_originX_3_0, 
+        		lv_originX_9_0, 
         		"FLOAT");
 	    }
 
 )
 )(
 (
-		lv_originY_4_0=RULE_FLOAT
+		lv_originY_10_0=RULE_FLOAT
 		{
-			newLeafNode(lv_originY_4_0, grammarAccess.getFxmlIncludeAccess().getOriginYFLOATTerminalRuleCall_2_2_0()); 
+			newLeafNode(lv_originY_10_0, grammarAccess.getFxmlIncludeAccess().getOriginYFLOATTerminalRuleCall_8_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -797,16 +815,16 @@ ruleFxmlInclude returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"originY",
-        		lv_originY_4_0, 
+        		lv_originY_10_0, 
         		"FLOAT");
 	    }
 
 )
 )(
 (
-		lv_originZ_5_0=RULE_FLOAT
+		lv_originZ_11_0=RULE_FLOAT
 		{
-			newLeafNode(lv_originZ_5_0, grammarAccess.getFxmlIncludeAccess().getOriginZFLOATTerminalRuleCall_2_3_0()); 
+			newLeafNode(lv_originZ_11_0, grammarAccess.getFxmlIncludeAccess().getOriginZFLOATTerminalRuleCall_8_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -815,250 +833,16 @@ ruleFxmlInclude returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"originZ",
-        		lv_originZ_5_0, 
+        		lv_originZ_11_0, 
         		"FLOAT");
 	    }
 
 )
-))?)
-;
-
-
-
-
-
-// Entry rule entryRuleRoundBrick
-entryRuleRoundBrick returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getRoundBrickRule()); }
-	 iv_ruleRoundBrick=ruleRoundBrick 
-	 { $current=$iv_ruleRoundBrick.current; } 
-	 EOF 
-;
-
-// Rule RoundBrick
-ruleRoundBrick returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='rbrick' 
+))?	otherlv_12='}' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getRoundBrickAccess().getRbrickKeyword_0());
+    	newLeafNode(otherlv_12, grammarAccess.getFxmlIncludeAccess().getRightCurlyBracketKeyword_9());
     }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getNameValidIDParserRuleCall_1_0()); 
-	    }
-		lv_name_1_0=ruleValidID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_1_0, 
-        		"ValidID");
-	        afterParserOrEnumRuleCall();
-	    }
-
 )
-)	otherlv_2='units' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getRoundBrickAccess().getUnitsKeyword_2());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getXUnitsXUnitParserRuleCall_3_0()); 
-	    }
-		lv_xUnits_3_0=ruleXUnit		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"xUnits",
-        		lv_xUnits_3_0, 
-        		"XUnit");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getYUnitsYUnitParserRuleCall_4_0()); 
-	    }
-		lv_yUnits_4_0=ruleYUnit		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"yUnits",
-        		lv_yUnits_4_0, 
-        		"YUnit");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getZUnitsZUnitParserRuleCall_5_0()); 
-	    }
-		lv_zUnits_5_0=ruleZUnit		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"zUnits",
-        		lv_zUnits_5_0, 
-        		"ZUnit");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRoundBrickAccess().getFillColorParserRuleCall_6_0()); 
-	    }
-		lv_fill_6_0=ruleColor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRoundBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"fill",
-        		lv_fill_6_0, 
-        		"Color");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))
-;
-
-
-
-
-
-// Entry rule entryRuleDoorBrick
-entryRuleDoorBrick returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getDoorBrickRule()); }
-	 iv_ruleDoorBrick=ruleDoorBrick 
-	 { $current=$iv_ruleDoorBrick.current; } 
-	 EOF 
-;
-
-// Rule DoorBrick
-ruleDoorBrick returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='dbrick' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getDoorBrickAccess().getDbrickKeyword_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getDoorBrickAccess().getNameValidIDParserRuleCall_1_0()); 
-	    }
-		lv_name_1_0=ruleValidID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getDoorBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_1_0, 
-        		"ValidID");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_2='units' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getDoorBrickAccess().getUnitsKeyword_2());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getDoorBrickAccess().getXUnitsXUnitParserRuleCall_3_0()); 
-	    }
-		lv_xUnits_3_0=ruleXUnit		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getDoorBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"xUnits",
-        		lv_xUnits_3_0, 
-        		"XUnit");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getDoorBrickAccess().getYUnitsYUnitParserRuleCall_4_0()); 
-	    }
-		lv_yUnits_4_0=ruleYUnit		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getDoorBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"yUnits",
-        		lv_yUnits_4_0, 
-        		"YUnit");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getDoorBrickAccess().getZUnitsZUnitParserRuleCall_5_0()); 
-	    }
-		lv_zUnits_5_0=ruleZUnit		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getDoorBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"zUnits",
-        		lv_zUnits_5_0, 
-        		"ZUnit");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getDoorBrickAccess().getFillColorParserRuleCall_6_0()); 
-	    }
-		lv_fill_6_0=ruleColor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getDoorBrickRule());
-	        }
-       		set(
-       			$current, 
-       			"fill",
-        		lv_fill_6_0, 
-        		"Color");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))
 ;
 
 
@@ -1381,7 +1165,7 @@ RULE_FLOAT : '-'? ('0'..'9')+ '.' ('0'..'9')*;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
+RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 

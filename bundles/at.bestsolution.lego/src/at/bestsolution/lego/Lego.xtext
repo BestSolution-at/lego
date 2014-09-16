@@ -35,7 +35,7 @@ LegoElement:
 ;
 
 Item:
-	Brick | RoundBrick | DoorBrick | Door
+	Brick | Door
 ;
 
 Color:
@@ -67,15 +67,7 @@ Generated:
 ;
 
 FxmlInclude:
-	'fxml' source=STRING ('origin' originX=FLOAT originY=FLOAT originZ=FLOAT)?
-;
-
-RoundBrick: 
-	'rbrick' name=ValidID 'units' xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
-;
-
-DoorBrick:
-	'dbrick' name=ValidID 'units' xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
+	'fxml' '2d' '{' source2d=STRING '}' '3d' '{' source3d=STRING ('origin' originX=FLOAT originY=FLOAT originZ=FLOAT)? '}'
 ;
 
 Door:

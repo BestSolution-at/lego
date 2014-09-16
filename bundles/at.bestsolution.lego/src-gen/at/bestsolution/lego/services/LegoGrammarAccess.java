@@ -146,28 +146,20 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Item");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cBrickParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cRoundBrickParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cDoorBrickParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cDoorParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cDoorParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Item:
-		//	Brick | RoundBrick | DoorBrick | Door;
+		//	Brick | Door;
 		public ParserRule getRule() { return rule; }
 
-		//Brick | RoundBrick | DoorBrick | Door
+		//Brick | Door
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Brick
 		public RuleCall getBrickParserRuleCall_0() { return cBrickParserRuleCall_0; }
 
-		//RoundBrick
-		public RuleCall getRoundBrickParserRuleCall_1() { return cRoundBrickParserRuleCall_1; }
-
-		//DoorBrick
-		public RuleCall getDoorBrickParserRuleCall_2() { return cDoorBrickParserRuleCall_2; }
-
 		//Door
-		public RuleCall getDoorParserRuleCall_3() { return cDoorParserRuleCall_3; }
+		public RuleCall getDoorParserRuleCall_1() { return cDoorParserRuleCall_1; }
 	}
 
 	public class ColorElements extends AbstractParserRuleElementFinder {
@@ -362,176 +354,89 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FxmlInclude");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFxmlKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cSourceAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cSourceSTRINGTerminalRuleCall_1_0 = (RuleCall)cSourceAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cOriginKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cOriginXAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cOriginXFLOATTerminalRuleCall_2_1_0 = (RuleCall)cOriginXAssignment_2_1.eContents().get(0);
-		private final Assignment cOriginYAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cOriginYFLOATTerminalRuleCall_2_2_0 = (RuleCall)cOriginYAssignment_2_2.eContents().get(0);
-		private final Assignment cOriginZAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
-		private final RuleCall cOriginZFLOATTerminalRuleCall_2_3_0 = (RuleCall)cOriginZAssignment_2_3.eContents().get(0);
+		private final Keyword cDKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSource2dAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSource2dSTRINGTerminalRuleCall_3_0 = (RuleCall)cSource2dAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cDKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cLeftCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cSource3dAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cSource3dSTRINGTerminalRuleCall_7_0 = (RuleCall)cSource3dAssignment_7.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cOriginKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cOriginXAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cOriginXFLOATTerminalRuleCall_8_1_0 = (RuleCall)cOriginXAssignment_8_1.eContents().get(0);
+		private final Assignment cOriginYAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
+		private final RuleCall cOriginYFLOATTerminalRuleCall_8_2_0 = (RuleCall)cOriginYAssignment_8_2.eContents().get(0);
+		private final Assignment cOriginZAssignment_8_3 = (Assignment)cGroup_8.eContents().get(3);
+		private final RuleCall cOriginZFLOATTerminalRuleCall_8_3_0 = (RuleCall)cOriginZAssignment_8_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//FxmlInclude:
-		//	"fxml" source=STRING ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?;
+		//	"fxml" "2d" "{" source2d=STRING "}" "3d" "{" source3d=STRING ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?
+		//	"}";
 		public ParserRule getRule() { return rule; }
 
-		//"fxml" source=STRING ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?
+		//"fxml" "2d" "{" source2d=STRING "}" "3d" "{" source3d=STRING ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"fxml"
 		public Keyword getFxmlKeyword_0() { return cFxmlKeyword_0; }
 
-		//source=STRING
-		public Assignment getSourceAssignment_1() { return cSourceAssignment_1; }
+		//"2d"
+		public Keyword getDKeyword_1() { return cDKeyword_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//source2d=STRING
+		public Assignment getSource2dAssignment_3() { return cSource2dAssignment_3; }
 
 		//STRING
-		public RuleCall getSourceSTRINGTerminalRuleCall_1_0() { return cSourceSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getSource2dSTRINGTerminalRuleCall_3_0() { return cSource2dSTRINGTerminalRuleCall_3_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+
+		//"3d"
+		public Keyword getDKeyword_5() { return cDKeyword_5; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_6() { return cLeftCurlyBracketKeyword_6; }
+
+		//source3d=STRING
+		public Assignment getSource3dAssignment_7() { return cSource3dAssignment_7; }
+
+		//STRING
+		public RuleCall getSource3dSTRINGTerminalRuleCall_7_0() { return cSource3dSTRINGTerminalRuleCall_7_0; }
 
 		//("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_8() { return cGroup_8; }
 
 		//"origin"
-		public Keyword getOriginKeyword_2_0() { return cOriginKeyword_2_0; }
+		public Keyword getOriginKeyword_8_0() { return cOriginKeyword_8_0; }
 
 		//originX=FLOAT
-		public Assignment getOriginXAssignment_2_1() { return cOriginXAssignment_2_1; }
+		public Assignment getOriginXAssignment_8_1() { return cOriginXAssignment_8_1; }
 
 		//FLOAT
-		public RuleCall getOriginXFLOATTerminalRuleCall_2_1_0() { return cOriginXFLOATTerminalRuleCall_2_1_0; }
+		public RuleCall getOriginXFLOATTerminalRuleCall_8_1_0() { return cOriginXFLOATTerminalRuleCall_8_1_0; }
 
 		//originY=FLOAT
-		public Assignment getOriginYAssignment_2_2() { return cOriginYAssignment_2_2; }
+		public Assignment getOriginYAssignment_8_2() { return cOriginYAssignment_8_2; }
 
 		//FLOAT
-		public RuleCall getOriginYFLOATTerminalRuleCall_2_2_0() { return cOriginYFLOATTerminalRuleCall_2_2_0; }
+		public RuleCall getOriginYFLOATTerminalRuleCall_8_2_0() { return cOriginYFLOATTerminalRuleCall_8_2_0; }
 
 		//originZ=FLOAT
-		public Assignment getOriginZAssignment_2_3() { return cOriginZAssignment_2_3; }
+		public Assignment getOriginZAssignment_8_3() { return cOriginZAssignment_8_3; }
 
 		//FLOAT
-		public RuleCall getOriginZFLOATTerminalRuleCall_2_3_0() { return cOriginZFLOATTerminalRuleCall_2_3_0; }
-	}
+		public RuleCall getOriginZFLOATTerminalRuleCall_8_3_0() { return cOriginZFLOATTerminalRuleCall_8_3_0; }
 
-	public class RoundBrickElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RoundBrick");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cRbrickKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameValidIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cUnitsKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cXUnitsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cXUnitsXUnitParserRuleCall_3_0 = (RuleCall)cXUnitsAssignment_3.eContents().get(0);
-		private final Assignment cYUnitsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cYUnitsYUnitParserRuleCall_4_0 = (RuleCall)cYUnitsAssignment_4.eContents().get(0);
-		private final Assignment cZUnitsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cZUnitsZUnitParserRuleCall_5_0 = (RuleCall)cZUnitsAssignment_5.eContents().get(0);
-		private final Assignment cFillAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cFillColorParserRuleCall_6_0 = (RuleCall)cFillAssignment_6.eContents().get(0);
-		
-		//RoundBrick:
-		//	"rbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color;
-		public ParserRule getRule() { return rule; }
-
-		//"rbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
-		public Group getGroup() { return cGroup; }
-
-		//"rbrick"
-		public Keyword getRbrickKeyword_0() { return cRbrickKeyword_0; }
-
-		//name=ValidID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ValidID
-		public RuleCall getNameValidIDParserRuleCall_1_0() { return cNameValidIDParserRuleCall_1_0; }
-
-		//"units"
-		public Keyword getUnitsKeyword_2() { return cUnitsKeyword_2; }
-
-		//xUnits=XUnit
-		public Assignment getXUnitsAssignment_3() { return cXUnitsAssignment_3; }
-
-		//XUnit
-		public RuleCall getXUnitsXUnitParserRuleCall_3_0() { return cXUnitsXUnitParserRuleCall_3_0; }
-
-		//yUnits=YUnit
-		public Assignment getYUnitsAssignment_4() { return cYUnitsAssignment_4; }
-
-		//YUnit
-		public RuleCall getYUnitsYUnitParserRuleCall_4_0() { return cYUnitsYUnitParserRuleCall_4_0; }
-
-		//zUnits=ZUnit
-		public Assignment getZUnitsAssignment_5() { return cZUnitsAssignment_5; }
-
-		//ZUnit
-		public RuleCall getZUnitsZUnitParserRuleCall_5_0() { return cZUnitsZUnitParserRuleCall_5_0; }
-
-		//fill=Color
-		public Assignment getFillAssignment_6() { return cFillAssignment_6; }
-
-		//Color
-		public RuleCall getFillColorParserRuleCall_6_0() { return cFillColorParserRuleCall_6_0; }
-	}
-
-	public class DoorBrickElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DoorBrick");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDbrickKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameValidIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cUnitsKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cXUnitsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cXUnitsXUnitParserRuleCall_3_0 = (RuleCall)cXUnitsAssignment_3.eContents().get(0);
-		private final Assignment cYUnitsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cYUnitsYUnitParserRuleCall_4_0 = (RuleCall)cYUnitsAssignment_4.eContents().get(0);
-		private final Assignment cZUnitsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cZUnitsZUnitParserRuleCall_5_0 = (RuleCall)cZUnitsAssignment_5.eContents().get(0);
-		private final Assignment cFillAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cFillColorParserRuleCall_6_0 = (RuleCall)cFillAssignment_6.eContents().get(0);
-		
-		//DoorBrick:
-		//	"dbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color;
-		public ParserRule getRule() { return rule; }
-
-		//"dbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color
-		public Group getGroup() { return cGroup; }
-
-		//"dbrick"
-		public Keyword getDbrickKeyword_0() { return cDbrickKeyword_0; }
-
-		//name=ValidID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ValidID
-		public RuleCall getNameValidIDParserRuleCall_1_0() { return cNameValidIDParserRuleCall_1_0; }
-
-		//"units"
-		public Keyword getUnitsKeyword_2() { return cUnitsKeyword_2; }
-
-		//xUnits=XUnit
-		public Assignment getXUnitsAssignment_3() { return cXUnitsAssignment_3; }
-
-		//XUnit
-		public RuleCall getXUnitsXUnitParserRuleCall_3_0() { return cXUnitsXUnitParserRuleCall_3_0; }
-
-		//yUnits=YUnit
-		public Assignment getYUnitsAssignment_4() { return cYUnitsAssignment_4; }
-
-		//YUnit
-		public RuleCall getYUnitsYUnitParserRuleCall_4_0() { return cYUnitsYUnitParserRuleCall_4_0; }
-
-		//zUnits=ZUnit
-		public Assignment getZUnitsAssignment_5() { return cZUnitsAssignment_5; }
-
-		//ZUnit
-		public RuleCall getZUnitsZUnitParserRuleCall_5_0() { return cZUnitsZUnitParserRuleCall_5_0; }
-
-		//fill=Color
-		public Assignment getFillAssignment_6() { return cFillAssignment_6; }
-
-		//Color
-		public RuleCall getFillColorParserRuleCall_6_0() { return cFillColorParserRuleCall_6_0; }
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class DoorElements extends AbstractParserRuleElementFinder {
@@ -709,37 +614,54 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	private ModelElements pModel;
-	private ValidIDElements pValidID;
-	private QualifiedNameElements pQualifiedName;
-	private ItemRepositoryElements pItemRepository;
-	private LegoElementElements pLegoElement;
-	private ItemElements pItem;
-	private ColorElements pColor;
-	private XUnitElements pXUnit;
-	private YUnitElements pYUnit;
-	private ZUnitElements pZUnit;
-	private BrickElements pBrick;
-	private SourceElements pSource;
-	private GeneratedElements pGenerated;
-	private FxmlIncludeElements pFxmlInclude;
-	private RoundBrickElements pRoundBrick;
-	private DoorBrickElements pDoorBrick;
-	private DoorElements pDoor;
-	private AssemblyElements pAssembly;
-	private AssemblyItemElements pAssemblyItem;
-	private TerminalRule tINT;
-	private TerminalRule tFLOAT;
+	private final ModelElements pModel;
+	private final ValidIDElements pValidID;
+	private final QualifiedNameElements pQualifiedName;
+	private final ItemRepositoryElements pItemRepository;
+	private final LegoElementElements pLegoElement;
+	private final ItemElements pItem;
+	private final ColorElements pColor;
+	private final XUnitElements pXUnit;
+	private final YUnitElements pYUnit;
+	private final ZUnitElements pZUnit;
+	private final BrickElements pBrick;
+	private final SourceElements pSource;
+	private final GeneratedElements pGenerated;
+	private final FxmlIncludeElements pFxmlInclude;
+	private final DoorElements pDoor;
+	private final AssemblyElements pAssembly;
+	private final AssemblyItemElements pAssemblyItem;
+	private final TerminalRule tINT;
+	private final TerminalRule tFLOAT;
 	
 	private final Grammar grammar;
 
-	private TerminalsGrammarAccess gaTerminals;
+	private final TerminalsGrammarAccess gaTerminals;
 
 	@Inject
 	public LegoGrammarAccess(GrammarProvider grammarProvider,
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
+		this.pModel = new ModelElements();
+		this.pValidID = new ValidIDElements();
+		this.pQualifiedName = new QualifiedNameElements();
+		this.pItemRepository = new ItemRepositoryElements();
+		this.pLegoElement = new LegoElementElements();
+		this.pItem = new ItemElements();
+		this.pColor = new ColorElements();
+		this.pXUnit = new XUnitElements();
+		this.pYUnit = new YUnitElements();
+		this.pZUnit = new ZUnitElements();
+		this.pBrick = new BrickElements();
+		this.pSource = new SourceElements();
+		this.pGenerated = new GeneratedElements();
+		this.pFxmlInclude = new FxmlIncludeElements();
+		this.pDoor = new DoorElements();
+		this.pAssembly = new AssemblyElements();
+		this.pAssemblyItem = new AssemblyItemElements();
+		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT");
+		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "FLOAT");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -772,7 +694,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//Model:
 	//	repo=ItemRepository | assembly=Assembly;
 	public ModelElements getModelAccess() {
-		return (pModel != null) ? pModel : (pModel = new ModelElements());
+		return pModel;
 	}
 	
 	public ParserRule getModelRule() {
@@ -782,7 +704,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//ValidID:
 	//	ID;
 	public ValidIDElements getValidIDAccess() {
-		return (pValidID != null) ? pValidID : (pValidID = new ValidIDElements());
+		return pValidID;
 	}
 	
 	public ParserRule getValidIDRule() {
@@ -792,7 +714,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//QualifiedName:
 	//	ValidID ("." ValidID)*;
 	public QualifiedNameElements getQualifiedNameAccess() {
-		return (pQualifiedName != null) ? pQualifiedName : (pQualifiedName = new QualifiedNameElements());
+		return pQualifiedName;
 	}
 	
 	public ParserRule getQualifiedNameRule() {
@@ -802,7 +724,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//ItemRepository:
 	//	name=ValidID "{" elementList+=Item+ "}";
 	public ItemRepositoryElements getItemRepositoryAccess() {
-		return (pItemRepository != null) ? pItemRepository : (pItemRepository = new ItemRepositoryElements());
+		return pItemRepository;
 	}
 	
 	public ParserRule getItemRepositoryRule() {
@@ -812,7 +734,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//LegoElement:
 	//	Item | Assembly;
 	public LegoElementElements getLegoElementAccess() {
-		return (pLegoElement != null) ? pLegoElement : (pLegoElement = new LegoElementElements());
+		return pLegoElement;
 	}
 	
 	public ParserRule getLegoElementRule() {
@@ -820,9 +742,9 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Item:
-	//	Brick | RoundBrick | DoorBrick | Door;
+	//	Brick | Door;
 	public ItemElements getItemAccess() {
-		return (pItem != null) ? pItem : (pItem = new ItemElements());
+		return pItem;
 	}
 	
 	public ParserRule getItemRule() {
@@ -832,7 +754,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//Color:
 	//	"rgb" r=INT g=INT b=INT;
 	public ColorElements getColorAccess() {
-		return (pColor != null) ? pColor : (pColor = new ColorElements());
+		return pColor;
 	}
 	
 	public ParserRule getColorRule() {
@@ -842,7 +764,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//XUnit:
 	//	units=INT;
 	public XUnitElements getXUnitAccess() {
-		return (pXUnit != null) ? pXUnit : (pXUnit = new XUnitElements());
+		return pXUnit;
 	}
 	
 	public ParserRule getXUnitRule() {
@@ -852,7 +774,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//YUnit:
 	//	units=INT;
 	public YUnitElements getYUnitAccess() {
-		return (pYUnit != null) ? pYUnit : (pYUnit = new YUnitElements());
+		return pYUnit;
 	}
 	
 	public ParserRule getYUnitRule() {
@@ -862,7 +784,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//ZUnit:
 	//	units=INT;
 	public ZUnitElements getZUnitAccess() {
-		return (pZUnit != null) ? pZUnit : (pZUnit = new ZUnitElements());
+		return pZUnit;
 	}
 	
 	public ParserRule getZUnitRule() {
@@ -872,7 +794,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//Brick:
 	//	"brick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color source=Source;
 	public BrickElements getBrickAccess() {
-		return (pBrick != null) ? pBrick : (pBrick = new BrickElements());
+		return pBrick;
 	}
 	
 	public ParserRule getBrickRule() {
@@ -882,7 +804,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//Source:
 	//	Generated | FxmlInclude;
 	public SourceElements getSourceAccess() {
-		return (pSource != null) ? pSource : (pSource = new SourceElements());
+		return pSource;
 	}
 	
 	public ParserRule getSourceRule() {
@@ -892,7 +814,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//Generated:
 	//	"generated";
 	public GeneratedElements getGeneratedAccess() {
-		return (pGenerated != null) ? pGenerated : (pGenerated = new GeneratedElements());
+		return pGenerated;
 	}
 	
 	public ParserRule getGeneratedRule() {
@@ -900,39 +822,20 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FxmlInclude:
-	//	"fxml" source=STRING ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?;
+	//	"fxml" "2d" "{" source2d=STRING "}" "3d" "{" source3d=STRING ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?
+	//	"}";
 	public FxmlIncludeElements getFxmlIncludeAccess() {
-		return (pFxmlInclude != null) ? pFxmlInclude : (pFxmlInclude = new FxmlIncludeElements());
+		return pFxmlInclude;
 	}
 	
 	public ParserRule getFxmlIncludeRule() {
 		return getFxmlIncludeAccess().getRule();
 	}
 
-	//RoundBrick:
-	//	"rbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color;
-	public RoundBrickElements getRoundBrickAccess() {
-		return (pRoundBrick != null) ? pRoundBrick : (pRoundBrick = new RoundBrickElements());
-	}
-	
-	public ParserRule getRoundBrickRule() {
-		return getRoundBrickAccess().getRule();
-	}
-
-	//DoorBrick:
-	//	"dbrick" name=ValidID "units" xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color;
-	public DoorBrickElements getDoorBrickAccess() {
-		return (pDoorBrick != null) ? pDoorBrick : (pDoorBrick = new DoorBrickElements());
-	}
-	
-	public ParserRule getDoorBrickRule() {
-		return getDoorBrickAccess().getRule();
-	}
-
 	//Door:
 	//	"door" name=ValidID "units" xUnits=XUnit yUnits=YUnit fill=Color;
 	public DoorElements getDoorAccess() {
-		return (pDoor != null) ? pDoor : (pDoor = new DoorElements());
+		return pDoor;
 	}
 	
 	public ParserRule getDoorRule() {
@@ -942,7 +845,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//Assembly:
 	//	"assembly" name=ValidID "{" items+=AssemblyItem+ "}";
 	public AssemblyElements getAssemblyAccess() {
-		return (pAssembly != null) ? pAssembly : (pAssembly = new AssemblyElements());
+		return pAssembly;
 	}
 	
 	public ParserRule getAssemblyRule() {
@@ -953,7 +856,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//	element=[LegoElement|QualifiedName] "pos" xUnits=XUnit yUnits=YUnit zUnits=ZUnit ("transform" transform=("rotate180" |
 	//	"rotate90" | "rotate270"))?;
 	public AssemblyItemElements getAssemblyItemAccess() {
-		return (pAssemblyItem != null) ? pAssemblyItem : (pAssemblyItem = new AssemblyItemElements());
+		return pAssemblyItem;
 	}
 	
 	public ParserRule getAssemblyItemRule() {
@@ -963,13 +866,13 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	//terminal INT returns ecore::EInt:
 	//	"-"? "0".."9"+;
 	public TerminalRule getINTRule() {
-		return (tINT != null) ? tINT : (tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT"));
+		return tINT;
 	} 
 
 	//terminal FLOAT returns ecore::EFloat:
 	//	"-"? "0".."9"+ "." "0".."9"*;
 	public TerminalRule getFLOATRule() {
-		return (tFLOAT != null) ? tFLOAT : (tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "FLOAT"));
+		return tFLOAT;
 	} 
 
 	//terminal ID:
@@ -979,8 +882,8 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
+	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
+	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
