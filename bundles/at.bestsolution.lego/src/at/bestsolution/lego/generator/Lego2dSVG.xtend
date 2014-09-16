@@ -21,10 +21,10 @@ class Lego2dSVG implements IGenerator {
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		val m = input.contents.head as Model
 		if( m.assembly != null ) {
-			fsa.generateFile(m.assembly.name+".svg",m.assembly.generateSVG)
+			fsa.generateFile("2d/" + m.assembly.name+".svg",m.assembly.generateSVG)
 		} else {
 			m.repo.elementList.forEach[
-				fsa.generateFile(it.name+".svg",it.generateSVG)
+				fsa.generateFile("2d/" + it.name+".svg",it.generateSVG)
 			]
 		}		
 	}

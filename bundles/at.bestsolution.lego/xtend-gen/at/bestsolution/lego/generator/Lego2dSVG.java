@@ -42,19 +42,21 @@ public class Lego2dSVG implements IGenerator {
     if (_notEquals) {
       Assembly _assembly_1 = m.getAssembly();
       String _name = _assembly_1.getName();
-      String _plus = (_name + ".svg");
+      String _plus = ("2d/" + _name);
+      String _plus_1 = (_plus + ".svg");
       Assembly _assembly_2 = m.getAssembly();
       CharSequence _generateSVG = this.generateSVG(_assembly_2);
-      fsa.generateFile(_plus, _generateSVG);
+      fsa.generateFile(_plus_1, _generateSVG);
     } else {
       ItemRepository _repo = m.getRepo();
       EList<Item> _elementList = _repo.getElementList();
       final Consumer<Item> _function = new Consumer<Item>() {
         public void accept(final Item it) {
           String _name = it.getName();
-          String _plus = (_name + ".svg");
+          String _plus = ("2d/" + _name);
+          String _plus_1 = (_plus + ".svg");
           CharSequence _generateSVG = Lego2dSVG.this.generateSVG(it);
-          fsa.generateFile(_plus, _generateSVG);
+          fsa.generateFile(_plus_1, _generateSVG);
         }
       };
       _elementList.forEach(_function);

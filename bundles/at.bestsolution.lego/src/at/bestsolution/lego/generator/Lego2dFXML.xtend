@@ -31,10 +31,10 @@ class Lego2dFXML implements IGenerator {
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		val m = input.contents.head as Model
 		if( m.assembly != null ) {
-			fsa.generateFile(m.assembly.name+".fxml",m.assembly.generateFXML)
+			fsa.generateFile("2d/" + m.assembly.name+".fxml",m.assembly.generateFXML)
 		} else {
 			m.repo.elementList.forEach[
-				fsa.generateFile(it.name+".fxml",it.generateFXML)
+				fsa.generateFile("2d/" + it.name+".fxml",it.generateFXML)
 			]
 		}		
 	}
