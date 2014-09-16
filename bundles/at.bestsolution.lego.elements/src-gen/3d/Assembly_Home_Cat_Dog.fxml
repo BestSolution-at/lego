@@ -520,7 +520,7 @@
 				    </TriangleMesh>
 				  </mesh>
 				  <material>
-				  	<PhongMaterial diffuseColor="#ffff00"></PhongMaterial>
+				  	<PhongMaterial diffuseColor="#ff0000"></PhongMaterial>
 				  </material>
 				</MeshView>
 				<transforms>
@@ -554,7 +554,7 @@
 				    </TriangleMesh>
 				  </mesh>
 				  <material>
-				  	<PhongMaterial diffuseColor="#ffff00"></PhongMaterial>
+				  	<PhongMaterial diffuseColor="#ff0000"></PhongMaterial>
 				  </material>
 				</MeshView>
 				<transforms>

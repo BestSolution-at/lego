@@ -1,7 +1,7 @@
 assembly Assembly_Home_Cat_Dog {
 	DuploItems.Brick_8_1_2_green 			pos 0 0 0      
 	DuploItems.DoorBrick_4_6_2_yellow		pos 0 -1 0
-	DuploItems.Brick_2_2_2_light_green 		pos 4 -1 0
+	DuploItems.Brick_2_2_2_light_green 		pos 4 -1 0 
 	DuploItems.Brick_2_4_1_light_blue		pos 6 -1 1
 	DuploItems.Brick_2_2_2_red 				pos 4 -5 0 
 	DuploItems.Brick_2_2_2_orange 			pos 4 -3 0	

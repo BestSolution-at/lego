@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-<rect id="DoorBrick_4_6_2_yellow" width="120" height="120" fill="#ffff00"
-/>
+<g id="DoorBrick_4_6_2_yellow"
+>
+	<rect width="120" height="120" fill="#ffff00" />
+</g>
 </svg>
