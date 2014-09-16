@@ -24,7 +24,11 @@ class LegoGenerator implements IGenerator {
 	@Inject
 	Lego2dSVG lego2dsvg
 	
+	@Inject
+	Lego3dFXML lego3dfxml
+	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		lego2dsvg.doGenerate(resource,fsa)
+		lego3dfxml.doGenerate(resource, fsa)
 	}
 }

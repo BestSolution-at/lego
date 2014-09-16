@@ -4,6 +4,7 @@ package at.bestsolution.lego.lego.impl;
 
 import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.LegoPackage;
+import at.bestsolution.lego.lego.Source;
 import at.bestsolution.lego.lego.ZUnit;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link at.bestsolution.lego.lego.impl.BrickImpl#getZUnits <em>ZUnits</em>}</li>
+ *   <li>{@link at.bestsolution.lego.lego.impl.BrickImpl#getSource <em>Source</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,6 +40,16 @@ public class BrickImpl extends ItemImpl implements Brick
    * @ordered
    */
   protected ZUnit zUnits;
+
+  /**
+   * The cached value of the '{@link #getSource() <em>Source</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSource()
+   * @generated
+   * @ordered
+   */
+  protected Source source;
 
   /**
    * <!-- begin-user-doc -->
@@ -113,6 +125,54 @@ public class BrickImpl extends ItemImpl implements Brick
    * <!-- end-user-doc -->
    * @generated
    */
+  public Source getSource()
+  {
+    return source;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSource(Source newSource, NotificationChain msgs)
+  {
+    Source oldSource = source;
+    source = newSource;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LegoPackage.BRICK__SOURCE, oldSource, newSource);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSource(Source newSource)
+  {
+    if (newSource != source)
+    {
+      NotificationChain msgs = null;
+      if (source != null)
+        msgs = ((InternalEObject)source).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LegoPackage.BRICK__SOURCE, null, msgs);
+      if (newSource != null)
+        msgs = ((InternalEObject)newSource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LegoPackage.BRICK__SOURCE, null, msgs);
+      msgs = basicSetSource(newSource, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LegoPackage.BRICK__SOURCE, newSource, newSource));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -120,6 +180,8 @@ public class BrickImpl extends ItemImpl implements Brick
     {
       case LegoPackage.BRICK__ZUNITS:
         return basicSetZUnits(null, msgs);
+      case LegoPackage.BRICK__SOURCE:
+        return basicSetSource(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -136,6 +198,8 @@ public class BrickImpl extends ItemImpl implements Brick
     {
       case LegoPackage.BRICK__ZUNITS:
         return getZUnits();
+      case LegoPackage.BRICK__SOURCE:
+        return getSource();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -152,6 +216,9 @@ public class BrickImpl extends ItemImpl implements Brick
     {
       case LegoPackage.BRICK__ZUNITS:
         setZUnits((ZUnit)newValue);
+        return;
+      case LegoPackage.BRICK__SOURCE:
+        setSource((Source)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -170,6 +237,9 @@ public class BrickImpl extends ItemImpl implements Brick
       case LegoPackage.BRICK__ZUNITS:
         setZUnits((ZUnit)null);
         return;
+      case LegoPackage.BRICK__SOURCE:
+        setSource((Source)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -186,6 +256,8 @@ public class BrickImpl extends ItemImpl implements Brick
     {
       case LegoPackage.BRICK__ZUNITS:
         return zUnits != null;
+      case LegoPackage.BRICK__SOURCE:
+        return source != null;
     }
     return super.eIsSet(featureID);
   }

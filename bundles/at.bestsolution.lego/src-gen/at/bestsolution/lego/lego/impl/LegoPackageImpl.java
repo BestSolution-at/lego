@@ -8,6 +8,7 @@ import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
 import at.bestsolution.lego.lego.Door;
 import at.bestsolution.lego.lego.DoorBrick;
+import at.bestsolution.lego.lego.FxmlInclude;
 import at.bestsolution.lego.lego.Item;
 import at.bestsolution.lego.lego.ItemRepository;
 import at.bestsolution.lego.lego.LegoElement;
@@ -15,6 +16,7 @@ import at.bestsolution.lego.lego.LegoFactory;
 import at.bestsolution.lego.lego.LegoPackage;
 import at.bestsolution.lego.lego.Model;
 import at.bestsolution.lego.lego.RoundBrick;
+import at.bestsolution.lego.lego.Source;
 import at.bestsolution.lego.lego.XUnit;
 import at.bestsolution.lego.lego.YUnit;
 import at.bestsolution.lego.lego.ZUnit;
@@ -96,6 +98,20 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * @generated
    */
   private EClass brickEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fxmlIncludeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -440,6 +456,76 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getBrick_Source()
+  {
+    return (EReference)brickEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSource()
+  {
+    return sourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFxmlInclude()
+  {
+    return fxmlIncludeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFxmlInclude_Source()
+  {
+    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFxmlInclude_OriginX()
+  {
+    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFxmlInclude_OriginY()
+  {
+    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFxmlInclude_OriginZ()
+  {
+    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRoundBrick()
   {
     return roundBrickEClass;
@@ -627,6 +713,15 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
 
     brickEClass = createEClass(BRICK);
     createEReference(brickEClass, BRICK__ZUNITS);
+    createEReference(brickEClass, BRICK__SOURCE);
+
+    sourceEClass = createEClass(SOURCE);
+
+    fxmlIncludeEClass = createEClass(FXML_INCLUDE);
+    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__SOURCE);
+    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_X);
+    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_Y);
+    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_Z);
 
     roundBrickEClass = createEClass(ROUND_BRICK);
     createEReference(roundBrickEClass, ROUND_BRICK__ZUNITS);
@@ -678,6 +773,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     // Add supertypes to classes
     itemEClass.getESuperTypes().add(this.getLegoElement());
     brickEClass.getESuperTypes().add(this.getItem());
+    fxmlIncludeEClass.getESuperTypes().add(this.getSource());
     roundBrickEClass.getESuperTypes().add(this.getItem());
     doorBrickEClass.getESuperTypes().add(this.getItem());
     doorEClass.getESuperTypes().add(this.getItem());
@@ -716,6 +812,15 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
 
     initEClass(brickEClass, Brick.class, "Brick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBrick_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, Brick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBrick_Source(), this.getSource(), null, "source", null, 0, 1, Brick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sourceEClass, Source.class, "Source", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(fxmlIncludeEClass, FxmlInclude.class, "FxmlInclude", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFxmlInclude_Source(), ecorePackage.getEString(), "source", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFxmlInclude_OriginX(), ecorePackage.getEFloat(), "originX", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFxmlInclude_OriginY(), ecorePackage.getEFloat(), "originY", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFxmlInclude_OriginZ(), ecorePackage.getEFloat(), "originZ", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(roundBrickEClass, RoundBrick.class, "RoundBrick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRoundBrick_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, RoundBrick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

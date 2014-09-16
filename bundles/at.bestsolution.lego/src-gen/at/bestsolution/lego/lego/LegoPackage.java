@@ -399,13 +399,96 @@ public interface LegoPackage extends EPackage
   int BRICK__ZUNITS = ITEM_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Source</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BRICK__SOURCE = ITEM_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Brick</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BRICK_FEATURE_COUNT = ITEM_FEATURE_COUNT + 1;
+  int BRICK_FEATURE_COUNT = ITEM_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.SourceImpl <em>Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.bestsolution.lego.lego.impl.SourceImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getSource()
+   * @generated
+   */
+  int SOURCE = 9;
+
+  /**
+   * The number of structural features of the '<em>Source</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl <em>Fxml Include</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.bestsolution.lego.lego.impl.FxmlIncludeImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getFxmlInclude()
+   * @generated
+   */
+  int FXML_INCLUDE = 10;
+
+  /**
+   * The feature id for the '<em><b>Source</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FXML_INCLUDE__SOURCE = SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Origin X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FXML_INCLUDE__ORIGIN_X = SOURCE_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Origin Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FXML_INCLUDE__ORIGIN_Y = SOURCE_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Origin Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FXML_INCLUDE__ORIGIN_Z = SOURCE_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Fxml Include</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FXML_INCLUDE_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link at.bestsolution.lego.lego.impl.RoundBrickImpl <em>Round Brick</em>}' class.
@@ -415,7 +498,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRoundBrick()
    * @generated
    */
-  int ROUND_BRICK = 9;
+  int ROUND_BRICK = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -479,7 +562,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getDoorBrick()
    * @generated
    */
-  int DOOR_BRICK = 10;
+  int DOOR_BRICK = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -543,7 +626,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getDoor()
    * @generated
    */
-  int DOOR = 11;
+  int DOOR = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -598,7 +681,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAssembly()
    * @generated
    */
-  int ASSEMBLY = 12;
+  int ASSEMBLY = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -635,7 +718,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAssemblyItem()
    * @generated
    */
-  int ASSEMBLY_ITEM = 13;
+  int ASSEMBLY_ITEM = 15;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' reference.
@@ -946,6 +1029,81 @@ public interface LegoPackage extends EPackage
    * @generated
    */
   EReference getBrick_ZUnits();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.Brick#getSource <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Source</em>'.
+   * @see at.bestsolution.lego.lego.Brick#getSource()
+   * @see #getBrick()
+   * @generated
+   */
+  EReference getBrick_Source();
+
+  /**
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.Source <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Source</em>'.
+   * @see at.bestsolution.lego.lego.Source
+   * @generated
+   */
+  EClass getSource();
+
+  /**
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.FxmlInclude <em>Fxml Include</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fxml Include</em>'.
+   * @see at.bestsolution.lego.lego.FxmlInclude
+   * @generated
+   */
+  EClass getFxmlInclude();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getSource <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Source</em>'.
+   * @see at.bestsolution.lego.lego.FxmlInclude#getSource()
+   * @see #getFxmlInclude()
+   * @generated
+   */
+  EAttribute getFxmlInclude_Source();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getOriginX <em>Origin X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Origin X</em>'.
+   * @see at.bestsolution.lego.lego.FxmlInclude#getOriginX()
+   * @see #getFxmlInclude()
+   * @generated
+   */
+  EAttribute getFxmlInclude_OriginX();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getOriginY <em>Origin Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Origin Y</em>'.
+   * @see at.bestsolution.lego.lego.FxmlInclude#getOriginY()
+   * @see #getFxmlInclude()
+   * @generated
+   */
+  EAttribute getFxmlInclude_OriginY();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getOriginZ <em>Origin Z</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Origin Z</em>'.
+   * @see at.bestsolution.lego.lego.FxmlInclude#getOriginZ()
+   * @see #getFxmlInclude()
+   * @generated
+   */
+  EAttribute getFxmlInclude_OriginZ();
 
   /**
    * Returns the meta object for class '{@link at.bestsolution.lego.lego.RoundBrick <em>Round Brick</em>}'.
@@ -1317,6 +1475,66 @@ public interface LegoPackage extends EPackage
      * @generated
      */
     EReference BRICK__ZUNITS = eINSTANCE.getBrick_ZUnits();
+
+    /**
+     * The meta object literal for the '<em><b>Source</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BRICK__SOURCE = eINSTANCE.getBrick_Source();
+
+    /**
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.SourceImpl <em>Source</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.bestsolution.lego.lego.impl.SourceImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getSource()
+     * @generated
+     */
+    EClass SOURCE = eINSTANCE.getSource();
+
+    /**
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl <em>Fxml Include</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.bestsolution.lego.lego.impl.FxmlIncludeImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getFxmlInclude()
+     * @generated
+     */
+    EClass FXML_INCLUDE = eINSTANCE.getFxmlInclude();
+
+    /**
+     * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FXML_INCLUDE__SOURCE = eINSTANCE.getFxmlInclude_Source();
+
+    /**
+     * The meta object literal for the '<em><b>Origin X</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FXML_INCLUDE__ORIGIN_X = eINSTANCE.getFxmlInclude_OriginX();
+
+    /**
+     * The meta object literal for the '<em><b>Origin Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FXML_INCLUDE__ORIGIN_Y = eINSTANCE.getFxmlInclude_OriginY();
+
+    /**
+     * The meta object literal for the '<em><b>Origin Z</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FXML_INCLUDE__ORIGIN_Z = eINSTANCE.getFxmlInclude_OriginZ();
 
     /**
      * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.RoundBrickImpl <em>Round Brick</em>}' class.

@@ -104,6 +104,24 @@ public interface LegoFactory extends EFactory
   Brick createBrick();
 
   /**
+   * Returns a new object of class '<em>Source</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Source</em>'.
+   * @generated
+   */
+  Source createSource();
+
+  /**
+   * Returns a new object of class '<em>Fxml Include</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fxml Include</em>'.
+   * @generated
+   */
+  FxmlInclude createFxmlInclude();
+
+  /**
    * Returns a new object of class '<em>Round Brick</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

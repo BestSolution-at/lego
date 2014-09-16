@@ -39,6 +39,14 @@
     </genClasses>
     <genClasses ecoreClass="Lego.ecore#//Brick">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Brick/zUnits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Brick/source"/>
+    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//Source"/>
+    <genClasses ecoreClass="Lego.ecore#//FxmlInclude">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//FxmlInclude/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//FxmlInclude/originX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//FxmlInclude/originY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//FxmlInclude/originZ"/>
     </genClasses>
     <genClasses ecoreClass="Lego.ecore#//RoundBrick">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//RoundBrick/zUnits"/>

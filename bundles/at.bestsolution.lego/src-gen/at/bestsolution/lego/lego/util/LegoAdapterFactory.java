@@ -120,6 +120,16 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
         return createBrickAdapter();
       }
       @Override
+      public Adapter caseSource(Source object)
+      {
+        return createSourceAdapter();
+      }
+      @Override
+      public Adapter caseFxmlInclude(FxmlInclude object)
+      {
+        return createFxmlIncludeAdapter();
+      }
+      @Override
       public Adapter caseRoundBrick(RoundBrick object)
       {
         return createRoundBrickAdapter();
@@ -297,6 +307,36 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBrickAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.Source <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.bestsolution.lego.lego.Source
+   * @generated
+   */
+  public Adapter createSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.FxmlInclude <em>Fxml Include</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.bestsolution.lego.lego.FxmlInclude
+   * @generated
+   */
+  public Adapter createFxmlIncludeAdapter()
   {
     return null;
   }

@@ -6,6 +6,7 @@ import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
 import at.bestsolution.lego.lego.Door;
 import at.bestsolution.lego.lego.DoorBrick;
+import at.bestsolution.lego.lego.FxmlInclude;
 import at.bestsolution.lego.lego.ItemRepository;
 import at.bestsolution.lego.lego.LegoPackage;
 import at.bestsolution.lego.lego.Model;
@@ -79,6 +80,13 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case LegoPackage.FXML_INCLUDE:
+				if(context == grammarAccess.getFxmlIncludeRule() ||
+				   context == grammarAccess.getSourceRule()) {
+					sequence_FxmlInclude(context, (FxmlInclude) semanticObject); 
+					return; 
+				}
+				else break;
 			case LegoPackage.ITEM_REPOSITORY:
 				if(context == grammarAccess.getItemRepositoryRule()) {
 					sequence_ItemRepository(context, (ItemRepository) semanticObject); 
@@ -123,7 +131,13 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (element=[LegoElement|QualifiedName] xUnits=XUnit yUnits=YUnit zUnits=ZUnit (transform='mirror-x' | transform='mirror-y')?)
+	 *     (
+	 *         element=[LegoElement|QualifiedName] 
+	 *         xUnits=XUnit 
+	 *         yUnits=YUnit 
+	 *         zUnits=ZUnit 
+	 *         (transform='rotate180' | transform='rotate90' | transform='rotate270')?
+	 *     )
 	 */
 	protected void sequence_AssemblyItem(EObject context, AssemblyItem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -141,7 +155,14 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ValidID xUnits=XUnit yUnits=YUnit zUnits=ZUnit fill=Color)
+	 *     (
+	 *         name=ValidID 
+	 *         xUnits=XUnit 
+	 *         yUnits=YUnit 
+	 *         zUnits=ZUnit 
+	 *         fill=Color 
+	 *         source=Source
+	 *     )
 	 */
 	protected void sequence_Brick(EObject context, Brick semanticObject) {
 		if(errorAcceptor != null) {
@@ -155,6 +176,8 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.ITEM__FILL));
 			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.BRICK__ZUNITS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.BRICK__ZUNITS));
+			if(transientValues.isValueTransient(semanticObject, LegoPackage.Literals.BRICK__SOURCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LegoPackage.Literals.BRICK__SOURCE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -163,6 +186,7 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getBrickAccess().getYUnitsYUnitParserRuleCall_4_0(), semanticObject.getYUnits());
 		feeder.accept(grammarAccess.getBrickAccess().getZUnitsZUnitParserRuleCall_5_0(), semanticObject.getZUnits());
 		feeder.accept(grammarAccess.getBrickAccess().getFillColorParserRuleCall_6_0(), semanticObject.getFill());
+		feeder.accept(grammarAccess.getBrickAccess().getSourceSourceParserRuleCall_7_0(), semanticObject.getSource());
 		feeder.finish();
 	}
 	
@@ -239,6 +263,15 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getDoorAccess().getYUnitsYUnitParserRuleCall_4_0(), semanticObject.getYUnits());
 		feeder.accept(grammarAccess.getDoorAccess().getFillColorParserRuleCall_5_0(), semanticObject.getFill());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (source=STRING (originX=FLOAT originY=FLOAT originZ=FLOAT)?)
+	 */
+	protected void sequence_FxmlInclude(EObject context, FxmlInclude semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

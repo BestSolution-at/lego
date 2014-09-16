@@ -23,9 +23,21 @@ public class LegoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if(ruleCall.getRule() == grammarAccess.getGeneratedRule())
+			return getGeneratedToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * Generated:
+	 * 	'generated'
+	 * ;
+	 */
+	protected String getGeneratedToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "generated";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

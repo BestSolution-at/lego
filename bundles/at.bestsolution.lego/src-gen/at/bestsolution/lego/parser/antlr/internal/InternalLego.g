@@ -635,7 +635,192 @@ ruleBrick returns [EObject current=null]
 	    }
 
 )
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBrickAccess().getSourceSourceParserRuleCall_7_0()); 
+	    }
+		lv_source_7_0=ruleSource		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBrickRule());
+	        }
+       		set(
+       			$current, 
+       			"source",
+        		lv_source_7_0, 
+        		"Source");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 ))
+;
+
+
+
+
+
+// Entry rule entryRuleSource
+entryRuleSource returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getSourceRule()); }
+	 iv_ruleSource=ruleSource 
+	 { $current=$iv_ruleSource.current; } 
+	 EOF 
+;
+
+// Rule Source
+ruleSource returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getSourceAccess().getGeneratedParserRuleCall_0()); 
+    }
+ruleGenerated
+    { 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getSourceAccess().getFxmlIncludeParserRuleCall_1()); 
+    }
+    this_FxmlInclude_1=ruleFxmlInclude
+    { 
+        $current = $this_FxmlInclude_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleGenerated
+entryRuleGenerated returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getGeneratedRule()); } 
+	 iv_ruleGenerated=ruleGenerated 
+	 { $current=$iv_ruleGenerated.current.getText(); }  
+	 EOF 
+;
+
+// Rule Generated
+ruleGenerated returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+
+	kw='generated' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getGeneratedAccess().getGeneratedKeyword()); 
+    }
+
+    ;
+
+
+
+
+
+// Entry rule entryRuleFxmlInclude
+entryRuleFxmlInclude returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getFxmlIncludeRule()); }
+	 iv_ruleFxmlInclude=ruleFxmlInclude 
+	 { $current=$iv_ruleFxmlInclude.current; } 
+	 EOF 
+;
+
+// Rule FxmlInclude
+ruleFxmlInclude returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='fxml' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getFxmlIncludeAccess().getFxmlKeyword_0());
+    }
+(
+(
+		lv_source_1_0=RULE_STRING
+		{
+			newLeafNode(lv_source_1_0, grammarAccess.getFxmlIncludeAccess().getSourceSTRINGTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFxmlIncludeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"source",
+        		lv_source_1_0, 
+        		"STRING");
+	    }
+
+)
+)(	otherlv_2='origin' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getFxmlIncludeAccess().getOriginKeyword_2_0());
+    }
+(
+(
+		lv_originX_3_0=RULE_FLOAT
+		{
+			newLeafNode(lv_originX_3_0, grammarAccess.getFxmlIncludeAccess().getOriginXFLOATTerminalRuleCall_2_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFxmlIncludeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"originX",
+        		lv_originX_3_0, 
+        		"FLOAT");
+	    }
+
+)
+)(
+(
+		lv_originY_4_0=RULE_FLOAT
+		{
+			newLeafNode(lv_originY_4_0, grammarAccess.getFxmlIncludeAccess().getOriginYFLOATTerminalRuleCall_2_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFxmlIncludeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"originY",
+        		lv_originY_4_0, 
+        		"FLOAT");
+	    }
+
+)
+)(
+(
+		lv_originZ_5_0=RULE_FLOAT
+		{
+			newLeafNode(lv_originZ_5_0, grammarAccess.getFxmlIncludeAccess().getOriginZFLOATTerminalRuleCall_2_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFxmlIncludeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"originZ",
+        		lv_originZ_5_0, 
+        		"FLOAT");
+	    }
+
+)
+))?)
 ;
 
 
@@ -1144,9 +1329,9 @@ ruleAssemblyItem returns [EObject current=null]
 (
 (
 (
-		lv_transform_6_1=	'mirror-x' 
+		lv_transform_6_1=	'rotate180' 
     {
-        newLeafNode(lv_transform_6_1, grammarAccess.getAssemblyItemAccess().getTransformMirrorXKeyword_5_1_0_0());
+        newLeafNode(lv_transform_6_1, grammarAccess.getAssemblyItemAccess().getTransformRotate180Keyword_5_1_0_0());
     }
  
 	    {
@@ -1156,9 +1341,9 @@ ruleAssemblyItem returns [EObject current=null]
        		setWithLastConsumed($current, "transform", lv_transform_6_1, null);
 	    }
 
-    |		lv_transform_6_2=	'mirror-y' 
+    |		lv_transform_6_2=	'rotate90' 
     {
-        newLeafNode(lv_transform_6_2, grammarAccess.getAssemblyItemAccess().getTransformMirrorYKeyword_5_1_0_1());
+        newLeafNode(lv_transform_6_2, grammarAccess.getAssemblyItemAccess().getTransformRotate90Keyword_5_1_0_1());
     }
  
 	    {
@@ -1166,6 +1351,18 @@ ruleAssemblyItem returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getAssemblyItemRule());
 	        }
        		setWithLastConsumed($current, "transform", lv_transform_6_2, null);
+	    }
+
+    |		lv_transform_6_3=	'rotate270' 
+    {
+        newLeafNode(lv_transform_6_3, grammarAccess.getAssemblyItemAccess().getTransformRotate270Keyword_5_1_0_2());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAssemblyItemRule());
+	        }
+       		setWithLastConsumed($current, "transform", lv_transform_6_3, null);
 	    }
 
 )
@@ -1178,11 +1375,13 @@ ruleAssemblyItem returns [EObject current=null]
 
 
 
+RULE_INT : '-'? ('0'..'9')+;
+
+RULE_FLOAT : '-'? ('0'..'9')+ '.' ('0'..'9')*;
+
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-RULE_INT : ('0'..'9')+;
-
-RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
+RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 

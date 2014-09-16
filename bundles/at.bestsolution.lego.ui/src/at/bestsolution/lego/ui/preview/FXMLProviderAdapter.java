@@ -27,6 +27,7 @@ import org.eclipse.xtext.util.concurrent.IUnitOfWork;
 import com.google.inject.Injector;
 
 import at.bestsolution.lego.generator.Lego2dFXML;
+import at.bestsolution.lego.generator.Lego3dFXML;
 import at.bestsolution.lego.lego.Model;
 import at.bestsolution.lego.ui.LegoUiModule;
 import at.bestsolution.lego.ui.internal.LegoActivator;
@@ -49,9 +50,9 @@ public class FXMLProviderAdapter implements IFXMLProviderAdapter {
 
 			@Override
 			public String exec(XtextResource resource) throws Exception {
-				System.err.println("GENERATING");
+				System.err.println("GENERATING 3d");
 				Injector injector = LegoActivator.getInstance().getInjector("at.bestsolution.lego.Lego");
-				Lego2dFXML generator = injector.getInstance(Lego2dFXML.class);
+				Lego3dFXML generator = injector.getInstance(Lego3dFXML.class);
 				return generator.generatePreview((Model) resource.getContents().get(0)).toString();
 			}
 			 

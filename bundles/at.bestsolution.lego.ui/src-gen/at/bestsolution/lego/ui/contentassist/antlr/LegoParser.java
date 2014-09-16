@@ -40,12 +40,15 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getAlternatives(), "rule__Model__Alternatives");
 					put(grammarAccess.getLegoElementAccess().getAlternatives(), "rule__LegoElement__Alternatives");
 					put(grammarAccess.getItemAccess().getAlternatives(), "rule__Item__Alternatives");
+					put(grammarAccess.getSourceAccess().getAlternatives(), "rule__Source__Alternatives");
 					put(grammarAccess.getAssemblyItemAccess().getTransformAlternatives_5_1_0(), "rule__AssemblyItem__TransformAlternatives_5_1_0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getItemRepositoryAccess().getGroup(), "rule__ItemRepository__Group__0");
 					put(grammarAccess.getColorAccess().getGroup(), "rule__Color__Group__0");
 					put(grammarAccess.getBrickAccess().getGroup(), "rule__Brick__Group__0");
+					put(grammarAccess.getFxmlIncludeAccess().getGroup(), "rule__FxmlInclude__Group__0");
+					put(grammarAccess.getFxmlIncludeAccess().getGroup_2(), "rule__FxmlInclude__Group_2__0");
 					put(grammarAccess.getRoundBrickAccess().getGroup(), "rule__RoundBrick__Group__0");
 					put(grammarAccess.getDoorBrickAccess().getGroup(), "rule__DoorBrick__Group__0");
 					put(grammarAccess.getDoorAccess().getGroup(), "rule__Door__Group__0");
@@ -67,6 +70,11 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBrickAccess().getYUnitsAssignment_4(), "rule__Brick__YUnitsAssignment_4");
 					put(grammarAccess.getBrickAccess().getZUnitsAssignment_5(), "rule__Brick__ZUnitsAssignment_5");
 					put(grammarAccess.getBrickAccess().getFillAssignment_6(), "rule__Brick__FillAssignment_6");
+					put(grammarAccess.getBrickAccess().getSourceAssignment_7(), "rule__Brick__SourceAssignment_7");
+					put(grammarAccess.getFxmlIncludeAccess().getSourceAssignment_1(), "rule__FxmlInclude__SourceAssignment_1");
+					put(grammarAccess.getFxmlIncludeAccess().getOriginXAssignment_2_1(), "rule__FxmlInclude__OriginXAssignment_2_1");
+					put(grammarAccess.getFxmlIncludeAccess().getOriginYAssignment_2_2(), "rule__FxmlInclude__OriginYAssignment_2_2");
+					put(grammarAccess.getFxmlIncludeAccess().getOriginZAssignment_2_3(), "rule__FxmlInclude__OriginZAssignment_2_3");
 					put(grammarAccess.getRoundBrickAccess().getNameAssignment_1(), "rule__RoundBrick__NameAssignment_1");
 					put(grammarAccess.getRoundBrickAccess().getXUnitsAssignment_3(), "rule__RoundBrick__XUnitsAssignment_3");
 					put(grammarAccess.getRoundBrickAccess().getYUnitsAssignment_4(), "rule__RoundBrick__YUnitsAssignment_4");

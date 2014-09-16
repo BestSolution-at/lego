@@ -18,7 +18,8 @@ Require-Bundle: at.bestsolution.lego;visibility:=reexport,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare,
  org.eclipse.fx.ide.ui
-Import-Package: org.apache.log4j
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: at.bestsolution.lego.ui.quickfix,
  at.bestsolution.lego.ui.contentassist,
