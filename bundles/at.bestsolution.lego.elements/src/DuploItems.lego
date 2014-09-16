@@ -1,17 +1,17 @@
 DuploItems { 
-	brick Brick_2_2_2_red 			units 2 2 2 rgb 255 0 0   
-	brick Brick_2_2_2_orange 		units 2 2 2 rgb 255 165 0 
-	brick Brick_2_2_2_light_blue 	units 2 2 2 rgb 173 216 230 
-	brick Brick_2_2_2_light_green 	units 2 2 2 rgb 154 205 50
+	brick Brick_2_2_2_red 			units 2 2 2 rgb 255 0 0    	generated
+	brick Brick_2_2_2_orange 		units 2 2 2 rgb 255 165 0 		generated
+	brick Brick_2_2_2_light_blue 	units 2 2 2 rgb 173 216 230 	generated
+	brick Brick_2_2_2_light_green 	units 2 2 2 rgb 154 205 50		generated
 	
-	brick Brick_2_4_1_light_blue	units 2 4 1 rgb 173 216 230
+	brick Brick_2_4_1_light_blue	units 2 4 1 rgb 173 216 230	generated
 	   
-	brick Brick_4_1_2_red			units 4 1 2 rgb 255 0 0
+	brick Brick_4_1_2_red			units 4 1 2 rgb 255 0 0		generated
 	
-	brick Brick_8_1_2_green			units 8 1 2 rgb 107 142 35 
+	brick Brick_8_1_2_green			units 8 1 2 rgb 107 142 35 	generated
 	 
-	rbrick RBrick_2_2_2_red 		units 2 2 2 rgb 255 0 0
+	brick RBrick_2_2_2_red 		units 2 2 2 rgb 255 0 0 			fxml "/opt/projects/3dfun/git/lego/bundles/at.bestsolution.lego.elements/src/3x2x2R.fxml" origin -7.8 0. -7.8
 
-	dbrick DoorBrick_4_6_2_yellow	units 4 6 2 rgb 255 255 0  
+	brick DoorBrick_4_6_2_yellow	units 4 6 2 rgb 255 255 0  	generated
 	door Door_4_6 					units 4 6 	rgb 139 69 19
-}   
+} 
