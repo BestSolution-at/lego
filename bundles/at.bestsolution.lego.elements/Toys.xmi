@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<elementary:ElementaryRepository
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:elementary="http://www.bestsolution.at/elementary/1.0"
+    xsi:schemaLocation="http://www.bestsolution.at/elementary/1.0 ../at.bestsolution.elementary.model/model/Elementary.ecore"
+    name="Toy">
+  <assemblyList
+      name="Lego Duplo Cat &amp; Dog Home"
+      ean="Assembly_Home_Cat_Dog">
+    <itemList
+        amount="1"
+        item="//@itemList.5"/>
+    <itemList
+        amount="1"
+        item="//@itemList.2"/>
+    <itemList
+        amount="1"
+        item="//@itemList.1"/>
+    <itemList
+        amount="1"
+        item="//@itemList.0"/>
+    <itemList
+        amount="2"
+        item="//@itemList.9"/>
+    <itemList
+        amount="1"
+        item="//@itemList.6"/>
+    <assemblyList
+        amount="1"
+        assembly="//@assemblyList.1"/>
+  </assemblyList>
+  <assemblyList
+      name="Lego Duplo Door Assembly"
+      ean="Door">
+    <itemList
+        amount="1"
+        item="//@itemList.7"/>
+    <itemList
+        amount="1"
+        item="//@itemList.8"/>
+  </assemblyList>
+  <itemList
+      name="Lego Duplo Brick 2x2x2 Red"
+      ean="Brick_2_2_2_red"/>
+  <itemList
+      name="Lego Duplo Brick 2x2x2 Orange"
+      ean="Brick_2_2_2_orange"/>
+  <itemList
+      name="Lego Duplo Brick 2x2x2 Light Green"
+      ean="Brick_2_2_2_light_green"/>
+  <itemList
+      name="Lego Duplo Brick 2x2x2 Light Blue"
+      ean="Brick_2_2_2_light_blue"/>
+  <itemList
+      name="Lego Duplo Brick 4x1x2 Red"
+      ean="Brick_4_1_2_red"/>
+  <itemList
+      name="Lego Duplo Brick 8x1x2 Green"
+      ean="Brick_8_1_2_green"/>
+  <itemList
+      name="Lego Duplo Brick 2x4x1 Light Blue"
+      ean="Brick_2_4_1_light_blue"/>
+  <itemList
+      name="Lego Duplo Door Brown"
+      ean="Door_4_6"/>
+  <itemList
+      name="Lego Duplo Brick Door Yellow"
+      ean="DoorBrick_4_6_2_yellow"/>
+  <itemList
+      name="Lego Brick 2x2x2 Round Red"
+      ean="RBrick_2_2_2_red"/>
+  <repositoryElementList
+      xsi:type="elementary:RepositoryContainerElement"
+      name="Duplo">
+    <children
+        xsi:type="elementary:RepositoryContainerElement"
+        name="Age 1.5">
+      <children
+          xsi:type="elementary:RepositoryAssemblyElement"
+          name="Cat &amp; Dog">
+        <assemblyList
+            amount="1"
+            assembly="//@assemblyList.0"/>
+      </children>
+    </children>
+  </repositoryElementList>
+</elementary:ElementaryRepository>

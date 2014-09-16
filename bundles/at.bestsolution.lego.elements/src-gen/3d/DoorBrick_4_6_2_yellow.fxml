@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 
 <Group xmlns:fx="http://javafx.com/fxml/1">
-<Group>
+<Group id="DoorBrick_4_6_2_yellow">
 	<Box width="63.6" depth="31.6" height="57.599999999999994">
 		<material>
 			<PhongMaterial diffuseColor="rgb(255, 255, 0)

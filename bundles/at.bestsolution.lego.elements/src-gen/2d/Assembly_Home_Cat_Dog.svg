@@ -21,11 +21,11 @@
 		 transform="translate(120, -60)"
 		/>
 	<g transform="matrix(-1 0 0 1 60 0)">
-		<rect id="RBrick_2_2_2_red" width="60" height="40" fill="#ff0000"
+		<rect id="RBrick_2_2_2_red" width="60" height="40" fill="#ffff00"
 		 transform="translate(60, -140)"
 		/>
 	</g>
-		<rect id="RBrick_2_2_2_red" width="60" height="40" fill="#ff0000"
+		<rect id="RBrick_2_2_2_red" width="60" height="40" fill="#ffff00"
 		 transform="translate(90, -140)"
 		/>
 </g>
