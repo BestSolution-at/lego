@@ -28,7 +28,7 @@ class LegoGenerator implements IGenerator {
 	Lego3dFXML lego3dfxml
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		lego2dsvg.doGenerate(resource,fsa)
+//		lego2dsvg.doGenerate(resource,fsa)
 		lego3dfxml.doGenerate(resource, fsa)
 	}
 }

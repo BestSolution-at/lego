@@ -22,13 +22,13 @@ class PreviewGenerator {
 	<?import javafx.scene.paint.*?>
 	<?import javafx.scene.control.*?>
 	<TabPane xmlns:fx="http://javafx.com/fxml/1" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
-		<Tab text="2d">
-			<content>
-				<ScrollPane>
-					«lego2.generatePreview(model)»
-				</ScrollPane>
-			</content>
-		</Tab>
+«««		<Tab text="2d">
+«««			<content>
+«««				<ScrollPane>
+«««					«lego2.generatePreview(model)»
+«««				</ScrollPane>
+«««			</content>
+«««		</Tab>
 		<Tab text="3d">
 			<content>
 				<ScrollPane>
