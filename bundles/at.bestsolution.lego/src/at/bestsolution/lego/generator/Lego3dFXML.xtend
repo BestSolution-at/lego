@@ -23,6 +23,9 @@ import java.io.FileReader
 import at.bestsolution.lego.lego.RepostoryItem
 import at.bestsolution.lego.lego.RasterAssemblyItem
 import at.bestsolution.lego.lego.RasterItem
+import at.bestsolution.lego.lego.MountedAssemblyItem
+import at.bestsolution.lego.lego.MountedPart
+import at.bestsolution.lego.lego.Generated
 
 class Lego3dFXML implements IGenerator {
 	@Inject
@@ -71,38 +74,72 @@ class Lego3dFXML implements IGenerator {
 		return brick.ZUnits.units * P - 2 * off;
 	}
 	
+	
 	def generatedAssembly(Assembly a) '''
 	<Group>
 		«FOR x : a.items»
 			<Group>
-				«IF x.element instanceof Brick»
-					«createBrick(x.element as Brick)»
-				«ELSEIF x.element instanceof Assembly»
-					«generatedAssembly(x.element as Assembly)»
-				«ENDIF»
 				«IF x instanceof RasterAssemblyItem»
-				<transforms>
-					<Translate x="«x.XUnits.units * P»" y="«x.YUnits.units * H»" z="«x.ZUnits.units * P»" />
-					«IF x.transform == "rotate180"»
-						<Rotate angle="180" >
-						 <axis><Point3D x="0" y="1" z="0"/></axis>
-						</Rotate>
-					«ELSEIF x.transform == "rotate90"»
-						<Rotate angle="90" >
-						 <axis><Point3D x="0" y="1" z="0"/></axis>
-						</Rotate>
-					«ELSEIF x.transform == "rotate270"»
-						<Rotate angle="270" >
-						 <axis><Point3D x="0" y="1" z="0"/></axis>
-						</Rotate>
+					«IF x.element instanceof Brick»
+						«createBrick(x.element as Brick)»
+					«ELSEIF x.element instanceof Assembly»
+						«generatedAssembly(x.element as Assembly)»
 					«ENDIF»
 					
-				</transforms>
+					<transforms>
+						<Translate x="«x.XUnits.units * P»" y="«x.YUnits.units * H»" z="«x.ZUnits.units * P»" />
+						«IF x.transform == "rotate180"»
+							<Rotate angle="180" >
+							 <axis><Point3D x="0" y="1" z="0"/></axis>
+							</Rotate>
+						«ELSEIF x.transform == "rotate90"»
+							<Rotate angle="90" >
+							 <axis><Point3D x="0" y="1" z="0"/></axis>
+							</Rotate>
+						«ELSEIF x.transform == "rotate270"»
+							<Rotate angle="270" >
+							 <axis><Point3D x="0" y="1" z="0"/></axis>
+							</Rotate>
+						«ENDIF»
+						
+					</transforms>
+				«ELSEIF x instanceof MountedAssemblyItem»
+					«val xm = x as MountedAssemblyItem»
+					«createMPart(xm.element)»
+					<transforms>
+						<Translate x="«xm.XUnits»" y="«xm.YUnits»" z="«xm.ZUnits»" />
+							<Rotate angle="«xm.rotateX»" >
+							 <axis><Point3D x="1" y="0" z="0"/></axis>
+							</Rotate>
+							<Rotate angle="«xm.rotateY»" >
+							 <axis><Point3D x="0" y="1" z="0"/></axis>
+							</Rotate>
+							<Rotate angle="«xm.rotateZ»" >
+							 <axis><Point3D x="0" y="0" z="1"/></axis>
+							</Rotate>
+						
+					</transforms>
 				«ENDIF»
 			</Group>
 			
 		«ENDFOR»
 	</Group>
+	'''
+	
+	def createMPart(MountedPart object) '''
+	«IF object.source instanceof Generated»
+	«val s = object.source as Generated»
+	<Group>
+		<Box width="«s.width»" height="«s.height»" depth="«s.depth»">
+			<material>
+				<PhongMaterial diffuseColor="«object.toColor()»"/>
+			</material>
+		</Box>
+		<transforms>
+			<Translate x="«s.originX»" y="«s.originY»" z="«s.originZ»" />
+		</transforms>
+	</Group>
+	«ENDIF»
 	'''
 	
 	def generateAssemblyPreview(Assembly a) '''

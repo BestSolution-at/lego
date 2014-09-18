@@ -2,8 +2,8 @@
  */
 package at.bestsolution.lego.lego.impl;
 
-import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.LegoPackage;
+import at.bestsolution.lego.lego.RasterItem;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -11,21 +11,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Assembly Item</b></em>'.
+ * An implementation of the model object '<em><b>Raster Item</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements AssemblyItem
+public class RasterItemImpl extends MinimalEObjectImpl.Container implements RasterItem
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AssemblyItemImpl()
+  protected RasterItemImpl()
   {
     super();
   }
@@ -38,7 +38,7 @@ public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements As
   @Override
   protected EClass eStaticClass()
   {
-    return LegoPackage.Literals.ASSEMBLY_ITEM;
+    return LegoPackage.Literals.RASTER_ITEM;
   }
 
-} //AssemblyItemImpl
+} //RasterItemImpl

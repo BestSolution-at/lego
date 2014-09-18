@@ -49,6 +49,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Source/originZ"/>
     </genClasses>
     <genClasses ecoreClass="Lego.ecore#//Generated">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Generated/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Generated/width"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Generated/height"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Generated/depth"/>
@@ -59,16 +60,16 @@
     <genClasses ecoreClass="Lego.ecore#//Assembly">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//Assembly/items"/>
     </genClasses>
-    <genClasses ecoreClass="Lego.ecore#//AssemblyItem">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Lego.ecore#//AssemblyItem/element"/>
-    </genClasses>
+    <genClasses ecoreClass="Lego.ecore#//AssemblyItem"/>
     <genClasses ecoreClass="Lego.ecore#//RasterAssemblyItem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Lego.ecore#//RasterAssemblyItem/element"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//RasterAssemblyItem/xUnits"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//RasterAssemblyItem/yUnits"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//RasterAssemblyItem/zUnits"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//RasterAssemblyItem/transform"/>
     </genClasses>
     <genClasses ecoreClass="Lego.ecore#//MountedAssemblyItem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Lego.ecore#//MountedAssemblyItem/element"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//MountedAssemblyItem/xUnits"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//MountedAssemblyItem/yUnits"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//MountedAssemblyItem/zUnits"/>

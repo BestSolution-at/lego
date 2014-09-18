@@ -402,80 +402,90 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Generated");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGeneratedKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cBoxKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cWidthAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cWidthFLOATTerminalRuleCall_1_1_0 = (RuleCall)cWidthAssignment_1_1.eContents().get(0);
-		private final Assignment cHeightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cHeightFLOATTerminalRuleCall_1_2_0 = (RuleCall)cHeightAssignment_1_2.eContents().get(0);
-		private final Assignment cDepthAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final RuleCall cDepthFLOATTerminalRuleCall_1_3_0 = (RuleCall)cDepthAssignment_1_3.eContents().get(0);
-		private final Group cGroup_1_4 = (Group)cGroup_1.eContents().get(4);
-		private final Keyword cOriginKeyword_1_4_0 = (Keyword)cGroup_1_4.eContents().get(0);
-		private final Assignment cOriginXAssignment_1_4_1 = (Assignment)cGroup_1_4.eContents().get(1);
-		private final RuleCall cOriginXFLOATTerminalRuleCall_1_4_1_0 = (RuleCall)cOriginXAssignment_1_4_1.eContents().get(0);
-		private final Assignment cOriginYAssignment_1_4_2 = (Assignment)cGroup_1_4.eContents().get(2);
-		private final RuleCall cOriginYFLOATTerminalRuleCall_1_4_2_0 = (RuleCall)cOriginYAssignment_1_4_2.eContents().get(0);
-		private final Assignment cOriginZAssignment_1_4_3 = (Assignment)cGroup_1_4.eContents().get(3);
-		private final RuleCall cOriginZFLOATTerminalRuleCall_1_4_3_0 = (RuleCall)cOriginZAssignment_1_4_3.eContents().get(0);
+		private final Action cGeneratedAction_1 = (Action)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final Keyword cTypeBoxKeyword_2_0_0 = (Keyword)cTypeAssignment_2_0.eContents().get(0);
+		private final Assignment cWidthAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cWidthFLOATTerminalRuleCall_2_1_0 = (RuleCall)cWidthAssignment_2_1.eContents().get(0);
+		private final Assignment cHeightAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final RuleCall cHeightFLOATTerminalRuleCall_2_2_0 = (RuleCall)cHeightAssignment_2_2.eContents().get(0);
+		private final Assignment cDepthAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
+		private final RuleCall cDepthFLOATTerminalRuleCall_2_3_0 = (RuleCall)cDepthAssignment_2_3.eContents().get(0);
+		private final Group cGroup_2_4 = (Group)cGroup_2.eContents().get(4);
+		private final Keyword cOriginKeyword_2_4_0 = (Keyword)cGroup_2_4.eContents().get(0);
+		private final Assignment cOriginXAssignment_2_4_1 = (Assignment)cGroup_2_4.eContents().get(1);
+		private final RuleCall cOriginXFLOATTerminalRuleCall_2_4_1_0 = (RuleCall)cOriginXAssignment_2_4_1.eContents().get(0);
+		private final Assignment cOriginYAssignment_2_4_2 = (Assignment)cGroup_2_4.eContents().get(2);
+		private final RuleCall cOriginYFLOATTerminalRuleCall_2_4_2_0 = (RuleCall)cOriginYAssignment_2_4_2.eContents().get(0);
+		private final Assignment cOriginZAssignment_2_4_3 = (Assignment)cGroup_2_4.eContents().get(3);
+		private final RuleCall cOriginZFLOATTerminalRuleCall_2_4_3_0 = (RuleCall)cOriginZAssignment_2_4_3.eContents().get(0);
 		
 		//Generated:
-		//	"generated" ("box" width=FLOAT height=FLOAT depth=FLOAT ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?)?;
+		//	"generated" {Generated} (type="box" width=FLOAT height=FLOAT depth=FLOAT ("origin" originX=FLOAT originY=FLOAT
+		//	originZ=FLOAT)?)?;
 		public ParserRule getRule() { return rule; }
 
-		//"generated" ("box" width=FLOAT height=FLOAT depth=FLOAT ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?)?
+		//"generated" {Generated} (type="box" width=FLOAT height=FLOAT depth=FLOAT ("origin" originX=FLOAT originY=FLOAT
+		//originZ=FLOAT)?)?
 		public Group getGroup() { return cGroup; }
 
 		//"generated"
 		public Keyword getGeneratedKeyword_0() { return cGeneratedKeyword_0; }
 
-		//("box" width=FLOAT height=FLOAT depth=FLOAT ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?)?
-		public Group getGroup_1() { return cGroup_1; }
+		//{Generated}
+		public Action getGeneratedAction_1() { return cGeneratedAction_1; }
+
+		//(type="box" width=FLOAT height=FLOAT depth=FLOAT ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//type="box"
+		public Assignment getTypeAssignment_2_0() { return cTypeAssignment_2_0; }
 
 		//"box"
-		public Keyword getBoxKeyword_1_0() { return cBoxKeyword_1_0; }
+		public Keyword getTypeBoxKeyword_2_0_0() { return cTypeBoxKeyword_2_0_0; }
 
 		//width=FLOAT
-		public Assignment getWidthAssignment_1_1() { return cWidthAssignment_1_1; }
+		public Assignment getWidthAssignment_2_1() { return cWidthAssignment_2_1; }
 
 		//FLOAT
-		public RuleCall getWidthFLOATTerminalRuleCall_1_1_0() { return cWidthFLOATTerminalRuleCall_1_1_0; }
+		public RuleCall getWidthFLOATTerminalRuleCall_2_1_0() { return cWidthFLOATTerminalRuleCall_2_1_0; }
 
 		//height=FLOAT
-		public Assignment getHeightAssignment_1_2() { return cHeightAssignment_1_2; }
+		public Assignment getHeightAssignment_2_2() { return cHeightAssignment_2_2; }
 
 		//FLOAT
-		public RuleCall getHeightFLOATTerminalRuleCall_1_2_0() { return cHeightFLOATTerminalRuleCall_1_2_0; }
+		public RuleCall getHeightFLOATTerminalRuleCall_2_2_0() { return cHeightFLOATTerminalRuleCall_2_2_0; }
 
 		//depth=FLOAT
-		public Assignment getDepthAssignment_1_3() { return cDepthAssignment_1_3; }
+		public Assignment getDepthAssignment_2_3() { return cDepthAssignment_2_3; }
 
 		//FLOAT
-		public RuleCall getDepthFLOATTerminalRuleCall_1_3_0() { return cDepthFLOATTerminalRuleCall_1_3_0; }
+		public RuleCall getDepthFLOATTerminalRuleCall_2_3_0() { return cDepthFLOATTerminalRuleCall_2_3_0; }
 
 		//("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?
-		public Group getGroup_1_4() { return cGroup_1_4; }
+		public Group getGroup_2_4() { return cGroup_2_4; }
 
 		//"origin"
-		public Keyword getOriginKeyword_1_4_0() { return cOriginKeyword_1_4_0; }
+		public Keyword getOriginKeyword_2_4_0() { return cOriginKeyword_2_4_0; }
 
 		//originX=FLOAT
-		public Assignment getOriginXAssignment_1_4_1() { return cOriginXAssignment_1_4_1; }
+		public Assignment getOriginXAssignment_2_4_1() { return cOriginXAssignment_2_4_1; }
 
 		//FLOAT
-		public RuleCall getOriginXFLOATTerminalRuleCall_1_4_1_0() { return cOriginXFLOATTerminalRuleCall_1_4_1_0; }
+		public RuleCall getOriginXFLOATTerminalRuleCall_2_4_1_0() { return cOriginXFLOATTerminalRuleCall_2_4_1_0; }
 
 		//originY=FLOAT
-		public Assignment getOriginYAssignment_1_4_2() { return cOriginYAssignment_1_4_2; }
+		public Assignment getOriginYAssignment_2_4_2() { return cOriginYAssignment_2_4_2; }
 
 		//FLOAT
-		public RuleCall getOriginYFLOATTerminalRuleCall_1_4_2_0() { return cOriginYFLOATTerminalRuleCall_1_4_2_0; }
+		public RuleCall getOriginYFLOATTerminalRuleCall_2_4_2_0() { return cOriginYFLOATTerminalRuleCall_2_4_2_0; }
 
 		//originZ=FLOAT
-		public Assignment getOriginZAssignment_1_4_3() { return cOriginZAssignment_1_4_3; }
+		public Assignment getOriginZAssignment_2_4_3() { return cOriginZAssignment_2_4_3; }
 
 		//FLOAT
-		public RuleCall getOriginZFLOATTerminalRuleCall_1_4_3_0() { return cOriginZFLOATTerminalRuleCall_1_4_3_0; }
+		public RuleCall getOriginZFLOATTerminalRuleCall_2_4_3_0() { return cOriginZFLOATTerminalRuleCall_2_4_3_0; }
 	}
 
 	public class FxmlIncludeElements extends AbstractParserRuleElementFinder {
@@ -680,8 +690,8 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MountedAssemblyItem");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cElementAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cElementRasterItemCrossReference_0_0 = (CrossReference)cElementAssignment_0.eContents().get(0);
-		private final RuleCall cElementRasterItemQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cElementRasterItemCrossReference_0_0.eContents().get(1);
+		private final CrossReference cElementMountedPartCrossReference_0_0 = (CrossReference)cElementAssignment_0.eContents().get(0);
+		private final RuleCall cElementMountedPartQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cElementMountedPartCrossReference_0_0.eContents().get(1);
 		private final Keyword cPosKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cXUnitsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cXUnitsFLOATTerminalRuleCall_2_0 = (RuleCall)cXUnitsAssignment_2.eContents().get(0);
@@ -699,22 +709,22 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRotateZFLOATTerminalRuleCall_5_3_0 = (RuleCall)cRotateZAssignment_5_3.eContents().get(0);
 		
 		//MountedAssemblyItem:
-		//	element=[RasterItem|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT
+		//	element=[MountedPart|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT
 		//	rotateY=FLOAT rotateZ=FLOAT)?;
 		public ParserRule getRule() { return rule; }
 
-		//element=[RasterItem|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT rotateY=FLOAT
-		//rotateZ=FLOAT)?
+		//element=[MountedPart|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT
+		//rotateY=FLOAT rotateZ=FLOAT)?
 		public Group getGroup() { return cGroup; }
 
-		//element=[RasterItem|QualifiedName]
+		//element=[MountedPart|QualifiedName]
 		public Assignment getElementAssignment_0() { return cElementAssignment_0; }
 
-		//[RasterItem|QualifiedName]
-		public CrossReference getElementRasterItemCrossReference_0_0() { return cElementRasterItemCrossReference_0_0; }
+		//[MountedPart|QualifiedName]
+		public CrossReference getElementMountedPartCrossReference_0_0() { return cElementMountedPartCrossReference_0_0; }
 
 		//QualifiedName
-		public RuleCall getElementRasterItemQualifiedNameParserRuleCall_0_0_1() { return cElementRasterItemQualifiedNameParserRuleCall_0_0_1; }
+		public RuleCall getElementMountedPartQualifiedNameParserRuleCall_0_0_1() { return cElementMountedPartQualifiedNameParserRuleCall_0_0_1; }
 
 		//"pos"
 		public Keyword getPosKeyword_1() { return cPosKeyword_1; }
@@ -987,7 +997,8 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Generated:
-	//	"generated" ("box" width=FLOAT height=FLOAT depth=FLOAT ("origin" originX=FLOAT originY=FLOAT originZ=FLOAT)?)?;
+	//	"generated" {Generated} (type="box" width=FLOAT height=FLOAT depth=FLOAT ("origin" originX=FLOAT originY=FLOAT
+	//	originZ=FLOAT)?)?;
 	public GeneratedElements getGeneratedAccess() {
 		return pGenerated;
 	}
@@ -1038,7 +1049,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MountedAssemblyItem:
-	//	element=[RasterItem|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT
+	//	element=[MountedPart|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT
 	//	rotateY=FLOAT rotateZ=FLOAT)?;
 	public MountedAssemblyItemElements getMountedAssemblyItemAccess() {
 		return pMountedAssemblyItem;

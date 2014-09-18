@@ -2010,28 +2010,28 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGenerated"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:774:1: ruleGenerated returns [EObject current=null] : (otherlv_0= 'generated' (otherlv_1= 'box' ( (lv_width_2_0= RULE_FLOAT ) ) ( (lv_height_3_0= RULE_FLOAT ) ) ( (lv_depth_4_0= RULE_FLOAT ) ) (otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) ) )? )? ) ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:774:1: ruleGenerated returns [EObject current=null] : (otherlv_0= 'generated' () ( ( (lv_type_2_0= 'box' ) ) ( (lv_width_3_0= RULE_FLOAT ) ) ( (lv_height_4_0= RULE_FLOAT ) ) ( (lv_depth_5_0= RULE_FLOAT ) ) (otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) ) )? )? ) ;
     public final EObject ruleGenerated() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token otherlv_1=null;
-        Token lv_width_2_0=null;
-        Token lv_height_3_0=null;
-        Token lv_depth_4_0=null;
-        Token otherlv_5=null;
-        Token lv_originX_6_0=null;
-        Token lv_originY_7_0=null;
-        Token lv_originZ_8_0=null;
+        Token lv_type_2_0=null;
+        Token lv_width_3_0=null;
+        Token lv_height_4_0=null;
+        Token lv_depth_5_0=null;
+        Token otherlv_6=null;
+        Token lv_originX_7_0=null;
+        Token lv_originY_8_0=null;
+        Token lv_originZ_9_0=null;
 
          enterRule(); 
             
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:777:28: ( (otherlv_0= 'generated' (otherlv_1= 'box' ( (lv_width_2_0= RULE_FLOAT ) ) ( (lv_height_3_0= RULE_FLOAT ) ) ( (lv_depth_4_0= RULE_FLOAT ) ) (otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) ) )? )? ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:778:1: (otherlv_0= 'generated' (otherlv_1= 'box' ( (lv_width_2_0= RULE_FLOAT ) ) ( (lv_height_3_0= RULE_FLOAT ) ) ( (lv_depth_4_0= RULE_FLOAT ) ) (otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) ) )? )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:777:28: ( (otherlv_0= 'generated' () ( ( (lv_type_2_0= 'box' ) ) ( (lv_width_3_0= RULE_FLOAT ) ) ( (lv_height_4_0= RULE_FLOAT ) ) ( (lv_depth_5_0= RULE_FLOAT ) ) (otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) ) )? )? ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:778:1: (otherlv_0= 'generated' () ( ( (lv_type_2_0= 'box' ) ) ( (lv_width_3_0= RULE_FLOAT ) ) ( (lv_height_4_0= RULE_FLOAT ) ) ( (lv_depth_5_0= RULE_FLOAT ) ) (otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) ) )? )? )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:778:1: (otherlv_0= 'generated' (otherlv_1= 'box' ( (lv_width_2_0= RULE_FLOAT ) ) ( (lv_height_3_0= RULE_FLOAT ) ) ( (lv_depth_4_0= RULE_FLOAT ) ) (otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) ) )? )? )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:778:3: otherlv_0= 'generated' (otherlv_1= 'box' ( (lv_width_2_0= RULE_FLOAT ) ) ( (lv_height_3_0= RULE_FLOAT ) ) ( (lv_depth_4_0= RULE_FLOAT ) ) (otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) ) )? )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:778:1: (otherlv_0= 'generated' () ( ( (lv_type_2_0= 'box' ) ) ( (lv_width_3_0= RULE_FLOAT ) ) ( (lv_height_4_0= RULE_FLOAT ) ) ( (lv_depth_5_0= RULE_FLOAT ) ) (otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) ) )? )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:778:3: otherlv_0= 'generated' () ( ( (lv_type_2_0= 'box' ) ) ( (lv_width_3_0= RULE_FLOAT ) ) ( (lv_height_4_0= RULE_FLOAT ) ) ( (lv_depth_5_0= RULE_FLOAT ) ) (otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) ) )? )?
             {
             otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleGenerated1662); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2039,7 +2039,20 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_0, grammarAccess.getGeneratedAccess().getGeneratedKeyword_0());
                   
             }
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:782:1: (otherlv_1= 'box' ( (lv_width_2_0= RULE_FLOAT ) ) ( (lv_height_3_0= RULE_FLOAT ) ) ( (lv_depth_4_0= RULE_FLOAT ) ) (otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) ) )? )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:782:1: ()
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:783:5: 
+            {
+            if ( state.backtracking==0 ) {
+
+                      current = forceCreateModelElement(
+                          grammarAccess.getGeneratedAccess().getGeneratedAction_1(),
+                          current);
+                  
+            }
+
+            }
+
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:788:2: ( ( (lv_type_2_0= 'box' ) ) ( (lv_width_3_0= RULE_FLOAT ) ) ( (lv_height_4_0= RULE_FLOAT ) ) ( (lv_depth_5_0= RULE_FLOAT ) ) (otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) ) )? )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2048,24 +2061,44 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:782:3: otherlv_1= 'box' ( (lv_width_2_0= RULE_FLOAT ) ) ( (lv_height_3_0= RULE_FLOAT ) ) ( (lv_depth_4_0= RULE_FLOAT ) ) (otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) ) )?
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:788:3: ( (lv_type_2_0= 'box' ) ) ( (lv_width_3_0= RULE_FLOAT ) ) ( (lv_height_4_0= RULE_FLOAT ) ) ( (lv_depth_5_0= RULE_FLOAT ) ) (otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) ) )?
                     {
-                    otherlv_1=(Token)match(input,20,FOLLOW_20_in_ruleGenerated1675); if (state.failed) return current;
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:788:3: ( (lv_type_2_0= 'box' ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:789:1: (lv_type_2_0= 'box' )
+                    {
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:789:1: (lv_type_2_0= 'box' )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:790:3: lv_type_2_0= 'box'
+                    {
+                    lv_type_2_0=(Token)match(input,20,FOLLOW_20_in_ruleGenerated1690); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                          	newLeafNode(otherlv_1, grammarAccess.getGeneratedAccess().getBoxKeyword_1_0());
+                              newLeafNode(lv_type_2_0, grammarAccess.getGeneratedAccess().getTypeBoxKeyword_2_0_0());
                           
                     }
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:786:1: ( (lv_width_2_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:787:1: (lv_width_2_0= RULE_FLOAT )
-                    {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:787:1: (lv_width_2_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:788:3: lv_width_2_0= RULE_FLOAT
-                    {
-                    lv_width_2_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1692); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_width_2_0, grammarAccess.getGeneratedAccess().getWidthFLOATTerminalRuleCall_1_1_0()); 
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getGeneratedRule());
+                      	        }
+                             		setWithLastConsumed(current, "type", lv_type_2_0, "box");
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:803:2: ( (lv_width_3_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:804:1: (lv_width_3_0= RULE_FLOAT )
+                    {
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:804:1: (lv_width_3_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:805:3: lv_width_3_0= RULE_FLOAT
+                    {
+                    lv_width_3_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1720); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			newLeafNode(lv_width_3_0, grammarAccess.getGeneratedAccess().getWidthFLOATTerminalRuleCall_2_1_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -2076,7 +2109,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                              		setWithLastConsumed(
                              			current, 
                              			"width",
-                              		lv_width_2_0, 
+                              		lv_width_3_0, 
                               		"FLOAT");
                       	    
                     }
@@ -2086,16 +2119,16 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:804:2: ( (lv_height_3_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:805:1: (lv_height_3_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:821:2: ( (lv_height_4_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:822:1: (lv_height_4_0= RULE_FLOAT )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:805:1: (lv_height_3_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:806:3: lv_height_3_0= RULE_FLOAT
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:822:1: (lv_height_4_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:823:3: lv_height_4_0= RULE_FLOAT
                     {
-                    lv_height_3_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1714); if (state.failed) return current;
+                    lv_height_4_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1742); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_height_3_0, grammarAccess.getGeneratedAccess().getHeightFLOATTerminalRuleCall_1_2_0()); 
+                      			newLeafNode(lv_height_4_0, grammarAccess.getGeneratedAccess().getHeightFLOATTerminalRuleCall_2_2_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -2106,7 +2139,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                              		setWithLastConsumed(
                              			current, 
                              			"height",
-                              		lv_height_3_0, 
+                              		lv_height_4_0, 
                               		"FLOAT");
                       	    
                     }
@@ -2116,16 +2149,16 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:822:2: ( (lv_depth_4_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:823:1: (lv_depth_4_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:839:2: ( (lv_depth_5_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:840:1: (lv_depth_5_0= RULE_FLOAT )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:823:1: (lv_depth_4_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:824:3: lv_depth_4_0= RULE_FLOAT
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:840:1: (lv_depth_5_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:841:3: lv_depth_5_0= RULE_FLOAT
                     {
-                    lv_depth_4_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1736); if (state.failed) return current;
+                    lv_depth_5_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1764); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_depth_4_0, grammarAccess.getGeneratedAccess().getDepthFLOATTerminalRuleCall_1_3_0()); 
+                      			newLeafNode(lv_depth_5_0, grammarAccess.getGeneratedAccess().getDepthFLOATTerminalRuleCall_2_3_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -2136,7 +2169,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                              		setWithLastConsumed(
                              			current, 
                              			"depth",
-                              		lv_depth_4_0, 
+                              		lv_depth_5_0, 
                               		"FLOAT");
                       	    
                     }
@@ -2146,7 +2179,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:840:2: (otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) ) )?
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:857:2: (otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) ) )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -2155,24 +2188,24 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt6) {
                         case 1 :
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:840:4: otherlv_5= 'origin' ( (lv_originX_6_0= RULE_FLOAT ) ) ( (lv_originY_7_0= RULE_FLOAT ) ) ( (lv_originZ_8_0= RULE_FLOAT ) )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:857:4: otherlv_6= 'origin' ( (lv_originX_7_0= RULE_FLOAT ) ) ( (lv_originY_8_0= RULE_FLOAT ) ) ( (lv_originZ_9_0= RULE_FLOAT ) )
                             {
-                            otherlv_5=(Token)match(input,21,FOLLOW_21_in_ruleGenerated1754); if (state.failed) return current;
+                            otherlv_6=(Token)match(input,21,FOLLOW_21_in_ruleGenerated1782); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                                  	newLeafNode(otherlv_5, grammarAccess.getGeneratedAccess().getOriginKeyword_1_4_0());
+                                  	newLeafNode(otherlv_6, grammarAccess.getGeneratedAccess().getOriginKeyword_2_4_0());
                                   
                             }
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:844:1: ( (lv_originX_6_0= RULE_FLOAT ) )
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:845:1: (lv_originX_6_0= RULE_FLOAT )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:861:1: ( (lv_originX_7_0= RULE_FLOAT ) )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:862:1: (lv_originX_7_0= RULE_FLOAT )
                             {
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:845:1: (lv_originX_6_0= RULE_FLOAT )
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:846:3: lv_originX_6_0= RULE_FLOAT
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:862:1: (lv_originX_7_0= RULE_FLOAT )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:863:3: lv_originX_7_0= RULE_FLOAT
                             {
-                            lv_originX_6_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1771); if (state.failed) return current;
+                            lv_originX_7_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1799); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              			newLeafNode(lv_originX_6_0, grammarAccess.getGeneratedAccess().getOriginXFLOATTerminalRuleCall_1_4_1_0()); 
+                              			newLeafNode(lv_originX_7_0, grammarAccess.getGeneratedAccess().getOriginXFLOATTerminalRuleCall_2_4_1_0()); 
                               		
                             }
                             if ( state.backtracking==0 ) {
@@ -2183,7 +2216,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                                      		setWithLastConsumed(
                                      			current, 
                                      			"originX",
-                                      		lv_originX_6_0, 
+                                      		lv_originX_7_0, 
                                       		"FLOAT");
                               	    
                             }
@@ -2193,16 +2226,16 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:862:2: ( (lv_originY_7_0= RULE_FLOAT ) )
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:863:1: (lv_originY_7_0= RULE_FLOAT )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:879:2: ( (lv_originY_8_0= RULE_FLOAT ) )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:880:1: (lv_originY_8_0= RULE_FLOAT )
                             {
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:863:1: (lv_originY_7_0= RULE_FLOAT )
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:864:3: lv_originY_7_0= RULE_FLOAT
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:880:1: (lv_originY_8_0= RULE_FLOAT )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:881:3: lv_originY_8_0= RULE_FLOAT
                             {
-                            lv_originY_7_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1793); if (state.failed) return current;
+                            lv_originY_8_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1821); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              			newLeafNode(lv_originY_7_0, grammarAccess.getGeneratedAccess().getOriginYFLOATTerminalRuleCall_1_4_2_0()); 
+                              			newLeafNode(lv_originY_8_0, grammarAccess.getGeneratedAccess().getOriginYFLOATTerminalRuleCall_2_4_2_0()); 
                               		
                             }
                             if ( state.backtracking==0 ) {
@@ -2213,7 +2246,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                                      		setWithLastConsumed(
                                      			current, 
                                      			"originY",
-                                      		lv_originY_7_0, 
+                                      		lv_originY_8_0, 
                                       		"FLOAT");
                               	    
                             }
@@ -2223,16 +2256,16 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:880:2: ( (lv_originZ_8_0= RULE_FLOAT ) )
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:881:1: (lv_originZ_8_0= RULE_FLOAT )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:897:2: ( (lv_originZ_9_0= RULE_FLOAT ) )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:898:1: (lv_originZ_9_0= RULE_FLOAT )
                             {
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:881:1: (lv_originZ_8_0= RULE_FLOAT )
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:882:3: lv_originZ_8_0= RULE_FLOAT
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:898:1: (lv_originZ_9_0= RULE_FLOAT )
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:899:3: lv_originZ_9_0= RULE_FLOAT
                             {
-                            lv_originZ_8_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1815); if (state.failed) return current;
+                            lv_originZ_9_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleGenerated1843); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              			newLeafNode(lv_originZ_8_0, grammarAccess.getGeneratedAccess().getOriginZFLOATTerminalRuleCall_1_4_3_0()); 
+                              			newLeafNode(lv_originZ_9_0, grammarAccess.getGeneratedAccess().getOriginZFLOATTerminalRuleCall_2_4_3_0()); 
                               		
                             }
                             if ( state.backtracking==0 ) {
@@ -2243,7 +2276,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                                      		setWithLastConsumed(
                                      			current, 
                                      			"originZ",
-                                      		lv_originZ_8_0, 
+                                      		lv_originZ_9_0, 
                                       		"FLOAT");
                               	    
                             }
@@ -2288,7 +2321,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFxmlInclude"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:906:1: entryRuleFxmlInclude returns [EObject current=null] : iv_ruleFxmlInclude= ruleFxmlInclude EOF ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:923:1: entryRuleFxmlInclude returns [EObject current=null] : iv_ruleFxmlInclude= ruleFxmlInclude EOF ;
     public final EObject entryRuleFxmlInclude() throws RecognitionException {
         EObject current = null;
 
@@ -2296,13 +2329,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:907:2: (iv_ruleFxmlInclude= ruleFxmlInclude EOF )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:908:2: iv_ruleFxmlInclude= ruleFxmlInclude EOF
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:924:2: (iv_ruleFxmlInclude= ruleFxmlInclude EOF )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:925:2: iv_ruleFxmlInclude= ruleFxmlInclude EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFxmlIncludeRule()); 
             }
-            pushFollow(FOLLOW_ruleFxmlInclude_in_entryRuleFxmlInclude1860);
+            pushFollow(FOLLOW_ruleFxmlInclude_in_entryRuleFxmlInclude1888);
             iv_ruleFxmlInclude=ruleFxmlInclude();
 
             state._fsp--;
@@ -2310,7 +2343,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFxmlInclude; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFxmlInclude1870); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFxmlInclude1898); if (state.failed) return current;
 
             }
 
@@ -2328,7 +2361,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFxmlInclude"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:915:1: ruleFxmlInclude returns [EObject current=null] : (otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )? ) ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:932:1: ruleFxmlInclude returns [EObject current=null] : (otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )? ) ;
     public final EObject ruleFxmlInclude() throws RecognitionException {
         EObject current = null;
 
@@ -2342,25 +2375,25 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:918:28: ( (otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )? ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:919:1: (otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:935:28: ( (otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )? ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:936:1: (otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )? )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:919:1: (otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )? )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:919:3: otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:936:1: (otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:936:3: otherlv_0= 'fxml' ( (lv_source3d_1_0= RULE_STRING ) ) (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )?
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleFxmlInclude1907); if (state.failed) return current;
+            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleFxmlInclude1935); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getFxmlIncludeAccess().getFxmlKeyword_0());
                   
             }
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:923:1: ( (lv_source3d_1_0= RULE_STRING ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:924:1: (lv_source3d_1_0= RULE_STRING )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:940:1: ( (lv_source3d_1_0= RULE_STRING ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:941:1: (lv_source3d_1_0= RULE_STRING )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:924:1: (lv_source3d_1_0= RULE_STRING )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:925:3: lv_source3d_1_0= RULE_STRING
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:941:1: (lv_source3d_1_0= RULE_STRING )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:942:3: lv_source3d_1_0= RULE_STRING
             {
-            lv_source3d_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFxmlInclude1924); if (state.failed) return current;
+            lv_source3d_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFxmlInclude1952); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_source3d_1_0, grammarAccess.getFxmlIncludeAccess().getSource3dSTRINGTerminalRuleCall_1_0()); 
@@ -2384,7 +2417,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:941:2: (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:958:2: (otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) ) )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -2393,21 +2426,21 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:941:4: otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:958:4: otherlv_2= 'origin' ( (lv_originX_3_0= RULE_FLOAT ) ) ( (lv_originY_4_0= RULE_FLOAT ) ) ( (lv_originZ_5_0= RULE_FLOAT ) )
                     {
-                    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleFxmlInclude1942); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleFxmlInclude1970); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getFxmlIncludeAccess().getOriginKeyword_2_0());
                           
                     }
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:945:1: ( (lv_originX_3_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:946:1: (lv_originX_3_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:962:1: ( (lv_originX_3_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:963:1: (lv_originX_3_0= RULE_FLOAT )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:946:1: (lv_originX_3_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:947:3: lv_originX_3_0= RULE_FLOAT
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:963:1: (lv_originX_3_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:964:3: lv_originX_3_0= RULE_FLOAT
                     {
-                    lv_originX_3_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleFxmlInclude1959); if (state.failed) return current;
+                    lv_originX_3_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleFxmlInclude1987); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_originX_3_0, grammarAccess.getFxmlIncludeAccess().getOriginXFLOATTerminalRuleCall_2_1_0()); 
@@ -2431,13 +2464,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:963:2: ( (lv_originY_4_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:964:1: (lv_originY_4_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:980:2: ( (lv_originY_4_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:981:1: (lv_originY_4_0= RULE_FLOAT )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:964:1: (lv_originY_4_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:965:3: lv_originY_4_0= RULE_FLOAT
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:981:1: (lv_originY_4_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:982:3: lv_originY_4_0= RULE_FLOAT
                     {
-                    lv_originY_4_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleFxmlInclude1981); if (state.failed) return current;
+                    lv_originY_4_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleFxmlInclude2009); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_originY_4_0, grammarAccess.getFxmlIncludeAccess().getOriginYFLOATTerminalRuleCall_2_2_0()); 
@@ -2461,13 +2494,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:981:2: ( (lv_originZ_5_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:982:1: (lv_originZ_5_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:998:2: ( (lv_originZ_5_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:999:1: (lv_originZ_5_0= RULE_FLOAT )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:982:1: (lv_originZ_5_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:983:3: lv_originZ_5_0= RULE_FLOAT
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:999:1: (lv_originZ_5_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1000:3: lv_originZ_5_0= RULE_FLOAT
                     {
-                    lv_originZ_5_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleFxmlInclude2003); if (state.failed) return current;
+                    lv_originZ_5_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleFxmlInclude2031); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_originZ_5_0, grammarAccess.getFxmlIncludeAccess().getOriginZFLOATTerminalRuleCall_2_3_0()); 
@@ -2520,7 +2553,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAssembly"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1007:1: entryRuleAssembly returns [EObject current=null] : iv_ruleAssembly= ruleAssembly EOF ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1024:1: entryRuleAssembly returns [EObject current=null] : iv_ruleAssembly= ruleAssembly EOF ;
     public final EObject entryRuleAssembly() throws RecognitionException {
         EObject current = null;
 
@@ -2528,13 +2561,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1008:2: (iv_ruleAssembly= ruleAssembly EOF )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1009:2: iv_ruleAssembly= ruleAssembly EOF
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1025:2: (iv_ruleAssembly= ruleAssembly EOF )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1026:2: iv_ruleAssembly= ruleAssembly EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAssemblyRule()); 
             }
-            pushFollow(FOLLOW_ruleAssembly_in_entryRuleAssembly2046);
+            pushFollow(FOLLOW_ruleAssembly_in_entryRuleAssembly2074);
             iv_ruleAssembly=ruleAssembly();
 
             state._fsp--;
@@ -2542,7 +2575,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAssembly; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAssembly2056); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAssembly2084); if (state.failed) return current;
 
             }
 
@@ -2560,7 +2593,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAssembly"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1016:1: ruleAssembly returns [EObject current=null] : (otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}' ) ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1033:1: ruleAssembly returns [EObject current=null] : (otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}' ) ;
     public final EObject ruleAssembly() throws RecognitionException {
         EObject current = null;
 
@@ -2575,30 +2608,30 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1019:28: ( (otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}' ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1020:1: (otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1036:28: ( (otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}' ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1037:1: (otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}' )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1020:1: (otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1020:3: otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1037:1: (otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1037:3: otherlv_0= 'assembly' ( (lv_name_1_0= ruleValidID ) ) otherlv_2= '{' ( (lv_items_3_0= ruleAssemblyItem ) )+ otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleAssembly2093); if (state.failed) return current;
+            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleAssembly2121); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getAssemblyAccess().getAssemblyKeyword_0());
                   
             }
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1024:1: ( (lv_name_1_0= ruleValidID ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1025:1: (lv_name_1_0= ruleValidID )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1041:1: ( (lv_name_1_0= ruleValidID ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1042:1: (lv_name_1_0= ruleValidID )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1025:1: (lv_name_1_0= ruleValidID )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1026:3: lv_name_1_0= ruleValidID
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1042:1: (lv_name_1_0= ruleValidID )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1043:3: lv_name_1_0= ruleValidID
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getAssemblyAccess().getNameValidIDParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleValidID_in_ruleAssembly2114);
+            pushFollow(FOLLOW_ruleValidID_in_ruleAssembly2142);
             lv_name_1_0=ruleValidID();
 
             state._fsp--;
@@ -2622,13 +2655,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleAssembly2126); if (state.failed) return current;
+            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleAssembly2154); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getAssemblyAccess().getLeftCurlyBracketKeyword_2());
                   
             }
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1046:1: ( (lv_items_3_0= ruleAssemblyItem ) )+
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1063:1: ( (lv_items_3_0= ruleAssemblyItem ) )+
             int cnt9=0;
             loop9:
             do {
@@ -2642,17 +2675,17 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1047:1: (lv_items_3_0= ruleAssemblyItem )
+            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1064:1: (lv_items_3_0= ruleAssemblyItem )
             	    {
-            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1047:1: (lv_items_3_0= ruleAssemblyItem )
-            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1048:3: lv_items_3_0= ruleAssemblyItem
+            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1064:1: (lv_items_3_0= ruleAssemblyItem )
+            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1065:3: lv_items_3_0= ruleAssemblyItem
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getAssemblyAccess().getItemsAssemblyItemParserRuleCall_3_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleAssemblyItem_in_ruleAssembly2147);
+            	    pushFollow(FOLLOW_ruleAssemblyItem_in_ruleAssembly2175);
             	    lv_items_3_0=ruleAssemblyItem();
 
             	    state._fsp--;
@@ -2687,7 +2720,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                 cnt9++;
             } while (true);
 
-            otherlv_4=(Token)match(input,14,FOLLOW_14_in_ruleAssembly2160); if (state.failed) return current;
+            otherlv_4=(Token)match(input,14,FOLLOW_14_in_ruleAssembly2188); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getAssemblyAccess().getRightCurlyBracketKeyword_4());
@@ -2716,7 +2749,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAssemblyItem"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1076:1: entryRuleAssemblyItem returns [EObject current=null] : iv_ruleAssemblyItem= ruleAssemblyItem EOF ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1093:1: entryRuleAssemblyItem returns [EObject current=null] : iv_ruleAssemblyItem= ruleAssemblyItem EOF ;
     public final EObject entryRuleAssemblyItem() throws RecognitionException {
         EObject current = null;
 
@@ -2724,13 +2757,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1077:2: (iv_ruleAssemblyItem= ruleAssemblyItem EOF )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1078:2: iv_ruleAssemblyItem= ruleAssemblyItem EOF
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1094:2: (iv_ruleAssemblyItem= ruleAssemblyItem EOF )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1095:2: iv_ruleAssemblyItem= ruleAssemblyItem EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAssemblyItemRule()); 
             }
-            pushFollow(FOLLOW_ruleAssemblyItem_in_entryRuleAssemblyItem2196);
+            pushFollow(FOLLOW_ruleAssemblyItem_in_entryRuleAssemblyItem2224);
             iv_ruleAssemblyItem=ruleAssemblyItem();
 
             state._fsp--;
@@ -2738,7 +2771,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAssemblyItem; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAssemblyItem2206); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAssemblyItem2234); if (state.failed) return current;
 
             }
 
@@ -2756,7 +2789,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAssemblyItem"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1085:1: ruleAssemblyItem returns [EObject current=null] : (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem ) ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1102:1: ruleAssemblyItem returns [EObject current=null] : (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem ) ;
     public final EObject ruleAssemblyItem() throws RecognitionException {
         EObject current = null;
 
@@ -2768,22 +2801,22 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1088:28: ( (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1089:1: (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1105:28: ( (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1106:1: (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1089:1: (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1106:1: (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem )
             int alt10=2;
             alt10 = dfa10.predict(input);
             switch (alt10) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1090:5: this_RasterAssemblyItem_0= ruleRasterAssemblyItem
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1107:5: this_RasterAssemblyItem_0= ruleRasterAssemblyItem
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getAssemblyItemAccess().getRasterAssemblyItemParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleRasterAssemblyItem_in_ruleAssemblyItem2253);
+                    pushFollow(FOLLOW_ruleRasterAssemblyItem_in_ruleAssemblyItem2281);
                     this_RasterAssemblyItem_0=ruleRasterAssemblyItem();
 
                     state._fsp--;
@@ -2798,14 +2831,14 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1100:5: this_MountedAssemblyItem_1= ruleMountedAssemblyItem
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1117:5: this_MountedAssemblyItem_1= ruleMountedAssemblyItem
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getAssemblyItemAccess().getMountedAssemblyItemParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleMountedAssemblyItem_in_ruleAssemblyItem2280);
+                    pushFollow(FOLLOW_ruleMountedAssemblyItem_in_ruleAssemblyItem2308);
                     this_MountedAssemblyItem_1=ruleMountedAssemblyItem();
 
                     state._fsp--;
@@ -2842,7 +2875,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRasterAssemblyItem"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1116:1: entryRuleRasterAssemblyItem returns [EObject current=null] : iv_ruleRasterAssemblyItem= ruleRasterAssemblyItem EOF ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1133:1: entryRuleRasterAssemblyItem returns [EObject current=null] : iv_ruleRasterAssemblyItem= ruleRasterAssemblyItem EOF ;
     public final EObject entryRuleRasterAssemblyItem() throws RecognitionException {
         EObject current = null;
 
@@ -2850,13 +2883,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1117:2: (iv_ruleRasterAssemblyItem= ruleRasterAssemblyItem EOF )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1118:2: iv_ruleRasterAssemblyItem= ruleRasterAssemblyItem EOF
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1134:2: (iv_ruleRasterAssemblyItem= ruleRasterAssemblyItem EOF )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1135:2: iv_ruleRasterAssemblyItem= ruleRasterAssemblyItem EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRasterAssemblyItemRule()); 
             }
-            pushFollow(FOLLOW_ruleRasterAssemblyItem_in_entryRuleRasterAssemblyItem2315);
+            pushFollow(FOLLOW_ruleRasterAssemblyItem_in_entryRuleRasterAssemblyItem2343);
             iv_ruleRasterAssemblyItem=ruleRasterAssemblyItem();
 
             state._fsp--;
@@ -2864,7 +2897,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleRasterAssemblyItem; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRasterAssemblyItem2325); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRasterAssemblyItem2353); if (state.failed) return current;
 
             }
 
@@ -2882,7 +2915,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRasterAssemblyItem"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1125:1: ruleRasterAssemblyItem returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )? ) ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1142:1: ruleRasterAssemblyItem returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )? ) ;
     public final EObject ruleRasterAssemblyItem() throws RecognitionException {
         EObject current = null;
 
@@ -2901,17 +2934,17 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1128:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )? ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1129:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1145:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )? ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1146:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )? )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1129:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )? )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1129:2: ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1146:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1146:2: ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= ruleXUnit ) ) ( (lv_yUnits_3_0= ruleYUnit ) ) ( (lv_zUnits_4_0= ruleZUnit ) ) (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )?
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1129:2: ( ( ruleQualifiedName ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1130:1: ( ruleQualifiedName )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1146:2: ( ( ruleQualifiedName ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1147:1: ( ruleQualifiedName )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1130:1: ( ruleQualifiedName )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1131:3: ruleQualifiedName
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1147:1: ( ruleQualifiedName )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1148:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -2925,7 +2958,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getRasterAssemblyItemAccess().getElementRasterItemCrossReference_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleRasterAssemblyItem2373);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleRasterAssemblyItem2401);
             ruleQualifiedName();
 
             state._fsp--;
@@ -2941,24 +2974,24 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleRasterAssemblyItem2385); if (state.failed) return current;
+            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleRasterAssemblyItem2413); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getRasterAssemblyItemAccess().getPosKeyword_1());
                   
             }
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1148:1: ( (lv_xUnits_2_0= ruleXUnit ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1149:1: (lv_xUnits_2_0= ruleXUnit )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1165:1: ( (lv_xUnits_2_0= ruleXUnit ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1166:1: (lv_xUnits_2_0= ruleXUnit )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1149:1: (lv_xUnits_2_0= ruleXUnit )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1150:3: lv_xUnits_2_0= ruleXUnit
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1166:1: (lv_xUnits_2_0= ruleXUnit )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1167:3: lv_xUnits_2_0= ruleXUnit
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getRasterAssemblyItemAccess().getXUnitsXUnitParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXUnit_in_ruleRasterAssemblyItem2406);
+            pushFollow(FOLLOW_ruleXUnit_in_ruleRasterAssemblyItem2434);
             lv_xUnits_2_0=ruleXUnit();
 
             state._fsp--;
@@ -2982,18 +3015,18 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1166:2: ( (lv_yUnits_3_0= ruleYUnit ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1167:1: (lv_yUnits_3_0= ruleYUnit )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1183:2: ( (lv_yUnits_3_0= ruleYUnit ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1184:1: (lv_yUnits_3_0= ruleYUnit )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1167:1: (lv_yUnits_3_0= ruleYUnit )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1168:3: lv_yUnits_3_0= ruleYUnit
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1184:1: (lv_yUnits_3_0= ruleYUnit )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1185:3: lv_yUnits_3_0= ruleYUnit
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getRasterAssemblyItemAccess().getYUnitsYUnitParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleYUnit_in_ruleRasterAssemblyItem2427);
+            pushFollow(FOLLOW_ruleYUnit_in_ruleRasterAssemblyItem2455);
             lv_yUnits_3_0=ruleYUnit();
 
             state._fsp--;
@@ -3017,18 +3050,18 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1184:2: ( (lv_zUnits_4_0= ruleZUnit ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1185:1: (lv_zUnits_4_0= ruleZUnit )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1201:2: ( (lv_zUnits_4_0= ruleZUnit ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1202:1: (lv_zUnits_4_0= ruleZUnit )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1185:1: (lv_zUnits_4_0= ruleZUnit )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1186:3: lv_zUnits_4_0= ruleZUnit
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1202:1: (lv_zUnits_4_0= ruleZUnit )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1203:3: lv_zUnits_4_0= ruleZUnit
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getRasterAssemblyItemAccess().getZUnitsZUnitParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleZUnit_in_ruleRasterAssemblyItem2448);
+            pushFollow(FOLLOW_ruleZUnit_in_ruleRasterAssemblyItem2476);
             lv_zUnits_4_0=ruleZUnit();
 
             state._fsp--;
@@ -3052,7 +3085,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1202:2: (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1219:2: (otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) ) )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -3061,21 +3094,21 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1202:4: otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1219:4: otherlv_5= 'transform' ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) )
                     {
-                    otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleRasterAssemblyItem2461); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleRasterAssemblyItem2489); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getRasterAssemblyItemAccess().getTransformKeyword_5_0());
                           
                     }
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1206:1: ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1207:1: ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1223:1: ( ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1224:1: ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1207:1: ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1208:1: (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1224:1: ( (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1225:1: (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1208:1: (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1225:1: (lv_transform_6_1= 'rotate180' | lv_transform_6_2= 'rotate90' | lv_transform_6_3= 'rotate270' )
                     int alt11=3;
                     switch ( input.LA(1) ) {
                     case 26:
@@ -3103,9 +3136,9 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                     switch (alt11) {
                         case 1 :
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1209:3: lv_transform_6_1= 'rotate180'
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1226:3: lv_transform_6_1= 'rotate180'
                             {
-                            lv_transform_6_1=(Token)match(input,26,FOLLOW_26_in_ruleRasterAssemblyItem2481); if (state.failed) return current;
+                            lv_transform_6_1=(Token)match(input,26,FOLLOW_26_in_ruleRasterAssemblyItem2509); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_transform_6_1, grammarAccess.getRasterAssemblyItemAccess().getTransformRotate180Keyword_5_1_0_0());
@@ -3123,9 +3156,9 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1221:8: lv_transform_6_2= 'rotate90'
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1238:8: lv_transform_6_2= 'rotate90'
                             {
-                            lv_transform_6_2=(Token)match(input,27,FOLLOW_27_in_ruleRasterAssemblyItem2510); if (state.failed) return current;
+                            lv_transform_6_2=(Token)match(input,27,FOLLOW_27_in_ruleRasterAssemblyItem2538); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_transform_6_2, grammarAccess.getRasterAssemblyItemAccess().getTransformRotate90Keyword_5_1_0_1());
@@ -3143,9 +3176,9 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1233:8: lv_transform_6_3= 'rotate270'
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1250:8: lv_transform_6_3= 'rotate270'
                             {
-                            lv_transform_6_3=(Token)match(input,28,FOLLOW_28_in_ruleRasterAssemblyItem2539); if (state.failed) return current;
+                            lv_transform_6_3=(Token)match(input,28,FOLLOW_28_in_ruleRasterAssemblyItem2567); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_transform_6_3, grammarAccess.getRasterAssemblyItemAccess().getTransformRotate270Keyword_5_1_0_2());
@@ -3200,7 +3233,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMountedAssemblyItem"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1256:1: entryRuleMountedAssemblyItem returns [EObject current=null] : iv_ruleMountedAssemblyItem= ruleMountedAssemblyItem EOF ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1273:1: entryRuleMountedAssemblyItem returns [EObject current=null] : iv_ruleMountedAssemblyItem= ruleMountedAssemblyItem EOF ;
     public final EObject entryRuleMountedAssemblyItem() throws RecognitionException {
         EObject current = null;
 
@@ -3208,13 +3241,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1257:2: (iv_ruleMountedAssemblyItem= ruleMountedAssemblyItem EOF )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1258:2: iv_ruleMountedAssemblyItem= ruleMountedAssemblyItem EOF
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1274:2: (iv_ruleMountedAssemblyItem= ruleMountedAssemblyItem EOF )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1275:2: iv_ruleMountedAssemblyItem= ruleMountedAssemblyItem EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMountedAssemblyItemRule()); 
             }
-            pushFollow(FOLLOW_ruleMountedAssemblyItem_in_entryRuleMountedAssemblyItem2593);
+            pushFollow(FOLLOW_ruleMountedAssemblyItem_in_entryRuleMountedAssemblyItem2621);
             iv_ruleMountedAssemblyItem=ruleMountedAssemblyItem();
 
             state._fsp--;
@@ -3222,7 +3255,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMountedAssemblyItem; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMountedAssemblyItem2603); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMountedAssemblyItem2631); if (state.failed) return current;
 
             }
 
@@ -3240,7 +3273,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMountedAssemblyItem"
-    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1265:1: ruleMountedAssemblyItem returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )? ) ;
+    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1282:1: ruleMountedAssemblyItem returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )? ) ;
     public final EObject ruleMountedAssemblyItem() throws RecognitionException {
         EObject current = null;
 
@@ -3256,17 +3289,17 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1268:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )? ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1269:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1285:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )? ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1286:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )? )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1269:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )? )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1269:2: ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1286:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1286:2: ( ( ruleQualifiedName ) ) otherlv_1= 'pos' ( (lv_xUnits_2_0= RULE_FLOAT ) ) ( (lv_yUnits_3_0= RULE_FLOAT ) ) ( (lv_zUnits_4_0= RULE_FLOAT ) ) (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )?
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1269:2: ( ( ruleQualifiedName ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1270:1: ( ruleQualifiedName )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1286:2: ( ( ruleQualifiedName ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1287:1: ( ruleQualifiedName )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1270:1: ( ruleQualifiedName )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1271:3: ruleQualifiedName
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1287:1: ( ruleQualifiedName )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1288:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -3277,10 +3310,10 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getMountedAssemblyItemAccess().getElementRasterItemCrossReference_0_0()); 
+              	        newCompositeNode(grammarAccess.getMountedAssemblyItemAccess().getElementMountedPartCrossReference_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleMountedAssemblyItem2651);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleMountedAssemblyItem2679);
             ruleQualifiedName();
 
             state._fsp--;
@@ -3296,19 +3329,19 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleMountedAssemblyItem2663); if (state.failed) return current;
+            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleMountedAssemblyItem2691); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getMountedAssemblyItemAccess().getPosKeyword_1());
                   
             }
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1288:1: ( (lv_xUnits_2_0= RULE_FLOAT ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1289:1: (lv_xUnits_2_0= RULE_FLOAT )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1305:1: ( (lv_xUnits_2_0= RULE_FLOAT ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1306:1: (lv_xUnits_2_0= RULE_FLOAT )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1289:1: (lv_xUnits_2_0= RULE_FLOAT )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1290:3: lv_xUnits_2_0= RULE_FLOAT
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1306:1: (lv_xUnits_2_0= RULE_FLOAT )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1307:3: lv_xUnits_2_0= RULE_FLOAT
             {
-            lv_xUnits_2_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2680); if (state.failed) return current;
+            lv_xUnits_2_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2708); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_xUnits_2_0, grammarAccess.getMountedAssemblyItemAccess().getXUnitsFLOATTerminalRuleCall_2_0()); 
@@ -3332,13 +3365,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1306:2: ( (lv_yUnits_3_0= RULE_FLOAT ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1307:1: (lv_yUnits_3_0= RULE_FLOAT )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1323:2: ( (lv_yUnits_3_0= RULE_FLOAT ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1324:1: (lv_yUnits_3_0= RULE_FLOAT )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1307:1: (lv_yUnits_3_0= RULE_FLOAT )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1308:3: lv_yUnits_3_0= RULE_FLOAT
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1324:1: (lv_yUnits_3_0= RULE_FLOAT )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1325:3: lv_yUnits_3_0= RULE_FLOAT
             {
-            lv_yUnits_3_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2702); if (state.failed) return current;
+            lv_yUnits_3_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2730); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_yUnits_3_0, grammarAccess.getMountedAssemblyItemAccess().getYUnitsFLOATTerminalRuleCall_3_0()); 
@@ -3362,13 +3395,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1324:2: ( (lv_zUnits_4_0= RULE_FLOAT ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1325:1: (lv_zUnits_4_0= RULE_FLOAT )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1341:2: ( (lv_zUnits_4_0= RULE_FLOAT ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1342:1: (lv_zUnits_4_0= RULE_FLOAT )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1325:1: (lv_zUnits_4_0= RULE_FLOAT )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1326:3: lv_zUnits_4_0= RULE_FLOAT
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1342:1: (lv_zUnits_4_0= RULE_FLOAT )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1343:3: lv_zUnits_4_0= RULE_FLOAT
             {
-            lv_zUnits_4_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2724); if (state.failed) return current;
+            lv_zUnits_4_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2752); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_zUnits_4_0, grammarAccess.getMountedAssemblyItemAccess().getZUnitsFLOATTerminalRuleCall_4_0()); 
@@ -3392,7 +3425,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1342:2: (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1359:2: (otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) ) )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -3401,21 +3434,21 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1342:4: otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1359:4: otherlv_5= 'transform' ( (lv_rotateX_6_0= RULE_FLOAT ) ) ( (lv_rotateY_7_0= RULE_FLOAT ) ) ( (lv_rotateZ_8_0= RULE_FLOAT ) )
                     {
-                    otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleMountedAssemblyItem2742); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleMountedAssemblyItem2770); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getMountedAssemblyItemAccess().getTransformKeyword_5_0());
                           
                     }
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1346:1: ( (lv_rotateX_6_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1347:1: (lv_rotateX_6_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1363:1: ( (lv_rotateX_6_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1364:1: (lv_rotateX_6_0= RULE_FLOAT )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1347:1: (lv_rotateX_6_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1348:3: lv_rotateX_6_0= RULE_FLOAT
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1364:1: (lv_rotateX_6_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1365:3: lv_rotateX_6_0= RULE_FLOAT
                     {
-                    lv_rotateX_6_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2759); if (state.failed) return current;
+                    lv_rotateX_6_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2787); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_rotateX_6_0, grammarAccess.getMountedAssemblyItemAccess().getRotateXFLOATTerminalRuleCall_5_1_0()); 
@@ -3439,13 +3472,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1364:2: ( (lv_rotateY_7_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1365:1: (lv_rotateY_7_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1381:2: ( (lv_rotateY_7_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1382:1: (lv_rotateY_7_0= RULE_FLOAT )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1365:1: (lv_rotateY_7_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1366:3: lv_rotateY_7_0= RULE_FLOAT
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1382:1: (lv_rotateY_7_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1383:3: lv_rotateY_7_0= RULE_FLOAT
                     {
-                    lv_rotateY_7_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2781); if (state.failed) return current;
+                    lv_rotateY_7_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2809); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_rotateY_7_0, grammarAccess.getMountedAssemblyItemAccess().getRotateYFLOATTerminalRuleCall_5_2_0()); 
@@ -3469,13 +3502,13 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1382:2: ( (lv_rotateZ_8_0= RULE_FLOAT ) )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1383:1: (lv_rotateZ_8_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1399:2: ( (lv_rotateZ_8_0= RULE_FLOAT ) )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1400:1: (lv_rotateZ_8_0= RULE_FLOAT )
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1383:1: (lv_rotateZ_8_0= RULE_FLOAT )
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1384:3: lv_rotateZ_8_0= RULE_FLOAT
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1400:1: (lv_rotateZ_8_0= RULE_FLOAT )
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1401:3: lv_rotateZ_8_0= RULE_FLOAT
                     {
-                    lv_rotateZ_8_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2803); if (state.failed) return current;
+                    lv_rotateZ_8_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2831); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_rotateZ_8_0, grammarAccess.getMountedAssemblyItemAccess().getRotateZFLOATTerminalRuleCall_5_3_0()); 
@@ -3608,7 +3641,7 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
             this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "1089:1: (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem )";
+            return "1106:1: (this_RasterAssemblyItem_0= ruleRasterAssemblyItem | this_MountedAssemblyItem_1= ruleMountedAssemblyItem )";
         }
     }
  
@@ -3673,55 +3706,55 @@ public class InternalLegoParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleGenerated_in_entryRuleGenerated1615 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGenerated1625 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_19_in_ruleGenerated1662 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_20_in_ruleGenerated1675 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1692 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1714 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1736 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleGenerated1754 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1771 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1793 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFxmlInclude_in_entryRuleFxmlInclude1860 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFxmlInclude1870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleFxmlInclude1907 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFxmlInclude1924 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleFxmlInclude1942 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleFxmlInclude1959 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleFxmlInclude1981 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleFxmlInclude2003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssembly_in_entryRuleAssembly2046 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAssembly2056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleAssembly2093 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleAssembly2114 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleAssembly2126 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleAssemblyItem_in_ruleAssembly2147 = new BitSet(new long[]{0x0000000000004010L});
-    public static final BitSet FOLLOW_14_in_ruleAssembly2160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssemblyItem_in_entryRuleAssemblyItem2196 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAssemblyItem2206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRasterAssemblyItem_in_ruleAssemblyItem2253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMountedAssemblyItem_in_ruleAssemblyItem2280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRasterAssemblyItem_in_entryRuleRasterAssemblyItem2315 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRasterAssemblyItem2325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleRasterAssemblyItem2373 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleRasterAssemblyItem2385 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleXUnit_in_ruleRasterAssemblyItem2406 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleYUnit_in_ruleRasterAssemblyItem2427 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleZUnit_in_ruleRasterAssemblyItem2448 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_25_in_ruleRasterAssemblyItem2461 = new BitSet(new long[]{0x000000001C000000L});
-    public static final BitSet FOLLOW_26_in_ruleRasterAssemblyItem2481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleRasterAssemblyItem2510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleRasterAssemblyItem2539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMountedAssemblyItem_in_entryRuleMountedAssemblyItem2593 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMountedAssemblyItem2603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleMountedAssemblyItem2651 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleMountedAssemblyItem2663 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2680 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2702 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2724 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_25_in_ruleMountedAssemblyItem2742 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2759 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2781 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleGenerated1690 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1720 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1742 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1764 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_21_in_ruleGenerated1782 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1799 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1821 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleGenerated1843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFxmlInclude_in_entryRuleFxmlInclude1888 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFxmlInclude1898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleFxmlInclude1935 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFxmlInclude1952 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_21_in_ruleFxmlInclude1970 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleFxmlInclude1987 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleFxmlInclude2009 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleFxmlInclude2031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssembly_in_entryRuleAssembly2074 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAssembly2084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleAssembly2121 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleAssembly2142 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_ruleAssembly2154 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAssemblyItem_in_ruleAssembly2175 = new BitSet(new long[]{0x0000000000004010L});
+    public static final BitSet FOLLOW_14_in_ruleAssembly2188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssemblyItem_in_entryRuleAssemblyItem2224 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAssemblyItem2234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRasterAssemblyItem_in_ruleAssemblyItem2281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMountedAssemblyItem_in_ruleAssemblyItem2308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRasterAssemblyItem_in_entryRuleRasterAssemblyItem2343 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRasterAssemblyItem2353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleRasterAssemblyItem2401 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleRasterAssemblyItem2413 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleXUnit_in_ruleRasterAssemblyItem2434 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleYUnit_in_ruleRasterAssemblyItem2455 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleZUnit_in_ruleRasterAssemblyItem2476 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_25_in_ruleRasterAssemblyItem2489 = new BitSet(new long[]{0x000000001C000000L});
+    public static final BitSet FOLLOW_26_in_ruleRasterAssemblyItem2509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleRasterAssemblyItem2538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleRasterAssemblyItem2567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMountedAssemblyItem_in_entryRuleMountedAssemblyItem2621 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMountedAssemblyItem2631 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleMountedAssemblyItem2679 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleMountedAssemblyItem2691 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2708 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2730 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2752 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_25_in_ruleMountedAssemblyItem2770 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2787 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2809 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleMountedAssemblyItem2831 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_12_in_synpred1_InternalLego367 = new BitSet(new long[]{0x0000000000000002L});
 
 }

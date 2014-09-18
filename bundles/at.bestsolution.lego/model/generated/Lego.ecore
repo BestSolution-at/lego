@@ -51,6 +51,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="originZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Generated" eSuperTypes="#//Source">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="depth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -62,10 +63,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
         eType="#//AssemblyItem" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AssemblyItem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//RasterItem"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssemblyItem"/>
   <eClassifiers xsi:type="ecore:EClass" name="RasterAssemblyItem" eSuperTypes="#//AssemblyItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//RasterItem"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="xUnits" eType="#//XUnit"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="yUnits" eType="#//YUnit"
@@ -75,6 +75,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="transform" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MountedAssemblyItem" eSuperTypes="#//AssemblyItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//MountedPart"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xUnits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yUnits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zUnits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>

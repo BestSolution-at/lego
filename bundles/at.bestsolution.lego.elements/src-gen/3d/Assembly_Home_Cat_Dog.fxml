@@ -181,6 +181,7 @@
 					</transforms>
 				</Cylinder>
 			</Group>
+			
 			<transforms>
 				<Translate x="0" y="0.0" z="0" />
 				
@@ -214,13 +215,42 @@
 										<Translate x="-7.8" y="0.0" z="23.8" />
 						</transforms>
 					</Group>
+					
 					<transforms>
 						<Translate x="0" y="0.0" z="0" />
 						
 					</transforms>
 				</Group>
 				
+				<Group>
+					<Group>
+						<Box width="53.0" height="50.0" depth="2.0">
+							<material>
+								<PhongMaterial diffuseColor="rgb(139, 69, 19)
+								"/>
+							</material>
+						</Box>
+						<transforms>
+							<Translate x="25.0" y="-25.0" z="0.0" />
+						</transforms>
+					</Group>
+					<transforms>
+						<Translate x="50.0" y="-5.0" z="-8.0" />
+							<Rotate angle="0.0" >
+							 <axis><Point3D x="1" y="0" z="0"/></axis>
+							</Rotate>
+							<Rotate angle="160.0" >
+							 <axis><Point3D x="0" y="1" z="0"/></axis>
+							</Rotate>
+							<Rotate angle="0.0" >
+							 <axis><Point3D x="0" y="0" z="1"/></axis>
+							</Rotate>
+						
+					</transforms>
+				</Group>
+				
 			</Group>
+			
 			<transforms>
 				<Translate x="0" y="-9.6" z="0" />
 				
@@ -280,6 +310,7 @@
 					</transforms>
 				</Cylinder>
 			</Group>
+			
 			<transforms>
 				<Translate x="64" y="-9.6" z="0" />
 				
@@ -319,6 +350,7 @@
 					</transforms>
 				</Cylinder>
 			</Group>
+			
 			<transforms>
 				<Translate x="96" y="-9.6" z="16" />
 				
@@ -378,6 +410,7 @@
 					</transforms>
 				</Cylinder>
 			</Group>
+			
 			<transforms>
 				<Translate x="64" y="-48.0" z="0" />
 				
@@ -437,6 +470,7 @@
 					</transforms>
 				</Cylinder>
 			</Group>
+			
 			<transforms>
 				<Translate x="64" y="-28.799999999999997" z="0" />
 				
@@ -468,6 +502,7 @@
 								<Translate x="-7.8" y="0.0" z="-7.8" />
 				</transforms>
 			</Group>
+			
 			<transforms>
 				<Translate x="32" y="-67.2" z="16" />
 				<Rotate angle="180" >
@@ -502,6 +537,7 @@
 								<Translate x="-7.8" y="0.0" z="-7.8" />
 				</transforms>
 			</Group>
+			
 			<transforms>
 				<Translate x="48" y="-67.2" z="0" />
 				

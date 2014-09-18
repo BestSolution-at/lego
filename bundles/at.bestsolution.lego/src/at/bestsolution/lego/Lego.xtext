@@ -71,7 +71,7 @@ Source:
 ;
 
 Generated:
-	'generated' ( 'box' width=FLOAT height=FLOAT depth=FLOAT ('origin' originX=FLOAT originY=FLOAT originZ=FLOAT)? )? 
+	'generated' {Generated} ( type='box' width=FLOAT height=FLOAT depth=FLOAT ('origin' originX=FLOAT originY=FLOAT originZ=FLOAT)? )? 
 ;
 
 FxmlInclude:
@@ -94,7 +94,7 @@ RasterAssemblyItem:
 ;
 
 MountedAssemblyItem:
-	element=[RasterItem|QualifiedName] 'pos' xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT 
+	element=[MountedPart|QualifiedName] 'pos' xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT 
 		( 'transform' rotateX=FLOAT rotateY=FLOAT rotateZ=FLOAT  )?	
 ;
 

@@ -552,7 +552,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGenerated_Width()
+  public EAttribute getGenerated_Type()
   {
     return (EAttribute)generatedEClass.getEStructuralFeatures().get(0);
   }
@@ -562,7 +562,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGenerated_Height()
+  public EAttribute getGenerated_Width()
   {
     return (EAttribute)generatedEClass.getEStructuralFeatures().get(1);
   }
@@ -572,9 +572,19 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGenerated_Depth()
+  public EAttribute getGenerated_Height()
   {
     return (EAttribute)generatedEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGenerated_Depth()
+  {
+    return (EAttribute)generatedEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -632,16 +642,6 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAssemblyItem_Element()
-  {
-    return (EReference)assemblyItemEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getRasterAssemblyItem()
   {
     return rasterAssemblyItemEClass;
@@ -652,7 +652,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRasterAssemblyItem_XUnits()
+  public EReference getRasterAssemblyItem_Element()
   {
     return (EReference)rasterAssemblyItemEClass.getEStructuralFeatures().get(0);
   }
@@ -662,7 +662,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRasterAssemblyItem_YUnits()
+  public EReference getRasterAssemblyItem_XUnits()
   {
     return (EReference)rasterAssemblyItemEClass.getEStructuralFeatures().get(1);
   }
@@ -672,7 +672,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRasterAssemblyItem_ZUnits()
+  public EReference getRasterAssemblyItem_YUnits()
   {
     return (EReference)rasterAssemblyItemEClass.getEStructuralFeatures().get(2);
   }
@@ -682,9 +682,19 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRasterAssemblyItem_ZUnits()
+  {
+    return (EReference)rasterAssemblyItemEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getRasterAssemblyItem_Transform()
   {
-    return (EAttribute)rasterAssemblyItemEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)rasterAssemblyItemEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -702,9 +712,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMountedAssemblyItem_XUnits()
+  public EReference getMountedAssemblyItem_Element()
   {
-    return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(0);
+    return (EReference)mountedAssemblyItemEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -712,7 +722,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMountedAssemblyItem_YUnits()
+  public EAttribute getMountedAssemblyItem_XUnits()
   {
     return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(1);
   }
@@ -722,7 +732,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMountedAssemblyItem_ZUnits()
+  public EAttribute getMountedAssemblyItem_YUnits()
   {
     return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(2);
   }
@@ -732,7 +742,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMountedAssemblyItem_RotateX()
+  public EAttribute getMountedAssemblyItem_ZUnits()
   {
     return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(3);
   }
@@ -742,7 +752,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMountedAssemblyItem_RotateY()
+  public EAttribute getMountedAssemblyItem_RotateX()
   {
     return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(4);
   }
@@ -752,9 +762,19 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMountedAssemblyItem_RotateZ()
+  public EAttribute getMountedAssemblyItem_RotateY()
   {
     return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMountedAssemblyItem_RotateZ()
+  {
+    return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -831,6 +851,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     createEAttribute(sourceEClass, SOURCE__ORIGIN_Z);
 
     generatedEClass = createEClass(GENERATED);
+    createEAttribute(generatedEClass, GENERATED__TYPE);
     createEAttribute(generatedEClass, GENERATED__WIDTH);
     createEAttribute(generatedEClass, GENERATED__HEIGHT);
     createEAttribute(generatedEClass, GENERATED__DEPTH);
@@ -842,15 +863,16 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     createEReference(assemblyEClass, ASSEMBLY__ITEMS);
 
     assemblyItemEClass = createEClass(ASSEMBLY_ITEM);
-    createEReference(assemblyItemEClass, ASSEMBLY_ITEM__ELEMENT);
 
     rasterAssemblyItemEClass = createEClass(RASTER_ASSEMBLY_ITEM);
+    createEReference(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__ELEMENT);
     createEReference(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__XUNITS);
     createEReference(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__YUNITS);
     createEReference(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__ZUNITS);
     createEAttribute(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__TRANSFORM);
 
     mountedAssemblyItemEClass = createEClass(MOUNTED_ASSEMBLY_ITEM);
+    createEReference(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ELEMENT);
     createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__XUNITS);
     createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__YUNITS);
     createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ZUNITS);
@@ -944,6 +966,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     initEAttribute(getSource_OriginZ(), ecorePackage.getEFloat(), "originZ", null, 0, 1, Source.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(generatedEClass, Generated.class, "Generated", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGenerated_Type(), ecorePackage.getEString(), "type", null, 0, 1, Generated.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGenerated_Width(), ecorePackage.getEFloat(), "width", null, 0, 1, Generated.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGenerated_Height(), ecorePackage.getEFloat(), "height", null, 0, 1, Generated.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGenerated_Depth(), ecorePackage.getEFloat(), "depth", null, 0, 1, Generated.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -955,15 +978,16 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     initEReference(getAssembly_Items(), this.getAssemblyItem(), null, "items", null, 0, -1, Assembly.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(assemblyItemEClass, AssemblyItem.class, "AssemblyItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAssemblyItem_Element(), this.getRasterItem(), null, "element", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rasterAssemblyItemEClass, RasterAssemblyItem.class, "RasterAssemblyItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRasterAssemblyItem_Element(), this.getRasterItem(), null, "element", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRasterAssemblyItem_XUnits(), this.getXUnit(), null, "xUnits", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRasterAssemblyItem_YUnits(), this.getYUnit(), null, "yUnits", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRasterAssemblyItem_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRasterAssemblyItem_Transform(), ecorePackage.getEString(), "transform", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mountedAssemblyItemEClass, MountedAssemblyItem.class, "MountedAssemblyItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMountedAssemblyItem_Element(), this.getMountedPart(), null, "element", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMountedAssemblyItem_XUnits(), ecorePackage.getEFloat(), "xUnits", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMountedAssemblyItem_YUnits(), ecorePackage.getEFloat(), "yUnits", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMountedAssemblyItem_ZUnits(), ecorePackage.getEFloat(), "zUnits", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

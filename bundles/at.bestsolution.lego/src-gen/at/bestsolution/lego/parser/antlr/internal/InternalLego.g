@@ -779,15 +779,32 @@ ruleGenerated returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getGeneratedAccess().getGeneratedKeyword_0());
     }
-(	otherlv_1='box' 
+(
     {
-    	newLeafNode(otherlv_1, grammarAccess.getGeneratedAccess().getBoxKeyword_1_0());
+        $current = forceCreateModelElement(
+            grammarAccess.getGeneratedAccess().getGeneratedAction_1(),
+            $current);
     }
+)((
 (
+		lv_type_2_0=	'box' 
+    {
+        newLeafNode(lv_type_2_0, grammarAccess.getGeneratedAccess().getTypeBoxKeyword_2_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getGeneratedRule());
+	        }
+       		setWithLastConsumed($current, "type", lv_type_2_0, "box");
+	    }
+
+)
+)(
 (
-		lv_width_2_0=RULE_FLOAT
+		lv_width_3_0=RULE_FLOAT
 		{
-			newLeafNode(lv_width_2_0, grammarAccess.getGeneratedAccess().getWidthFLOATTerminalRuleCall_1_1_0()); 
+			newLeafNode(lv_width_3_0, grammarAccess.getGeneratedAccess().getWidthFLOATTerminalRuleCall_2_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -796,16 +813,16 @@ ruleGenerated returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"width",
-        		lv_width_2_0, 
+        		lv_width_3_0, 
         		"FLOAT");
 	    }
 
 )
 )(
 (
-		lv_height_3_0=RULE_FLOAT
+		lv_height_4_0=RULE_FLOAT
 		{
-			newLeafNode(lv_height_3_0, grammarAccess.getGeneratedAccess().getHeightFLOATTerminalRuleCall_1_2_0()); 
+			newLeafNode(lv_height_4_0, grammarAccess.getGeneratedAccess().getHeightFLOATTerminalRuleCall_2_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -814,16 +831,16 @@ ruleGenerated returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"height",
-        		lv_height_3_0, 
+        		lv_height_4_0, 
         		"FLOAT");
 	    }
 
 )
 )(
 (
-		lv_depth_4_0=RULE_FLOAT
+		lv_depth_5_0=RULE_FLOAT
 		{
-			newLeafNode(lv_depth_4_0, grammarAccess.getGeneratedAccess().getDepthFLOATTerminalRuleCall_1_3_0()); 
+			newLeafNode(lv_depth_5_0, grammarAccess.getGeneratedAccess().getDepthFLOATTerminalRuleCall_2_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -832,20 +849,20 @@ ruleGenerated returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"depth",
-        		lv_depth_4_0, 
+        		lv_depth_5_0, 
         		"FLOAT");
 	    }
 
 )
-)(	otherlv_5='origin' 
+)(	otherlv_6='origin' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getGeneratedAccess().getOriginKeyword_1_4_0());
+    	newLeafNode(otherlv_6, grammarAccess.getGeneratedAccess().getOriginKeyword_2_4_0());
     }
 (
 (
-		lv_originX_6_0=RULE_FLOAT
+		lv_originX_7_0=RULE_FLOAT
 		{
-			newLeafNode(lv_originX_6_0, grammarAccess.getGeneratedAccess().getOriginXFLOATTerminalRuleCall_1_4_1_0()); 
+			newLeafNode(lv_originX_7_0, grammarAccess.getGeneratedAccess().getOriginXFLOATTerminalRuleCall_2_4_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -854,16 +871,16 @@ ruleGenerated returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"originX",
-        		lv_originX_6_0, 
+        		lv_originX_7_0, 
         		"FLOAT");
 	    }
 
 )
 )(
 (
-		lv_originY_7_0=RULE_FLOAT
+		lv_originY_8_0=RULE_FLOAT
 		{
-			newLeafNode(lv_originY_7_0, grammarAccess.getGeneratedAccess().getOriginYFLOATTerminalRuleCall_1_4_2_0()); 
+			newLeafNode(lv_originY_8_0, grammarAccess.getGeneratedAccess().getOriginYFLOATTerminalRuleCall_2_4_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -872,16 +889,16 @@ ruleGenerated returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"originY",
-        		lv_originY_7_0, 
+        		lv_originY_8_0, 
         		"FLOAT");
 	    }
 
 )
 )(
 (
-		lv_originZ_8_0=RULE_FLOAT
+		lv_originZ_9_0=RULE_FLOAT
 		{
-			newLeafNode(lv_originZ_8_0, grammarAccess.getGeneratedAccess().getOriginZFLOATTerminalRuleCall_1_4_3_0()); 
+			newLeafNode(lv_originZ_9_0, grammarAccess.getGeneratedAccess().getOriginZFLOATTerminalRuleCall_2_4_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -890,7 +907,7 @@ ruleGenerated returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"originZ",
-        		lv_originZ_8_0, 
+        		lv_originZ_9_0, 
         		"FLOAT");
 	    }
 
@@ -1274,7 +1291,7 @@ ruleMountedAssemblyItem returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getMountedAssemblyItemAccess().getElementRasterItemCrossReference_0_0()); 
+	        newCompositeNode(grammarAccess.getMountedAssemblyItemAccess().getElementMountedPartCrossReference_0_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();

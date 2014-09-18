@@ -16,8 +16,11 @@ import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
 import at.bestsolution.lego.lego.FxmlInclude;
+import at.bestsolution.lego.lego.Generated;
 import at.bestsolution.lego.lego.ItemRepository;
 import at.bestsolution.lego.lego.Model;
+import at.bestsolution.lego.lego.MountedAssemblyItem;
+import at.bestsolution.lego.lego.MountedPart;
 import at.bestsolution.lego.lego.RasterAssemblyItem;
 import at.bestsolution.lego.lego.RasterItem;
 import at.bestsolution.lego.lego.RepostoryItem;
@@ -148,28 +151,31 @@ public class Lego3dFXML implements IGenerator {
         _builder.append("<Group>");
         _builder.newLine();
         {
-          RasterItem _element = x.getElement();
-          if ((_element instanceof Brick)) {
-            _builder.append("\t");
-            _builder.append("\t");
-            RasterItem _element_1 = x.getElement();
-            CharSequence _createBrick = this.createBrick(((Brick) _element_1));
-            _builder.append(_createBrick, "\t\t");
-            _builder.newLineIfNotEmpty();
-          } else {
-            RasterItem _element_2 = x.getElement();
-            if ((_element_2 instanceof Assembly)) {
-              _builder.append("\t");
-              _builder.append("\t");
-              RasterItem _element_3 = x.getElement();
-              Object _generatedAssembly = this.generatedAssembly(((Assembly) _element_3));
-              _builder.append(_generatedAssembly, "\t\t");
-              _builder.newLineIfNotEmpty();
-            }
-          }
-        }
-        {
           if ((x instanceof RasterAssemblyItem)) {
+            {
+              RasterItem _element = ((RasterAssemblyItem)x).getElement();
+              if ((_element instanceof Brick)) {
+                _builder.append("\t");
+                _builder.append("\t");
+                RasterItem _element_1 = ((RasterAssemblyItem)x).getElement();
+                CharSequence _createBrick = this.createBrick(((Brick) _element_1));
+                _builder.append(_createBrick, "\t\t");
+                _builder.newLineIfNotEmpty();
+              } else {
+                RasterItem _element_2 = ((RasterAssemblyItem)x).getElement();
+                if ((_element_2 instanceof Assembly)) {
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  RasterItem _element_3 = ((RasterAssemblyItem)x).getElement();
+                  Object _generatedAssembly = this.generatedAssembly(((Assembly) _element_3));
+                  _builder.append(_generatedAssembly, "\t\t");
+                  _builder.newLineIfNotEmpty();
+                }
+              }
+            }
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.newLine();
             _builder.append("\t");
             _builder.append("\t");
             _builder.append("<transforms>");
@@ -266,6 +272,99 @@ public class Lego3dFXML implements IGenerator {
             _builder.append("\t");
             _builder.append("</transforms>");
             _builder.newLine();
+          } else {
+            if ((x instanceof MountedAssemblyItem)) {
+              _builder.append("\t");
+              _builder.append("\t");
+              final MountedAssemblyItem xm = ((MountedAssemblyItem) x);
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("\t");
+              MountedPart _element_4 = xm.getElement();
+              CharSequence _createMPart = this.createMPart(_element_4);
+              _builder.append(_createMPart, "\t\t");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("<transforms>");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("<Translate x=\"");
+              float _xUnits_1 = xm.getXUnits();
+              _builder.append(_xUnits_1, "\t\t\t");
+              _builder.append("\" y=\"");
+              float _yUnits_1 = xm.getYUnits();
+              _builder.append(_yUnits_1, "\t\t\t");
+              _builder.append("\" z=\"");
+              float _zUnits_1 = xm.getZUnits();
+              _builder.append(_zUnits_1, "\t\t\t");
+              _builder.append("\" />");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t");
+              _builder.append("<Rotate angle=\"");
+              float _rotateX = xm.getRotateX();
+              _builder.append(_rotateX, "\t\t\t\t");
+              _builder.append("\" >");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t ");
+              _builder.append("<axis><Point3D x=\"1\" y=\"0\" z=\"0\"/></axis>");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t");
+              _builder.append("</Rotate>");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t");
+              _builder.append("<Rotate angle=\"");
+              float _rotateY = xm.getRotateY();
+              _builder.append(_rotateY, "\t\t\t\t");
+              _builder.append("\" >");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t ");
+              _builder.append("<axis><Point3D x=\"0\" y=\"1\" z=\"0\"/></axis>");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t");
+              _builder.append("</Rotate>");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t");
+              _builder.append("<Rotate angle=\"");
+              float _rotateZ = xm.getRotateZ();
+              _builder.append(_rotateZ, "\t\t\t\t");
+              _builder.append("\" >");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t ");
+              _builder.append("<axis><Point3D x=\"0\" y=\"0\" z=\"1\"/></axis>");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t\t");
+              _builder.append("</Rotate>");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("</transforms>");
+              _builder.newLine();
+            }
           }
         }
         _builder.append("\t");
@@ -277,6 +376,68 @@ public class Lego3dFXML implements IGenerator {
     }
     _builder.append("</Group>");
     _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence createMPart(final MountedPart object) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      Source _source = object.getSource();
+      if ((_source instanceof Generated)) {
+        Source _source_1 = object.getSource();
+        final Generated s = ((Generated) _source_1);
+        _builder.newLineIfNotEmpty();
+        _builder.append("<Group>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("<Box width=\"");
+        float _width = s.getWidth();
+        _builder.append(_width, "\t");
+        _builder.append("\" height=\"");
+        float _height = s.getHeight();
+        _builder.append(_height, "\t");
+        _builder.append("\" depth=\"");
+        float _depth = s.getDepth();
+        _builder.append(_depth, "\t");
+        _builder.append("\">");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t");
+        _builder.append("<material>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<PhongMaterial diffuseColor=\"");
+        CharSequence _color = this.toColor(object);
+        _builder.append(_color, "\t\t\t");
+        _builder.append("\"/>");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t");
+        _builder.append("</material>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("</Box>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("<transforms>");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("<Translate x=\"");
+        float _originX = s.getOriginX();
+        _builder.append(_originX, "\t\t");
+        _builder.append("\" y=\"");
+        float _originY = s.getOriginY();
+        _builder.append(_originY, "\t\t");
+        _builder.append("\" z=\"");
+        float _originZ = s.getOriginZ();
+        _builder.append(_originZ, "\t\t");
+        _builder.append("\" />");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("</transforms>");
+        _builder.newLine();
+        _builder.append("</Group>");
+        _builder.newLine();
+      }
+    }
     return _builder;
   }
   

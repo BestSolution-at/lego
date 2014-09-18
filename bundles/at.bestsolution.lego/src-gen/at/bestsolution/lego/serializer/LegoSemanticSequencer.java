@@ -210,7 +210,7 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (width=FLOAT height=FLOAT depth=FLOAT (originX=FLOAT originY=FLOAT originZ=FLOAT)?)
+	 *     ((type='box' width=FLOAT height=FLOAT depth=FLOAT (originX=FLOAT originY=FLOAT originZ=FLOAT)?)?)
 	 */
 	protected void sequence_Generated(EObject context, Generated semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -237,7 +237,7 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (element=[RasterItem|QualifiedName] xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT (rotateX=FLOAT rotateY=FLOAT rotateZ=FLOAT)?)
+	 *     (element=[MountedPart|QualifiedName] xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT (rotateX=FLOAT rotateY=FLOAT rotateZ=FLOAT)?)
 	 */
 	protected void sequence_MountedAssemblyItem(EObject context, MountedAssemblyItem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

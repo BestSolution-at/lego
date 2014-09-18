@@ -2,30 +2,28 @@
  */
 package at.bestsolution.lego.lego.impl;
 
-import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.LegoPackage;
+import at.bestsolution.lego.lego.MountedPart;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Assembly Item</b></em>'.
+ * An implementation of the model object '<em><b>Mounted Part</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements AssemblyItem
+public class MountedPartImpl extends RepostoryItemImpl implements MountedPart
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AssemblyItemImpl()
+  protected MountedPartImpl()
   {
     super();
   }
@@ -38,7 +36,7 @@ public class AssemblyItemImpl extends MinimalEObjectImpl.Container implements As
   @Override
   protected EClass eStaticClass()
   {
-    return LegoPackage.Literals.ASSEMBLY_ITEM;
+    return LegoPackage.Literals.MOUNTED_PART;
   }
 
-} //AssemblyItemImpl
+} //MountedPartImpl

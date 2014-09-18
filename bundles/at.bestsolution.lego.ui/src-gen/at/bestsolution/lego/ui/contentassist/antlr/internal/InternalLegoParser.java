@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalLegoParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_FLOAT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'rotate180'", "'rotate90'", "'rotate270'", "'.'", "'{'", "'}'", "'mpart'", "'rgb'", "'brick'", "'units'", "'generated'", "'box'", "'origin'", "'fxml'", "'assembly'", "'pos'", "'transform'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_FLOAT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'rotate180'", "'rotate90'", "'rotate270'", "'.'", "'{'", "'}'", "'mpart'", "'rgb'", "'brick'", "'units'", "'generated'", "'origin'", "'fxml'", "'assembly'", "'pos'", "'transform'", "'box'"
     };
     public static final int RULE_STRING=7;
     public static final int RULE_SL_COMMENT=9;
@@ -1623,7 +1623,7 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
             if ( (LA1_0==RULE_ID) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==26) ) {
+            else if ( (LA1_0==25) ) {
                 alt1=2;
             }
             else {
@@ -1811,7 +1811,7 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
             if ( (LA3_0==22) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==25) ) {
+            else if ( (LA3_0==24) ) {
                 alt3=2;
             }
             else {
@@ -4242,17 +4242,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Generated__Group__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1485:1: rule__Generated__Group__1 : rule__Generated__Group__1__Impl ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1485:1: rule__Generated__Group__1 : rule__Generated__Group__1__Impl rule__Generated__Group__2 ;
     public final void rule__Generated__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1489:1: ( rule__Generated__Group__1__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1490:2: rule__Generated__Group__1__Impl
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1489:1: ( rule__Generated__Group__1__Impl rule__Generated__Group__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1490:2: rule__Generated__Group__1__Impl rule__Generated__Group__2
             {
             pushFollow(FOLLOW_rule__Generated__Group__1__Impl_in_rule__Generated__Group__12996);
             rule__Generated__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Generated__Group__2_in_rule__Generated__Group__12999);
+            rule__Generated__Group__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4275,45 +4280,28 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Generated__Group__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1496:1: rule__Generated__Group__1__Impl : ( ( rule__Generated__Group_1__0 )? ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1497:1: rule__Generated__Group__1__Impl : ( () ) ;
     public final void rule__Generated__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1500:1: ( ( ( rule__Generated__Group_1__0 )? ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1501:1: ( ( rule__Generated__Group_1__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1501:1: ( ( () ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1502:1: ( () )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1501:1: ( ( rule__Generated__Group_1__0 )? )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1502:1: ( rule__Generated__Group_1__0 )?
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1502:1: ( () )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1503:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getGroup_1()); 
+               before(grammarAccess.getGeneratedAccess().getGeneratedAction_1()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1503:1: ( rule__Generated__Group_1__0 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==23) ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1503:2: rule__Generated__Group_1__0
-                    {
-                    pushFollow(FOLLOW_rule__Generated__Group_1__0_in_rule__Generated__Group__1__Impl3023);
-                    rule__Generated__Group_1__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
-
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1504:1: ()
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1506:1: 
+            {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getGroup_1()); 
+               after(grammarAccess.getGeneratedAccess().getGeneratedAction_1()); 
             }
 
             }
@@ -4321,10 +4309,6 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
         }
         finally {
 
@@ -4336,23 +4320,18 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Generated__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Generated__Group_1__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1517:1: rule__Generated__Group_1__0 : rule__Generated__Group_1__0__Impl rule__Generated__Group_1__1 ;
-    public final void rule__Generated__Group_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Generated__Group__2"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1516:1: rule__Generated__Group__2 : rule__Generated__Group__2__Impl ;
+    public final void rule__Generated__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1521:1: ( rule__Generated__Group_1__0__Impl rule__Generated__Group_1__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1522:2: rule__Generated__Group_1__0__Impl rule__Generated__Group_1__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1520:1: ( rule__Generated__Group__2__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1521:2: rule__Generated__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Generated__Group_1__0__Impl_in_rule__Generated__Group_1__03058);
-            rule__Generated__Group_1__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Generated__Group_1__1_in_rule__Generated__Group_1__03061);
-            rule__Generated__Group_1__1();
+            pushFollow(FOLLOW_rule__Generated__Group__2__Impl_in_rule__Generated__Group__23057);
+            rule__Generated__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4371,379 +4350,38 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__Group_1__0"
+    // $ANTLR end "rule__Generated__Group__2"
 
 
-    // $ANTLR start "rule__Generated__Group_1__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1529:1: rule__Generated__Group_1__0__Impl : ( 'box' ) ;
-    public final void rule__Generated__Group_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1533:1: ( ( 'box' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1534:1: ( 'box' )
-            {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1534:1: ( 'box' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1535:1: 'box'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getBoxKeyword_1_0()); 
-            }
-            match(input,23,FOLLOW_23_in_rule__Generated__Group_1__0__Impl3089); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getBoxKeyword_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__Generated__Group_1__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1548:1: rule__Generated__Group_1__1 : rule__Generated__Group_1__1__Impl rule__Generated__Group_1__2 ;
-    public final void rule__Generated__Group_1__1() throws RecognitionException {
+    // $ANTLR start "rule__Generated__Group__2__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1527:1: rule__Generated__Group__2__Impl : ( ( rule__Generated__Group_2__0 )? ) ;
+    public final void rule__Generated__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1552:1: ( rule__Generated__Group_1__1__Impl rule__Generated__Group_1__2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1553:2: rule__Generated__Group_1__1__Impl rule__Generated__Group_1__2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1531:1: ( ( ( rule__Generated__Group_2__0 )? ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1532:1: ( ( rule__Generated__Group_2__0 )? )
             {
-            pushFollow(FOLLOW_rule__Generated__Group_1__1__Impl_in_rule__Generated__Group_1__13120);
-            rule__Generated__Group_1__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Generated__Group_1__2_in_rule__Generated__Group_1__13123);
-            rule__Generated__Group_1__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1__1"
-
-
-    // $ANTLR start "rule__Generated__Group_1__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1560:1: rule__Generated__Group_1__1__Impl : ( ( rule__Generated__WidthAssignment_1_1 ) ) ;
-    public final void rule__Generated__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1564:1: ( ( ( rule__Generated__WidthAssignment_1_1 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1565:1: ( ( rule__Generated__WidthAssignment_1_1 ) )
-            {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1565:1: ( ( rule__Generated__WidthAssignment_1_1 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1566:1: ( rule__Generated__WidthAssignment_1_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1532:1: ( ( rule__Generated__Group_2__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1533:1: ( rule__Generated__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getWidthAssignment_1_1()); 
+               before(grammarAccess.getGeneratedAccess().getGroup_2()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1567:1: ( rule__Generated__WidthAssignment_1_1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1567:2: rule__Generated__WidthAssignment_1_1
-            {
-            pushFollow(FOLLOW_rule__Generated__WidthAssignment_1_1_in_rule__Generated__Group_1__1__Impl3150);
-            rule__Generated__WidthAssignment_1_1();
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1534:1: ( rule__Generated__Group_2__0 )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            state._fsp--;
-            if (state.failed) return ;
-
+            if ( (LA8_0==28) ) {
+                alt8=1;
             }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getWidthAssignment_1_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1__1__Impl"
-
-
-    // $ANTLR start "rule__Generated__Group_1__2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1577:1: rule__Generated__Group_1__2 : rule__Generated__Group_1__2__Impl rule__Generated__Group_1__3 ;
-    public final void rule__Generated__Group_1__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1581:1: ( rule__Generated__Group_1__2__Impl rule__Generated__Group_1__3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1582:2: rule__Generated__Group_1__2__Impl rule__Generated__Group_1__3
-            {
-            pushFollow(FOLLOW_rule__Generated__Group_1__2__Impl_in_rule__Generated__Group_1__23180);
-            rule__Generated__Group_1__2__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Generated__Group_1__3_in_rule__Generated__Group_1__23183);
-            rule__Generated__Group_1__3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1__2"
-
-
-    // $ANTLR start "rule__Generated__Group_1__2__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1589:1: rule__Generated__Group_1__2__Impl : ( ( rule__Generated__HeightAssignment_1_2 ) ) ;
-    public final void rule__Generated__Group_1__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1593:1: ( ( ( rule__Generated__HeightAssignment_1_2 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1594:1: ( ( rule__Generated__HeightAssignment_1_2 ) )
-            {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1594:1: ( ( rule__Generated__HeightAssignment_1_2 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1595:1: ( rule__Generated__HeightAssignment_1_2 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getHeightAssignment_1_2()); 
-            }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1596:1: ( rule__Generated__HeightAssignment_1_2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1596:2: rule__Generated__HeightAssignment_1_2
-            {
-            pushFollow(FOLLOW_rule__Generated__HeightAssignment_1_2_in_rule__Generated__Group_1__2__Impl3210);
-            rule__Generated__HeightAssignment_1_2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getHeightAssignment_1_2()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1__2__Impl"
-
-
-    // $ANTLR start "rule__Generated__Group_1__3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1606:1: rule__Generated__Group_1__3 : rule__Generated__Group_1__3__Impl rule__Generated__Group_1__4 ;
-    public final void rule__Generated__Group_1__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1610:1: ( rule__Generated__Group_1__3__Impl rule__Generated__Group_1__4 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1611:2: rule__Generated__Group_1__3__Impl rule__Generated__Group_1__4
-            {
-            pushFollow(FOLLOW_rule__Generated__Group_1__3__Impl_in_rule__Generated__Group_1__33240);
-            rule__Generated__Group_1__3__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Generated__Group_1__4_in_rule__Generated__Group_1__33243);
-            rule__Generated__Group_1__4();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1__3"
-
-
-    // $ANTLR start "rule__Generated__Group_1__3__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1618:1: rule__Generated__Group_1__3__Impl : ( ( rule__Generated__DepthAssignment_1_3 ) ) ;
-    public final void rule__Generated__Group_1__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1622:1: ( ( ( rule__Generated__DepthAssignment_1_3 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1623:1: ( ( rule__Generated__DepthAssignment_1_3 ) )
-            {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1623:1: ( ( rule__Generated__DepthAssignment_1_3 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1624:1: ( rule__Generated__DepthAssignment_1_3 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getDepthAssignment_1_3()); 
-            }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1625:1: ( rule__Generated__DepthAssignment_1_3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1625:2: rule__Generated__DepthAssignment_1_3
-            {
-            pushFollow(FOLLOW_rule__Generated__DepthAssignment_1_3_in_rule__Generated__Group_1__3__Impl3270);
-            rule__Generated__DepthAssignment_1_3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getDepthAssignment_1_3()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1__3__Impl"
-
-
-    // $ANTLR start "rule__Generated__Group_1__4"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1635:1: rule__Generated__Group_1__4 : rule__Generated__Group_1__4__Impl ;
-    public final void rule__Generated__Group_1__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1639:1: ( rule__Generated__Group_1__4__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1640:2: rule__Generated__Group_1__4__Impl
-            {
-            pushFollow(FOLLOW_rule__Generated__Group_1__4__Impl_in_rule__Generated__Group_1__43300);
-            rule__Generated__Group_1__4__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1__4"
-
-
-    // $ANTLR start "rule__Generated__Group_1__4__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1646:1: rule__Generated__Group_1__4__Impl : ( ( rule__Generated__Group_1_4__0 )? ) ;
-    public final void rule__Generated__Group_1__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1650:1: ( ( ( rule__Generated__Group_1_4__0 )? ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1651:1: ( ( rule__Generated__Group_1_4__0 )? )
-            {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1651:1: ( ( rule__Generated__Group_1_4__0 )? )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1652:1: ( rule__Generated__Group_1_4__0 )?
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getGroup_1_4()); 
-            }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1653:1: ( rule__Generated__Group_1_4__0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==24) ) {
-                alt9=1;
-            }
-            switch (alt9) {
+            switch (alt8) {
                 case 1 :
-                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1653:2: rule__Generated__Group_1_4__0
+                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1534:2: rule__Generated__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Generated__Group_1_4__0_in_rule__Generated__Group_1__4__Impl3327);
-                    rule__Generated__Group_1_4__0();
+                    pushFollow(FOLLOW_rule__Generated__Group_2__0_in_rule__Generated__Group__2__Impl3084);
+                    rule__Generated__Group_2__0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -4754,7 +4392,7 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getGroup_1_4()); 
+               after(grammarAccess.getGeneratedAccess().getGroup_2()); 
             }
 
             }
@@ -4774,26 +4412,26 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__Group_1__4__Impl"
+    // $ANTLR end "rule__Generated__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Generated__Group_1_4__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1673:1: rule__Generated__Group_1_4__0 : rule__Generated__Group_1_4__0__Impl rule__Generated__Group_1_4__1 ;
-    public final void rule__Generated__Group_1_4__0() throws RecognitionException {
+    // $ANTLR start "rule__Generated__Group_2__0"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1550:1: rule__Generated__Group_2__0 : rule__Generated__Group_2__0__Impl rule__Generated__Group_2__1 ;
+    public final void rule__Generated__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1677:1: ( rule__Generated__Group_1_4__0__Impl rule__Generated__Group_1_4__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1678:2: rule__Generated__Group_1_4__0__Impl rule__Generated__Group_1_4__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1554:1: ( rule__Generated__Group_2__0__Impl rule__Generated__Group_2__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1555:2: rule__Generated__Group_2__0__Impl rule__Generated__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Generated__Group_1_4__0__Impl_in_rule__Generated__Group_1_4__03368);
-            rule__Generated__Group_1_4__0__Impl();
+            pushFollow(FOLLOW_rule__Generated__Group_2__0__Impl_in_rule__Generated__Group_2__03121);
+            rule__Generated__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Generated__Group_1_4__1_in_rule__Generated__Group_1_4__03371);
-            rule__Generated__Group_1_4__1();
+            pushFollow(FOLLOW_rule__Generated__Group_2__1_in_rule__Generated__Group_2__03124);
+            rule__Generated__Group_2__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4812,109 +4450,30 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__Group_1_4__0"
+    // $ANTLR end "rule__Generated__Group_2__0"
 
 
-    // $ANTLR start "rule__Generated__Group_1_4__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1685:1: rule__Generated__Group_1_4__0__Impl : ( 'origin' ) ;
-    public final void rule__Generated__Group_1_4__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Generated__Group_2__0__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1562:1: rule__Generated__Group_2__0__Impl : ( ( rule__Generated__TypeAssignment_2_0 ) ) ;
+    public final void rule__Generated__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1689:1: ( ( 'origin' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1690:1: ( 'origin' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1566:1: ( ( ( rule__Generated__TypeAssignment_2_0 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1567:1: ( ( rule__Generated__TypeAssignment_2_0 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1690:1: ( 'origin' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1691:1: 'origin'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1567:1: ( ( rule__Generated__TypeAssignment_2_0 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1568:1: ( rule__Generated__TypeAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getOriginKeyword_1_4_0()); 
+               before(grammarAccess.getGeneratedAccess().getTypeAssignment_2_0()); 
             }
-            match(input,24,FOLLOW_24_in_rule__Generated__Group_1_4__0__Impl3399); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getOriginKeyword_1_4_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1_4__0__Impl"
-
-
-    // $ANTLR start "rule__Generated__Group_1_4__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1704:1: rule__Generated__Group_1_4__1 : rule__Generated__Group_1_4__1__Impl rule__Generated__Group_1_4__2 ;
-    public final void rule__Generated__Group_1_4__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1708:1: ( rule__Generated__Group_1_4__1__Impl rule__Generated__Group_1_4__2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1709:2: rule__Generated__Group_1_4__1__Impl rule__Generated__Group_1_4__2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1569:1: ( rule__Generated__TypeAssignment_2_0 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1569:2: rule__Generated__TypeAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__Generated__Group_1_4__1__Impl_in_rule__Generated__Group_1_4__13430);
-            rule__Generated__Group_1_4__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Generated__Group_1_4__2_in_rule__Generated__Group_1_4__13433);
-            rule__Generated__Group_1_4__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1_4__1"
-
-
-    // $ANTLR start "rule__Generated__Group_1_4__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1716:1: rule__Generated__Group_1_4__1__Impl : ( ( rule__Generated__OriginXAssignment_1_4_1 ) ) ;
-    public final void rule__Generated__Group_1_4__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1720:1: ( ( ( rule__Generated__OriginXAssignment_1_4_1 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1721:1: ( ( rule__Generated__OriginXAssignment_1_4_1 ) )
-            {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1721:1: ( ( rule__Generated__OriginXAssignment_1_4_1 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1722:1: ( rule__Generated__OriginXAssignment_1_4_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getOriginXAssignment_1_4_1()); 
-            }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1723:1: ( rule__Generated__OriginXAssignment_1_4_1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1723:2: rule__Generated__OriginXAssignment_1_4_1
-            {
-            pushFollow(FOLLOW_rule__Generated__OriginXAssignment_1_4_1_in_rule__Generated__Group_1_4__1__Impl3460);
-            rule__Generated__OriginXAssignment_1_4_1();
+            pushFollow(FOLLOW_rule__Generated__TypeAssignment_2_0_in_rule__Generated__Group_2__0__Impl3151);
+            rule__Generated__TypeAssignment_2_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4922,7 +4481,7 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getOriginXAssignment_1_4_1()); 
+               after(grammarAccess.getGeneratedAccess().getTypeAssignment_2_0()); 
             }
 
             }
@@ -4942,26 +4501,26 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__Group_1_4__1__Impl"
+    // $ANTLR end "rule__Generated__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__Generated__Group_1_4__2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1733:1: rule__Generated__Group_1_4__2 : rule__Generated__Group_1_4__2__Impl rule__Generated__Group_1_4__3 ;
-    public final void rule__Generated__Group_1_4__2() throws RecognitionException {
+    // $ANTLR start "rule__Generated__Group_2__1"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1579:1: rule__Generated__Group_2__1 : rule__Generated__Group_2__1__Impl rule__Generated__Group_2__2 ;
+    public final void rule__Generated__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1737:1: ( rule__Generated__Group_1_4__2__Impl rule__Generated__Group_1_4__3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1738:2: rule__Generated__Group_1_4__2__Impl rule__Generated__Group_1_4__3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1583:1: ( rule__Generated__Group_2__1__Impl rule__Generated__Group_2__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1584:2: rule__Generated__Group_2__1__Impl rule__Generated__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Generated__Group_1_4__2__Impl_in_rule__Generated__Group_1_4__23490);
-            rule__Generated__Group_1_4__2__Impl();
+            pushFollow(FOLLOW_rule__Generated__Group_2__1__Impl_in_rule__Generated__Group_2__13181);
+            rule__Generated__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Generated__Group_1_4__3_in_rule__Generated__Group_1_4__23493);
-            rule__Generated__Group_1_4__3();
+            pushFollow(FOLLOW_rule__Generated__Group_2__2_in_rule__Generated__Group_2__13184);
+            rule__Generated__Group_2__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4980,114 +4539,30 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__Group_1_4__2"
+    // $ANTLR end "rule__Generated__Group_2__1"
 
 
-    // $ANTLR start "rule__Generated__Group_1_4__2__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1745:1: rule__Generated__Group_1_4__2__Impl : ( ( rule__Generated__OriginYAssignment_1_4_2 ) ) ;
-    public final void rule__Generated__Group_1_4__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Generated__Group_2__1__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1591:1: rule__Generated__Group_2__1__Impl : ( ( rule__Generated__WidthAssignment_2_1 ) ) ;
+    public final void rule__Generated__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1749:1: ( ( ( rule__Generated__OriginYAssignment_1_4_2 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1750:1: ( ( rule__Generated__OriginYAssignment_1_4_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1595:1: ( ( ( rule__Generated__WidthAssignment_2_1 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1596:1: ( ( rule__Generated__WidthAssignment_2_1 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1750:1: ( ( rule__Generated__OriginYAssignment_1_4_2 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1751:1: ( rule__Generated__OriginYAssignment_1_4_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1596:1: ( ( rule__Generated__WidthAssignment_2_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1597:1: ( rule__Generated__WidthAssignment_2_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getOriginYAssignment_1_4_2()); 
+               before(grammarAccess.getGeneratedAccess().getWidthAssignment_2_1()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1752:1: ( rule__Generated__OriginYAssignment_1_4_2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1752:2: rule__Generated__OriginYAssignment_1_4_2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1598:1: ( rule__Generated__WidthAssignment_2_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1598:2: rule__Generated__WidthAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Generated__OriginYAssignment_1_4_2_in_rule__Generated__Group_1_4__2__Impl3520);
-            rule__Generated__OriginYAssignment_1_4_2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getOriginYAssignment_1_4_2()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1_4__2__Impl"
-
-
-    // $ANTLR start "rule__Generated__Group_1_4__3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1762:1: rule__Generated__Group_1_4__3 : rule__Generated__Group_1_4__3__Impl ;
-    public final void rule__Generated__Group_1_4__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1766:1: ( rule__Generated__Group_1_4__3__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1767:2: rule__Generated__Group_1_4__3__Impl
-            {
-            pushFollow(FOLLOW_rule__Generated__Group_1_4__3__Impl_in_rule__Generated__Group_1_4__33550);
-            rule__Generated__Group_1_4__3__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Generated__Group_1_4__3"
-
-
-    // $ANTLR start "rule__Generated__Group_1_4__3__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1773:1: rule__Generated__Group_1_4__3__Impl : ( ( rule__Generated__OriginZAssignment_1_4_3 ) ) ;
-    public final void rule__Generated__Group_1_4__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1777:1: ( ( ( rule__Generated__OriginZAssignment_1_4_3 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1778:1: ( ( rule__Generated__OriginZAssignment_1_4_3 ) )
-            {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1778:1: ( ( rule__Generated__OriginZAssignment_1_4_3 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1779:1: ( rule__Generated__OriginZAssignment_1_4_3 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getOriginZAssignment_1_4_3()); 
-            }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1780:1: ( rule__Generated__OriginZAssignment_1_4_3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1780:2: rule__Generated__OriginZAssignment_1_4_3
-            {
-            pushFollow(FOLLOW_rule__Generated__OriginZAssignment_1_4_3_in_rule__Generated__Group_1_4__3__Impl3577);
-            rule__Generated__OriginZAssignment_1_4_3();
+            pushFollow(FOLLOW_rule__Generated__WidthAssignment_2_1_in_rule__Generated__Group_2__1__Impl3211);
+            rule__Generated__WidthAssignment_2_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -5095,7 +4570,7 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getOriginZAssignment_1_4_3()); 
+               after(grammarAccess.getGeneratedAccess().getWidthAssignment_2_1()); 
             }
 
             }
@@ -5115,25 +4590,639 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__Group_1_4__3__Impl"
+    // $ANTLR end "rule__Generated__Group_2__1__Impl"
+
+
+    // $ANTLR start "rule__Generated__Group_2__2"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1608:1: rule__Generated__Group_2__2 : rule__Generated__Group_2__2__Impl rule__Generated__Group_2__3 ;
+    public final void rule__Generated__Group_2__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1612:1: ( rule__Generated__Group_2__2__Impl rule__Generated__Group_2__3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1613:2: rule__Generated__Group_2__2__Impl rule__Generated__Group_2__3
+            {
+            pushFollow(FOLLOW_rule__Generated__Group_2__2__Impl_in_rule__Generated__Group_2__23241);
+            rule__Generated__Group_2__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Generated__Group_2__3_in_rule__Generated__Group_2__23244);
+            rule__Generated__Group_2__3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2__2"
+
+
+    // $ANTLR start "rule__Generated__Group_2__2__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1620:1: rule__Generated__Group_2__2__Impl : ( ( rule__Generated__HeightAssignment_2_2 ) ) ;
+    public final void rule__Generated__Group_2__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1624:1: ( ( ( rule__Generated__HeightAssignment_2_2 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1625:1: ( ( rule__Generated__HeightAssignment_2_2 ) )
+            {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1625:1: ( ( rule__Generated__HeightAssignment_2_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1626:1: ( rule__Generated__HeightAssignment_2_2 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGeneratedAccess().getHeightAssignment_2_2()); 
+            }
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1627:1: ( rule__Generated__HeightAssignment_2_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1627:2: rule__Generated__HeightAssignment_2_2
+            {
+            pushFollow(FOLLOW_rule__Generated__HeightAssignment_2_2_in_rule__Generated__Group_2__2__Impl3271);
+            rule__Generated__HeightAssignment_2_2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getHeightAssignment_2_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2__2__Impl"
+
+
+    // $ANTLR start "rule__Generated__Group_2__3"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1637:1: rule__Generated__Group_2__3 : rule__Generated__Group_2__3__Impl rule__Generated__Group_2__4 ;
+    public final void rule__Generated__Group_2__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1641:1: ( rule__Generated__Group_2__3__Impl rule__Generated__Group_2__4 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1642:2: rule__Generated__Group_2__3__Impl rule__Generated__Group_2__4
+            {
+            pushFollow(FOLLOW_rule__Generated__Group_2__3__Impl_in_rule__Generated__Group_2__33301);
+            rule__Generated__Group_2__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Generated__Group_2__4_in_rule__Generated__Group_2__33304);
+            rule__Generated__Group_2__4();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2__3"
+
+
+    // $ANTLR start "rule__Generated__Group_2__3__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1649:1: rule__Generated__Group_2__3__Impl : ( ( rule__Generated__DepthAssignment_2_3 ) ) ;
+    public final void rule__Generated__Group_2__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1653:1: ( ( ( rule__Generated__DepthAssignment_2_3 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1654:1: ( ( rule__Generated__DepthAssignment_2_3 ) )
+            {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1654:1: ( ( rule__Generated__DepthAssignment_2_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1655:1: ( rule__Generated__DepthAssignment_2_3 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGeneratedAccess().getDepthAssignment_2_3()); 
+            }
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1656:1: ( rule__Generated__DepthAssignment_2_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1656:2: rule__Generated__DepthAssignment_2_3
+            {
+            pushFollow(FOLLOW_rule__Generated__DepthAssignment_2_3_in_rule__Generated__Group_2__3__Impl3331);
+            rule__Generated__DepthAssignment_2_3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getDepthAssignment_2_3()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2__3__Impl"
+
+
+    // $ANTLR start "rule__Generated__Group_2__4"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1666:1: rule__Generated__Group_2__4 : rule__Generated__Group_2__4__Impl ;
+    public final void rule__Generated__Group_2__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1670:1: ( rule__Generated__Group_2__4__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1671:2: rule__Generated__Group_2__4__Impl
+            {
+            pushFollow(FOLLOW_rule__Generated__Group_2__4__Impl_in_rule__Generated__Group_2__43361);
+            rule__Generated__Group_2__4__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2__4"
+
+
+    // $ANTLR start "rule__Generated__Group_2__4__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1677:1: rule__Generated__Group_2__4__Impl : ( ( rule__Generated__Group_2_4__0 )? ) ;
+    public final void rule__Generated__Group_2__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1681:1: ( ( ( rule__Generated__Group_2_4__0 )? ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1682:1: ( ( rule__Generated__Group_2_4__0 )? )
+            {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1682:1: ( ( rule__Generated__Group_2_4__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1683:1: ( rule__Generated__Group_2_4__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGeneratedAccess().getGroup_2_4()); 
+            }
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1684:1: ( rule__Generated__Group_2_4__0 )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0==23) ) {
+                alt9=1;
+            }
+            switch (alt9) {
+                case 1 :
+                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1684:2: rule__Generated__Group_2_4__0
+                    {
+                    pushFollow(FOLLOW_rule__Generated__Group_2_4__0_in_rule__Generated__Group_2__4__Impl3388);
+                    rule__Generated__Group_2_4__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getGroup_2_4()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2__4__Impl"
+
+
+    // $ANTLR start "rule__Generated__Group_2_4__0"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1704:1: rule__Generated__Group_2_4__0 : rule__Generated__Group_2_4__0__Impl rule__Generated__Group_2_4__1 ;
+    public final void rule__Generated__Group_2_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1708:1: ( rule__Generated__Group_2_4__0__Impl rule__Generated__Group_2_4__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1709:2: rule__Generated__Group_2_4__0__Impl rule__Generated__Group_2_4__1
+            {
+            pushFollow(FOLLOW_rule__Generated__Group_2_4__0__Impl_in_rule__Generated__Group_2_4__03429);
+            rule__Generated__Group_2_4__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Generated__Group_2_4__1_in_rule__Generated__Group_2_4__03432);
+            rule__Generated__Group_2_4__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2_4__0"
+
+
+    // $ANTLR start "rule__Generated__Group_2_4__0__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1716:1: rule__Generated__Group_2_4__0__Impl : ( 'origin' ) ;
+    public final void rule__Generated__Group_2_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1720:1: ( ( 'origin' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1721:1: ( 'origin' )
+            {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1721:1: ( 'origin' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1722:1: 'origin'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGeneratedAccess().getOriginKeyword_2_4_0()); 
+            }
+            match(input,23,FOLLOW_23_in_rule__Generated__Group_2_4__0__Impl3460); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getOriginKeyword_2_4_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2_4__0__Impl"
+
+
+    // $ANTLR start "rule__Generated__Group_2_4__1"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1735:1: rule__Generated__Group_2_4__1 : rule__Generated__Group_2_4__1__Impl rule__Generated__Group_2_4__2 ;
+    public final void rule__Generated__Group_2_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1739:1: ( rule__Generated__Group_2_4__1__Impl rule__Generated__Group_2_4__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1740:2: rule__Generated__Group_2_4__1__Impl rule__Generated__Group_2_4__2
+            {
+            pushFollow(FOLLOW_rule__Generated__Group_2_4__1__Impl_in_rule__Generated__Group_2_4__13491);
+            rule__Generated__Group_2_4__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Generated__Group_2_4__2_in_rule__Generated__Group_2_4__13494);
+            rule__Generated__Group_2_4__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2_4__1"
+
+
+    // $ANTLR start "rule__Generated__Group_2_4__1__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1747:1: rule__Generated__Group_2_4__1__Impl : ( ( rule__Generated__OriginXAssignment_2_4_1 ) ) ;
+    public final void rule__Generated__Group_2_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1751:1: ( ( ( rule__Generated__OriginXAssignment_2_4_1 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1752:1: ( ( rule__Generated__OriginXAssignment_2_4_1 ) )
+            {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1752:1: ( ( rule__Generated__OriginXAssignment_2_4_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1753:1: ( rule__Generated__OriginXAssignment_2_4_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGeneratedAccess().getOriginXAssignment_2_4_1()); 
+            }
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1754:1: ( rule__Generated__OriginXAssignment_2_4_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1754:2: rule__Generated__OriginXAssignment_2_4_1
+            {
+            pushFollow(FOLLOW_rule__Generated__OriginXAssignment_2_4_1_in_rule__Generated__Group_2_4__1__Impl3521);
+            rule__Generated__OriginXAssignment_2_4_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getOriginXAssignment_2_4_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2_4__1__Impl"
+
+
+    // $ANTLR start "rule__Generated__Group_2_4__2"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1764:1: rule__Generated__Group_2_4__2 : rule__Generated__Group_2_4__2__Impl rule__Generated__Group_2_4__3 ;
+    public final void rule__Generated__Group_2_4__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1768:1: ( rule__Generated__Group_2_4__2__Impl rule__Generated__Group_2_4__3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1769:2: rule__Generated__Group_2_4__2__Impl rule__Generated__Group_2_4__3
+            {
+            pushFollow(FOLLOW_rule__Generated__Group_2_4__2__Impl_in_rule__Generated__Group_2_4__23551);
+            rule__Generated__Group_2_4__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Generated__Group_2_4__3_in_rule__Generated__Group_2_4__23554);
+            rule__Generated__Group_2_4__3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2_4__2"
+
+
+    // $ANTLR start "rule__Generated__Group_2_4__2__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1776:1: rule__Generated__Group_2_4__2__Impl : ( ( rule__Generated__OriginYAssignment_2_4_2 ) ) ;
+    public final void rule__Generated__Group_2_4__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1780:1: ( ( ( rule__Generated__OriginYAssignment_2_4_2 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1781:1: ( ( rule__Generated__OriginYAssignment_2_4_2 ) )
+            {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1781:1: ( ( rule__Generated__OriginYAssignment_2_4_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1782:1: ( rule__Generated__OriginYAssignment_2_4_2 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGeneratedAccess().getOriginYAssignment_2_4_2()); 
+            }
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1783:1: ( rule__Generated__OriginYAssignment_2_4_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1783:2: rule__Generated__OriginYAssignment_2_4_2
+            {
+            pushFollow(FOLLOW_rule__Generated__OriginYAssignment_2_4_2_in_rule__Generated__Group_2_4__2__Impl3581);
+            rule__Generated__OriginYAssignment_2_4_2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getOriginYAssignment_2_4_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2_4__2__Impl"
+
+
+    // $ANTLR start "rule__Generated__Group_2_4__3"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1793:1: rule__Generated__Group_2_4__3 : rule__Generated__Group_2_4__3__Impl ;
+    public final void rule__Generated__Group_2_4__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1797:1: ( rule__Generated__Group_2_4__3__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1798:2: rule__Generated__Group_2_4__3__Impl
+            {
+            pushFollow(FOLLOW_rule__Generated__Group_2_4__3__Impl_in_rule__Generated__Group_2_4__33611);
+            rule__Generated__Group_2_4__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2_4__3"
+
+
+    // $ANTLR start "rule__Generated__Group_2_4__3__Impl"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1804:1: rule__Generated__Group_2_4__3__Impl : ( ( rule__Generated__OriginZAssignment_2_4_3 ) ) ;
+    public final void rule__Generated__Group_2_4__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1808:1: ( ( ( rule__Generated__OriginZAssignment_2_4_3 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1809:1: ( ( rule__Generated__OriginZAssignment_2_4_3 ) )
+            {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1809:1: ( ( rule__Generated__OriginZAssignment_2_4_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1810:1: ( rule__Generated__OriginZAssignment_2_4_3 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGeneratedAccess().getOriginZAssignment_2_4_3()); 
+            }
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1811:1: ( rule__Generated__OriginZAssignment_2_4_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1811:2: rule__Generated__OriginZAssignment_2_4_3
+            {
+            pushFollow(FOLLOW_rule__Generated__OriginZAssignment_2_4_3_in_rule__Generated__Group_2_4__3__Impl3638);
+            rule__Generated__OriginZAssignment_2_4_3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getOriginZAssignment_2_4_3()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__Group_2_4__3__Impl"
 
 
     // $ANTLR start "rule__FxmlInclude__Group__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1798:1: rule__FxmlInclude__Group__0 : rule__FxmlInclude__Group__0__Impl rule__FxmlInclude__Group__1 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1829:1: rule__FxmlInclude__Group__0 : rule__FxmlInclude__Group__0__Impl rule__FxmlInclude__Group__1 ;
     public final void rule__FxmlInclude__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1802:1: ( rule__FxmlInclude__Group__0__Impl rule__FxmlInclude__Group__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1803:2: rule__FxmlInclude__Group__0__Impl rule__FxmlInclude__Group__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1833:1: ( rule__FxmlInclude__Group__0__Impl rule__FxmlInclude__Group__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1834:2: rule__FxmlInclude__Group__0__Impl rule__FxmlInclude__Group__1
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__Group__0__Impl_in_rule__FxmlInclude__Group__03615);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group__0__Impl_in_rule__FxmlInclude__Group__03676);
             rule__FxmlInclude__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FxmlInclude__Group__1_in_rule__FxmlInclude__Group__03618);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group__1_in_rule__FxmlInclude__Group__03679);
             rule__FxmlInclude__Group__1();
 
             state._fsp--;
@@ -5157,22 +5246,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1810:1: rule__FxmlInclude__Group__0__Impl : ( 'fxml' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1841:1: rule__FxmlInclude__Group__0__Impl : ( 'fxml' ) ;
     public final void rule__FxmlInclude__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1814:1: ( ( 'fxml' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1815:1: ( 'fxml' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1845:1: ( ( 'fxml' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1846:1: ( 'fxml' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1815:1: ( 'fxml' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1816:1: 'fxml'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1846:1: ( 'fxml' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1847:1: 'fxml'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getFxmlKeyword_0()); 
             }
-            match(input,25,FOLLOW_25_in_rule__FxmlInclude__Group__0__Impl3646); if (state.failed) return ;
+            match(input,24,FOLLOW_24_in_rule__FxmlInclude__Group__0__Impl3707); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFxmlIncludeAccess().getFxmlKeyword_0()); 
             }
@@ -5198,21 +5287,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1829:1: rule__FxmlInclude__Group__1 : rule__FxmlInclude__Group__1__Impl rule__FxmlInclude__Group__2 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1860:1: rule__FxmlInclude__Group__1 : rule__FxmlInclude__Group__1__Impl rule__FxmlInclude__Group__2 ;
     public final void rule__FxmlInclude__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1833:1: ( rule__FxmlInclude__Group__1__Impl rule__FxmlInclude__Group__2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1834:2: rule__FxmlInclude__Group__1__Impl rule__FxmlInclude__Group__2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1864:1: ( rule__FxmlInclude__Group__1__Impl rule__FxmlInclude__Group__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1865:2: rule__FxmlInclude__Group__1__Impl rule__FxmlInclude__Group__2
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__Group__1__Impl_in_rule__FxmlInclude__Group__13677);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group__1__Impl_in_rule__FxmlInclude__Group__13738);
             rule__FxmlInclude__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FxmlInclude__Group__2_in_rule__FxmlInclude__Group__13680);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group__2_in_rule__FxmlInclude__Group__13741);
             rule__FxmlInclude__Group__2();
 
             state._fsp--;
@@ -5236,25 +5325,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1841:1: rule__FxmlInclude__Group__1__Impl : ( ( rule__FxmlInclude__Source3dAssignment_1 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1872:1: rule__FxmlInclude__Group__1__Impl : ( ( rule__FxmlInclude__Source3dAssignment_1 ) ) ;
     public final void rule__FxmlInclude__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1845:1: ( ( ( rule__FxmlInclude__Source3dAssignment_1 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1846:1: ( ( rule__FxmlInclude__Source3dAssignment_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1876:1: ( ( ( rule__FxmlInclude__Source3dAssignment_1 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1877:1: ( ( rule__FxmlInclude__Source3dAssignment_1 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1846:1: ( ( rule__FxmlInclude__Source3dAssignment_1 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1847:1: ( rule__FxmlInclude__Source3dAssignment_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1877:1: ( ( rule__FxmlInclude__Source3dAssignment_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1878:1: ( rule__FxmlInclude__Source3dAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getSource3dAssignment_1()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1848:1: ( rule__FxmlInclude__Source3dAssignment_1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1848:2: rule__FxmlInclude__Source3dAssignment_1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1879:1: ( rule__FxmlInclude__Source3dAssignment_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1879:2: rule__FxmlInclude__Source3dAssignment_1
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__Source3dAssignment_1_in_rule__FxmlInclude__Group__1__Impl3707);
+            pushFollow(FOLLOW_rule__FxmlInclude__Source3dAssignment_1_in_rule__FxmlInclude__Group__1__Impl3768);
             rule__FxmlInclude__Source3dAssignment_1();
 
             state._fsp--;
@@ -5287,16 +5376,16 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group__2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1858:1: rule__FxmlInclude__Group__2 : rule__FxmlInclude__Group__2__Impl ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1889:1: rule__FxmlInclude__Group__2 : rule__FxmlInclude__Group__2__Impl ;
     public final void rule__FxmlInclude__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1862:1: ( rule__FxmlInclude__Group__2__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1863:2: rule__FxmlInclude__Group__2__Impl
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1893:1: ( rule__FxmlInclude__Group__2__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1894:2: rule__FxmlInclude__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__Group__2__Impl_in_rule__FxmlInclude__Group__23737);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group__2__Impl_in_rule__FxmlInclude__Group__23798);
             rule__FxmlInclude__Group__2__Impl();
 
             state._fsp--;
@@ -5320,33 +5409,33 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group__2__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1869:1: rule__FxmlInclude__Group__2__Impl : ( ( rule__FxmlInclude__Group_2__0 )? ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1900:1: rule__FxmlInclude__Group__2__Impl : ( ( rule__FxmlInclude__Group_2__0 )? ) ;
     public final void rule__FxmlInclude__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1873:1: ( ( ( rule__FxmlInclude__Group_2__0 )? ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1874:1: ( ( rule__FxmlInclude__Group_2__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1904:1: ( ( ( rule__FxmlInclude__Group_2__0 )? ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1905:1: ( ( rule__FxmlInclude__Group_2__0 )? )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1874:1: ( ( rule__FxmlInclude__Group_2__0 )? )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1875:1: ( rule__FxmlInclude__Group_2__0 )?
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1905:1: ( ( rule__FxmlInclude__Group_2__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1906:1: ( rule__FxmlInclude__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getGroup_2()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1876:1: ( rule__FxmlInclude__Group_2__0 )?
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1907:1: ( rule__FxmlInclude__Group_2__0 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==24) ) {
+            if ( (LA10_0==23) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1876:2: rule__FxmlInclude__Group_2__0
+                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1907:2: rule__FxmlInclude__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__FxmlInclude__Group_2__0_in_rule__FxmlInclude__Group__2__Impl3764);
+                    pushFollow(FOLLOW_rule__FxmlInclude__Group_2__0_in_rule__FxmlInclude__Group__2__Impl3825);
                     rule__FxmlInclude__Group_2__0();
 
                     state._fsp--;
@@ -5382,21 +5471,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group_2__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1892:1: rule__FxmlInclude__Group_2__0 : rule__FxmlInclude__Group_2__0__Impl rule__FxmlInclude__Group_2__1 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1923:1: rule__FxmlInclude__Group_2__0 : rule__FxmlInclude__Group_2__0__Impl rule__FxmlInclude__Group_2__1 ;
     public final void rule__FxmlInclude__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1896:1: ( rule__FxmlInclude__Group_2__0__Impl rule__FxmlInclude__Group_2__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1897:2: rule__FxmlInclude__Group_2__0__Impl rule__FxmlInclude__Group_2__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1927:1: ( rule__FxmlInclude__Group_2__0__Impl rule__FxmlInclude__Group_2__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1928:2: rule__FxmlInclude__Group_2__0__Impl rule__FxmlInclude__Group_2__1
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__0__Impl_in_rule__FxmlInclude__Group_2__03801);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__0__Impl_in_rule__FxmlInclude__Group_2__03862);
             rule__FxmlInclude__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__1_in_rule__FxmlInclude__Group_2__03804);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__1_in_rule__FxmlInclude__Group_2__03865);
             rule__FxmlInclude__Group_2__1();
 
             state._fsp--;
@@ -5420,22 +5509,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group_2__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1904:1: rule__FxmlInclude__Group_2__0__Impl : ( 'origin' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1935:1: rule__FxmlInclude__Group_2__0__Impl : ( 'origin' ) ;
     public final void rule__FxmlInclude__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1908:1: ( ( 'origin' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1909:1: ( 'origin' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1939:1: ( ( 'origin' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1940:1: ( 'origin' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1909:1: ( 'origin' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1910:1: 'origin'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1940:1: ( 'origin' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1941:1: 'origin'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getOriginKeyword_2_0()); 
             }
-            match(input,24,FOLLOW_24_in_rule__FxmlInclude__Group_2__0__Impl3832); if (state.failed) return ;
+            match(input,23,FOLLOW_23_in_rule__FxmlInclude__Group_2__0__Impl3893); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFxmlIncludeAccess().getOriginKeyword_2_0()); 
             }
@@ -5461,21 +5550,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group_2__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1923:1: rule__FxmlInclude__Group_2__1 : rule__FxmlInclude__Group_2__1__Impl rule__FxmlInclude__Group_2__2 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1954:1: rule__FxmlInclude__Group_2__1 : rule__FxmlInclude__Group_2__1__Impl rule__FxmlInclude__Group_2__2 ;
     public final void rule__FxmlInclude__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1927:1: ( rule__FxmlInclude__Group_2__1__Impl rule__FxmlInclude__Group_2__2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1928:2: rule__FxmlInclude__Group_2__1__Impl rule__FxmlInclude__Group_2__2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1958:1: ( rule__FxmlInclude__Group_2__1__Impl rule__FxmlInclude__Group_2__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1959:2: rule__FxmlInclude__Group_2__1__Impl rule__FxmlInclude__Group_2__2
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__1__Impl_in_rule__FxmlInclude__Group_2__13863);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__1__Impl_in_rule__FxmlInclude__Group_2__13924);
             rule__FxmlInclude__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__2_in_rule__FxmlInclude__Group_2__13866);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__2_in_rule__FxmlInclude__Group_2__13927);
             rule__FxmlInclude__Group_2__2();
 
             state._fsp--;
@@ -5499,25 +5588,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group_2__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1935:1: rule__FxmlInclude__Group_2__1__Impl : ( ( rule__FxmlInclude__OriginXAssignment_2_1 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1966:1: rule__FxmlInclude__Group_2__1__Impl : ( ( rule__FxmlInclude__OriginXAssignment_2_1 ) ) ;
     public final void rule__FxmlInclude__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1939:1: ( ( ( rule__FxmlInclude__OriginXAssignment_2_1 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1940:1: ( ( rule__FxmlInclude__OriginXAssignment_2_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1970:1: ( ( ( rule__FxmlInclude__OriginXAssignment_2_1 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1971:1: ( ( rule__FxmlInclude__OriginXAssignment_2_1 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1940:1: ( ( rule__FxmlInclude__OriginXAssignment_2_1 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1941:1: ( rule__FxmlInclude__OriginXAssignment_2_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1971:1: ( ( rule__FxmlInclude__OriginXAssignment_2_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1972:1: ( rule__FxmlInclude__OriginXAssignment_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getOriginXAssignment_2_1()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1942:1: ( rule__FxmlInclude__OriginXAssignment_2_1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1942:2: rule__FxmlInclude__OriginXAssignment_2_1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1973:1: ( rule__FxmlInclude__OriginXAssignment_2_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1973:2: rule__FxmlInclude__OriginXAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__OriginXAssignment_2_1_in_rule__FxmlInclude__Group_2__1__Impl3893);
+            pushFollow(FOLLOW_rule__FxmlInclude__OriginXAssignment_2_1_in_rule__FxmlInclude__Group_2__1__Impl3954);
             rule__FxmlInclude__OriginXAssignment_2_1();
 
             state._fsp--;
@@ -5550,21 +5639,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group_2__2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1952:1: rule__FxmlInclude__Group_2__2 : rule__FxmlInclude__Group_2__2__Impl rule__FxmlInclude__Group_2__3 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1983:1: rule__FxmlInclude__Group_2__2 : rule__FxmlInclude__Group_2__2__Impl rule__FxmlInclude__Group_2__3 ;
     public final void rule__FxmlInclude__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1956:1: ( rule__FxmlInclude__Group_2__2__Impl rule__FxmlInclude__Group_2__3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1957:2: rule__FxmlInclude__Group_2__2__Impl rule__FxmlInclude__Group_2__3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1987:1: ( rule__FxmlInclude__Group_2__2__Impl rule__FxmlInclude__Group_2__3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1988:2: rule__FxmlInclude__Group_2__2__Impl rule__FxmlInclude__Group_2__3
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__2__Impl_in_rule__FxmlInclude__Group_2__23923);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__2__Impl_in_rule__FxmlInclude__Group_2__23984);
             rule__FxmlInclude__Group_2__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__3_in_rule__FxmlInclude__Group_2__23926);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__3_in_rule__FxmlInclude__Group_2__23987);
             rule__FxmlInclude__Group_2__3();
 
             state._fsp--;
@@ -5588,25 +5677,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group_2__2__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1964:1: rule__FxmlInclude__Group_2__2__Impl : ( ( rule__FxmlInclude__OriginYAssignment_2_2 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1995:1: rule__FxmlInclude__Group_2__2__Impl : ( ( rule__FxmlInclude__OriginYAssignment_2_2 ) ) ;
     public final void rule__FxmlInclude__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1968:1: ( ( ( rule__FxmlInclude__OriginYAssignment_2_2 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1969:1: ( ( rule__FxmlInclude__OriginYAssignment_2_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1999:1: ( ( ( rule__FxmlInclude__OriginYAssignment_2_2 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2000:1: ( ( rule__FxmlInclude__OriginYAssignment_2_2 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1969:1: ( ( rule__FxmlInclude__OriginYAssignment_2_2 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1970:1: ( rule__FxmlInclude__OriginYAssignment_2_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2000:1: ( ( rule__FxmlInclude__OriginYAssignment_2_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2001:1: ( rule__FxmlInclude__OriginYAssignment_2_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getOriginYAssignment_2_2()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1971:1: ( rule__FxmlInclude__OriginYAssignment_2_2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1971:2: rule__FxmlInclude__OriginYAssignment_2_2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2002:1: ( rule__FxmlInclude__OriginYAssignment_2_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2002:2: rule__FxmlInclude__OriginYAssignment_2_2
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__OriginYAssignment_2_2_in_rule__FxmlInclude__Group_2__2__Impl3953);
+            pushFollow(FOLLOW_rule__FxmlInclude__OriginYAssignment_2_2_in_rule__FxmlInclude__Group_2__2__Impl4014);
             rule__FxmlInclude__OriginYAssignment_2_2();
 
             state._fsp--;
@@ -5639,16 +5728,16 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group_2__3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1981:1: rule__FxmlInclude__Group_2__3 : rule__FxmlInclude__Group_2__3__Impl ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2012:1: rule__FxmlInclude__Group_2__3 : rule__FxmlInclude__Group_2__3__Impl ;
     public final void rule__FxmlInclude__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1985:1: ( rule__FxmlInclude__Group_2__3__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1986:2: rule__FxmlInclude__Group_2__3__Impl
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2016:1: ( rule__FxmlInclude__Group_2__3__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2017:2: rule__FxmlInclude__Group_2__3__Impl
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__3__Impl_in_rule__FxmlInclude__Group_2__33983);
+            pushFollow(FOLLOW_rule__FxmlInclude__Group_2__3__Impl_in_rule__FxmlInclude__Group_2__34044);
             rule__FxmlInclude__Group_2__3__Impl();
 
             state._fsp--;
@@ -5672,25 +5761,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__Group_2__3__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1992:1: rule__FxmlInclude__Group_2__3__Impl : ( ( rule__FxmlInclude__OriginZAssignment_2_3 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2023:1: rule__FxmlInclude__Group_2__3__Impl : ( ( rule__FxmlInclude__OriginZAssignment_2_3 ) ) ;
     public final void rule__FxmlInclude__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1996:1: ( ( ( rule__FxmlInclude__OriginZAssignment_2_3 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1997:1: ( ( rule__FxmlInclude__OriginZAssignment_2_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2027:1: ( ( ( rule__FxmlInclude__OriginZAssignment_2_3 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2028:1: ( ( rule__FxmlInclude__OriginZAssignment_2_3 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1997:1: ( ( rule__FxmlInclude__OriginZAssignment_2_3 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1998:1: ( rule__FxmlInclude__OriginZAssignment_2_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2028:1: ( ( rule__FxmlInclude__OriginZAssignment_2_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2029:1: ( rule__FxmlInclude__OriginZAssignment_2_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getOriginZAssignment_2_3()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1999:1: ( rule__FxmlInclude__OriginZAssignment_2_3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:1999:2: rule__FxmlInclude__OriginZAssignment_2_3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2030:1: ( rule__FxmlInclude__OriginZAssignment_2_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2030:2: rule__FxmlInclude__OriginZAssignment_2_3
             {
-            pushFollow(FOLLOW_rule__FxmlInclude__OriginZAssignment_2_3_in_rule__FxmlInclude__Group_2__3__Impl4010);
+            pushFollow(FOLLOW_rule__FxmlInclude__OriginZAssignment_2_3_in_rule__FxmlInclude__Group_2__3__Impl4071);
             rule__FxmlInclude__OriginZAssignment_2_3();
 
             state._fsp--;
@@ -5723,21 +5812,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2017:1: rule__Assembly__Group__0 : rule__Assembly__Group__0__Impl rule__Assembly__Group__1 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2048:1: rule__Assembly__Group__0 : rule__Assembly__Group__0__Impl rule__Assembly__Group__1 ;
     public final void rule__Assembly__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2021:1: ( rule__Assembly__Group__0__Impl rule__Assembly__Group__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2022:2: rule__Assembly__Group__0__Impl rule__Assembly__Group__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2052:1: ( rule__Assembly__Group__0__Impl rule__Assembly__Group__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2053:2: rule__Assembly__Group__0__Impl rule__Assembly__Group__1
             {
-            pushFollow(FOLLOW_rule__Assembly__Group__0__Impl_in_rule__Assembly__Group__04048);
+            pushFollow(FOLLOW_rule__Assembly__Group__0__Impl_in_rule__Assembly__Group__04109);
             rule__Assembly__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Assembly__Group__1_in_rule__Assembly__Group__04051);
+            pushFollow(FOLLOW_rule__Assembly__Group__1_in_rule__Assembly__Group__04112);
             rule__Assembly__Group__1();
 
             state._fsp--;
@@ -5761,22 +5850,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2029:1: rule__Assembly__Group__0__Impl : ( 'assembly' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2060:1: rule__Assembly__Group__0__Impl : ( 'assembly' ) ;
     public final void rule__Assembly__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2033:1: ( ( 'assembly' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2034:1: ( 'assembly' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2064:1: ( ( 'assembly' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2065:1: ( 'assembly' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2034:1: ( 'assembly' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2035:1: 'assembly'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2065:1: ( 'assembly' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2066:1: 'assembly'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssemblyAccess().getAssemblyKeyword_0()); 
             }
-            match(input,26,FOLLOW_26_in_rule__Assembly__Group__0__Impl4079); if (state.failed) return ;
+            match(input,25,FOLLOW_25_in_rule__Assembly__Group__0__Impl4140); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAssemblyAccess().getAssemblyKeyword_0()); 
             }
@@ -5802,21 +5891,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2048:1: rule__Assembly__Group__1 : rule__Assembly__Group__1__Impl rule__Assembly__Group__2 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2079:1: rule__Assembly__Group__1 : rule__Assembly__Group__1__Impl rule__Assembly__Group__2 ;
     public final void rule__Assembly__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2052:1: ( rule__Assembly__Group__1__Impl rule__Assembly__Group__2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2053:2: rule__Assembly__Group__1__Impl rule__Assembly__Group__2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2083:1: ( rule__Assembly__Group__1__Impl rule__Assembly__Group__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2084:2: rule__Assembly__Group__1__Impl rule__Assembly__Group__2
             {
-            pushFollow(FOLLOW_rule__Assembly__Group__1__Impl_in_rule__Assembly__Group__14110);
+            pushFollow(FOLLOW_rule__Assembly__Group__1__Impl_in_rule__Assembly__Group__14171);
             rule__Assembly__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Assembly__Group__2_in_rule__Assembly__Group__14113);
+            pushFollow(FOLLOW_rule__Assembly__Group__2_in_rule__Assembly__Group__14174);
             rule__Assembly__Group__2();
 
             state._fsp--;
@@ -5840,25 +5929,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2060:1: rule__Assembly__Group__1__Impl : ( ( rule__Assembly__NameAssignment_1 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2091:1: rule__Assembly__Group__1__Impl : ( ( rule__Assembly__NameAssignment_1 ) ) ;
     public final void rule__Assembly__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2064:1: ( ( ( rule__Assembly__NameAssignment_1 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2065:1: ( ( rule__Assembly__NameAssignment_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2095:1: ( ( ( rule__Assembly__NameAssignment_1 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2096:1: ( ( rule__Assembly__NameAssignment_1 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2065:1: ( ( rule__Assembly__NameAssignment_1 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2066:1: ( rule__Assembly__NameAssignment_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2096:1: ( ( rule__Assembly__NameAssignment_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2097:1: ( rule__Assembly__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssemblyAccess().getNameAssignment_1()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2067:1: ( rule__Assembly__NameAssignment_1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2067:2: rule__Assembly__NameAssignment_1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2098:1: ( rule__Assembly__NameAssignment_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2098:2: rule__Assembly__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Assembly__NameAssignment_1_in_rule__Assembly__Group__1__Impl4140);
+            pushFollow(FOLLOW_rule__Assembly__NameAssignment_1_in_rule__Assembly__Group__1__Impl4201);
             rule__Assembly__NameAssignment_1();
 
             state._fsp--;
@@ -5891,21 +5980,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2077:1: rule__Assembly__Group__2 : rule__Assembly__Group__2__Impl rule__Assembly__Group__3 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2108:1: rule__Assembly__Group__2 : rule__Assembly__Group__2__Impl rule__Assembly__Group__3 ;
     public final void rule__Assembly__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2081:1: ( rule__Assembly__Group__2__Impl rule__Assembly__Group__3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2082:2: rule__Assembly__Group__2__Impl rule__Assembly__Group__3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2112:1: ( rule__Assembly__Group__2__Impl rule__Assembly__Group__3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2113:2: rule__Assembly__Group__2__Impl rule__Assembly__Group__3
             {
-            pushFollow(FOLLOW_rule__Assembly__Group__2__Impl_in_rule__Assembly__Group__24170);
+            pushFollow(FOLLOW_rule__Assembly__Group__2__Impl_in_rule__Assembly__Group__24231);
             rule__Assembly__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Assembly__Group__3_in_rule__Assembly__Group__24173);
+            pushFollow(FOLLOW_rule__Assembly__Group__3_in_rule__Assembly__Group__24234);
             rule__Assembly__Group__3();
 
             state._fsp--;
@@ -5929,22 +6018,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__2__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2089:1: rule__Assembly__Group__2__Impl : ( '{' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2120:1: rule__Assembly__Group__2__Impl : ( '{' ) ;
     public final void rule__Assembly__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2093:1: ( ( '{' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2094:1: ( '{' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2124:1: ( ( '{' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2125:1: ( '{' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2094:1: ( '{' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2095:1: '{'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2125:1: ( '{' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2126:1: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssemblyAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,16,FOLLOW_16_in_rule__Assembly__Group__2__Impl4201); if (state.failed) return ;
+            match(input,16,FOLLOW_16_in_rule__Assembly__Group__2__Impl4262); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAssemblyAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -5970,21 +6059,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2108:1: rule__Assembly__Group__3 : rule__Assembly__Group__3__Impl rule__Assembly__Group__4 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2139:1: rule__Assembly__Group__3 : rule__Assembly__Group__3__Impl rule__Assembly__Group__4 ;
     public final void rule__Assembly__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2112:1: ( rule__Assembly__Group__3__Impl rule__Assembly__Group__4 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2113:2: rule__Assembly__Group__3__Impl rule__Assembly__Group__4
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2143:1: ( rule__Assembly__Group__3__Impl rule__Assembly__Group__4 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2144:2: rule__Assembly__Group__3__Impl rule__Assembly__Group__4
             {
-            pushFollow(FOLLOW_rule__Assembly__Group__3__Impl_in_rule__Assembly__Group__34232);
+            pushFollow(FOLLOW_rule__Assembly__Group__3__Impl_in_rule__Assembly__Group__34293);
             rule__Assembly__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Assembly__Group__4_in_rule__Assembly__Group__34235);
+            pushFollow(FOLLOW_rule__Assembly__Group__4_in_rule__Assembly__Group__34296);
             rule__Assembly__Group__4();
 
             state._fsp--;
@@ -6008,28 +6097,28 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__3__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2120:1: rule__Assembly__Group__3__Impl : ( ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2151:1: rule__Assembly__Group__3__Impl : ( ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* ) ) ;
     public final void rule__Assembly__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2124:1: ( ( ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2125:1: ( ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2155:1: ( ( ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2156:1: ( ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2125:1: ( ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2126:1: ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2156:1: ( ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2157:1: ( ( rule__Assembly__ItemsAssignment_3 ) ) ( ( rule__Assembly__ItemsAssignment_3 )* )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2126:1: ( ( rule__Assembly__ItemsAssignment_3 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2127:1: ( rule__Assembly__ItemsAssignment_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2157:1: ( ( rule__Assembly__ItemsAssignment_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2158:1: ( rule__Assembly__ItemsAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssemblyAccess().getItemsAssignment_3()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2128:1: ( rule__Assembly__ItemsAssignment_3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2128:2: rule__Assembly__ItemsAssignment_3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2159:1: ( rule__Assembly__ItemsAssignment_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2159:2: rule__Assembly__ItemsAssignment_3
             {
-            pushFollow(FOLLOW_rule__Assembly__ItemsAssignment_3_in_rule__Assembly__Group__3__Impl4264);
+            pushFollow(FOLLOW_rule__Assembly__ItemsAssignment_3_in_rule__Assembly__Group__3__Impl4325);
             rule__Assembly__ItemsAssignment_3();
 
             state._fsp--;
@@ -6043,13 +6132,13 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2131:1: ( ( rule__Assembly__ItemsAssignment_3 )* )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2132:1: ( rule__Assembly__ItemsAssignment_3 )*
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2162:1: ( ( rule__Assembly__ItemsAssignment_3 )* )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2163:1: ( rule__Assembly__ItemsAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssemblyAccess().getItemsAssignment_3()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2133:1: ( rule__Assembly__ItemsAssignment_3 )*
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2164:1: ( rule__Assembly__ItemsAssignment_3 )*
             loop11:
             do {
                 int alt11=2;
@@ -6062,9 +6151,9 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2133:2: rule__Assembly__ItemsAssignment_3
+            	    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2164:2: rule__Assembly__ItemsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__Assembly__ItemsAssignment_3_in_rule__Assembly__Group__3__Impl4276);
+            	    pushFollow(FOLLOW_rule__Assembly__ItemsAssignment_3_in_rule__Assembly__Group__3__Impl4337);
             	    rule__Assembly__ItemsAssignment_3();
 
             	    state._fsp--;
@@ -6106,16 +6195,16 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__4"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2144:1: rule__Assembly__Group__4 : rule__Assembly__Group__4__Impl ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2175:1: rule__Assembly__Group__4 : rule__Assembly__Group__4__Impl ;
     public final void rule__Assembly__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2148:1: ( rule__Assembly__Group__4__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2149:2: rule__Assembly__Group__4__Impl
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2179:1: ( rule__Assembly__Group__4__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2180:2: rule__Assembly__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Assembly__Group__4__Impl_in_rule__Assembly__Group__44309);
+            pushFollow(FOLLOW_rule__Assembly__Group__4__Impl_in_rule__Assembly__Group__44370);
             rule__Assembly__Group__4__Impl();
 
             state._fsp--;
@@ -6139,22 +6228,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__Group__4__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2155:1: rule__Assembly__Group__4__Impl : ( '}' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2186:1: rule__Assembly__Group__4__Impl : ( '}' ) ;
     public final void rule__Assembly__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2159:1: ( ( '}' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2160:1: ( '}' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2190:1: ( ( '}' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2191:1: ( '}' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2160:1: ( '}' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2161:1: '}'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2191:1: ( '}' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2192:1: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssemblyAccess().getRightCurlyBracketKeyword_4()); 
             }
-            match(input,17,FOLLOW_17_in_rule__Assembly__Group__4__Impl4337); if (state.failed) return ;
+            match(input,17,FOLLOW_17_in_rule__Assembly__Group__4__Impl4398); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAssemblyAccess().getRightCurlyBracketKeyword_4()); 
             }
@@ -6180,21 +6269,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2184:1: rule__RasterAssemblyItem__Group__0 : rule__RasterAssemblyItem__Group__0__Impl rule__RasterAssemblyItem__Group__1 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2215:1: rule__RasterAssemblyItem__Group__0 : rule__RasterAssemblyItem__Group__0__Impl rule__RasterAssemblyItem__Group__1 ;
     public final void rule__RasterAssemblyItem__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2188:1: ( rule__RasterAssemblyItem__Group__0__Impl rule__RasterAssemblyItem__Group__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2189:2: rule__RasterAssemblyItem__Group__0__Impl rule__RasterAssemblyItem__Group__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2219:1: ( rule__RasterAssemblyItem__Group__0__Impl rule__RasterAssemblyItem__Group__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2220:2: rule__RasterAssemblyItem__Group__0__Impl rule__RasterAssemblyItem__Group__1
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__0__Impl_in_rule__RasterAssemblyItem__Group__04378);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__0__Impl_in_rule__RasterAssemblyItem__Group__04439);
             rule__RasterAssemblyItem__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__1_in_rule__RasterAssemblyItem__Group__04381);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__1_in_rule__RasterAssemblyItem__Group__04442);
             rule__RasterAssemblyItem__Group__1();
 
             state._fsp--;
@@ -6218,25 +6307,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2196:1: rule__RasterAssemblyItem__Group__0__Impl : ( ( rule__RasterAssemblyItem__ElementAssignment_0 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2227:1: rule__RasterAssemblyItem__Group__0__Impl : ( ( rule__RasterAssemblyItem__ElementAssignment_0 ) ) ;
     public final void rule__RasterAssemblyItem__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2200:1: ( ( ( rule__RasterAssemblyItem__ElementAssignment_0 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2201:1: ( ( rule__RasterAssemblyItem__ElementAssignment_0 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2231:1: ( ( ( rule__RasterAssemblyItem__ElementAssignment_0 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2232:1: ( ( rule__RasterAssemblyItem__ElementAssignment_0 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2201:1: ( ( rule__RasterAssemblyItem__ElementAssignment_0 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2202:1: ( rule__RasterAssemblyItem__ElementAssignment_0 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2232:1: ( ( rule__RasterAssemblyItem__ElementAssignment_0 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2233:1: ( rule__RasterAssemblyItem__ElementAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getElementAssignment_0()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2203:1: ( rule__RasterAssemblyItem__ElementAssignment_0 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2203:2: rule__RasterAssemblyItem__ElementAssignment_0
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2234:1: ( rule__RasterAssemblyItem__ElementAssignment_0 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2234:2: rule__RasterAssemblyItem__ElementAssignment_0
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__ElementAssignment_0_in_rule__RasterAssemblyItem__Group__0__Impl4408);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__ElementAssignment_0_in_rule__RasterAssemblyItem__Group__0__Impl4469);
             rule__RasterAssemblyItem__ElementAssignment_0();
 
             state._fsp--;
@@ -6269,21 +6358,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2213:1: rule__RasterAssemblyItem__Group__1 : rule__RasterAssemblyItem__Group__1__Impl rule__RasterAssemblyItem__Group__2 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2244:1: rule__RasterAssemblyItem__Group__1 : rule__RasterAssemblyItem__Group__1__Impl rule__RasterAssemblyItem__Group__2 ;
     public final void rule__RasterAssemblyItem__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2217:1: ( rule__RasterAssemblyItem__Group__1__Impl rule__RasterAssemblyItem__Group__2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2218:2: rule__RasterAssemblyItem__Group__1__Impl rule__RasterAssemblyItem__Group__2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2248:1: ( rule__RasterAssemblyItem__Group__1__Impl rule__RasterAssemblyItem__Group__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2249:2: rule__RasterAssemblyItem__Group__1__Impl rule__RasterAssemblyItem__Group__2
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__1__Impl_in_rule__RasterAssemblyItem__Group__14438);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__1__Impl_in_rule__RasterAssemblyItem__Group__14499);
             rule__RasterAssemblyItem__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__2_in_rule__RasterAssemblyItem__Group__14441);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__2_in_rule__RasterAssemblyItem__Group__14502);
             rule__RasterAssemblyItem__Group__2();
 
             state._fsp--;
@@ -6307,22 +6396,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2225:1: rule__RasterAssemblyItem__Group__1__Impl : ( 'pos' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2256:1: rule__RasterAssemblyItem__Group__1__Impl : ( 'pos' ) ;
     public final void rule__RasterAssemblyItem__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2229:1: ( ( 'pos' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2230:1: ( 'pos' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2260:1: ( ( 'pos' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2261:1: ( 'pos' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2230:1: ( 'pos' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2231:1: 'pos'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2261:1: ( 'pos' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2262:1: 'pos'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getPosKeyword_1()); 
             }
-            match(input,27,FOLLOW_27_in_rule__RasterAssemblyItem__Group__1__Impl4469); if (state.failed) return ;
+            match(input,26,FOLLOW_26_in_rule__RasterAssemblyItem__Group__1__Impl4530); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRasterAssemblyItemAccess().getPosKeyword_1()); 
             }
@@ -6348,21 +6437,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2244:1: rule__RasterAssemblyItem__Group__2 : rule__RasterAssemblyItem__Group__2__Impl rule__RasterAssemblyItem__Group__3 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2275:1: rule__RasterAssemblyItem__Group__2 : rule__RasterAssemblyItem__Group__2__Impl rule__RasterAssemblyItem__Group__3 ;
     public final void rule__RasterAssemblyItem__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2248:1: ( rule__RasterAssemblyItem__Group__2__Impl rule__RasterAssemblyItem__Group__3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2249:2: rule__RasterAssemblyItem__Group__2__Impl rule__RasterAssemblyItem__Group__3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2279:1: ( rule__RasterAssemblyItem__Group__2__Impl rule__RasterAssemblyItem__Group__3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2280:2: rule__RasterAssemblyItem__Group__2__Impl rule__RasterAssemblyItem__Group__3
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__2__Impl_in_rule__RasterAssemblyItem__Group__24500);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__2__Impl_in_rule__RasterAssemblyItem__Group__24561);
             rule__RasterAssemblyItem__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__3_in_rule__RasterAssemblyItem__Group__24503);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__3_in_rule__RasterAssemblyItem__Group__24564);
             rule__RasterAssemblyItem__Group__3();
 
             state._fsp--;
@@ -6386,25 +6475,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__2__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2256:1: rule__RasterAssemblyItem__Group__2__Impl : ( ( rule__RasterAssemblyItem__XUnitsAssignment_2 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2287:1: rule__RasterAssemblyItem__Group__2__Impl : ( ( rule__RasterAssemblyItem__XUnitsAssignment_2 ) ) ;
     public final void rule__RasterAssemblyItem__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2260:1: ( ( ( rule__RasterAssemblyItem__XUnitsAssignment_2 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2261:1: ( ( rule__RasterAssemblyItem__XUnitsAssignment_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2291:1: ( ( ( rule__RasterAssemblyItem__XUnitsAssignment_2 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2292:1: ( ( rule__RasterAssemblyItem__XUnitsAssignment_2 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2261:1: ( ( rule__RasterAssemblyItem__XUnitsAssignment_2 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2262:1: ( rule__RasterAssemblyItem__XUnitsAssignment_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2292:1: ( ( rule__RasterAssemblyItem__XUnitsAssignment_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2293:1: ( rule__RasterAssemblyItem__XUnitsAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getXUnitsAssignment_2()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2263:1: ( rule__RasterAssemblyItem__XUnitsAssignment_2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2263:2: rule__RasterAssemblyItem__XUnitsAssignment_2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2294:1: ( rule__RasterAssemblyItem__XUnitsAssignment_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2294:2: rule__RasterAssemblyItem__XUnitsAssignment_2
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__XUnitsAssignment_2_in_rule__RasterAssemblyItem__Group__2__Impl4530);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__XUnitsAssignment_2_in_rule__RasterAssemblyItem__Group__2__Impl4591);
             rule__RasterAssemblyItem__XUnitsAssignment_2();
 
             state._fsp--;
@@ -6437,21 +6526,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2273:1: rule__RasterAssemblyItem__Group__3 : rule__RasterAssemblyItem__Group__3__Impl rule__RasterAssemblyItem__Group__4 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2304:1: rule__RasterAssemblyItem__Group__3 : rule__RasterAssemblyItem__Group__3__Impl rule__RasterAssemblyItem__Group__4 ;
     public final void rule__RasterAssemblyItem__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2277:1: ( rule__RasterAssemblyItem__Group__3__Impl rule__RasterAssemblyItem__Group__4 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2278:2: rule__RasterAssemblyItem__Group__3__Impl rule__RasterAssemblyItem__Group__4
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2308:1: ( rule__RasterAssemblyItem__Group__3__Impl rule__RasterAssemblyItem__Group__4 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2309:2: rule__RasterAssemblyItem__Group__3__Impl rule__RasterAssemblyItem__Group__4
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__3__Impl_in_rule__RasterAssemblyItem__Group__34560);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__3__Impl_in_rule__RasterAssemblyItem__Group__34621);
             rule__RasterAssemblyItem__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__4_in_rule__RasterAssemblyItem__Group__34563);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__4_in_rule__RasterAssemblyItem__Group__34624);
             rule__RasterAssemblyItem__Group__4();
 
             state._fsp--;
@@ -6475,25 +6564,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__3__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2285:1: rule__RasterAssemblyItem__Group__3__Impl : ( ( rule__RasterAssemblyItem__YUnitsAssignment_3 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2316:1: rule__RasterAssemblyItem__Group__3__Impl : ( ( rule__RasterAssemblyItem__YUnitsAssignment_3 ) ) ;
     public final void rule__RasterAssemblyItem__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2289:1: ( ( ( rule__RasterAssemblyItem__YUnitsAssignment_3 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2290:1: ( ( rule__RasterAssemblyItem__YUnitsAssignment_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2320:1: ( ( ( rule__RasterAssemblyItem__YUnitsAssignment_3 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2321:1: ( ( rule__RasterAssemblyItem__YUnitsAssignment_3 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2290:1: ( ( rule__RasterAssemblyItem__YUnitsAssignment_3 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2291:1: ( rule__RasterAssemblyItem__YUnitsAssignment_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2321:1: ( ( rule__RasterAssemblyItem__YUnitsAssignment_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2322:1: ( rule__RasterAssemblyItem__YUnitsAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getYUnitsAssignment_3()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2292:1: ( rule__RasterAssemblyItem__YUnitsAssignment_3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2292:2: rule__RasterAssemblyItem__YUnitsAssignment_3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2323:1: ( rule__RasterAssemblyItem__YUnitsAssignment_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2323:2: rule__RasterAssemblyItem__YUnitsAssignment_3
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__YUnitsAssignment_3_in_rule__RasterAssemblyItem__Group__3__Impl4590);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__YUnitsAssignment_3_in_rule__RasterAssemblyItem__Group__3__Impl4651);
             rule__RasterAssemblyItem__YUnitsAssignment_3();
 
             state._fsp--;
@@ -6526,21 +6615,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__4"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2302:1: rule__RasterAssemblyItem__Group__4 : rule__RasterAssemblyItem__Group__4__Impl rule__RasterAssemblyItem__Group__5 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2333:1: rule__RasterAssemblyItem__Group__4 : rule__RasterAssemblyItem__Group__4__Impl rule__RasterAssemblyItem__Group__5 ;
     public final void rule__RasterAssemblyItem__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2306:1: ( rule__RasterAssemblyItem__Group__4__Impl rule__RasterAssemblyItem__Group__5 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2307:2: rule__RasterAssemblyItem__Group__4__Impl rule__RasterAssemblyItem__Group__5
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2337:1: ( rule__RasterAssemblyItem__Group__4__Impl rule__RasterAssemblyItem__Group__5 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2338:2: rule__RasterAssemblyItem__Group__4__Impl rule__RasterAssemblyItem__Group__5
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__4__Impl_in_rule__RasterAssemblyItem__Group__44620);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__4__Impl_in_rule__RasterAssemblyItem__Group__44681);
             rule__RasterAssemblyItem__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__5_in_rule__RasterAssemblyItem__Group__44623);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__5_in_rule__RasterAssemblyItem__Group__44684);
             rule__RasterAssemblyItem__Group__5();
 
             state._fsp--;
@@ -6564,25 +6653,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__4__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2314:1: rule__RasterAssemblyItem__Group__4__Impl : ( ( rule__RasterAssemblyItem__ZUnitsAssignment_4 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2345:1: rule__RasterAssemblyItem__Group__4__Impl : ( ( rule__RasterAssemblyItem__ZUnitsAssignment_4 ) ) ;
     public final void rule__RasterAssemblyItem__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2318:1: ( ( ( rule__RasterAssemblyItem__ZUnitsAssignment_4 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2319:1: ( ( rule__RasterAssemblyItem__ZUnitsAssignment_4 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2349:1: ( ( ( rule__RasterAssemblyItem__ZUnitsAssignment_4 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2350:1: ( ( rule__RasterAssemblyItem__ZUnitsAssignment_4 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2319:1: ( ( rule__RasterAssemblyItem__ZUnitsAssignment_4 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2320:1: ( rule__RasterAssemblyItem__ZUnitsAssignment_4 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2350:1: ( ( rule__RasterAssemblyItem__ZUnitsAssignment_4 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2351:1: ( rule__RasterAssemblyItem__ZUnitsAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getZUnitsAssignment_4()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2321:1: ( rule__RasterAssemblyItem__ZUnitsAssignment_4 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2321:2: rule__RasterAssemblyItem__ZUnitsAssignment_4
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2352:1: ( rule__RasterAssemblyItem__ZUnitsAssignment_4 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2352:2: rule__RasterAssemblyItem__ZUnitsAssignment_4
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__ZUnitsAssignment_4_in_rule__RasterAssemblyItem__Group__4__Impl4650);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__ZUnitsAssignment_4_in_rule__RasterAssemblyItem__Group__4__Impl4711);
             rule__RasterAssemblyItem__ZUnitsAssignment_4();
 
             state._fsp--;
@@ -6615,16 +6704,16 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__5"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2331:1: rule__RasterAssemblyItem__Group__5 : rule__RasterAssemblyItem__Group__5__Impl ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2362:1: rule__RasterAssemblyItem__Group__5 : rule__RasterAssemblyItem__Group__5__Impl ;
     public final void rule__RasterAssemblyItem__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2335:1: ( rule__RasterAssemblyItem__Group__5__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2336:2: rule__RasterAssemblyItem__Group__5__Impl
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2366:1: ( rule__RasterAssemblyItem__Group__5__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2367:2: rule__RasterAssemblyItem__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__5__Impl_in_rule__RasterAssemblyItem__Group__54680);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group__5__Impl_in_rule__RasterAssemblyItem__Group__54741);
             rule__RasterAssemblyItem__Group__5__Impl();
 
             state._fsp--;
@@ -6648,33 +6737,33 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group__5__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2342:1: rule__RasterAssemblyItem__Group__5__Impl : ( ( rule__RasterAssemblyItem__Group_5__0 )? ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2373:1: rule__RasterAssemblyItem__Group__5__Impl : ( ( rule__RasterAssemblyItem__Group_5__0 )? ) ;
     public final void rule__RasterAssemblyItem__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2346:1: ( ( ( rule__RasterAssemblyItem__Group_5__0 )? ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2347:1: ( ( rule__RasterAssemblyItem__Group_5__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2377:1: ( ( ( rule__RasterAssemblyItem__Group_5__0 )? ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2378:1: ( ( rule__RasterAssemblyItem__Group_5__0 )? )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2347:1: ( ( rule__RasterAssemblyItem__Group_5__0 )? )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2348:1: ( rule__RasterAssemblyItem__Group_5__0 )?
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2378:1: ( ( rule__RasterAssemblyItem__Group_5__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2379:1: ( rule__RasterAssemblyItem__Group_5__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getGroup_5()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2349:1: ( rule__RasterAssemblyItem__Group_5__0 )?
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2380:1: ( rule__RasterAssemblyItem__Group_5__0 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==28) ) {
+            if ( (LA12_0==27) ) {
                 alt12=1;
             }
             switch (alt12) {
                 case 1 :
-                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2349:2: rule__RasterAssemblyItem__Group_5__0
+                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2380:2: rule__RasterAssemblyItem__Group_5__0
                     {
-                    pushFollow(FOLLOW_rule__RasterAssemblyItem__Group_5__0_in_rule__RasterAssemblyItem__Group__5__Impl4707);
+                    pushFollow(FOLLOW_rule__RasterAssemblyItem__Group_5__0_in_rule__RasterAssemblyItem__Group__5__Impl4768);
                     rule__RasterAssemblyItem__Group_5__0();
 
                     state._fsp--;
@@ -6710,21 +6799,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group_5__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2371:1: rule__RasterAssemblyItem__Group_5__0 : rule__RasterAssemblyItem__Group_5__0__Impl rule__RasterAssemblyItem__Group_5__1 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2402:1: rule__RasterAssemblyItem__Group_5__0 : rule__RasterAssemblyItem__Group_5__0__Impl rule__RasterAssemblyItem__Group_5__1 ;
     public final void rule__RasterAssemblyItem__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2375:1: ( rule__RasterAssemblyItem__Group_5__0__Impl rule__RasterAssemblyItem__Group_5__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2376:2: rule__RasterAssemblyItem__Group_5__0__Impl rule__RasterAssemblyItem__Group_5__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2406:1: ( rule__RasterAssemblyItem__Group_5__0__Impl rule__RasterAssemblyItem__Group_5__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2407:2: rule__RasterAssemblyItem__Group_5__0__Impl rule__RasterAssemblyItem__Group_5__1
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group_5__0__Impl_in_rule__RasterAssemblyItem__Group_5__04750);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group_5__0__Impl_in_rule__RasterAssemblyItem__Group_5__04811);
             rule__RasterAssemblyItem__Group_5__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group_5__1_in_rule__RasterAssemblyItem__Group_5__04753);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group_5__1_in_rule__RasterAssemblyItem__Group_5__04814);
             rule__RasterAssemblyItem__Group_5__1();
 
             state._fsp--;
@@ -6748,22 +6837,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group_5__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2383:1: rule__RasterAssemblyItem__Group_5__0__Impl : ( 'transform' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2414:1: rule__RasterAssemblyItem__Group_5__0__Impl : ( 'transform' ) ;
     public final void rule__RasterAssemblyItem__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2387:1: ( ( 'transform' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2388:1: ( 'transform' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2418:1: ( ( 'transform' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2419:1: ( 'transform' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2388:1: ( 'transform' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2389:1: 'transform'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2419:1: ( 'transform' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2420:1: 'transform'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getTransformKeyword_5_0()); 
             }
-            match(input,28,FOLLOW_28_in_rule__RasterAssemblyItem__Group_5__0__Impl4781); if (state.failed) return ;
+            match(input,27,FOLLOW_27_in_rule__RasterAssemblyItem__Group_5__0__Impl4842); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRasterAssemblyItemAccess().getTransformKeyword_5_0()); 
             }
@@ -6789,16 +6878,16 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group_5__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2402:1: rule__RasterAssemblyItem__Group_5__1 : rule__RasterAssemblyItem__Group_5__1__Impl ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2433:1: rule__RasterAssemblyItem__Group_5__1 : rule__RasterAssemblyItem__Group_5__1__Impl ;
     public final void rule__RasterAssemblyItem__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2406:1: ( rule__RasterAssemblyItem__Group_5__1__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2407:2: rule__RasterAssemblyItem__Group_5__1__Impl
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2437:1: ( rule__RasterAssemblyItem__Group_5__1__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2438:2: rule__RasterAssemblyItem__Group_5__1__Impl
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group_5__1__Impl_in_rule__RasterAssemblyItem__Group_5__14812);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__Group_5__1__Impl_in_rule__RasterAssemblyItem__Group_5__14873);
             rule__RasterAssemblyItem__Group_5__1__Impl();
 
             state._fsp--;
@@ -6822,25 +6911,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__Group_5__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2413:1: rule__RasterAssemblyItem__Group_5__1__Impl : ( ( rule__RasterAssemblyItem__TransformAssignment_5_1 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2444:1: rule__RasterAssemblyItem__Group_5__1__Impl : ( ( rule__RasterAssemblyItem__TransformAssignment_5_1 ) ) ;
     public final void rule__RasterAssemblyItem__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2417:1: ( ( ( rule__RasterAssemblyItem__TransformAssignment_5_1 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2418:1: ( ( rule__RasterAssemblyItem__TransformAssignment_5_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2448:1: ( ( ( rule__RasterAssemblyItem__TransformAssignment_5_1 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2449:1: ( ( rule__RasterAssemblyItem__TransformAssignment_5_1 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2418:1: ( ( rule__RasterAssemblyItem__TransformAssignment_5_1 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2419:1: ( rule__RasterAssemblyItem__TransformAssignment_5_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2449:1: ( ( rule__RasterAssemblyItem__TransformAssignment_5_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2450:1: ( rule__RasterAssemblyItem__TransformAssignment_5_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getTransformAssignment_5_1()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2420:1: ( rule__RasterAssemblyItem__TransformAssignment_5_1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2420:2: rule__RasterAssemblyItem__TransformAssignment_5_1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2451:1: ( rule__RasterAssemblyItem__TransformAssignment_5_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2451:2: rule__RasterAssemblyItem__TransformAssignment_5_1
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__TransformAssignment_5_1_in_rule__RasterAssemblyItem__Group_5__1__Impl4839);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__TransformAssignment_5_1_in_rule__RasterAssemblyItem__Group_5__1__Impl4900);
             rule__RasterAssemblyItem__TransformAssignment_5_1();
 
             state._fsp--;
@@ -6873,21 +6962,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2434:1: rule__MountedAssemblyItem__Group__0 : rule__MountedAssemblyItem__Group__0__Impl rule__MountedAssemblyItem__Group__1 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2465:1: rule__MountedAssemblyItem__Group__0 : rule__MountedAssemblyItem__Group__0__Impl rule__MountedAssemblyItem__Group__1 ;
     public final void rule__MountedAssemblyItem__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2438:1: ( rule__MountedAssemblyItem__Group__0__Impl rule__MountedAssemblyItem__Group__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2439:2: rule__MountedAssemblyItem__Group__0__Impl rule__MountedAssemblyItem__Group__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2469:1: ( rule__MountedAssemblyItem__Group__0__Impl rule__MountedAssemblyItem__Group__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2470:2: rule__MountedAssemblyItem__Group__0__Impl rule__MountedAssemblyItem__Group__1
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__0__Impl_in_rule__MountedAssemblyItem__Group__04873);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__0__Impl_in_rule__MountedAssemblyItem__Group__04934);
             rule__MountedAssemblyItem__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__1_in_rule__MountedAssemblyItem__Group__04876);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__1_in_rule__MountedAssemblyItem__Group__04937);
             rule__MountedAssemblyItem__Group__1();
 
             state._fsp--;
@@ -6911,25 +7000,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2446:1: rule__MountedAssemblyItem__Group__0__Impl : ( ( rule__MountedAssemblyItem__ElementAssignment_0 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2477:1: rule__MountedAssemblyItem__Group__0__Impl : ( ( rule__MountedAssemblyItem__ElementAssignment_0 ) ) ;
     public final void rule__MountedAssemblyItem__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2450:1: ( ( ( rule__MountedAssemblyItem__ElementAssignment_0 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2451:1: ( ( rule__MountedAssemblyItem__ElementAssignment_0 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2481:1: ( ( ( rule__MountedAssemblyItem__ElementAssignment_0 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2482:1: ( ( rule__MountedAssemblyItem__ElementAssignment_0 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2451:1: ( ( rule__MountedAssemblyItem__ElementAssignment_0 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2452:1: ( rule__MountedAssemblyItem__ElementAssignment_0 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2482:1: ( ( rule__MountedAssemblyItem__ElementAssignment_0 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2483:1: ( rule__MountedAssemblyItem__ElementAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getElementAssignment_0()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2453:1: ( rule__MountedAssemblyItem__ElementAssignment_0 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2453:2: rule__MountedAssemblyItem__ElementAssignment_0
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2484:1: ( rule__MountedAssemblyItem__ElementAssignment_0 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2484:2: rule__MountedAssemblyItem__ElementAssignment_0
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__ElementAssignment_0_in_rule__MountedAssemblyItem__Group__0__Impl4903);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__ElementAssignment_0_in_rule__MountedAssemblyItem__Group__0__Impl4964);
             rule__MountedAssemblyItem__ElementAssignment_0();
 
             state._fsp--;
@@ -6962,21 +7051,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2463:1: rule__MountedAssemblyItem__Group__1 : rule__MountedAssemblyItem__Group__1__Impl rule__MountedAssemblyItem__Group__2 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2494:1: rule__MountedAssemblyItem__Group__1 : rule__MountedAssemblyItem__Group__1__Impl rule__MountedAssemblyItem__Group__2 ;
     public final void rule__MountedAssemblyItem__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2467:1: ( rule__MountedAssemblyItem__Group__1__Impl rule__MountedAssemblyItem__Group__2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2468:2: rule__MountedAssemblyItem__Group__1__Impl rule__MountedAssemblyItem__Group__2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2498:1: ( rule__MountedAssemblyItem__Group__1__Impl rule__MountedAssemblyItem__Group__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2499:2: rule__MountedAssemblyItem__Group__1__Impl rule__MountedAssemblyItem__Group__2
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__1__Impl_in_rule__MountedAssemblyItem__Group__14933);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__1__Impl_in_rule__MountedAssemblyItem__Group__14994);
             rule__MountedAssemblyItem__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__2_in_rule__MountedAssemblyItem__Group__14936);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__2_in_rule__MountedAssemblyItem__Group__14997);
             rule__MountedAssemblyItem__Group__2();
 
             state._fsp--;
@@ -7000,22 +7089,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2475:1: rule__MountedAssemblyItem__Group__1__Impl : ( 'pos' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2506:1: rule__MountedAssemblyItem__Group__1__Impl : ( 'pos' ) ;
     public final void rule__MountedAssemblyItem__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2479:1: ( ( 'pos' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2480:1: ( 'pos' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2510:1: ( ( 'pos' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2511:1: ( 'pos' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2480:1: ( 'pos' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2481:1: 'pos'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2511:1: ( 'pos' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2512:1: 'pos'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getPosKeyword_1()); 
             }
-            match(input,27,FOLLOW_27_in_rule__MountedAssemblyItem__Group__1__Impl4964); if (state.failed) return ;
+            match(input,26,FOLLOW_26_in_rule__MountedAssemblyItem__Group__1__Impl5025); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMountedAssemblyItemAccess().getPosKeyword_1()); 
             }
@@ -7041,21 +7130,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2494:1: rule__MountedAssemblyItem__Group__2 : rule__MountedAssemblyItem__Group__2__Impl rule__MountedAssemblyItem__Group__3 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2525:1: rule__MountedAssemblyItem__Group__2 : rule__MountedAssemblyItem__Group__2__Impl rule__MountedAssemblyItem__Group__3 ;
     public final void rule__MountedAssemblyItem__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2498:1: ( rule__MountedAssemblyItem__Group__2__Impl rule__MountedAssemblyItem__Group__3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2499:2: rule__MountedAssemblyItem__Group__2__Impl rule__MountedAssemblyItem__Group__3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2529:1: ( rule__MountedAssemblyItem__Group__2__Impl rule__MountedAssemblyItem__Group__3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2530:2: rule__MountedAssemblyItem__Group__2__Impl rule__MountedAssemblyItem__Group__3
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__2__Impl_in_rule__MountedAssemblyItem__Group__24995);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__2__Impl_in_rule__MountedAssemblyItem__Group__25056);
             rule__MountedAssemblyItem__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__3_in_rule__MountedAssemblyItem__Group__24998);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__3_in_rule__MountedAssemblyItem__Group__25059);
             rule__MountedAssemblyItem__Group__3();
 
             state._fsp--;
@@ -7079,25 +7168,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__2__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2506:1: rule__MountedAssemblyItem__Group__2__Impl : ( ( rule__MountedAssemblyItem__XUnitsAssignment_2 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2537:1: rule__MountedAssemblyItem__Group__2__Impl : ( ( rule__MountedAssemblyItem__XUnitsAssignment_2 ) ) ;
     public final void rule__MountedAssemblyItem__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2510:1: ( ( ( rule__MountedAssemblyItem__XUnitsAssignment_2 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2511:1: ( ( rule__MountedAssemblyItem__XUnitsAssignment_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2541:1: ( ( ( rule__MountedAssemblyItem__XUnitsAssignment_2 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2542:1: ( ( rule__MountedAssemblyItem__XUnitsAssignment_2 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2511:1: ( ( rule__MountedAssemblyItem__XUnitsAssignment_2 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2512:1: ( rule__MountedAssemblyItem__XUnitsAssignment_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2542:1: ( ( rule__MountedAssemblyItem__XUnitsAssignment_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2543:1: ( rule__MountedAssemblyItem__XUnitsAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getXUnitsAssignment_2()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2513:1: ( rule__MountedAssemblyItem__XUnitsAssignment_2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2513:2: rule__MountedAssemblyItem__XUnitsAssignment_2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2544:1: ( rule__MountedAssemblyItem__XUnitsAssignment_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2544:2: rule__MountedAssemblyItem__XUnitsAssignment_2
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__XUnitsAssignment_2_in_rule__MountedAssemblyItem__Group__2__Impl5025);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__XUnitsAssignment_2_in_rule__MountedAssemblyItem__Group__2__Impl5086);
             rule__MountedAssemblyItem__XUnitsAssignment_2();
 
             state._fsp--;
@@ -7130,21 +7219,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2523:1: rule__MountedAssemblyItem__Group__3 : rule__MountedAssemblyItem__Group__3__Impl rule__MountedAssemblyItem__Group__4 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2554:1: rule__MountedAssemblyItem__Group__3 : rule__MountedAssemblyItem__Group__3__Impl rule__MountedAssemblyItem__Group__4 ;
     public final void rule__MountedAssemblyItem__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2527:1: ( rule__MountedAssemblyItem__Group__3__Impl rule__MountedAssemblyItem__Group__4 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2528:2: rule__MountedAssemblyItem__Group__3__Impl rule__MountedAssemblyItem__Group__4
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2558:1: ( rule__MountedAssemblyItem__Group__3__Impl rule__MountedAssemblyItem__Group__4 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2559:2: rule__MountedAssemblyItem__Group__3__Impl rule__MountedAssemblyItem__Group__4
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__3__Impl_in_rule__MountedAssemblyItem__Group__35055);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__3__Impl_in_rule__MountedAssemblyItem__Group__35116);
             rule__MountedAssemblyItem__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__4_in_rule__MountedAssemblyItem__Group__35058);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__4_in_rule__MountedAssemblyItem__Group__35119);
             rule__MountedAssemblyItem__Group__4();
 
             state._fsp--;
@@ -7168,25 +7257,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__3__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2535:1: rule__MountedAssemblyItem__Group__3__Impl : ( ( rule__MountedAssemblyItem__YUnitsAssignment_3 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2566:1: rule__MountedAssemblyItem__Group__3__Impl : ( ( rule__MountedAssemblyItem__YUnitsAssignment_3 ) ) ;
     public final void rule__MountedAssemblyItem__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2539:1: ( ( ( rule__MountedAssemblyItem__YUnitsAssignment_3 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2540:1: ( ( rule__MountedAssemblyItem__YUnitsAssignment_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2570:1: ( ( ( rule__MountedAssemblyItem__YUnitsAssignment_3 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2571:1: ( ( rule__MountedAssemblyItem__YUnitsAssignment_3 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2540:1: ( ( rule__MountedAssemblyItem__YUnitsAssignment_3 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2541:1: ( rule__MountedAssemblyItem__YUnitsAssignment_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2571:1: ( ( rule__MountedAssemblyItem__YUnitsAssignment_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2572:1: ( rule__MountedAssemblyItem__YUnitsAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getYUnitsAssignment_3()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2542:1: ( rule__MountedAssemblyItem__YUnitsAssignment_3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2542:2: rule__MountedAssemblyItem__YUnitsAssignment_3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2573:1: ( rule__MountedAssemblyItem__YUnitsAssignment_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2573:2: rule__MountedAssemblyItem__YUnitsAssignment_3
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__YUnitsAssignment_3_in_rule__MountedAssemblyItem__Group__3__Impl5085);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__YUnitsAssignment_3_in_rule__MountedAssemblyItem__Group__3__Impl5146);
             rule__MountedAssemblyItem__YUnitsAssignment_3();
 
             state._fsp--;
@@ -7219,21 +7308,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__4"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2552:1: rule__MountedAssemblyItem__Group__4 : rule__MountedAssemblyItem__Group__4__Impl rule__MountedAssemblyItem__Group__5 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2583:1: rule__MountedAssemblyItem__Group__4 : rule__MountedAssemblyItem__Group__4__Impl rule__MountedAssemblyItem__Group__5 ;
     public final void rule__MountedAssemblyItem__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2556:1: ( rule__MountedAssemblyItem__Group__4__Impl rule__MountedAssemblyItem__Group__5 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2557:2: rule__MountedAssemblyItem__Group__4__Impl rule__MountedAssemblyItem__Group__5
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2587:1: ( rule__MountedAssemblyItem__Group__4__Impl rule__MountedAssemblyItem__Group__5 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2588:2: rule__MountedAssemblyItem__Group__4__Impl rule__MountedAssemblyItem__Group__5
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__4__Impl_in_rule__MountedAssemblyItem__Group__45115);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__4__Impl_in_rule__MountedAssemblyItem__Group__45176);
             rule__MountedAssemblyItem__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__5_in_rule__MountedAssemblyItem__Group__45118);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__5_in_rule__MountedAssemblyItem__Group__45179);
             rule__MountedAssemblyItem__Group__5();
 
             state._fsp--;
@@ -7257,25 +7346,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__4__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2564:1: rule__MountedAssemblyItem__Group__4__Impl : ( ( rule__MountedAssemblyItem__ZUnitsAssignment_4 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2595:1: rule__MountedAssemblyItem__Group__4__Impl : ( ( rule__MountedAssemblyItem__ZUnitsAssignment_4 ) ) ;
     public final void rule__MountedAssemblyItem__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2568:1: ( ( ( rule__MountedAssemblyItem__ZUnitsAssignment_4 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2569:1: ( ( rule__MountedAssemblyItem__ZUnitsAssignment_4 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2599:1: ( ( ( rule__MountedAssemblyItem__ZUnitsAssignment_4 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2600:1: ( ( rule__MountedAssemblyItem__ZUnitsAssignment_4 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2569:1: ( ( rule__MountedAssemblyItem__ZUnitsAssignment_4 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2570:1: ( rule__MountedAssemblyItem__ZUnitsAssignment_4 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2600:1: ( ( rule__MountedAssemblyItem__ZUnitsAssignment_4 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2601:1: ( rule__MountedAssemblyItem__ZUnitsAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getZUnitsAssignment_4()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2571:1: ( rule__MountedAssemblyItem__ZUnitsAssignment_4 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2571:2: rule__MountedAssemblyItem__ZUnitsAssignment_4
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2602:1: ( rule__MountedAssemblyItem__ZUnitsAssignment_4 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2602:2: rule__MountedAssemblyItem__ZUnitsAssignment_4
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__ZUnitsAssignment_4_in_rule__MountedAssemblyItem__Group__4__Impl5145);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__ZUnitsAssignment_4_in_rule__MountedAssemblyItem__Group__4__Impl5206);
             rule__MountedAssemblyItem__ZUnitsAssignment_4();
 
             state._fsp--;
@@ -7308,16 +7397,16 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__5"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2581:1: rule__MountedAssemblyItem__Group__5 : rule__MountedAssemblyItem__Group__5__Impl ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2612:1: rule__MountedAssemblyItem__Group__5 : rule__MountedAssemblyItem__Group__5__Impl ;
     public final void rule__MountedAssemblyItem__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2585:1: ( rule__MountedAssemblyItem__Group__5__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2586:2: rule__MountedAssemblyItem__Group__5__Impl
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2616:1: ( rule__MountedAssemblyItem__Group__5__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2617:2: rule__MountedAssemblyItem__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__5__Impl_in_rule__MountedAssemblyItem__Group__55175);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group__5__Impl_in_rule__MountedAssemblyItem__Group__55236);
             rule__MountedAssemblyItem__Group__5__Impl();
 
             state._fsp--;
@@ -7341,33 +7430,33 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group__5__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2592:1: rule__MountedAssemblyItem__Group__5__Impl : ( ( rule__MountedAssemblyItem__Group_5__0 )? ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2623:1: rule__MountedAssemblyItem__Group__5__Impl : ( ( rule__MountedAssemblyItem__Group_5__0 )? ) ;
     public final void rule__MountedAssemblyItem__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2596:1: ( ( ( rule__MountedAssemblyItem__Group_5__0 )? ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2597:1: ( ( rule__MountedAssemblyItem__Group_5__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2627:1: ( ( ( rule__MountedAssemblyItem__Group_5__0 )? ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2628:1: ( ( rule__MountedAssemblyItem__Group_5__0 )? )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2597:1: ( ( rule__MountedAssemblyItem__Group_5__0 )? )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2598:1: ( rule__MountedAssemblyItem__Group_5__0 )?
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2628:1: ( ( rule__MountedAssemblyItem__Group_5__0 )? )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2629:1: ( rule__MountedAssemblyItem__Group_5__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getGroup_5()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2599:1: ( rule__MountedAssemblyItem__Group_5__0 )?
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2630:1: ( rule__MountedAssemblyItem__Group_5__0 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==28) ) {
+            if ( (LA13_0==27) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2599:2: rule__MountedAssemblyItem__Group_5__0
+                    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2630:2: rule__MountedAssemblyItem__Group_5__0
                     {
-                    pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__0_in_rule__MountedAssemblyItem__Group__5__Impl5202);
+                    pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__0_in_rule__MountedAssemblyItem__Group__5__Impl5263);
                     rule__MountedAssemblyItem__Group_5__0();
 
                     state._fsp--;
@@ -7403,21 +7492,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group_5__0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2621:1: rule__MountedAssemblyItem__Group_5__0 : rule__MountedAssemblyItem__Group_5__0__Impl rule__MountedAssemblyItem__Group_5__1 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2652:1: rule__MountedAssemblyItem__Group_5__0 : rule__MountedAssemblyItem__Group_5__0__Impl rule__MountedAssemblyItem__Group_5__1 ;
     public final void rule__MountedAssemblyItem__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2625:1: ( rule__MountedAssemblyItem__Group_5__0__Impl rule__MountedAssemblyItem__Group_5__1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2626:2: rule__MountedAssemblyItem__Group_5__0__Impl rule__MountedAssemblyItem__Group_5__1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2656:1: ( rule__MountedAssemblyItem__Group_5__0__Impl rule__MountedAssemblyItem__Group_5__1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2657:2: rule__MountedAssemblyItem__Group_5__0__Impl rule__MountedAssemblyItem__Group_5__1
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__0__Impl_in_rule__MountedAssemblyItem__Group_5__05245);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__0__Impl_in_rule__MountedAssemblyItem__Group_5__05306);
             rule__MountedAssemblyItem__Group_5__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__1_in_rule__MountedAssemblyItem__Group_5__05248);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__1_in_rule__MountedAssemblyItem__Group_5__05309);
             rule__MountedAssemblyItem__Group_5__1();
 
             state._fsp--;
@@ -7441,22 +7530,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group_5__0__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2633:1: rule__MountedAssemblyItem__Group_5__0__Impl : ( 'transform' ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2664:1: rule__MountedAssemblyItem__Group_5__0__Impl : ( 'transform' ) ;
     public final void rule__MountedAssemblyItem__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2637:1: ( ( 'transform' ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2638:1: ( 'transform' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2668:1: ( ( 'transform' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2669:1: ( 'transform' )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2638:1: ( 'transform' )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2639:1: 'transform'
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2669:1: ( 'transform' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2670:1: 'transform'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getTransformKeyword_5_0()); 
             }
-            match(input,28,FOLLOW_28_in_rule__MountedAssemblyItem__Group_5__0__Impl5276); if (state.failed) return ;
+            match(input,27,FOLLOW_27_in_rule__MountedAssemblyItem__Group_5__0__Impl5337); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMountedAssemblyItemAccess().getTransformKeyword_5_0()); 
             }
@@ -7482,21 +7571,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group_5__1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2652:1: rule__MountedAssemblyItem__Group_5__1 : rule__MountedAssemblyItem__Group_5__1__Impl rule__MountedAssemblyItem__Group_5__2 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2683:1: rule__MountedAssemblyItem__Group_5__1 : rule__MountedAssemblyItem__Group_5__1__Impl rule__MountedAssemblyItem__Group_5__2 ;
     public final void rule__MountedAssemblyItem__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2656:1: ( rule__MountedAssemblyItem__Group_5__1__Impl rule__MountedAssemblyItem__Group_5__2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2657:2: rule__MountedAssemblyItem__Group_5__1__Impl rule__MountedAssemblyItem__Group_5__2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2687:1: ( rule__MountedAssemblyItem__Group_5__1__Impl rule__MountedAssemblyItem__Group_5__2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2688:2: rule__MountedAssemblyItem__Group_5__1__Impl rule__MountedAssemblyItem__Group_5__2
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__1__Impl_in_rule__MountedAssemblyItem__Group_5__15307);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__1__Impl_in_rule__MountedAssemblyItem__Group_5__15368);
             rule__MountedAssemblyItem__Group_5__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__2_in_rule__MountedAssemblyItem__Group_5__15310);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__2_in_rule__MountedAssemblyItem__Group_5__15371);
             rule__MountedAssemblyItem__Group_5__2();
 
             state._fsp--;
@@ -7520,25 +7609,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group_5__1__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2664:1: rule__MountedAssemblyItem__Group_5__1__Impl : ( ( rule__MountedAssemblyItem__RotateXAssignment_5_1 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2695:1: rule__MountedAssemblyItem__Group_5__1__Impl : ( ( rule__MountedAssemblyItem__RotateXAssignment_5_1 ) ) ;
     public final void rule__MountedAssemblyItem__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2668:1: ( ( ( rule__MountedAssemblyItem__RotateXAssignment_5_1 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2669:1: ( ( rule__MountedAssemblyItem__RotateXAssignment_5_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2699:1: ( ( ( rule__MountedAssemblyItem__RotateXAssignment_5_1 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2700:1: ( ( rule__MountedAssemblyItem__RotateXAssignment_5_1 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2669:1: ( ( rule__MountedAssemblyItem__RotateXAssignment_5_1 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2670:1: ( rule__MountedAssemblyItem__RotateXAssignment_5_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2700:1: ( ( rule__MountedAssemblyItem__RotateXAssignment_5_1 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2701:1: ( rule__MountedAssemblyItem__RotateXAssignment_5_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getRotateXAssignment_5_1()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2671:1: ( rule__MountedAssemblyItem__RotateXAssignment_5_1 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2671:2: rule__MountedAssemblyItem__RotateXAssignment_5_1
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2702:1: ( rule__MountedAssemblyItem__RotateXAssignment_5_1 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2702:2: rule__MountedAssemblyItem__RotateXAssignment_5_1
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__RotateXAssignment_5_1_in_rule__MountedAssemblyItem__Group_5__1__Impl5337);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__RotateXAssignment_5_1_in_rule__MountedAssemblyItem__Group_5__1__Impl5398);
             rule__MountedAssemblyItem__RotateXAssignment_5_1();
 
             state._fsp--;
@@ -7571,21 +7660,21 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group_5__2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2681:1: rule__MountedAssemblyItem__Group_5__2 : rule__MountedAssemblyItem__Group_5__2__Impl rule__MountedAssemblyItem__Group_5__3 ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2712:1: rule__MountedAssemblyItem__Group_5__2 : rule__MountedAssemblyItem__Group_5__2__Impl rule__MountedAssemblyItem__Group_5__3 ;
     public final void rule__MountedAssemblyItem__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2685:1: ( rule__MountedAssemblyItem__Group_5__2__Impl rule__MountedAssemblyItem__Group_5__3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2686:2: rule__MountedAssemblyItem__Group_5__2__Impl rule__MountedAssemblyItem__Group_5__3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2716:1: ( rule__MountedAssemblyItem__Group_5__2__Impl rule__MountedAssemblyItem__Group_5__3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2717:2: rule__MountedAssemblyItem__Group_5__2__Impl rule__MountedAssemblyItem__Group_5__3
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__2__Impl_in_rule__MountedAssemblyItem__Group_5__25367);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__2__Impl_in_rule__MountedAssemblyItem__Group_5__25428);
             rule__MountedAssemblyItem__Group_5__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__3_in_rule__MountedAssemblyItem__Group_5__25370);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__3_in_rule__MountedAssemblyItem__Group_5__25431);
             rule__MountedAssemblyItem__Group_5__3();
 
             state._fsp--;
@@ -7609,25 +7698,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group_5__2__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2693:1: rule__MountedAssemblyItem__Group_5__2__Impl : ( ( rule__MountedAssemblyItem__RotateYAssignment_5_2 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2724:1: rule__MountedAssemblyItem__Group_5__2__Impl : ( ( rule__MountedAssemblyItem__RotateYAssignment_5_2 ) ) ;
     public final void rule__MountedAssemblyItem__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2697:1: ( ( ( rule__MountedAssemblyItem__RotateYAssignment_5_2 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2698:1: ( ( rule__MountedAssemblyItem__RotateYAssignment_5_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2728:1: ( ( ( rule__MountedAssemblyItem__RotateYAssignment_5_2 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2729:1: ( ( rule__MountedAssemblyItem__RotateYAssignment_5_2 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2698:1: ( ( rule__MountedAssemblyItem__RotateYAssignment_5_2 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2699:1: ( rule__MountedAssemblyItem__RotateYAssignment_5_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2729:1: ( ( rule__MountedAssemblyItem__RotateYAssignment_5_2 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2730:1: ( rule__MountedAssemblyItem__RotateYAssignment_5_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getRotateYAssignment_5_2()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2700:1: ( rule__MountedAssemblyItem__RotateYAssignment_5_2 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2700:2: rule__MountedAssemblyItem__RotateYAssignment_5_2
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2731:1: ( rule__MountedAssemblyItem__RotateYAssignment_5_2 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2731:2: rule__MountedAssemblyItem__RotateYAssignment_5_2
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__RotateYAssignment_5_2_in_rule__MountedAssemblyItem__Group_5__2__Impl5397);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__RotateYAssignment_5_2_in_rule__MountedAssemblyItem__Group_5__2__Impl5458);
             rule__MountedAssemblyItem__RotateYAssignment_5_2();
 
             state._fsp--;
@@ -7660,16 +7749,16 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group_5__3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2710:1: rule__MountedAssemblyItem__Group_5__3 : rule__MountedAssemblyItem__Group_5__3__Impl ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2741:1: rule__MountedAssemblyItem__Group_5__3 : rule__MountedAssemblyItem__Group_5__3__Impl ;
     public final void rule__MountedAssemblyItem__Group_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2714:1: ( rule__MountedAssemblyItem__Group_5__3__Impl )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2715:2: rule__MountedAssemblyItem__Group_5__3__Impl
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2745:1: ( rule__MountedAssemblyItem__Group_5__3__Impl )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2746:2: rule__MountedAssemblyItem__Group_5__3__Impl
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__3__Impl_in_rule__MountedAssemblyItem__Group_5__35427);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__Group_5__3__Impl_in_rule__MountedAssemblyItem__Group_5__35488);
             rule__MountedAssemblyItem__Group_5__3__Impl();
 
             state._fsp--;
@@ -7693,25 +7782,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__Group_5__3__Impl"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2721:1: rule__MountedAssemblyItem__Group_5__3__Impl : ( ( rule__MountedAssemblyItem__RotateZAssignment_5_3 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2752:1: rule__MountedAssemblyItem__Group_5__3__Impl : ( ( rule__MountedAssemblyItem__RotateZAssignment_5_3 ) ) ;
     public final void rule__MountedAssemblyItem__Group_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2725:1: ( ( ( rule__MountedAssemblyItem__RotateZAssignment_5_3 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2726:1: ( ( rule__MountedAssemblyItem__RotateZAssignment_5_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2756:1: ( ( ( rule__MountedAssemblyItem__RotateZAssignment_5_3 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2757:1: ( ( rule__MountedAssemblyItem__RotateZAssignment_5_3 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2726:1: ( ( rule__MountedAssemblyItem__RotateZAssignment_5_3 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2727:1: ( rule__MountedAssemblyItem__RotateZAssignment_5_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2757:1: ( ( rule__MountedAssemblyItem__RotateZAssignment_5_3 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2758:1: ( rule__MountedAssemblyItem__RotateZAssignment_5_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getRotateZAssignment_5_3()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2728:1: ( rule__MountedAssemblyItem__RotateZAssignment_5_3 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2728:2: rule__MountedAssemblyItem__RotateZAssignment_5_3
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2759:1: ( rule__MountedAssemblyItem__RotateZAssignment_5_3 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2759:2: rule__MountedAssemblyItem__RotateZAssignment_5_3
             {
-            pushFollow(FOLLOW_rule__MountedAssemblyItem__RotateZAssignment_5_3_in_rule__MountedAssemblyItem__Group_5__3__Impl5454);
+            pushFollow(FOLLOW_rule__MountedAssemblyItem__RotateZAssignment_5_3_in_rule__MountedAssemblyItem__Group_5__3__Impl5515);
             rule__MountedAssemblyItem__RotateZAssignment_5_3();
 
             state._fsp--;
@@ -7744,22 +7833,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__RepoAssignment_0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2747:1: rule__Model__RepoAssignment_0 : ( ruleItemRepository ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2778:1: rule__Model__RepoAssignment_0 : ( ruleItemRepository ) ;
     public final void rule__Model__RepoAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2751:1: ( ( ruleItemRepository ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2752:1: ( ruleItemRepository )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2782:1: ( ( ruleItemRepository ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2783:1: ( ruleItemRepository )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2752:1: ( ruleItemRepository )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2753:1: ruleItemRepository
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2783:1: ( ruleItemRepository )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2784:1: ruleItemRepository
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getRepoItemRepositoryParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleItemRepository_in_rule__Model__RepoAssignment_05497);
+            pushFollow(FOLLOW_ruleItemRepository_in_rule__Model__RepoAssignment_05558);
             ruleItemRepository();
 
             state._fsp--;
@@ -7789,22 +7878,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__AssemblyAssignment_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2762:1: rule__Model__AssemblyAssignment_1 : ( ruleAssembly ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2793:1: rule__Model__AssemblyAssignment_1 : ( ruleAssembly ) ;
     public final void rule__Model__AssemblyAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2766:1: ( ( ruleAssembly ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2767:1: ( ruleAssembly )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2797:1: ( ( ruleAssembly ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2798:1: ( ruleAssembly )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2767:1: ( ruleAssembly )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2768:1: ruleAssembly
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2798:1: ( ruleAssembly )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2799:1: ruleAssembly
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getAssemblyAssemblyParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleAssembly_in_rule__Model__AssemblyAssignment_15528);
+            pushFollow(FOLLOW_ruleAssembly_in_rule__Model__AssemblyAssignment_15589);
             ruleAssembly();
 
             state._fsp--;
@@ -7834,22 +7923,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItemRepository__NameAssignment_0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2777:1: rule__ItemRepository__NameAssignment_0 : ( ruleValidID ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2808:1: rule__ItemRepository__NameAssignment_0 : ( ruleValidID ) ;
     public final void rule__ItemRepository__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2781:1: ( ( ruleValidID ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2782:1: ( ruleValidID )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2812:1: ( ( ruleValidID ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2813:1: ( ruleValidID )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2782:1: ( ruleValidID )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2783:1: ruleValidID
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2813:1: ( ruleValidID )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2814:1: ruleValidID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getItemRepositoryAccess().getNameValidIDParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleValidID_in_rule__ItemRepository__NameAssignment_05559);
+            pushFollow(FOLLOW_ruleValidID_in_rule__ItemRepository__NameAssignment_05620);
             ruleValidID();
 
             state._fsp--;
@@ -7879,22 +7968,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItemRepository__ElementListAssignment_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2792:1: rule__ItemRepository__ElementListAssignment_2 : ( ruleRepostoryItem ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2823:1: rule__ItemRepository__ElementListAssignment_2 : ( ruleRepostoryItem ) ;
     public final void rule__ItemRepository__ElementListAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2796:1: ( ( ruleRepostoryItem ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2797:1: ( ruleRepostoryItem )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2827:1: ( ( ruleRepostoryItem ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2828:1: ( ruleRepostoryItem )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2797:1: ( ruleRepostoryItem )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2798:1: ruleRepostoryItem
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2828:1: ( ruleRepostoryItem )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2829:1: ruleRepostoryItem
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getItemRepositoryAccess().getElementListRepostoryItemParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleRepostoryItem_in_rule__ItemRepository__ElementListAssignment_25590);
+            pushFollow(FOLLOW_ruleRepostoryItem_in_rule__ItemRepository__ElementListAssignment_25651);
             ruleRepostoryItem();
 
             state._fsp--;
@@ -7924,22 +8013,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedPart__NameAssignment_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2807:1: rule__MountedPart__NameAssignment_1 : ( ruleValidID ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2838:1: rule__MountedPart__NameAssignment_1 : ( ruleValidID ) ;
     public final void rule__MountedPart__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2811:1: ( ( ruleValidID ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2812:1: ( ruleValidID )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2842:1: ( ( ruleValidID ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2843:1: ( ruleValidID )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2812:1: ( ruleValidID )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2813:1: ruleValidID
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2843:1: ( ruleValidID )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2844:1: ruleValidID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedPartAccess().getNameValidIDParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValidID_in_rule__MountedPart__NameAssignment_15621);
+            pushFollow(FOLLOW_ruleValidID_in_rule__MountedPart__NameAssignment_15682);
             ruleValidID();
 
             state._fsp--;
@@ -7969,22 +8058,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedPart__FillAssignment_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2822:1: rule__MountedPart__FillAssignment_2 : ( ruleColor ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2853:1: rule__MountedPart__FillAssignment_2 : ( ruleColor ) ;
     public final void rule__MountedPart__FillAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2826:1: ( ( ruleColor ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2827:1: ( ruleColor )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2857:1: ( ( ruleColor ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2858:1: ( ruleColor )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2827:1: ( ruleColor )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2828:1: ruleColor
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2858:1: ( ruleColor )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2859:1: ruleColor
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedPartAccess().getFillColorParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleColor_in_rule__MountedPart__FillAssignment_25652);
+            pushFollow(FOLLOW_ruleColor_in_rule__MountedPart__FillAssignment_25713);
             ruleColor();
 
             state._fsp--;
@@ -8014,22 +8103,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedPart__SourceAssignment_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2837:1: rule__MountedPart__SourceAssignment_3 : ( ruleSource ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2868:1: rule__MountedPart__SourceAssignment_3 : ( ruleSource ) ;
     public final void rule__MountedPart__SourceAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2841:1: ( ( ruleSource ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2842:1: ( ruleSource )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2872:1: ( ( ruleSource ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2873:1: ( ruleSource )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2842:1: ( ruleSource )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2843:1: ruleSource
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2873:1: ( ruleSource )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2874:1: ruleSource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedPartAccess().getSourceSourceParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleSource_in_rule__MountedPart__SourceAssignment_35683);
+            pushFollow(FOLLOW_ruleSource_in_rule__MountedPart__SourceAssignment_35744);
             ruleSource();
 
             state._fsp--;
@@ -8059,22 +8148,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Color__RAssignment_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2852:1: rule__Color__RAssignment_1 : ( RULE_INT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2883:1: rule__Color__RAssignment_1 : ( RULE_INT ) ;
     public final void rule__Color__RAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2856:1: ( ( RULE_INT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2857:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2887:1: ( ( RULE_INT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2888:1: ( RULE_INT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2857:1: ( RULE_INT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2858:1: RULE_INT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2888:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2889:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColorAccess().getRINTTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Color__RAssignment_15714); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Color__RAssignment_15775); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getColorAccess().getRINTTerminalRuleCall_1_0()); 
             }
@@ -8100,22 +8189,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Color__GAssignment_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2867:1: rule__Color__GAssignment_2 : ( RULE_INT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2898:1: rule__Color__GAssignment_2 : ( RULE_INT ) ;
     public final void rule__Color__GAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2871:1: ( ( RULE_INT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2872:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2902:1: ( ( RULE_INT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2903:1: ( RULE_INT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2872:1: ( RULE_INT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2873:1: RULE_INT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2903:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2904:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColorAccess().getGINTTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Color__GAssignment_25745); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Color__GAssignment_25806); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getColorAccess().getGINTTerminalRuleCall_2_0()); 
             }
@@ -8141,22 +8230,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Color__BAssignment_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2882:1: rule__Color__BAssignment_3 : ( RULE_INT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2913:1: rule__Color__BAssignment_3 : ( RULE_INT ) ;
     public final void rule__Color__BAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2886:1: ( ( RULE_INT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2887:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2917:1: ( ( RULE_INT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2918:1: ( RULE_INT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2887:1: ( RULE_INT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2888:1: RULE_INT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2918:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2919:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColorAccess().getBINTTerminalRuleCall_3_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Color__BAssignment_35776); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Color__BAssignment_35837); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getColorAccess().getBINTTerminalRuleCall_3_0()); 
             }
@@ -8182,22 +8271,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__XUnit__UnitsAssignment"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2897:1: rule__XUnit__UnitsAssignment : ( RULE_INT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2928:1: rule__XUnit__UnitsAssignment : ( RULE_INT ) ;
     public final void rule__XUnit__UnitsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2901:1: ( ( RULE_INT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2902:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2932:1: ( ( RULE_INT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2933:1: ( RULE_INT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2902:1: ( RULE_INT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2903:1: RULE_INT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2933:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2934:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getXUnitAccess().getUnitsINTTerminalRuleCall_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__XUnit__UnitsAssignment5807); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__XUnit__UnitsAssignment5868); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getXUnitAccess().getUnitsINTTerminalRuleCall_0()); 
             }
@@ -8223,22 +8312,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__YUnit__UnitsAssignment"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2912:1: rule__YUnit__UnitsAssignment : ( RULE_INT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2943:1: rule__YUnit__UnitsAssignment : ( RULE_INT ) ;
     public final void rule__YUnit__UnitsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2916:1: ( ( RULE_INT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2917:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2947:1: ( ( RULE_INT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2948:1: ( RULE_INT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2917:1: ( RULE_INT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2918:1: RULE_INT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2948:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2949:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYUnitAccess().getUnitsINTTerminalRuleCall_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__YUnit__UnitsAssignment5838); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__YUnit__UnitsAssignment5899); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getYUnitAccess().getUnitsINTTerminalRuleCall_0()); 
             }
@@ -8264,22 +8353,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ZUnit__UnitsAssignment"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2927:1: rule__ZUnit__UnitsAssignment : ( RULE_INT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2958:1: rule__ZUnit__UnitsAssignment : ( RULE_INT ) ;
     public final void rule__ZUnit__UnitsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2931:1: ( ( RULE_INT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2932:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2962:1: ( ( RULE_INT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2963:1: ( RULE_INT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2932:1: ( RULE_INT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2933:1: RULE_INT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2963:1: ( RULE_INT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2964:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getZUnitAccess().getUnitsINTTerminalRuleCall_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ZUnit__UnitsAssignment5869); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ZUnit__UnitsAssignment5930); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getZUnitAccess().getUnitsINTTerminalRuleCall_0()); 
             }
@@ -8305,22 +8394,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Brick__NameAssignment_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2942:1: rule__Brick__NameAssignment_1 : ( ruleValidID ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2973:1: rule__Brick__NameAssignment_1 : ( ruleValidID ) ;
     public final void rule__Brick__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2946:1: ( ( ruleValidID ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2947:1: ( ruleValidID )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2977:1: ( ( ruleValidID ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2978:1: ( ruleValidID )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2947:1: ( ruleValidID )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2948:1: ruleValidID
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2978:1: ( ruleValidID )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2979:1: ruleValidID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBrickAccess().getNameValidIDParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValidID_in_rule__Brick__NameAssignment_15900);
+            pushFollow(FOLLOW_ruleValidID_in_rule__Brick__NameAssignment_15961);
             ruleValidID();
 
             state._fsp--;
@@ -8350,22 +8439,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Brick__XUnitsAssignment_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2957:1: rule__Brick__XUnitsAssignment_3 : ( ruleXUnit ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2988:1: rule__Brick__XUnitsAssignment_3 : ( ruleXUnit ) ;
     public final void rule__Brick__XUnitsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2961:1: ( ( ruleXUnit ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2962:1: ( ruleXUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2992:1: ( ( ruleXUnit ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2993:1: ( ruleXUnit )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2962:1: ( ruleXUnit )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2963:1: ruleXUnit
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2993:1: ( ruleXUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2994:1: ruleXUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBrickAccess().getXUnitsXUnitParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleXUnit_in_rule__Brick__XUnitsAssignment_35931);
+            pushFollow(FOLLOW_ruleXUnit_in_rule__Brick__XUnitsAssignment_35992);
             ruleXUnit();
 
             state._fsp--;
@@ -8395,22 +8484,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Brick__YUnitsAssignment_4"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2972:1: rule__Brick__YUnitsAssignment_4 : ( ruleYUnit ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3003:1: rule__Brick__YUnitsAssignment_4 : ( ruleYUnit ) ;
     public final void rule__Brick__YUnitsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2976:1: ( ( ruleYUnit ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2977:1: ( ruleYUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3007:1: ( ( ruleYUnit ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3008:1: ( ruleYUnit )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2977:1: ( ruleYUnit )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2978:1: ruleYUnit
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3008:1: ( ruleYUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3009:1: ruleYUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBrickAccess().getYUnitsYUnitParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleYUnit_in_rule__Brick__YUnitsAssignment_45962);
+            pushFollow(FOLLOW_ruleYUnit_in_rule__Brick__YUnitsAssignment_46023);
             ruleYUnit();
 
             state._fsp--;
@@ -8440,22 +8529,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Brick__ZUnitsAssignment_5"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2987:1: rule__Brick__ZUnitsAssignment_5 : ( ruleZUnit ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3018:1: rule__Brick__ZUnitsAssignment_5 : ( ruleZUnit ) ;
     public final void rule__Brick__ZUnitsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2991:1: ( ( ruleZUnit ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2992:1: ( ruleZUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3022:1: ( ( ruleZUnit ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3023:1: ( ruleZUnit )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2992:1: ( ruleZUnit )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:2993:1: ruleZUnit
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3023:1: ( ruleZUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3024:1: ruleZUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBrickAccess().getZUnitsZUnitParserRuleCall_5_0()); 
             }
-            pushFollow(FOLLOW_ruleZUnit_in_rule__Brick__ZUnitsAssignment_55993);
+            pushFollow(FOLLOW_ruleZUnit_in_rule__Brick__ZUnitsAssignment_56054);
             ruleZUnit();
 
             state._fsp--;
@@ -8485,22 +8574,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Brick__FillAssignment_6"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3002:1: rule__Brick__FillAssignment_6 : ( ruleColor ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3033:1: rule__Brick__FillAssignment_6 : ( ruleColor ) ;
     public final void rule__Brick__FillAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3006:1: ( ( ruleColor ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3007:1: ( ruleColor )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3037:1: ( ( ruleColor ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3038:1: ( ruleColor )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3007:1: ( ruleColor )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3008:1: ruleColor
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3038:1: ( ruleColor )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3039:1: ruleColor
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBrickAccess().getFillColorParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_ruleColor_in_rule__Brick__FillAssignment_66024);
+            pushFollow(FOLLOW_ruleColor_in_rule__Brick__FillAssignment_66085);
             ruleColor();
 
             state._fsp--;
@@ -8530,22 +8619,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Brick__SourceAssignment_7"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3017:1: rule__Brick__SourceAssignment_7 : ( ruleSource ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3048:1: rule__Brick__SourceAssignment_7 : ( ruleSource ) ;
     public final void rule__Brick__SourceAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3021:1: ( ( ruleSource ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3022:1: ( ruleSource )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3052:1: ( ( ruleSource ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3053:1: ( ruleSource )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3022:1: ( ruleSource )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3023:1: ruleSource
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3053:1: ( ruleSource )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3054:1: ruleSource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBrickAccess().getSourceSourceParserRuleCall_7_0()); 
             }
-            pushFollow(FOLLOW_ruleSource_in_rule__Brick__SourceAssignment_76055);
+            pushFollow(FOLLOW_ruleSource_in_rule__Brick__SourceAssignment_76116);
             ruleSource();
 
             state._fsp--;
@@ -8574,25 +8663,37 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Brick__SourceAssignment_7"
 
 
-    // $ANTLR start "rule__Generated__WidthAssignment_1_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3032:1: rule__Generated__WidthAssignment_1_1 : ( RULE_FLOAT ) ;
-    public final void rule__Generated__WidthAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Generated__TypeAssignment_2_0"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3063:1: rule__Generated__TypeAssignment_2_0 : ( ( 'box' ) ) ;
+    public final void rule__Generated__TypeAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3036:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3037:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3067:1: ( ( ( 'box' ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3068:1: ( ( 'box' ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3037:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3038:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3068:1: ( ( 'box' ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3069:1: ( 'box' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getWidthFLOATTerminalRuleCall_1_1_0()); 
+               before(grammarAccess.getGeneratedAccess().getTypeBoxKeyword_2_0_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__WidthAssignment_1_16086); if (state.failed) return ;
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3070:1: ( 'box' )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3071:1: 'box'
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getWidthFLOATTerminalRuleCall_1_1_0()); 
+               before(grammarAccess.getGeneratedAccess().getTypeBoxKeyword_2_0_0()); 
+            }
+            match(input,28,FOLLOW_28_in_rule__Generated__TypeAssignment_2_06152); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getTypeBoxKeyword_2_0_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getTypeBoxKeyword_2_0_0()); 
             }
 
             }
@@ -8612,28 +8713,28 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__WidthAssignment_1_1"
+    // $ANTLR end "rule__Generated__TypeAssignment_2_0"
 
 
-    // $ANTLR start "rule__Generated__HeightAssignment_1_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3047:1: rule__Generated__HeightAssignment_1_2 : ( RULE_FLOAT ) ;
-    public final void rule__Generated__HeightAssignment_1_2() throws RecognitionException {
+    // $ANTLR start "rule__Generated__WidthAssignment_2_1"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3086:1: rule__Generated__WidthAssignment_2_1 : ( RULE_FLOAT ) ;
+    public final void rule__Generated__WidthAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3051:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3052:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3090:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3091:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3052:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3053:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3091:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3092:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getHeightFLOATTerminalRuleCall_1_2_0()); 
+               before(grammarAccess.getGeneratedAccess().getWidthFLOATTerminalRuleCall_2_1_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__HeightAssignment_1_26117); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__WidthAssignment_2_16191); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getHeightFLOATTerminalRuleCall_1_2_0()); 
+               after(grammarAccess.getGeneratedAccess().getWidthFLOATTerminalRuleCall_2_1_0()); 
             }
 
             }
@@ -8653,28 +8754,28 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__HeightAssignment_1_2"
+    // $ANTLR end "rule__Generated__WidthAssignment_2_1"
 
 
-    // $ANTLR start "rule__Generated__DepthAssignment_1_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3062:1: rule__Generated__DepthAssignment_1_3 : ( RULE_FLOAT ) ;
-    public final void rule__Generated__DepthAssignment_1_3() throws RecognitionException {
+    // $ANTLR start "rule__Generated__HeightAssignment_2_2"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3101:1: rule__Generated__HeightAssignment_2_2 : ( RULE_FLOAT ) ;
+    public final void rule__Generated__HeightAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3066:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3067:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3105:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3106:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3067:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3068:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3106:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3107:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getDepthFLOATTerminalRuleCall_1_3_0()); 
+               before(grammarAccess.getGeneratedAccess().getHeightFLOATTerminalRuleCall_2_2_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__DepthAssignment_1_36148); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__HeightAssignment_2_26222); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getDepthFLOATTerminalRuleCall_1_3_0()); 
+               after(grammarAccess.getGeneratedAccess().getHeightFLOATTerminalRuleCall_2_2_0()); 
             }
 
             }
@@ -8694,28 +8795,28 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__DepthAssignment_1_3"
+    // $ANTLR end "rule__Generated__HeightAssignment_2_2"
 
 
-    // $ANTLR start "rule__Generated__OriginXAssignment_1_4_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3077:1: rule__Generated__OriginXAssignment_1_4_1 : ( RULE_FLOAT ) ;
-    public final void rule__Generated__OriginXAssignment_1_4_1() throws RecognitionException {
+    // $ANTLR start "rule__Generated__DepthAssignment_2_3"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3116:1: rule__Generated__DepthAssignment_2_3 : ( RULE_FLOAT ) ;
+    public final void rule__Generated__DepthAssignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3081:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3082:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3120:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3121:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3082:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3083:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3121:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3122:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getOriginXFLOATTerminalRuleCall_1_4_1_0()); 
+               before(grammarAccess.getGeneratedAccess().getDepthFLOATTerminalRuleCall_2_3_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__OriginXAssignment_1_4_16179); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__DepthAssignment_2_36253); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getOriginXFLOATTerminalRuleCall_1_4_1_0()); 
+               after(grammarAccess.getGeneratedAccess().getDepthFLOATTerminalRuleCall_2_3_0()); 
             }
 
             }
@@ -8735,28 +8836,28 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__OriginXAssignment_1_4_1"
+    // $ANTLR end "rule__Generated__DepthAssignment_2_3"
 
 
-    // $ANTLR start "rule__Generated__OriginYAssignment_1_4_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3092:1: rule__Generated__OriginYAssignment_1_4_2 : ( RULE_FLOAT ) ;
-    public final void rule__Generated__OriginYAssignment_1_4_2() throws RecognitionException {
+    // $ANTLR start "rule__Generated__OriginXAssignment_2_4_1"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3131:1: rule__Generated__OriginXAssignment_2_4_1 : ( RULE_FLOAT ) ;
+    public final void rule__Generated__OriginXAssignment_2_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3096:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3097:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3135:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3136:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3097:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3098:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3136:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3137:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getOriginYFLOATTerminalRuleCall_1_4_2_0()); 
+               before(grammarAccess.getGeneratedAccess().getOriginXFLOATTerminalRuleCall_2_4_1_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__OriginYAssignment_1_4_26210); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__OriginXAssignment_2_4_16284); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getOriginYFLOATTerminalRuleCall_1_4_2_0()); 
+               after(grammarAccess.getGeneratedAccess().getOriginXFLOATTerminalRuleCall_2_4_1_0()); 
             }
 
             }
@@ -8776,28 +8877,28 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__OriginYAssignment_1_4_2"
+    // $ANTLR end "rule__Generated__OriginXAssignment_2_4_1"
 
 
-    // $ANTLR start "rule__Generated__OriginZAssignment_1_4_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3107:1: rule__Generated__OriginZAssignment_1_4_3 : ( RULE_FLOAT ) ;
-    public final void rule__Generated__OriginZAssignment_1_4_3() throws RecognitionException {
+    // $ANTLR start "rule__Generated__OriginYAssignment_2_4_2"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3146:1: rule__Generated__OriginYAssignment_2_4_2 : ( RULE_FLOAT ) ;
+    public final void rule__Generated__OriginYAssignment_2_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3111:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3112:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3150:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3151:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3112:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3113:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3151:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3152:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGeneratedAccess().getOriginZFLOATTerminalRuleCall_1_4_3_0()); 
+               before(grammarAccess.getGeneratedAccess().getOriginYFLOATTerminalRuleCall_2_4_2_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__OriginZAssignment_1_4_36241); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__OriginYAssignment_2_4_26315); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGeneratedAccess().getOriginZFLOATTerminalRuleCall_1_4_3_0()); 
+               after(grammarAccess.getGeneratedAccess().getOriginYFLOATTerminalRuleCall_2_4_2_0()); 
             }
 
             }
@@ -8817,26 +8918,67 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Generated__OriginZAssignment_1_4_3"
+    // $ANTLR end "rule__Generated__OriginYAssignment_2_4_2"
+
+
+    // $ANTLR start "rule__Generated__OriginZAssignment_2_4_3"
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3161:1: rule__Generated__OriginZAssignment_2_4_3 : ( RULE_FLOAT ) ;
+    public final void rule__Generated__OriginZAssignment_2_4_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3165:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3166:1: ( RULE_FLOAT )
+            {
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3166:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3167:1: RULE_FLOAT
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGeneratedAccess().getOriginZFLOATTerminalRuleCall_2_4_3_0()); 
+            }
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Generated__OriginZAssignment_2_4_36346); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGeneratedAccess().getOriginZFLOATTerminalRuleCall_2_4_3_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Generated__OriginZAssignment_2_4_3"
 
 
     // $ANTLR start "rule__FxmlInclude__Source3dAssignment_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3122:1: rule__FxmlInclude__Source3dAssignment_1 : ( RULE_STRING ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3176:1: rule__FxmlInclude__Source3dAssignment_1 : ( RULE_STRING ) ;
     public final void rule__FxmlInclude__Source3dAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3126:1: ( ( RULE_STRING ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3127:1: ( RULE_STRING )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3180:1: ( ( RULE_STRING ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3181:1: ( RULE_STRING )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3127:1: ( RULE_STRING )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3128:1: RULE_STRING
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3181:1: ( RULE_STRING )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3182:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getSource3dSTRINGTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__FxmlInclude__Source3dAssignment_16272); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__FxmlInclude__Source3dAssignment_16377); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFxmlIncludeAccess().getSource3dSTRINGTerminalRuleCall_1_0()); 
             }
@@ -8862,22 +9004,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__OriginXAssignment_2_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3137:1: rule__FxmlInclude__OriginXAssignment_2_1 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3191:1: rule__FxmlInclude__OriginXAssignment_2_1 : ( RULE_FLOAT ) ;
     public final void rule__FxmlInclude__OriginXAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3141:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3142:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3195:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3196:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3142:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3143:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3196:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3197:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getOriginXFLOATTerminalRuleCall_2_1_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginXAssignment_2_16303); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginXAssignment_2_16408); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFxmlIncludeAccess().getOriginXFLOATTerminalRuleCall_2_1_0()); 
             }
@@ -8903,22 +9045,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__OriginYAssignment_2_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3152:1: rule__FxmlInclude__OriginYAssignment_2_2 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3206:1: rule__FxmlInclude__OriginYAssignment_2_2 : ( RULE_FLOAT ) ;
     public final void rule__FxmlInclude__OriginYAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3156:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3157:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3210:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3211:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3157:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3158:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3211:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3212:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getOriginYFLOATTerminalRuleCall_2_2_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginYAssignment_2_26334); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginYAssignment_2_26439); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFxmlIncludeAccess().getOriginYFLOATTerminalRuleCall_2_2_0()); 
             }
@@ -8944,22 +9086,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FxmlInclude__OriginZAssignment_2_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3167:1: rule__FxmlInclude__OriginZAssignment_2_3 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3221:1: rule__FxmlInclude__OriginZAssignment_2_3 : ( RULE_FLOAT ) ;
     public final void rule__FxmlInclude__OriginZAssignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3171:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3172:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3225:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3226:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3172:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3173:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3226:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3227:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFxmlIncludeAccess().getOriginZFLOATTerminalRuleCall_2_3_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginZAssignment_2_36365); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginZAssignment_2_36470); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFxmlIncludeAccess().getOriginZFLOATTerminalRuleCall_2_3_0()); 
             }
@@ -8985,22 +9127,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__NameAssignment_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3182:1: rule__Assembly__NameAssignment_1 : ( ruleValidID ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3236:1: rule__Assembly__NameAssignment_1 : ( ruleValidID ) ;
     public final void rule__Assembly__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3186:1: ( ( ruleValidID ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3187:1: ( ruleValidID )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3240:1: ( ( ruleValidID ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3241:1: ( ruleValidID )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3187:1: ( ruleValidID )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3188:1: ruleValidID
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3241:1: ( ruleValidID )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3242:1: ruleValidID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssemblyAccess().getNameValidIDParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValidID_in_rule__Assembly__NameAssignment_16396);
+            pushFollow(FOLLOW_ruleValidID_in_rule__Assembly__NameAssignment_16501);
             ruleValidID();
 
             state._fsp--;
@@ -9030,22 +9172,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assembly__ItemsAssignment_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3197:1: rule__Assembly__ItemsAssignment_3 : ( ruleAssemblyItem ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3251:1: rule__Assembly__ItemsAssignment_3 : ( ruleAssemblyItem ) ;
     public final void rule__Assembly__ItemsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3201:1: ( ( ruleAssemblyItem ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3202:1: ( ruleAssemblyItem )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3255:1: ( ( ruleAssemblyItem ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3256:1: ( ruleAssemblyItem )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3202:1: ( ruleAssemblyItem )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3203:1: ruleAssemblyItem
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3256:1: ( ruleAssemblyItem )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3257:1: ruleAssemblyItem
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssemblyAccess().getItemsAssemblyItemParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleAssemblyItem_in_rule__Assembly__ItemsAssignment_36427);
+            pushFollow(FOLLOW_ruleAssemblyItem_in_rule__Assembly__ItemsAssignment_36532);
             ruleAssemblyItem();
 
             state._fsp--;
@@ -9075,28 +9217,28 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__ElementAssignment_0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3212:1: rule__RasterAssemblyItem__ElementAssignment_0 : ( ( ruleQualifiedName ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3266:1: rule__RasterAssemblyItem__ElementAssignment_0 : ( ( ruleQualifiedName ) ) ;
     public final void rule__RasterAssemblyItem__ElementAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3216:1: ( ( ( ruleQualifiedName ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3217:1: ( ( ruleQualifiedName ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3270:1: ( ( ( ruleQualifiedName ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3271:1: ( ( ruleQualifiedName ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3217:1: ( ( ruleQualifiedName ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3218:1: ( ruleQualifiedName )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3271:1: ( ( ruleQualifiedName ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3272:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getElementRasterItemCrossReference_0_0()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3219:1: ( ruleQualifiedName )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3220:1: ruleQualifiedName
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3273:1: ( ruleQualifiedName )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3274:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getElementRasterItemQualifiedNameParserRuleCall_0_0_1()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__RasterAssemblyItem__ElementAssignment_06462);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__RasterAssemblyItem__ElementAssignment_06567);
             ruleQualifiedName();
 
             state._fsp--;
@@ -9132,22 +9274,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__XUnitsAssignment_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3231:1: rule__RasterAssemblyItem__XUnitsAssignment_2 : ( ruleXUnit ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3285:1: rule__RasterAssemblyItem__XUnitsAssignment_2 : ( ruleXUnit ) ;
     public final void rule__RasterAssemblyItem__XUnitsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3235:1: ( ( ruleXUnit ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3236:1: ( ruleXUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3289:1: ( ( ruleXUnit ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3290:1: ( ruleXUnit )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3236:1: ( ruleXUnit )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3237:1: ruleXUnit
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3290:1: ( ruleXUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3291:1: ruleXUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getXUnitsXUnitParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleXUnit_in_rule__RasterAssemblyItem__XUnitsAssignment_26497);
+            pushFollow(FOLLOW_ruleXUnit_in_rule__RasterAssemblyItem__XUnitsAssignment_26602);
             ruleXUnit();
 
             state._fsp--;
@@ -9177,22 +9319,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__YUnitsAssignment_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3246:1: rule__RasterAssemblyItem__YUnitsAssignment_3 : ( ruleYUnit ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3300:1: rule__RasterAssemblyItem__YUnitsAssignment_3 : ( ruleYUnit ) ;
     public final void rule__RasterAssemblyItem__YUnitsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3250:1: ( ( ruleYUnit ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3251:1: ( ruleYUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3304:1: ( ( ruleYUnit ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3305:1: ( ruleYUnit )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3251:1: ( ruleYUnit )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3252:1: ruleYUnit
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3305:1: ( ruleYUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3306:1: ruleYUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getYUnitsYUnitParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleYUnit_in_rule__RasterAssemblyItem__YUnitsAssignment_36528);
+            pushFollow(FOLLOW_ruleYUnit_in_rule__RasterAssemblyItem__YUnitsAssignment_36633);
             ruleYUnit();
 
             state._fsp--;
@@ -9222,22 +9364,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__ZUnitsAssignment_4"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3261:1: rule__RasterAssemblyItem__ZUnitsAssignment_4 : ( ruleZUnit ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3315:1: rule__RasterAssemblyItem__ZUnitsAssignment_4 : ( ruleZUnit ) ;
     public final void rule__RasterAssemblyItem__ZUnitsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3265:1: ( ( ruleZUnit ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3266:1: ( ruleZUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3319:1: ( ( ruleZUnit ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3320:1: ( ruleZUnit )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3266:1: ( ruleZUnit )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3267:1: ruleZUnit
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3320:1: ( ruleZUnit )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3321:1: ruleZUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getZUnitsZUnitParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleZUnit_in_rule__RasterAssemblyItem__ZUnitsAssignment_46559);
+            pushFollow(FOLLOW_ruleZUnit_in_rule__RasterAssemblyItem__ZUnitsAssignment_46664);
             ruleZUnit();
 
             state._fsp--;
@@ -9267,25 +9409,25 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RasterAssemblyItem__TransformAssignment_5_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3276:1: rule__RasterAssemblyItem__TransformAssignment_5_1 : ( ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3330:1: rule__RasterAssemblyItem__TransformAssignment_5_1 : ( ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 ) ) ;
     public final void rule__RasterAssemblyItem__TransformAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3280:1: ( ( ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3281:1: ( ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3334:1: ( ( ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3335:1: ( ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3281:1: ( ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3282:1: ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3335:1: ( ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3336:1: ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRasterAssemblyItemAccess().getTransformAlternatives_5_1_0()); 
             }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3283:1: ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3283:2: rule__RasterAssemblyItem__TransformAlternatives_5_1_0
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3337:1: ( rule__RasterAssemblyItem__TransformAlternatives_5_1_0 )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3337:2: rule__RasterAssemblyItem__TransformAlternatives_5_1_0
             {
-            pushFollow(FOLLOW_rule__RasterAssemblyItem__TransformAlternatives_5_1_0_in_rule__RasterAssemblyItem__TransformAssignment_5_16590);
+            pushFollow(FOLLOW_rule__RasterAssemblyItem__TransformAlternatives_5_1_0_in_rule__RasterAssemblyItem__TransformAssignment_5_16695);
             rule__RasterAssemblyItem__TransformAlternatives_5_1_0();
 
             state._fsp--;
@@ -9318,40 +9460,40 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__ElementAssignment_0"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3292:1: rule__MountedAssemblyItem__ElementAssignment_0 : ( ( ruleQualifiedName ) ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3346:1: rule__MountedAssemblyItem__ElementAssignment_0 : ( ( ruleQualifiedName ) ) ;
     public final void rule__MountedAssemblyItem__ElementAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3296:1: ( ( ( ruleQualifiedName ) ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3297:1: ( ( ruleQualifiedName ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3350:1: ( ( ( ruleQualifiedName ) ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3351:1: ( ( ruleQualifiedName ) )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3297:1: ( ( ruleQualifiedName ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3298:1: ( ruleQualifiedName )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMountedAssemblyItemAccess().getElementRasterItemCrossReference_0_0()); 
-            }
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3299:1: ( ruleQualifiedName )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3300:1: ruleQualifiedName
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3351:1: ( ( ruleQualifiedName ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3352:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMountedAssemblyItemAccess().getElementRasterItemQualifiedNameParserRuleCall_0_0_1()); 
+               before(grammarAccess.getMountedAssemblyItemAccess().getElementMountedPartCrossReference_0_0()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__MountedAssemblyItem__ElementAssignment_06627);
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3353:1: ( ruleQualifiedName )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3354:1: ruleQualifiedName
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMountedAssemblyItemAccess().getElementMountedPartQualifiedNameParserRuleCall_0_0_1()); 
+            }
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__MountedAssemblyItem__ElementAssignment_06732);
             ruleQualifiedName();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMountedAssemblyItemAccess().getElementRasterItemQualifiedNameParserRuleCall_0_0_1()); 
+               after(grammarAccess.getMountedAssemblyItemAccess().getElementMountedPartQualifiedNameParserRuleCall_0_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMountedAssemblyItemAccess().getElementRasterItemCrossReference_0_0()); 
+               after(grammarAccess.getMountedAssemblyItemAccess().getElementMountedPartCrossReference_0_0()); 
             }
 
             }
@@ -9375,22 +9517,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__XUnitsAssignment_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3311:1: rule__MountedAssemblyItem__XUnitsAssignment_2 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3365:1: rule__MountedAssemblyItem__XUnitsAssignment_2 : ( RULE_FLOAT ) ;
     public final void rule__MountedAssemblyItem__XUnitsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3315:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3316:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3369:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3370:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3316:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3317:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3370:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3371:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getXUnitsFLOATTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__XUnitsAssignment_26662); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__XUnitsAssignment_26767); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMountedAssemblyItemAccess().getXUnitsFLOATTerminalRuleCall_2_0()); 
             }
@@ -9416,22 +9558,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__YUnitsAssignment_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3326:1: rule__MountedAssemblyItem__YUnitsAssignment_3 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3380:1: rule__MountedAssemblyItem__YUnitsAssignment_3 : ( RULE_FLOAT ) ;
     public final void rule__MountedAssemblyItem__YUnitsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3330:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3331:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3384:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3385:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3331:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3332:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3385:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3386:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getYUnitsFLOATTerminalRuleCall_3_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__YUnitsAssignment_36693); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__YUnitsAssignment_36798); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMountedAssemblyItemAccess().getYUnitsFLOATTerminalRuleCall_3_0()); 
             }
@@ -9457,22 +9599,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__ZUnitsAssignment_4"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3341:1: rule__MountedAssemblyItem__ZUnitsAssignment_4 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3395:1: rule__MountedAssemblyItem__ZUnitsAssignment_4 : ( RULE_FLOAT ) ;
     public final void rule__MountedAssemblyItem__ZUnitsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3345:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3346:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3399:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3400:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3346:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3347:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3400:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3401:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getZUnitsFLOATTerminalRuleCall_4_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__ZUnitsAssignment_46724); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__ZUnitsAssignment_46829); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMountedAssemblyItemAccess().getZUnitsFLOATTerminalRuleCall_4_0()); 
             }
@@ -9498,22 +9640,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__RotateXAssignment_5_1"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3356:1: rule__MountedAssemblyItem__RotateXAssignment_5_1 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3410:1: rule__MountedAssemblyItem__RotateXAssignment_5_1 : ( RULE_FLOAT ) ;
     public final void rule__MountedAssemblyItem__RotateXAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3360:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3361:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3414:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3415:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3361:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3362:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3415:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3416:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getRotateXFLOATTerminalRuleCall_5_1_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateXAssignment_5_16755); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateXAssignment_5_16860); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMountedAssemblyItemAccess().getRotateXFLOATTerminalRuleCall_5_1_0()); 
             }
@@ -9539,22 +9681,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__RotateYAssignment_5_2"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3371:1: rule__MountedAssemblyItem__RotateYAssignment_5_2 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3425:1: rule__MountedAssemblyItem__RotateYAssignment_5_2 : ( RULE_FLOAT ) ;
     public final void rule__MountedAssemblyItem__RotateYAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3375:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3376:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3429:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3430:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3376:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3377:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3430:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3431:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getRotateYFLOATTerminalRuleCall_5_2_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateYAssignment_5_26786); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateYAssignment_5_26891); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMountedAssemblyItemAccess().getRotateYFLOATTerminalRuleCall_5_2_0()); 
             }
@@ -9580,22 +9722,22 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MountedAssemblyItem__RotateZAssignment_5_3"
-    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3386:1: rule__MountedAssemblyItem__RotateZAssignment_5_3 : ( RULE_FLOAT ) ;
+    // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3440:1: rule__MountedAssemblyItem__RotateZAssignment_5_3 : ( RULE_FLOAT ) ;
     public final void rule__MountedAssemblyItem__RotateZAssignment_5_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3390:1: ( ( RULE_FLOAT ) )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3391:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3444:1: ( ( RULE_FLOAT ) )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3445:1: ( RULE_FLOAT )
             {
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3391:1: ( RULE_FLOAT )
-            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3392:1: RULE_FLOAT
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3445:1: ( RULE_FLOAT )
+            // ../at.bestsolution.lego.ui/src-gen/at/bestsolution/lego/ui/contentassist/antlr/internal/InternalLego.g:3446:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMountedAssemblyItemAccess().getRotateZFLOATTerminalRuleCall_5_3_0()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateZAssignment_5_36817); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateZAssignment_5_36922); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMountedAssemblyItemAccess().getRotateZFLOATTerminalRuleCall_5_3_0()); 
             }
@@ -9630,17 +9772,17 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
     static final String DFA4_minS =
         "\1\4\1\17\1\4\1\5\1\17\2\uffff";
     static final String DFA4_maxS =
-        "\1\4\1\33\1\4\1\6\1\33\2\uffff";
+        "\1\4\1\32\1\4\1\6\1\32\2\uffff";
     static final String DFA4_acceptS =
         "\5\uffff\1\1\1\2";
     static final String DFA4_specialS =
         "\7\uffff}>";
     static final String[] DFA4_transitionS = {
             "\1\1",
-            "\1\2\13\uffff\1\3",
+            "\1\2\12\uffff\1\3",
             "\1\4",
             "\1\5\1\6",
-            "\1\2\13\uffff\1\3",
+            "\1\2\12\uffff\1\3",
             "",
             ""
     };
@@ -9773,7 +9915,7 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__MountedPart__Group__1__Impl_in_rule__MountedPart__Group__12005 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_rule__MountedPart__Group__2_in_rule__MountedPart__Group__12008 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__MountedPart__NameAssignment_1_in_rule__MountedPart__Group__1__Impl2035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedPart__Group__2__Impl_in_rule__MountedPart__Group__22065 = new BitSet(new long[]{0x0000000002400000L});
+    public static final BitSet FOLLOW_rule__MountedPart__Group__2__Impl_in_rule__MountedPart__Group__22065 = new BitSet(new long[]{0x0000000001400000L});
     public static final BitSet FOLLOW_rule__MountedPart__Group__3_in_rule__MountedPart__Group__22068 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__MountedPart__FillAssignment_2_in_rule__MountedPart__Group__2__Impl2095 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__MountedPart__Group__3__Impl_in_rule__MountedPart__Group__32125 = new BitSet(new long[]{0x0000000000000002L});
@@ -9807,167 +9949,170 @@ public class InternalLegoParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Brick__Group__5__Impl_in_rule__Brick__Group__52741 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_rule__Brick__Group__6_in_rule__Brick__Group__52744 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Brick__ZUnitsAssignment_5_in_rule__Brick__Group__5__Impl2771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Brick__Group__6__Impl_in_rule__Brick__Group__62801 = new BitSet(new long[]{0x0000000002400000L});
+    public static final BitSet FOLLOW_rule__Brick__Group__6__Impl_in_rule__Brick__Group__62801 = new BitSet(new long[]{0x0000000001400000L});
     public static final BitSet FOLLOW_rule__Brick__Group__7_in_rule__Brick__Group__62804 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Brick__FillAssignment_6_in_rule__Brick__Group__6__Impl2831 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Brick__Group__7__Impl_in_rule__Brick__Group__72861 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Brick__SourceAssignment_7_in_rule__Brick__Group__7__Impl2888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group__0__Impl_in_rule__Generated__Group__02934 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__Generated__Group__0__Impl_in_rule__Generated__Group__02934 = new BitSet(new long[]{0x0000000010000000L});
     public static final BitSet FOLLOW_rule__Generated__Group__1_in_rule__Generated__Group__02937 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_22_in_rule__Generated__Group__0__Impl2965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group__1__Impl_in_rule__Generated__Group__12996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__0_in_rule__Generated__Group__1__Impl3023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__0__Impl_in_rule__Generated__Group_1__03058 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__1_in_rule__Generated__Group_1__03061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Generated__Group_1__0__Impl3089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__1__Impl_in_rule__Generated__Group_1__13120 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__2_in_rule__Generated__Group_1__13123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__WidthAssignment_1_1_in_rule__Generated__Group_1__1__Impl3150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__2__Impl_in_rule__Generated__Group_1__23180 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__3_in_rule__Generated__Group_1__23183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__HeightAssignment_1_2_in_rule__Generated__Group_1__2__Impl3210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__3__Impl_in_rule__Generated__Group_1__33240 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__4_in_rule__Generated__Group_1__33243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__DepthAssignment_1_3_in_rule__Generated__Group_1__3__Impl3270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1__4__Impl_in_rule__Generated__Group_1__43300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1_4__0_in_rule__Generated__Group_1__4__Impl3327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1_4__0__Impl_in_rule__Generated__Group_1_4__03368 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1_4__1_in_rule__Generated__Group_1_4__03371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Generated__Group_1_4__0__Impl3399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1_4__1__Impl_in_rule__Generated__Group_1_4__13430 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1_4__2_in_rule__Generated__Group_1_4__13433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__OriginXAssignment_1_4_1_in_rule__Generated__Group_1_4__1__Impl3460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1_4__2__Impl_in_rule__Generated__Group_1_4__23490 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1_4__3_in_rule__Generated__Group_1_4__23493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__OriginYAssignment_1_4_2_in_rule__Generated__Group_1_4__2__Impl3520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__Group_1_4__3__Impl_in_rule__Generated__Group_1_4__33550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Generated__OriginZAssignment_1_4_3_in_rule__Generated__Group_1_4__3__Impl3577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group__0__Impl_in_rule__FxmlInclude__Group__03615 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group__1_in_rule__FxmlInclude__Group__03618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__FxmlInclude__Group__0__Impl3646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group__1__Impl_in_rule__FxmlInclude__Group__13677 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group__2_in_rule__FxmlInclude__Group__13680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Source3dAssignment_1_in_rule__FxmlInclude__Group__1__Impl3707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group__2__Impl_in_rule__FxmlInclude__Group__23737 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__0_in_rule__FxmlInclude__Group__2__Impl3764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__0__Impl_in_rule__FxmlInclude__Group_2__03801 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__1_in_rule__FxmlInclude__Group_2__03804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__FxmlInclude__Group_2__0__Impl3832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__1__Impl_in_rule__FxmlInclude__Group_2__13863 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__2_in_rule__FxmlInclude__Group_2__13866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__OriginXAssignment_2_1_in_rule__FxmlInclude__Group_2__1__Impl3893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__2__Impl_in_rule__FxmlInclude__Group_2__23923 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__3_in_rule__FxmlInclude__Group_2__23926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__OriginYAssignment_2_2_in_rule__FxmlInclude__Group_2__2__Impl3953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__3__Impl_in_rule__FxmlInclude__Group_2__33983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FxmlInclude__OriginZAssignment_2_3_in_rule__FxmlInclude__Group_2__3__Impl4010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__0__Impl_in_rule__Assembly__Group__04048 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__1_in_rule__Assembly__Group__04051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Assembly__Group__0__Impl4079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__1__Impl_in_rule__Assembly__Group__14110 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__2_in_rule__Assembly__Group__14113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assembly__NameAssignment_1_in_rule__Assembly__Group__1__Impl4140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__2__Impl_in_rule__Assembly__Group__24170 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__3_in_rule__Assembly__Group__24173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Assembly__Group__2__Impl4201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__3__Impl_in_rule__Assembly__Group__34232 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__4_in_rule__Assembly__Group__34235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assembly__ItemsAssignment_3_in_rule__Assembly__Group__3__Impl4264 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Assembly__ItemsAssignment_3_in_rule__Assembly__Group__3__Impl4276 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Assembly__Group__4__Impl_in_rule__Assembly__Group__44309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Assembly__Group__4__Impl4337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__0__Impl_in_rule__RasterAssemblyItem__Group__04378 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__1_in_rule__RasterAssemblyItem__Group__04381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__ElementAssignment_0_in_rule__RasterAssemblyItem__Group__0__Impl4408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__1__Impl_in_rule__RasterAssemblyItem__Group__14438 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__2_in_rule__RasterAssemblyItem__Group__14441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__RasterAssemblyItem__Group__1__Impl4469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__2__Impl_in_rule__RasterAssemblyItem__Group__24500 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__3_in_rule__RasterAssemblyItem__Group__24503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__XUnitsAssignment_2_in_rule__RasterAssemblyItem__Group__2__Impl4530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__3__Impl_in_rule__RasterAssemblyItem__Group__34560 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__4_in_rule__RasterAssemblyItem__Group__34563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__YUnitsAssignment_3_in_rule__RasterAssemblyItem__Group__3__Impl4590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__4__Impl_in_rule__RasterAssemblyItem__Group__44620 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__5_in_rule__RasterAssemblyItem__Group__44623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__ZUnitsAssignment_4_in_rule__RasterAssemblyItem__Group__4__Impl4650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__5__Impl_in_rule__RasterAssemblyItem__Group__54680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group_5__0_in_rule__RasterAssemblyItem__Group__5__Impl4707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group_5__0__Impl_in_rule__RasterAssemblyItem__Group_5__04750 = new BitSet(new long[]{0x0000000000007000L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group_5__1_in_rule__RasterAssemblyItem__Group_5__04753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__RasterAssemblyItem__Group_5__0__Impl4781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group_5__1__Impl_in_rule__RasterAssemblyItem__Group_5__14812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__TransformAssignment_5_1_in_rule__RasterAssemblyItem__Group_5__1__Impl4839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__0__Impl_in_rule__MountedAssemblyItem__Group__04873 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__1_in_rule__MountedAssemblyItem__Group__04876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__ElementAssignment_0_in_rule__MountedAssemblyItem__Group__0__Impl4903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__1__Impl_in_rule__MountedAssemblyItem__Group__14933 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__2_in_rule__MountedAssemblyItem__Group__14936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__MountedAssemblyItem__Group__1__Impl4964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__2__Impl_in_rule__MountedAssemblyItem__Group__24995 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__3_in_rule__MountedAssemblyItem__Group__24998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__XUnitsAssignment_2_in_rule__MountedAssemblyItem__Group__2__Impl5025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__3__Impl_in_rule__MountedAssemblyItem__Group__35055 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__4_in_rule__MountedAssemblyItem__Group__35058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__YUnitsAssignment_3_in_rule__MountedAssemblyItem__Group__3__Impl5085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__4__Impl_in_rule__MountedAssemblyItem__Group__45115 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__5_in_rule__MountedAssemblyItem__Group__45118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__ZUnitsAssignment_4_in_rule__MountedAssemblyItem__Group__4__Impl5145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__5__Impl_in_rule__MountedAssemblyItem__Group__55175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__0_in_rule__MountedAssemblyItem__Group__5__Impl5202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__0__Impl_in_rule__MountedAssemblyItem__Group_5__05245 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__1_in_rule__MountedAssemblyItem__Group_5__05248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__MountedAssemblyItem__Group_5__0__Impl5276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__1__Impl_in_rule__MountedAssemblyItem__Group_5__15307 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__2_in_rule__MountedAssemblyItem__Group_5__15310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__RotateXAssignment_5_1_in_rule__MountedAssemblyItem__Group_5__1__Impl5337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__2__Impl_in_rule__MountedAssemblyItem__Group_5__25367 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__3_in_rule__MountedAssemblyItem__Group_5__25370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__RotateYAssignment_5_2_in_rule__MountedAssemblyItem__Group_5__2__Impl5397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__3__Impl_in_rule__MountedAssemblyItem__Group_5__35427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MountedAssemblyItem__RotateZAssignment_5_3_in_rule__MountedAssemblyItem__Group_5__3__Impl5454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleItemRepository_in_rule__Model__RepoAssignment_05497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssembly_in_rule__Model__AssemblyAssignment_15528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValidID_in_rule__ItemRepository__NameAssignment_05559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRepostoryItem_in_rule__ItemRepository__ElementListAssignment_25590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValidID_in_rule__MountedPart__NameAssignment_15621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColor_in_rule__MountedPart__FillAssignment_25652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSource_in_rule__MountedPart__SourceAssignment_35683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Color__RAssignment_15714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Color__GAssignment_25745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Color__BAssignment_35776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__XUnit__UnitsAssignment5807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__YUnit__UnitsAssignment5838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__ZUnit__UnitsAssignment5869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValidID_in_rule__Brick__NameAssignment_15900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXUnit_in_rule__Brick__XUnitsAssignment_35931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleYUnit_in_rule__Brick__YUnitsAssignment_45962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleZUnit_in_rule__Brick__ZUnitsAssignment_55993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColor_in_rule__Brick__FillAssignment_66024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSource_in_rule__Brick__SourceAssignment_76055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__WidthAssignment_1_16086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__HeightAssignment_1_26117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__DepthAssignment_1_36148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__OriginXAssignment_1_4_16179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__OriginYAssignment_1_4_26210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__OriginZAssignment_1_4_36241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__FxmlInclude__Source3dAssignment_16272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginXAssignment_2_16303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginYAssignment_2_26334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginZAssignment_2_36365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValidID_in_rule__Assembly__NameAssignment_16396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssemblyItem_in_rule__Assembly__ItemsAssignment_36427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__RasterAssemblyItem__ElementAssignment_06462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXUnit_in_rule__RasterAssemblyItem__XUnitsAssignment_26497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleYUnit_in_rule__RasterAssemblyItem__YUnitsAssignment_36528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleZUnit_in_rule__RasterAssemblyItem__ZUnitsAssignment_46559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RasterAssemblyItem__TransformAlternatives_5_1_0_in_rule__RasterAssemblyItem__TransformAssignment_5_16590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__MountedAssemblyItem__ElementAssignment_06627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__XUnitsAssignment_26662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__YUnitsAssignment_36693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__ZUnitsAssignment_46724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateXAssignment_5_16755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateYAssignment_5_26786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateZAssignment_5_36817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group__1__Impl_in_rule__Generated__Group__12996 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__Generated__Group__2_in_rule__Generated__Group__12999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group__2__Impl_in_rule__Generated__Group__23057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__0_in_rule__Generated__Group__2__Impl3084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__0__Impl_in_rule__Generated__Group_2__03121 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__1_in_rule__Generated__Group_2__03124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__TypeAssignment_2_0_in_rule__Generated__Group_2__0__Impl3151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__1__Impl_in_rule__Generated__Group_2__13181 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__2_in_rule__Generated__Group_2__13184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__WidthAssignment_2_1_in_rule__Generated__Group_2__1__Impl3211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__2__Impl_in_rule__Generated__Group_2__23241 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__3_in_rule__Generated__Group_2__23244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__HeightAssignment_2_2_in_rule__Generated__Group_2__2__Impl3271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__3__Impl_in_rule__Generated__Group_2__33301 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__4_in_rule__Generated__Group_2__33304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__DepthAssignment_2_3_in_rule__Generated__Group_2__3__Impl3331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2__4__Impl_in_rule__Generated__Group_2__43361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2_4__0_in_rule__Generated__Group_2__4__Impl3388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2_4__0__Impl_in_rule__Generated__Group_2_4__03429 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2_4__1_in_rule__Generated__Group_2_4__03432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Generated__Group_2_4__0__Impl3460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2_4__1__Impl_in_rule__Generated__Group_2_4__13491 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2_4__2_in_rule__Generated__Group_2_4__13494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__OriginXAssignment_2_4_1_in_rule__Generated__Group_2_4__1__Impl3521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2_4__2__Impl_in_rule__Generated__Group_2_4__23551 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2_4__3_in_rule__Generated__Group_2_4__23554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__OriginYAssignment_2_4_2_in_rule__Generated__Group_2_4__2__Impl3581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__Group_2_4__3__Impl_in_rule__Generated__Group_2_4__33611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Generated__OriginZAssignment_2_4_3_in_rule__Generated__Group_2_4__3__Impl3638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group__0__Impl_in_rule__FxmlInclude__Group__03676 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group__1_in_rule__FxmlInclude__Group__03679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__FxmlInclude__Group__0__Impl3707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group__1__Impl_in_rule__FxmlInclude__Group__13738 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group__2_in_rule__FxmlInclude__Group__13741 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Source3dAssignment_1_in_rule__FxmlInclude__Group__1__Impl3768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group__2__Impl_in_rule__FxmlInclude__Group__23798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__0_in_rule__FxmlInclude__Group__2__Impl3825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__0__Impl_in_rule__FxmlInclude__Group_2__03862 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__1_in_rule__FxmlInclude__Group_2__03865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__FxmlInclude__Group_2__0__Impl3893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__1__Impl_in_rule__FxmlInclude__Group_2__13924 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__2_in_rule__FxmlInclude__Group_2__13927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__OriginXAssignment_2_1_in_rule__FxmlInclude__Group_2__1__Impl3954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__2__Impl_in_rule__FxmlInclude__Group_2__23984 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__3_in_rule__FxmlInclude__Group_2__23987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__OriginYAssignment_2_2_in_rule__FxmlInclude__Group_2__2__Impl4014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__Group_2__3__Impl_in_rule__FxmlInclude__Group_2__34044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FxmlInclude__OriginZAssignment_2_3_in_rule__FxmlInclude__Group_2__3__Impl4071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__0__Impl_in_rule__Assembly__Group__04109 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__1_in_rule__Assembly__Group__04112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Assembly__Group__0__Impl4140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__1__Impl_in_rule__Assembly__Group__14171 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__2_in_rule__Assembly__Group__14174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assembly__NameAssignment_1_in_rule__Assembly__Group__1__Impl4201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__2__Impl_in_rule__Assembly__Group__24231 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__3_in_rule__Assembly__Group__24234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Assembly__Group__2__Impl4262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__3__Impl_in_rule__Assembly__Group__34293 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__4_in_rule__Assembly__Group__34296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assembly__ItemsAssignment_3_in_rule__Assembly__Group__3__Impl4325 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Assembly__ItemsAssignment_3_in_rule__Assembly__Group__3__Impl4337 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Assembly__Group__4__Impl_in_rule__Assembly__Group__44370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Assembly__Group__4__Impl4398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__0__Impl_in_rule__RasterAssemblyItem__Group__04439 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__1_in_rule__RasterAssemblyItem__Group__04442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__ElementAssignment_0_in_rule__RasterAssemblyItem__Group__0__Impl4469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__1__Impl_in_rule__RasterAssemblyItem__Group__14499 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__2_in_rule__RasterAssemblyItem__Group__14502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__RasterAssemblyItem__Group__1__Impl4530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__2__Impl_in_rule__RasterAssemblyItem__Group__24561 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__3_in_rule__RasterAssemblyItem__Group__24564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__XUnitsAssignment_2_in_rule__RasterAssemblyItem__Group__2__Impl4591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__3__Impl_in_rule__RasterAssemblyItem__Group__34621 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__4_in_rule__RasterAssemblyItem__Group__34624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__YUnitsAssignment_3_in_rule__RasterAssemblyItem__Group__3__Impl4651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__4__Impl_in_rule__RasterAssemblyItem__Group__44681 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__5_in_rule__RasterAssemblyItem__Group__44684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__ZUnitsAssignment_4_in_rule__RasterAssemblyItem__Group__4__Impl4711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group__5__Impl_in_rule__RasterAssemblyItem__Group__54741 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group_5__0_in_rule__RasterAssemblyItem__Group__5__Impl4768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group_5__0__Impl_in_rule__RasterAssemblyItem__Group_5__04811 = new BitSet(new long[]{0x0000000000007000L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group_5__1_in_rule__RasterAssemblyItem__Group_5__04814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__RasterAssemblyItem__Group_5__0__Impl4842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__Group_5__1__Impl_in_rule__RasterAssemblyItem__Group_5__14873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__TransformAssignment_5_1_in_rule__RasterAssemblyItem__Group_5__1__Impl4900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__0__Impl_in_rule__MountedAssemblyItem__Group__04934 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__1_in_rule__MountedAssemblyItem__Group__04937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__ElementAssignment_0_in_rule__MountedAssemblyItem__Group__0__Impl4964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__1__Impl_in_rule__MountedAssemblyItem__Group__14994 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__2_in_rule__MountedAssemblyItem__Group__14997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__MountedAssemblyItem__Group__1__Impl5025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__2__Impl_in_rule__MountedAssemblyItem__Group__25056 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__3_in_rule__MountedAssemblyItem__Group__25059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__XUnitsAssignment_2_in_rule__MountedAssemblyItem__Group__2__Impl5086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__3__Impl_in_rule__MountedAssemblyItem__Group__35116 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__4_in_rule__MountedAssemblyItem__Group__35119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__YUnitsAssignment_3_in_rule__MountedAssemblyItem__Group__3__Impl5146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__4__Impl_in_rule__MountedAssemblyItem__Group__45176 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__5_in_rule__MountedAssemblyItem__Group__45179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__ZUnitsAssignment_4_in_rule__MountedAssemblyItem__Group__4__Impl5206 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group__5__Impl_in_rule__MountedAssemblyItem__Group__55236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__0_in_rule__MountedAssemblyItem__Group__5__Impl5263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__0__Impl_in_rule__MountedAssemblyItem__Group_5__05306 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__1_in_rule__MountedAssemblyItem__Group_5__05309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__MountedAssemblyItem__Group_5__0__Impl5337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__1__Impl_in_rule__MountedAssemblyItem__Group_5__15368 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__2_in_rule__MountedAssemblyItem__Group_5__15371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__RotateXAssignment_5_1_in_rule__MountedAssemblyItem__Group_5__1__Impl5398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__2__Impl_in_rule__MountedAssemblyItem__Group_5__25428 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__3_in_rule__MountedAssemblyItem__Group_5__25431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__RotateYAssignment_5_2_in_rule__MountedAssemblyItem__Group_5__2__Impl5458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__Group_5__3__Impl_in_rule__MountedAssemblyItem__Group_5__35488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MountedAssemblyItem__RotateZAssignment_5_3_in_rule__MountedAssemblyItem__Group_5__3__Impl5515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleItemRepository_in_rule__Model__RepoAssignment_05558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssembly_in_rule__Model__AssemblyAssignment_15589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValidID_in_rule__ItemRepository__NameAssignment_05620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRepostoryItem_in_rule__ItemRepository__ElementListAssignment_25651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValidID_in_rule__MountedPart__NameAssignment_15682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColor_in_rule__MountedPart__FillAssignment_25713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSource_in_rule__MountedPart__SourceAssignment_35744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Color__RAssignment_15775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Color__GAssignment_25806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Color__BAssignment_35837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__XUnit__UnitsAssignment5868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__YUnit__UnitsAssignment5899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ZUnit__UnitsAssignment5930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValidID_in_rule__Brick__NameAssignment_15961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXUnit_in_rule__Brick__XUnitsAssignment_35992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleYUnit_in_rule__Brick__YUnitsAssignment_46023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleZUnit_in_rule__Brick__ZUnitsAssignment_56054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColor_in_rule__Brick__FillAssignment_66085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSource_in_rule__Brick__SourceAssignment_76116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Generated__TypeAssignment_2_06152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__WidthAssignment_2_16191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__HeightAssignment_2_26222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__DepthAssignment_2_36253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__OriginXAssignment_2_4_16284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__OriginYAssignment_2_4_26315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Generated__OriginZAssignment_2_4_36346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__FxmlInclude__Source3dAssignment_16377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginXAssignment_2_16408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginYAssignment_2_26439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__FxmlInclude__OriginZAssignment_2_36470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValidID_in_rule__Assembly__NameAssignment_16501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssemblyItem_in_rule__Assembly__ItemsAssignment_36532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__RasterAssemblyItem__ElementAssignment_06567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXUnit_in_rule__RasterAssemblyItem__XUnitsAssignment_26602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleYUnit_in_rule__RasterAssemblyItem__YUnitsAssignment_36633 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleZUnit_in_rule__RasterAssemblyItem__ZUnitsAssignment_46664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RasterAssemblyItem__TransformAlternatives_5_1_0_in_rule__RasterAssemblyItem__TransformAssignment_5_16695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__MountedAssemblyItem__ElementAssignment_06732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__XUnitsAssignment_26767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__YUnitsAssignment_36798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__ZUnitsAssignment_46829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateXAssignment_5_16860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateYAssignment_5_26891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MountedAssemblyItem__RotateZAssignment_5_36922 = new BitSet(new long[]{0x0000000000000002L});
 
 }
