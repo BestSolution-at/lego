@@ -24,13 +24,10 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 import org.eclipse.xtext.util.concurrent.IUnitOfWork;
 
-import com.google.inject.Injector;
-
-import at.bestsolution.lego.generator.Lego2dFXML;
-import at.bestsolution.lego.generator.Lego3dFXML;
 import at.bestsolution.lego.lego.Model;
-import at.bestsolution.lego.ui.LegoUiModule;
 import at.bestsolution.lego.ui.internal.LegoActivator;
+
+import com.google.inject.Injector;
 
 public class FXMLProviderAdapter implements IFXMLProviderAdapter {
 	private XtextEditor editor;

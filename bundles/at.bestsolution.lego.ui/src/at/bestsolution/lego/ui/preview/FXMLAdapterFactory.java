@@ -19,10 +19,8 @@ public class FXMLAdapterFactory implements IAdapterFactory {
 
 	@Override
 	public Object getAdapter(Object adaptableObject, Class adapterType) {
-		System.err.println("THE ADAPTER: " + adaptableObject + "; " + adapterType);
 		if((adapterType == IFXMLProviderAdapter.class || adapterType == IFXPreviewAdapter.class) && adaptableObject instanceof XtextEditor ) {
 			XtextEditor editor = (XtextEditor) adaptableObject;
-			System.err.println("=====>" + editor.getLanguageName());
 			if( "at.bestsolution.lego.Lego".equals(editor.getLanguageName()) ) {
 				return new FXMLProviderAdapter(editor);
 			}

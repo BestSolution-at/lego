@@ -73,7 +73,11 @@ class Lego3dFXML implements IGenerator {
 	<Group>
 		«FOR x : a.items»
 			<Group>
-				«createBrick(x.element as Brick)»
+				«IF x.element instanceof Brick»
+					«createBrick(x.element as Brick)»
+				«ELSEIF x.element instanceof Assembly»
+					«generatedAssembly(x.element as Assembly)»
+				«ENDIF»
 				<transforms>
 					<Translate x="«x.XUnits.units * P»" y="«x.YUnits.units * H»" z="«x.ZUnits.units * P»" />
 					«IF x.transform == "rotate180"»

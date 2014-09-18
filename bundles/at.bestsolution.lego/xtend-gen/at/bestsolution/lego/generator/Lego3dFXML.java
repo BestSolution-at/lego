@@ -146,12 +146,27 @@ public class Lego3dFXML implements IGenerator {
         _builder.append("\t");
         _builder.append("<Group>");
         _builder.newLine();
-        _builder.append("\t");
-        _builder.append("\t");
-        LegoElement _element = x.getElement();
-        CharSequence _createBrick = this.createBrick(((Brick) _element));
-        _builder.append(_createBrick, "\t\t");
-        _builder.newLineIfNotEmpty();
+        {
+          LegoElement _element = x.getElement();
+          if ((_element instanceof Brick)) {
+            _builder.append("\t");
+            _builder.append("\t");
+            LegoElement _element_1 = x.getElement();
+            CharSequence _createBrick = this.createBrick(((Brick) _element_1));
+            _builder.append(_createBrick, "\t\t");
+            _builder.newLineIfNotEmpty();
+          } else {
+            LegoElement _element_2 = x.getElement();
+            if ((_element_2 instanceof Assembly)) {
+              _builder.append("\t");
+              _builder.append("\t");
+              LegoElement _element_3 = x.getElement();
+              Object _generatedAssembly = this.generatedAssembly(((Assembly) _element_3));
+              _builder.append(_generatedAssembly, "\t\t");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+        }
         _builder.append("\t");
         _builder.append("\t");
         _builder.append("<transforms>");

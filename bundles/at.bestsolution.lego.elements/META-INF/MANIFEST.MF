@@ -4,5 +4,3 @@ Bundle-Name: Elements
 Bundle-SymbolicName: at.bestsolution.lego.elements
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: 2d,
- 3d
