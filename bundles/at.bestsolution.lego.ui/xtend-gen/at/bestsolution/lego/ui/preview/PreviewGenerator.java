@@ -1,6 +1,5 @@
 package at.bestsolution.lego.ui.preview;
 
-import at.bestsolution.lego.generator.Lego2dFXML;
 import at.bestsolution.lego.generator.Lego3dFXML;
 import at.bestsolution.lego.lego.Model;
 import com.google.inject.Inject;
@@ -10,9 +9,6 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 public class PreviewGenerator {
   @Inject
   private Lego3dFXML lego3d;
-  
-  @Inject
-  private Lego2dFXML lego2;
   
   public CharSequence generatePreview(final Model model) {
     StringConcatenation _builder = new StringConcatenation();

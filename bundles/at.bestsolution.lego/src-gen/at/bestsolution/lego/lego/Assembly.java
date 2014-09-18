@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Assembly extends LegoElement
+public interface Assembly extends LegoElement, RasterItem
 {
   /**
    * Returns the value of the '<em><b>Items</b></em>' containment reference list.

@@ -13,7 +13,6 @@ package at.bestsolution.lego.generator
 import at.bestsolution.lego.lego.Assembly
 import at.bestsolution.lego.lego.Brick
 import at.bestsolution.lego.lego.FxmlInclude
-import at.bestsolution.lego.lego.Item
 import at.bestsolution.lego.lego.ItemRepository
 import at.bestsolution.lego.lego.Model
 import com.google.inject.Inject
@@ -21,6 +20,9 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import java.io.FileReader
+import at.bestsolution.lego.lego.RepostoryItem
+import at.bestsolution.lego.lego.RasterAssemblyItem
+import at.bestsolution.lego.lego.RasterItem
 
 class Lego3dFXML implements IGenerator {
 	@Inject
@@ -55,7 +57,7 @@ class Lego3dFXML implements IGenerator {
 		return idx % 4
 	} 
 	
-	def toColor(Item item) '''
+	def toColor(RepostoryItem item) '''
 	rgb(«item.fill.r», «item.fill.g», «item.fill.b»)
 	'''
 		
@@ -78,6 +80,7 @@ class Lego3dFXML implements IGenerator {
 				«ELSEIF x.element instanceof Assembly»
 					«generatedAssembly(x.element as Assembly)»
 				«ENDIF»
+				«IF x instanceof RasterAssemblyItem»
 				<transforms>
 					<Translate x="«x.XUnits.units * P»" y="«x.YUnits.units * H»" z="«x.ZUnits.units * P»" />
 					«IF x.transform == "rotate180"»
@@ -95,6 +98,7 @@ class Lego3dFXML implements IGenerator {
 					«ENDIF»
 					
 				</transforms>
+				«ENDIF»
 			</Group>
 			
 		«ENDFOR»
@@ -311,7 +315,7 @@ class Lego3dFXML implements IGenerator {
 	</Group>
 	'''
 	
-	def generateFXML(Item item) '''
+	def generateFXML(RepostoryItem item) '''
 	<?xml version="1.0" encoding="UTF-8"?>
 	<?import javafx.scene.shape.*?>
 	<?import javafx.scene.layout.*?>
@@ -323,6 +327,7 @@ class Lego3dFXML implements IGenerator {
 	<Group xmlns:fx="http://javafx.com/fxml/1">
 	«IF item instanceof Brick»
 		«createBrick(item as Brick)»
+«««	«ELSEIF »
 	«ENDIF»
 	</Group>
 	'''

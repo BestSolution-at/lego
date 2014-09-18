@@ -90,9 +90,19 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
         return createLegoElementAdapter();
       }
       @Override
-      public Adapter caseItem(Item object)
+      public Adapter caseRasterItem(RasterItem object)
       {
-        return createItemAdapter();
+        return createRasterItemAdapter();
+      }
+      @Override
+      public Adapter caseMountedPart(MountedPart object)
+      {
+        return createMountedPartAdapter();
+      }
+      @Override
+      public Adapter caseRepostoryItem(RepostoryItem object)
+      {
+        return createRepostoryItemAdapter();
       }
       @Override
       public Adapter caseColor(Color object)
@@ -125,14 +135,14 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
         return createSourceAdapter();
       }
       @Override
+      public Adapter caseGenerated(Generated object)
+      {
+        return createGeneratedAdapter();
+      }
+      @Override
       public Adapter caseFxmlInclude(FxmlInclude object)
       {
         return createFxmlIncludeAdapter();
-      }
-      @Override
-      public Adapter caseDoor(Door object)
-      {
-        return createDoorAdapter();
       }
       @Override
       public Adapter caseAssembly(Assembly object)
@@ -143,6 +153,16 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAssemblyItem(AssemblyItem object)
       {
         return createAssemblyItemAdapter();
+      }
+      @Override
+      public Adapter caseRasterAssemblyItem(RasterAssemblyItem object)
+      {
+        return createRasterAssemblyItemAdapter();
+      }
+      @Override
+      public Adapter caseMountedAssemblyItem(MountedAssemblyItem object)
+      {
+        return createMountedAssemblyItemAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -212,16 +232,46 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.Item <em>Item</em>}'.
+   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.RasterItem <em>Raster Item</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see at.bestsolution.lego.lego.Item
+   * @see at.bestsolution.lego.lego.RasterItem
    * @generated
    */
-  public Adapter createItemAdapter()
+  public Adapter createRasterItemAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.MountedPart <em>Mounted Part</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.bestsolution.lego.lego.MountedPart
+   * @generated
+   */
+  public Adapter createMountedPartAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.RepostoryItem <em>Repostory Item</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.bestsolution.lego.lego.RepostoryItem
+   * @generated
+   */
+  public Adapter createRepostoryItemAdapter()
   {
     return null;
   }
@@ -317,6 +367,21 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.Generated <em>Generated</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.bestsolution.lego.lego.Generated
+   * @generated
+   */
+  public Adapter createGeneratedAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.FxmlInclude <em>Fxml Include</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -327,21 +392,6 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFxmlIncludeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.Door <em>Door</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see at.bestsolution.lego.lego.Door
-   * @generated
-   */
-  public Adapter createDoorAdapter()
   {
     return null;
   }
@@ -372,6 +422,36 @@ public class LegoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAssemblyItemAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.RasterAssemblyItem <em>Raster Assembly Item</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.bestsolution.lego.lego.RasterAssemblyItem
+   * @generated
+   */
+  public Adapter createRasterAssemblyItemAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.bestsolution.lego.lego.MountedAssemblyItem <em>Mounted Assembly Item</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem
+   * @generated
+   */
+  public Adapter createMountedAssemblyItemAdapter()
   {
     return null;
   }

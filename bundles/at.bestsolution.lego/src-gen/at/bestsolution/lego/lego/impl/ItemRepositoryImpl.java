@@ -2,9 +2,9 @@
  */
 package at.bestsolution.lego.lego.impl;
 
-import at.bestsolution.lego.lego.Item;
 import at.bestsolution.lego.lego.ItemRepository;
 import at.bestsolution.lego.lego.LegoPackage;
+import at.bestsolution.lego.lego.RepostoryItem;
 
 import java.util.Collection;
 
@@ -66,7 +66,7 @@ public class ItemRepositoryImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected EList<Item> elementList;
+  protected EList<RepostoryItem> elementList;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,11 +117,11 @@ public class ItemRepositoryImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Item> getElementList()
+  public EList<RepostoryItem> getElementList()
   {
     if (elementList == null)
     {
-      elementList = new EObjectContainmentEList<Item>(Item.class, this, LegoPackage.ITEM_REPOSITORY__ELEMENT_LIST);
+      elementList = new EObjectContainmentEList<RepostoryItem>(RepostoryItem.class, this, LegoPackage.ITEM_REPOSITORY__ELEMENT_LIST);
     }
     return elementList;
   }
@@ -176,7 +176,7 @@ public class ItemRepositoryImpl extends MinimalEObjectImpl.Container implements 
         return;
       case LegoPackage.ITEM_REPOSITORY__ELEMENT_LIST:
         getElementList().clear();
-        getElementList().addAll((Collection<? extends Item>)newValue);
+        getElementList().addAll((Collection<? extends RepostoryItem>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

@@ -53,7 +53,7 @@ public interface ItemRepository extends EObject
 
   /**
    * Returns the value of the '<em><b>Element List</b></em>' containment reference list.
-   * The list contents are of type {@link at.bestsolution.lego.lego.Item}.
+   * The list contents are of type {@link at.bestsolution.lego.lego.RepostoryItem}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Element List</em>' containment reference list isn't clear,
@@ -65,6 +65,6 @@ public interface ItemRepository extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Item> getElementList();
+  EList<RepostoryItem> getElementList();
 
 } // ItemRepository

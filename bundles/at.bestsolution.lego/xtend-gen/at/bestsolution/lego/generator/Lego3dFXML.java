@@ -16,10 +16,11 @@ import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
 import at.bestsolution.lego.lego.FxmlInclude;
-import at.bestsolution.lego.lego.Item;
 import at.bestsolution.lego.lego.ItemRepository;
-import at.bestsolution.lego.lego.LegoElement;
 import at.bestsolution.lego.lego.Model;
+import at.bestsolution.lego.lego.RasterAssemblyItem;
+import at.bestsolution.lego.lego.RasterItem;
+import at.bestsolution.lego.lego.RepostoryItem;
 import at.bestsolution.lego.lego.Source;
 import at.bestsolution.lego.lego.XUnit;
 import at.bestsolution.lego.lego.YUnit;
@@ -75,9 +76,9 @@ public class Lego3dFXML implements IGenerator {
       fsa.generateFile(_plus_1, _generateFXML);
     } else {
       ItemRepository _repo = m.getRepo();
-      EList<Item> _elementList = _repo.getElementList();
-      final Consumer<Item> _function = new Consumer<Item>() {
-        public void accept(final Item it) {
+      EList<RepostoryItem> _elementList = _repo.getElementList();
+      final Consumer<RepostoryItem> _function = new Consumer<RepostoryItem>() {
+        public void accept(final RepostoryItem it) {
           String _name = it.getName();
           String _plus = ("3d/" + _name);
           String _plus_1 = (_plus + ".fxml");
@@ -97,7 +98,7 @@ public class Lego3dFXML implements IGenerator {
     return (idx % 4);
   }
   
-  public CharSequence toColor(final Item item) {
+  public CharSequence toColor(final RepostoryItem item) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("rgb(");
     Color _fill = item.getFill();
@@ -147,111 +148,126 @@ public class Lego3dFXML implements IGenerator {
         _builder.append("<Group>");
         _builder.newLine();
         {
-          LegoElement _element = x.getElement();
+          RasterItem _element = x.getElement();
           if ((_element instanceof Brick)) {
             _builder.append("\t");
             _builder.append("\t");
-            LegoElement _element_1 = x.getElement();
+            RasterItem _element_1 = x.getElement();
             CharSequence _createBrick = this.createBrick(((Brick) _element_1));
             _builder.append(_createBrick, "\t\t");
             _builder.newLineIfNotEmpty();
           } else {
-            LegoElement _element_2 = x.getElement();
+            RasterItem _element_2 = x.getElement();
             if ((_element_2 instanceof Assembly)) {
               _builder.append("\t");
               _builder.append("\t");
-              LegoElement _element_3 = x.getElement();
+              RasterItem _element_3 = x.getElement();
               Object _generatedAssembly = this.generatedAssembly(((Assembly) _element_3));
               _builder.append(_generatedAssembly, "\t\t");
               _builder.newLineIfNotEmpty();
             }
           }
         }
-        _builder.append("\t");
-        _builder.append("\t");
-        _builder.append("<transforms>");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("\t\t");
-        _builder.append("<Translate x=\"");
-        XUnit _xUnits = x.getXUnits();
-        int _units = _xUnits.getUnits();
-        int _multiply = (_units * this.P);
-        _builder.append(_multiply, "\t\t\t");
-        _builder.append("\" y=\"");
-        YUnit _yUnits = x.getYUnits();
-        int _units_1 = _yUnits.getUnits();
-        double _multiply_1 = (_units_1 * this.H);
-        _builder.append(_multiply_1, "\t\t\t");
-        _builder.append("\" z=\"");
-        ZUnit _zUnits = x.getZUnits();
-        int _units_2 = _zUnits.getUnits();
-        int _multiply_2 = (_units_2 * this.P);
-        _builder.append(_multiply_2, "\t\t\t");
-        _builder.append("\" />");
-        _builder.newLineIfNotEmpty();
         {
-          String _transform = x.getTransform();
-          boolean _equals = Objects.equal(_transform, "rotate180");
-          if (_equals) {
+          if ((x instanceof RasterAssemblyItem)) {
             _builder.append("\t");
-            _builder.append("\t\t");
-            _builder.append("<Rotate angle=\"180\" >");
+            _builder.append("\t");
+            _builder.append("<transforms>");
             _builder.newLine();
             _builder.append("\t");
-            _builder.append("\t\t");
-            _builder.append(" ");
-            _builder.append("<axis><Point3D x=\"0\" y=\"1\" z=\"0\"/></axis>");
-            _builder.newLine();
             _builder.append("\t");
-            _builder.append("\t\t");
-            _builder.append("</Rotate>");
-            _builder.newLine();
-          } else {
-            String _transform_1 = x.getTransform();
-            boolean _equals_1 = Objects.equal(_transform_1, "rotate90");
-            if (_equals_1) {
-              _builder.append("\t");
-              _builder.append("\t\t");
-              _builder.append("<Rotate angle=\"90\" >");
-              _builder.newLine();
-              _builder.append("\t");
-              _builder.append("\t\t");
-              _builder.append(" ");
-              _builder.append("<axis><Point3D x=\"0\" y=\"1\" z=\"0\"/></axis>");
-              _builder.newLine();
-              _builder.append("\t");
-              _builder.append("\t\t");
-              _builder.append("</Rotate>");
-              _builder.newLine();
-            } else {
-              String _transform_2 = x.getTransform();
-              boolean _equals_2 = Objects.equal(_transform_2, "rotate270");
-              if (_equals_2) {
+            _builder.append("\t");
+            _builder.append("<Translate x=\"");
+            XUnit _xUnits = ((RasterAssemblyItem)x).getXUnits();
+            int _units = _xUnits.getUnits();
+            int _multiply = (_units * this.P);
+            _builder.append(_multiply, "\t\t\t");
+            _builder.append("\" y=\"");
+            YUnit _yUnits = ((RasterAssemblyItem)x).getYUnits();
+            int _units_1 = _yUnits.getUnits();
+            double _multiply_1 = (_units_1 * this.H);
+            _builder.append(_multiply_1, "\t\t\t");
+            _builder.append("\" z=\"");
+            ZUnit _zUnits = ((RasterAssemblyItem)x).getZUnits();
+            int _units_2 = _zUnits.getUnits();
+            int _multiply_2 = (_units_2 * this.P);
+            _builder.append(_multiply_2, "\t\t\t");
+            _builder.append("\" />");
+            _builder.newLineIfNotEmpty();
+            {
+              String _transform = ((RasterAssemblyItem)x).getTransform();
+              boolean _equals = Objects.equal(_transform, "rotate180");
+              if (_equals) {
                 _builder.append("\t");
-                _builder.append("\t\t");
-                _builder.append("<Rotate angle=\"270\" >");
+                _builder.append("\t");
+                _builder.append("\t");
+                _builder.append("<Rotate angle=\"180\" >");
                 _builder.newLine();
                 _builder.append("\t");
-                _builder.append("\t\t");
+                _builder.append("\t");
+                _builder.append("\t");
                 _builder.append(" ");
                 _builder.append("<axis><Point3D x=\"0\" y=\"1\" z=\"0\"/></axis>");
                 _builder.newLine();
                 _builder.append("\t");
-                _builder.append("\t\t");
+                _builder.append("\t");
+                _builder.append("\t");
                 _builder.append("</Rotate>");
                 _builder.newLine();
+              } else {
+                String _transform_1 = ((RasterAssemblyItem)x).getTransform();
+                boolean _equals_1 = Objects.equal(_transform_1, "rotate90");
+                if (_equals_1) {
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("<Rotate angle=\"90\" >");
+                  _builder.newLine();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append(" ");
+                  _builder.append("<axis><Point3D x=\"0\" y=\"1\" z=\"0\"/></axis>");
+                  _builder.newLine();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("</Rotate>");
+                  _builder.newLine();
+                } else {
+                  String _transform_2 = ((RasterAssemblyItem)x).getTransform();
+                  boolean _equals_2 = Objects.equal(_transform_2, "rotate270");
+                  if (_equals_2) {
+                    _builder.append("\t");
+                    _builder.append("\t");
+                    _builder.append("\t");
+                    _builder.append("<Rotate angle=\"270\" >");
+                    _builder.newLine();
+                    _builder.append("\t");
+                    _builder.append("\t");
+                    _builder.append("\t");
+                    _builder.append(" ");
+                    _builder.append("<axis><Point3D x=\"0\" y=\"1\" z=\"0\"/></axis>");
+                    _builder.newLine();
+                    _builder.append("\t");
+                    _builder.append("\t");
+                    _builder.append("\t");
+                    _builder.append("</Rotate>");
+                    _builder.newLine();
+                  }
+                }
               }
             }
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("</transforms>");
+            _builder.newLine();
           }
         }
-        _builder.append("\t");
-        _builder.append("\t\t");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("\t");
-        _builder.append("</transforms>");
-        _builder.newLine();
         _builder.append("\t");
         _builder.append("</Group>");
         _builder.newLine();
@@ -404,8 +420,8 @@ public class Lego3dFXML implements IGenerator {
     int index = 0;
     _builder.newLineIfNotEmpty();
     {
-      EList<Item> _elementList = m.getElementList();
-      for(final Item item : _elementList) {
+      EList<RepostoryItem> _elementList = m.getElementList();
+      for(final RepostoryItem item : _elementList) {
         {
           if ((item instanceof Brick)) {
             final Brick brick = ((Brick) item);
@@ -897,7 +913,7 @@ public class Lego3dFXML implements IGenerator {
     return _builder;
   }
   
-  public CharSequence generateFXML(final Item item) {
+  public CharSequence generateFXML(final RepostoryItem item) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
     _builder.newLine();

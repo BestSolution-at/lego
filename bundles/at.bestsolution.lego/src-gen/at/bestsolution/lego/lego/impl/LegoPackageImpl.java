@@ -6,14 +6,18 @@ import at.bestsolution.lego.lego.Assembly;
 import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
-import at.bestsolution.lego.lego.Door;
 import at.bestsolution.lego.lego.FxmlInclude;
-import at.bestsolution.lego.lego.Item;
+import at.bestsolution.lego.lego.Generated;
 import at.bestsolution.lego.lego.ItemRepository;
 import at.bestsolution.lego.lego.LegoElement;
 import at.bestsolution.lego.lego.LegoFactory;
 import at.bestsolution.lego.lego.LegoPackage;
 import at.bestsolution.lego.lego.Model;
+import at.bestsolution.lego.lego.MountedAssemblyItem;
+import at.bestsolution.lego.lego.MountedPart;
+import at.bestsolution.lego.lego.RasterAssemblyItem;
+import at.bestsolution.lego.lego.RasterItem;
+import at.bestsolution.lego.lego.RepostoryItem;
 import at.bestsolution.lego.lego.Source;
 import at.bestsolution.lego.lego.XUnit;
 import at.bestsolution.lego.lego.YUnit;
@@ -60,7 +64,21 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass itemEClass = null;
+  private EClass rasterItemEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mountedPartEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass repostoryItemEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -109,14 +127,14 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass fxmlIncludeEClass = null;
+  private EClass generatedEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass doorEClass = null;
+  private EClass fxmlIncludeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -131,6 +149,20 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * @generated
    */
   private EClass assemblyItemEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rasterAssemblyItemEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mountedAssemblyItemEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -280,9 +312,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getItem()
+  public EClass getRasterItem()
   {
-    return itemEClass;
+    return rasterItemEClass;
   }
 
   /**
@@ -290,9 +322,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getItem_XUnits()
+  public EClass getMountedPart()
   {
-    return (EReference)itemEClass.getEStructuralFeatures().get(0);
+    return mountedPartEClass;
   }
 
   /**
@@ -300,9 +332,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getItem_YUnits()
+  public EClass getRepostoryItem()
   {
-    return (EReference)itemEClass.getEStructuralFeatures().get(1);
+    return repostoryItemEClass;
   }
 
   /**
@@ -310,9 +342,19 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getItem_Fill()
+  public EReference getRepostoryItem_Fill()
   {
-    return (EReference)itemEClass.getEStructuralFeatures().get(2);
+    return (EReference)repostoryItemEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRepostoryItem_Source()
+  {
+    return (EReference)repostoryItemEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -430,7 +472,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getBrick_ZUnits()
+  public EReference getBrick_XUnits()
   {
     return (EReference)brickEClass.getEStructuralFeatures().get(0);
   }
@@ -440,9 +482,19 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getBrick_Source()
+  public EReference getBrick_YUnits()
   {
     return (EReference)brickEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBrick_ZUnits()
+  {
+    return (EReference)brickEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -460,6 +512,76 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSource_OriginX()
+  {
+    return (EAttribute)sourceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSource_OriginY()
+  {
+    return (EAttribute)sourceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSource_OriginZ()
+  {
+    return (EAttribute)sourceEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGenerated()
+  {
+    return generatedEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGenerated_Width()
+  {
+    return (EAttribute)generatedEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGenerated_Height()
+  {
+    return (EAttribute)generatedEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGenerated_Depth()
+  {
+    return (EAttribute)generatedEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getFxmlInclude()
   {
     return fxmlIncludeEClass;
@@ -470,59 +592,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFxmlInclude_Source2d()
-  {
-    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getFxmlInclude_Source3d()
   {
-    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFxmlInclude_OriginX()
-  {
-    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFxmlInclude_OriginY()
-  {
-    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFxmlInclude_OriginZ()
-  {
-    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getDoor()
-  {
-    return doorEClass;
+    return (EAttribute)fxmlIncludeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -570,9 +642,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAssemblyItem_XUnits()
+  public EClass getRasterAssemblyItem()
   {
-    return (EReference)assemblyItemEClass.getEStructuralFeatures().get(1);
+    return rasterAssemblyItemEClass;
   }
 
   /**
@@ -580,9 +652,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAssemblyItem_YUnits()
+  public EReference getRasterAssemblyItem_XUnits()
   {
-    return (EReference)assemblyItemEClass.getEStructuralFeatures().get(2);
+    return (EReference)rasterAssemblyItemEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -590,9 +662,9 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAssemblyItem_ZUnits()
+  public EReference getRasterAssemblyItem_YUnits()
   {
-    return (EReference)assemblyItemEClass.getEStructuralFeatures().get(3);
+    return (EReference)rasterAssemblyItemEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -600,9 +672,89 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAssemblyItem_Transform()
+  public EReference getRasterAssemblyItem_ZUnits()
   {
-    return (EAttribute)assemblyItemEClass.getEStructuralFeatures().get(4);
+    return (EReference)rasterAssemblyItemEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRasterAssemblyItem_Transform()
+  {
+    return (EAttribute)rasterAssemblyItemEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMountedAssemblyItem()
+  {
+    return mountedAssemblyItemEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMountedAssemblyItem_XUnits()
+  {
+    return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMountedAssemblyItem_YUnits()
+  {
+    return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMountedAssemblyItem_ZUnits()
+  {
+    return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMountedAssemblyItem_RotateX()
+  {
+    return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMountedAssemblyItem_RotateY()
+  {
+    return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMountedAssemblyItem_RotateZ()
+  {
+    return (EAttribute)mountedAssemblyItemEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -646,10 +798,13 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     legoElementEClass = createEClass(LEGO_ELEMENT);
     createEAttribute(legoElementEClass, LEGO_ELEMENT__NAME);
 
-    itemEClass = createEClass(ITEM);
-    createEReference(itemEClass, ITEM__XUNITS);
-    createEReference(itemEClass, ITEM__YUNITS);
-    createEReference(itemEClass, ITEM__FILL);
+    rasterItemEClass = createEClass(RASTER_ITEM);
+
+    mountedPartEClass = createEClass(MOUNTED_PART);
+
+    repostoryItemEClass = createEClass(REPOSTORY_ITEM);
+    createEReference(repostoryItemEClass, REPOSTORY_ITEM__FILL);
+    createEReference(repostoryItemEClass, REPOSTORY_ITEM__SOURCE);
 
     colorEClass = createEClass(COLOR);
     createEAttribute(colorEClass, COLOR__R);
@@ -666,29 +821,42 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     createEAttribute(zUnitEClass, ZUNIT__UNITS);
 
     brickEClass = createEClass(BRICK);
+    createEReference(brickEClass, BRICK__XUNITS);
+    createEReference(brickEClass, BRICK__YUNITS);
     createEReference(brickEClass, BRICK__ZUNITS);
-    createEReference(brickEClass, BRICK__SOURCE);
 
     sourceEClass = createEClass(SOURCE);
+    createEAttribute(sourceEClass, SOURCE__ORIGIN_X);
+    createEAttribute(sourceEClass, SOURCE__ORIGIN_Y);
+    createEAttribute(sourceEClass, SOURCE__ORIGIN_Z);
+
+    generatedEClass = createEClass(GENERATED);
+    createEAttribute(generatedEClass, GENERATED__WIDTH);
+    createEAttribute(generatedEClass, GENERATED__HEIGHT);
+    createEAttribute(generatedEClass, GENERATED__DEPTH);
 
     fxmlIncludeEClass = createEClass(FXML_INCLUDE);
-    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__SOURCE2D);
     createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__SOURCE3D);
-    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_X);
-    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_Y);
-    createEAttribute(fxmlIncludeEClass, FXML_INCLUDE__ORIGIN_Z);
-
-    doorEClass = createEClass(DOOR);
 
     assemblyEClass = createEClass(ASSEMBLY);
     createEReference(assemblyEClass, ASSEMBLY__ITEMS);
 
     assemblyItemEClass = createEClass(ASSEMBLY_ITEM);
     createEReference(assemblyItemEClass, ASSEMBLY_ITEM__ELEMENT);
-    createEReference(assemblyItemEClass, ASSEMBLY_ITEM__XUNITS);
-    createEReference(assemblyItemEClass, ASSEMBLY_ITEM__YUNITS);
-    createEReference(assemblyItemEClass, ASSEMBLY_ITEM__ZUNITS);
-    createEAttribute(assemblyItemEClass, ASSEMBLY_ITEM__TRANSFORM);
+
+    rasterAssemblyItemEClass = createEClass(RASTER_ASSEMBLY_ITEM);
+    createEReference(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__XUNITS);
+    createEReference(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__YUNITS);
+    createEReference(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__ZUNITS);
+    createEAttribute(rasterAssemblyItemEClass, RASTER_ASSEMBLY_ITEM__TRANSFORM);
+
+    mountedAssemblyItemEClass = createEClass(MOUNTED_ASSEMBLY_ITEM);
+    createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__XUNITS);
+    createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__YUNITS);
+    createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ZUNITS);
+    createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ROTATE_X);
+    createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ROTATE_Y);
+    createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ROTATE_Z);
   }
 
   /**
@@ -720,11 +888,16 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    itemEClass.getESuperTypes().add(this.getLegoElement());
-    brickEClass.getESuperTypes().add(this.getItem());
+    mountedPartEClass.getESuperTypes().add(this.getRepostoryItem());
+    repostoryItemEClass.getESuperTypes().add(this.getLegoElement());
+    brickEClass.getESuperTypes().add(this.getRasterItem());
+    brickEClass.getESuperTypes().add(this.getRepostoryItem());
+    generatedEClass.getESuperTypes().add(this.getSource());
     fxmlIncludeEClass.getESuperTypes().add(this.getSource());
-    doorEClass.getESuperTypes().add(this.getItem());
     assemblyEClass.getESuperTypes().add(this.getLegoElement());
+    assemblyEClass.getESuperTypes().add(this.getRasterItem());
+    rasterAssemblyItemEClass.getESuperTypes().add(this.getAssemblyItem());
+    mountedAssemblyItemEClass.getESuperTypes().add(this.getAssemblyItem());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -733,15 +906,18 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
 
     initEClass(itemRepositoryEClass, ItemRepository.class, "ItemRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getItemRepository_Name(), ecorePackage.getEString(), "name", null, 0, 1, ItemRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getItemRepository_ElementList(), this.getItem(), null, "elementList", null, 0, -1, ItemRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getItemRepository_ElementList(), this.getRepostoryItem(), null, "elementList", null, 0, -1, ItemRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(legoElementEClass, LegoElement.class, "LegoElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLegoElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, LegoElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getItem_XUnits(), this.getXUnit(), null, "xUnits", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getItem_YUnits(), this.getYUnit(), null, "yUnits", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getItem_Fill(), this.getColor(), null, "fill", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(rasterItemEClass, RasterItem.class, "RasterItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(mountedPartEClass, MountedPart.class, "MountedPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(repostoryItemEClass, RepostoryItem.class, "RepostoryItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRepostoryItem_Fill(), this.getColor(), null, "fill", null, 0, 1, RepostoryItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRepostoryItem_Source(), this.getSource(), null, "source", null, 0, 1, RepostoryItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getColor_R(), ecorePackage.getEInt(), "r", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -758,29 +934,42 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     initEAttribute(getZUnit_Units(), ecorePackage.getEInt(), "units", null, 0, 1, ZUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(brickEClass, Brick.class, "Brick", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getBrick_XUnits(), this.getXUnit(), null, "xUnits", null, 0, 1, Brick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBrick_YUnits(), this.getYUnit(), null, "yUnits", null, 0, 1, Brick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBrick_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, Brick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBrick_Source(), this.getSource(), null, "source", null, 0, 1, Brick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sourceEClass, Source.class, "Source", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSource_OriginX(), ecorePackage.getEFloat(), "originX", null, 0, 1, Source.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSource_OriginY(), ecorePackage.getEFloat(), "originY", null, 0, 1, Source.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSource_OriginZ(), ecorePackage.getEFloat(), "originZ", null, 0, 1, Source.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(generatedEClass, Generated.class, "Generated", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGenerated_Width(), ecorePackage.getEFloat(), "width", null, 0, 1, Generated.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGenerated_Height(), ecorePackage.getEFloat(), "height", null, 0, 1, Generated.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGenerated_Depth(), ecorePackage.getEFloat(), "depth", null, 0, 1, Generated.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fxmlIncludeEClass, FxmlInclude.class, "FxmlInclude", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFxmlInclude_Source2d(), ecorePackage.getEString(), "source2d", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFxmlInclude_Source3d(), ecorePackage.getEString(), "source3d", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFxmlInclude_OriginX(), ecorePackage.getEFloat(), "originX", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFxmlInclude_OriginY(), ecorePackage.getEFloat(), "originY", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFxmlInclude_OriginZ(), ecorePackage.getEFloat(), "originZ", null, 0, 1, FxmlInclude.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(doorEClass, Door.class, "Door", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(assemblyEClass, Assembly.class, "Assembly", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAssembly_Items(), this.getAssemblyItem(), null, "items", null, 0, -1, Assembly.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(assemblyItemEClass, AssemblyItem.class, "AssemblyItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAssemblyItem_Element(), this.getLegoElement(), null, "element", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAssemblyItem_XUnits(), this.getXUnit(), null, "xUnits", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAssemblyItem_YUnits(), this.getYUnit(), null, "yUnits", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAssemblyItem_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAssemblyItem_Transform(), ecorePackage.getEString(), "transform", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAssemblyItem_Element(), this.getRasterItem(), null, "element", null, 0, 1, AssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rasterAssemblyItemEClass, RasterAssemblyItem.class, "RasterAssemblyItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRasterAssemblyItem_XUnits(), this.getXUnit(), null, "xUnits", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRasterAssemblyItem_YUnits(), this.getYUnit(), null, "yUnits", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRasterAssemblyItem_ZUnits(), this.getZUnit(), null, "zUnits", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRasterAssemblyItem_Transform(), ecorePackage.getEString(), "transform", null, 0, 1, RasterAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mountedAssemblyItemEClass, MountedAssemblyItem.class, "MountedAssemblyItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMountedAssemblyItem_XUnits(), ecorePackage.getEFloat(), "xUnits", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMountedAssemblyItem_YUnits(), ecorePackage.getEFloat(), "yUnits", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMountedAssemblyItem_ZUnits(), ecorePackage.getEFloat(), "zUnits", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMountedAssemblyItem_RotateX(), ecorePackage.getEFloat(), "rotateX", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMountedAssemblyItem_RotateY(), ecorePackage.getEFloat(), "rotateY", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMountedAssemblyItem_RotateZ(), ecorePackage.getEFloat(), "rotateZ", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -26,16 +26,24 @@ QualifiedName:
 
 ItemRepository:
 	name=ValidID '{' 
-		elementList+=Item+ 
+		elementList+=RepostoryItem+ 
 	'}'
 ;
 
 LegoElement:
-	Item | Assembly
+	RepostoryItem | Assembly
 ;
 
-Item:
-	Brick | Door
+RasterItem:
+	Brick | Assembly
+;
+
+MountedPart:
+	'mpart' name=ValidID fill=Color source=Source
+;
+
+RepostoryItem:
+	Brick | MountedPart
 ;
 
 Color:
@@ -63,15 +71,11 @@ Source:
 ;
 
 Generated:
-	'generated'
+	'generated' ( 'box' width=FLOAT height=FLOAT depth=FLOAT ('origin' originX=FLOAT originY=FLOAT originZ=FLOAT)? )? 
 ;
 
 FxmlInclude:
-	'fxml' '2d' '{' source2d=STRING '}' '3d' '{' source3d=STRING ('origin' originX=FLOAT originY=FLOAT originZ=FLOAT)? '}'
-;
-
-Door:
-	'door' name=ValidID 'units' xUnits=XUnit yUnits=YUnit fill=Color
+	'fxml' source3d=STRING ('origin' originX=FLOAT originY=FLOAT originZ=FLOAT)?
 ;
 
 Assembly:
@@ -81,7 +85,17 @@ Assembly:
 ;
 
 AssemblyItem:
-	element=[LegoElement|QualifiedName] 'pos' xUnits=XUnit yUnits=YUnit zUnits=ZUnit ( 'transform' transform=('rotate180'|'rotate90' | 'rotate270') )?
+	RasterAssemblyItem | MountedAssemblyItem
+;
+
+RasterAssemblyItem:
+	element=[RasterItem|QualifiedName] 'pos' xUnits=XUnit yUnits=YUnit zUnits=ZUnit 
+		( 'transform' transform=('rotate180'|'rotate90' | 'rotate270') )?
+;
+
+MountedAssemblyItem:
+	element=[RasterItem|QualifiedName] 'pos' xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT 
+		( 'transform' rotateX=FLOAT rotateY=FLOAT rotateZ=FLOAT  )?	
 ;
 
 terminal INT returns ecore::EInt:

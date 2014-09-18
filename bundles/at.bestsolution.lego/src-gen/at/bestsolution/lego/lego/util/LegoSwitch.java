@@ -93,11 +93,27 @@ public class LegoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case LegoPackage.ITEM:
+      case LegoPackage.RASTER_ITEM:
       {
-        Item item = (Item)theEObject;
-        T result = caseItem(item);
-        if (result == null) result = caseLegoElement(item);
+        RasterItem rasterItem = (RasterItem)theEObject;
+        T result = caseRasterItem(rasterItem);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LegoPackage.MOUNTED_PART:
+      {
+        MountedPart mountedPart = (MountedPart)theEObject;
+        T result = caseMountedPart(mountedPart);
+        if (result == null) result = caseRepostoryItem(mountedPart);
+        if (result == null) result = caseLegoElement(mountedPart);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LegoPackage.REPOSTORY_ITEM:
+      {
+        RepostoryItem repostoryItem = (RepostoryItem)theEObject;
+        T result = caseRepostoryItem(repostoryItem);
+        if (result == null) result = caseLegoElement(repostoryItem);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -133,7 +149,8 @@ public class LegoSwitch<T> extends Switch<T>
       {
         Brick brick = (Brick)theEObject;
         T result = caseBrick(brick);
-        if (result == null) result = caseItem(brick);
+        if (result == null) result = caseRasterItem(brick);
+        if (result == null) result = caseRepostoryItem(brick);
         if (result == null) result = caseLegoElement(brick);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -145,6 +162,14 @@ public class LegoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case LegoPackage.GENERATED:
+      {
+        Generated generated = (Generated)theEObject;
+        T result = caseGenerated(generated);
+        if (result == null) result = caseSource(generated);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case LegoPackage.FXML_INCLUDE:
       {
         FxmlInclude fxmlInclude = (FxmlInclude)theEObject;
@@ -153,20 +178,12 @@ public class LegoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case LegoPackage.DOOR:
-      {
-        Door door = (Door)theEObject;
-        T result = caseDoor(door);
-        if (result == null) result = caseItem(door);
-        if (result == null) result = caseLegoElement(door);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case LegoPackage.ASSEMBLY:
       {
         Assembly assembly = (Assembly)theEObject;
         T result = caseAssembly(assembly);
         if (result == null) result = caseLegoElement(assembly);
+        if (result == null) result = caseRasterItem(assembly);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -174,6 +191,22 @@ public class LegoSwitch<T> extends Switch<T>
       {
         AssemblyItem assemblyItem = (AssemblyItem)theEObject;
         T result = caseAssemblyItem(assemblyItem);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LegoPackage.RASTER_ASSEMBLY_ITEM:
+      {
+        RasterAssemblyItem rasterAssemblyItem = (RasterAssemblyItem)theEObject;
+        T result = caseRasterAssemblyItem(rasterAssemblyItem);
+        if (result == null) result = caseAssemblyItem(rasterAssemblyItem);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LegoPackage.MOUNTED_ASSEMBLY_ITEM:
+      {
+        MountedAssemblyItem mountedAssemblyItem = (MountedAssemblyItem)theEObject;
+        T result = caseMountedAssemblyItem(mountedAssemblyItem);
+        if (result == null) result = caseAssemblyItem(mountedAssemblyItem);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -230,17 +263,49 @@ public class LegoSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Item</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Raster Item</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Item</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Raster Item</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseItem(Item object)
+  public T caseRasterItem(RasterItem object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Mounted Part</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mounted Part</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMountedPart(MountedPart object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Repostory Item</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Repostory Item</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRepostoryItem(RepostoryItem object)
   {
     return null;
   }
@@ -342,6 +407,22 @@ public class LegoSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Generated</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Generated</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGenerated(Generated object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Fxml Include</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -353,22 +434,6 @@ public class LegoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFxmlInclude(FxmlInclude object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Door</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Door</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDoor(Door object)
   {
     return null;
   }
@@ -401,6 +466,38 @@ public class LegoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAssemblyItem(AssemblyItem object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Raster Assembly Item</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Raster Assembly Item</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRasterAssemblyItem(RasterAssemblyItem object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Mounted Assembly Item</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mounted Assembly Item</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMountedAssemblyItem(MountedAssemblyItem object)
   {
     return null;
   }

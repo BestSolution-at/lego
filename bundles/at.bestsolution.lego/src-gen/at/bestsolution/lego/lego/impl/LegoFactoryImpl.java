@@ -67,17 +67,21 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
       case LegoPackage.MODEL: return createModel();
       case LegoPackage.ITEM_REPOSITORY: return createItemRepository();
       case LegoPackage.LEGO_ELEMENT: return createLegoElement();
-      case LegoPackage.ITEM: return createItem();
+      case LegoPackage.RASTER_ITEM: return createRasterItem();
+      case LegoPackage.MOUNTED_PART: return createMountedPart();
+      case LegoPackage.REPOSTORY_ITEM: return createRepostoryItem();
       case LegoPackage.COLOR: return createColor();
       case LegoPackage.XUNIT: return createXUnit();
       case LegoPackage.YUNIT: return createYUnit();
       case LegoPackage.ZUNIT: return createZUnit();
       case LegoPackage.BRICK: return createBrick();
       case LegoPackage.SOURCE: return createSource();
+      case LegoPackage.GENERATED: return createGenerated();
       case LegoPackage.FXML_INCLUDE: return createFxmlInclude();
-      case LegoPackage.DOOR: return createDoor();
       case LegoPackage.ASSEMBLY: return createAssembly();
       case LegoPackage.ASSEMBLY_ITEM: return createAssemblyItem();
+      case LegoPackage.RASTER_ASSEMBLY_ITEM: return createRasterAssemblyItem();
+      case LegoPackage.MOUNTED_ASSEMBLY_ITEM: return createMountedAssemblyItem();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -121,10 +125,32 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Item createItem()
+  public RasterItem createRasterItem()
   {
-    ItemImpl item = new ItemImpl();
-    return item;
+    RasterItemImpl rasterItem = new RasterItemImpl();
+    return rasterItem;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MountedPart createMountedPart()
+  {
+    MountedPartImpl mountedPart = new MountedPartImpl();
+    return mountedPart;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RepostoryItem createRepostoryItem()
+  {
+    RepostoryItemImpl repostoryItem = new RepostoryItemImpl();
+    return repostoryItem;
   }
 
   /**
@@ -198,10 +224,10 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FxmlInclude createFxmlInclude()
+  public Generated createGenerated()
   {
-    FxmlIncludeImpl fxmlInclude = new FxmlIncludeImpl();
-    return fxmlInclude;
+    GeneratedImpl generated = new GeneratedImpl();
+    return generated;
   }
 
   /**
@@ -209,10 +235,10 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Door createDoor()
+  public FxmlInclude createFxmlInclude()
   {
-    DoorImpl door = new DoorImpl();
-    return door;
+    FxmlIncludeImpl fxmlInclude = new FxmlIncludeImpl();
+    return fxmlInclude;
   }
 
   /**
@@ -235,6 +261,28 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
   {
     AssemblyItemImpl assemblyItem = new AssemblyItemImpl();
     return assemblyItem;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RasterAssemblyItem createRasterAssemblyItem()
+  {
+    RasterAssemblyItemImpl rasterAssemblyItem = new RasterAssemblyItemImpl();
+    return rasterAssemblyItem;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MountedAssemblyItem createMountedAssemblyItem()
+  {
+    MountedAssemblyItemImpl mountedAssemblyItem = new MountedAssemblyItemImpl();
+    return mountedAssemblyItem;
   }
 
   /**

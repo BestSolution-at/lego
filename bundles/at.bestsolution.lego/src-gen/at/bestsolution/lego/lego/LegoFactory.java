@@ -50,13 +50,31 @@ public interface LegoFactory extends EFactory
   LegoElement createLegoElement();
 
   /**
-   * Returns a new object of class '<em>Item</em>'.
+   * Returns a new object of class '<em>Raster Item</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Item</em>'.
+   * @return a new object of class '<em>Raster Item</em>'.
    * @generated
    */
-  Item createItem();
+  RasterItem createRasterItem();
+
+  /**
+   * Returns a new object of class '<em>Mounted Part</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mounted Part</em>'.
+   * @generated
+   */
+  MountedPart createMountedPart();
+
+  /**
+   * Returns a new object of class '<em>Repostory Item</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Repostory Item</em>'.
+   * @generated
+   */
+  RepostoryItem createRepostoryItem();
 
   /**
    * Returns a new object of class '<em>Color</em>'.
@@ -113,6 +131,15 @@ public interface LegoFactory extends EFactory
   Source createSource();
 
   /**
+   * Returns a new object of class '<em>Generated</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Generated</em>'.
+   * @generated
+   */
+  Generated createGenerated();
+
+  /**
    * Returns a new object of class '<em>Fxml Include</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -120,15 +147,6 @@ public interface LegoFactory extends EFactory
    * @generated
    */
   FxmlInclude createFxmlInclude();
-
-  /**
-   * Returns a new object of class '<em>Door</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Door</em>'.
-   * @generated
-   */
-  Door createDoor();
 
   /**
    * Returns a new object of class '<em>Assembly</em>'.
@@ -147,6 +165,24 @@ public interface LegoFactory extends EFactory
    * @generated
    */
   AssemblyItem createAssemblyItem();
+
+  /**
+   * Returns a new object of class '<em>Raster Assembly Item</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Raster Assembly Item</em>'.
+   * @generated
+   */
+  RasterAssemblyItem createRasterAssemblyItem();
+
+  /**
+   * Returns a new object of class '<em>Mounted Assembly Item</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mounted Assembly Item</em>'.
+   * @generated
+   */
+  MountedAssemblyItem createMountedAssemblyItem();
 
   /**
    * Returns the package supported by this factory.

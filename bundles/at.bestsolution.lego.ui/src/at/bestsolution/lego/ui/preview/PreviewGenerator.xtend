@@ -2,15 +2,14 @@ package at.bestsolution.lego.ui.preview
 
 import com.google.inject.Inject
 import at.bestsolution.lego.generator.Lego3dFXML
-import at.bestsolution.lego.generator.Lego2dFXML
 import at.bestsolution.lego.lego.Model
 
 class PreviewGenerator {
 	@Inject
 	Lego3dFXML lego3d
 	
-	@Inject
-	Lego2dFXML lego2
+//	@Inject
+//	Lego2dFXML lego2
 	
 	def generatePreview(Model model) '''
 	<?xml version="1.0" encoding="UTF-8"?>

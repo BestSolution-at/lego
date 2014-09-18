@@ -21,8 +21,8 @@ import com.google.inject.Inject
  * see http://www.eclipse.org/Xtext/documentation.html#TutorialCodeGeneration
  */
 class LegoGenerator implements IGenerator {
-	@Inject
-	Lego2dSVG lego2dsvg
+//	@Inject
+//	Lego2dSVG lego2dsvg
 	
 	@Inject
 	Lego3dFXML lego3dfxml

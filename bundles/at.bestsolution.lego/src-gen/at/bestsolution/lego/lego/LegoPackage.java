@@ -159,14 +159,33 @@ public interface LegoPackage extends EPackage
   int LEGO_ELEMENT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.ItemImpl <em>Item</em>}' class.
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.RasterItemImpl <em>Raster Item</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see at.bestsolution.lego.lego.impl.ItemImpl
-   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getItem()
+   * @see at.bestsolution.lego.lego.impl.RasterItemImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRasterItem()
    * @generated
    */
-  int ITEM = 3;
+  int RASTER_ITEM = 3;
+
+  /**
+   * The number of structural features of the '<em>Raster Item</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RASTER_ITEM_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.RepostoryItemImpl <em>Repostory Item</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.bestsolution.lego.lego.impl.RepostoryItemImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRepostoryItem()
+   * @generated
+   */
+  int REPOSTORY_ITEM = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -175,25 +194,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITEM__NAME = LEGO_ELEMENT__NAME;
-
-  /**
-   * The feature id for the '<em><b>XUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ITEM__XUNITS = LEGO_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>YUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ITEM__YUNITS = LEGO_ELEMENT_FEATURE_COUNT + 1;
+  int REPOSTORY_ITEM__NAME = LEGO_ELEMENT__NAME;
 
   /**
    * The feature id for the '<em><b>Fill</b></em>' containment reference.
@@ -202,16 +203,71 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITEM__FILL = LEGO_ELEMENT_FEATURE_COUNT + 2;
+  int REPOSTORY_ITEM__FILL = LEGO_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Item</em>' class.
+   * The feature id for the '<em><b>Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ITEM_FEATURE_COUNT = LEGO_ELEMENT_FEATURE_COUNT + 3;
+  int REPOSTORY_ITEM__SOURCE = LEGO_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Repostory Item</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSTORY_ITEM_FEATURE_COUNT = LEGO_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.MountedPartImpl <em>Mounted Part</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.bestsolution.lego.lego.impl.MountedPartImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getMountedPart()
+   * @generated
+   */
+  int MOUNTED_PART = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_PART__NAME = REPOSTORY_ITEM__NAME;
+
+  /**
+   * The feature id for the '<em><b>Fill</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_PART__FILL = REPOSTORY_ITEM__FILL;
+
+  /**
+   * The feature id for the '<em><b>Source</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_PART__SOURCE = REPOSTORY_ITEM__SOURCE;
+
+  /**
+   * The number of structural features of the '<em>Mounted Part</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_PART_FEATURE_COUNT = REPOSTORY_ITEM_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link at.bestsolution.lego.lego.impl.ColorImpl <em>Color</em>}' class.
@@ -221,7 +277,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 4;
+  int COLOR = 6;
 
   /**
    * The feature id for the '<em><b>R</b></em>' attribute.
@@ -267,7 +323,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getXUnit()
    * @generated
    */
-  int XUNIT = 5;
+  int XUNIT = 7;
 
   /**
    * The feature id for the '<em><b>Units</b></em>' attribute.
@@ -295,7 +351,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getYUnit()
    * @generated
    */
-  int YUNIT = 6;
+  int YUNIT = 8;
 
   /**
    * The feature id for the '<em><b>Units</b></em>' attribute.
@@ -323,7 +379,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getZUnit()
    * @generated
    */
-  int ZUNIT = 7;
+  int ZUNIT = 9;
 
   /**
    * The feature id for the '<em><b>Units</b></em>' attribute.
@@ -351,7 +407,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getBrick()
    * @generated
    */
-  int BRICK = 8;
+  int BRICK = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -360,25 +416,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BRICK__NAME = ITEM__NAME;
-
-  /**
-   * The feature id for the '<em><b>XUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BRICK__XUNITS = ITEM__XUNITS;
-
-  /**
-   * The feature id for the '<em><b>YUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BRICK__YUNITS = ITEM__YUNITS;
+  int BRICK__NAME = RASTER_ITEM_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Fill</b></em>' containment reference.
@@ -387,16 +425,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BRICK__FILL = ITEM__FILL;
-
-  /**
-   * The feature id for the '<em><b>ZUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BRICK__ZUNITS = ITEM_FEATURE_COUNT + 0;
+  int BRICK__FILL = RASTER_ITEM_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Source</b></em>' containment reference.
@@ -405,7 +434,34 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BRICK__SOURCE = ITEM_FEATURE_COUNT + 1;
+  int BRICK__SOURCE = RASTER_ITEM_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>XUnits</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BRICK__XUNITS = RASTER_ITEM_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>YUnits</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BRICK__YUNITS = RASTER_ITEM_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>ZUnits</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BRICK__ZUNITS = RASTER_ITEM_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Brick</em>' class.
@@ -414,7 +470,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BRICK_FEATURE_COUNT = ITEM_FEATURE_COUNT + 2;
+  int BRICK_FEATURE_COUNT = RASTER_ITEM_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link at.bestsolution.lego.lego.impl.SourceImpl <em>Source</em>}' class.
@@ -424,7 +480,34 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getSource()
    * @generated
    */
-  int SOURCE = 9;
+  int SOURCE = 11;
+
+  /**
+   * The feature id for the '<em><b>Origin X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE__ORIGIN_X = 0;
+
+  /**
+   * The feature id for the '<em><b>Origin Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE__ORIGIN_Y = 1;
+
+  /**
+   * The feature id for the '<em><b>Origin Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE__ORIGIN_Z = 2;
 
   /**
    * The number of structural features of the '<em>Source</em>' class.
@@ -433,7 +516,80 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SOURCE_FEATURE_COUNT = 0;
+  int SOURCE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.GeneratedImpl <em>Generated</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.bestsolution.lego.lego.impl.GeneratedImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getGenerated()
+   * @generated
+   */
+  int GENERATED = 12;
+
+  /**
+   * The feature id for the '<em><b>Origin X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATED__ORIGIN_X = SOURCE__ORIGIN_X;
+
+  /**
+   * The feature id for the '<em><b>Origin Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATED__ORIGIN_Y = SOURCE__ORIGIN_Y;
+
+  /**
+   * The feature id for the '<em><b>Origin Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATED__ORIGIN_Z = SOURCE__ORIGIN_Z;
+
+  /**
+   * The feature id for the '<em><b>Width</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATED__WIDTH = SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Height</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATED__HEIGHT = SOURCE_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Depth</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATED__DEPTH = SOURCE_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Generated</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATED_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl <em>Fxml Include</em>}' class.
@@ -443,25 +599,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getFxmlInclude()
    * @generated
    */
-  int FXML_INCLUDE = 10;
-
-  /**
-   * The feature id for the '<em><b>Source2d</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FXML_INCLUDE__SOURCE2D = SOURCE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Source3d</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FXML_INCLUDE__SOURCE3D = SOURCE_FEATURE_COUNT + 1;
+  int FXML_INCLUDE = 13;
 
   /**
    * The feature id for the '<em><b>Origin X</b></em>' attribute.
@@ -470,7 +608,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE__ORIGIN_X = SOURCE_FEATURE_COUNT + 2;
+  int FXML_INCLUDE__ORIGIN_X = SOURCE__ORIGIN_X;
 
   /**
    * The feature id for the '<em><b>Origin Y</b></em>' attribute.
@@ -479,7 +617,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE__ORIGIN_Y = SOURCE_FEATURE_COUNT + 3;
+  int FXML_INCLUDE__ORIGIN_Y = SOURCE__ORIGIN_Y;
 
   /**
    * The feature id for the '<em><b>Origin Z</b></em>' attribute.
@@ -488,7 +626,16 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE__ORIGIN_Z = SOURCE_FEATURE_COUNT + 4;
+  int FXML_INCLUDE__ORIGIN_Z = SOURCE__ORIGIN_Z;
+
+  /**
+   * The feature id for the '<em><b>Source3d</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FXML_INCLUDE__SOURCE3D = SOURCE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Fxml Include</em>' class.
@@ -497,62 +644,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FXML_INCLUDE_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 5;
-
-  /**
-   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.DoorImpl <em>Door</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see at.bestsolution.lego.lego.impl.DoorImpl
-   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getDoor()
-   * @generated
-   */
-  int DOOR = 11;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR__NAME = ITEM__NAME;
-
-  /**
-   * The feature id for the '<em><b>XUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR__XUNITS = ITEM__XUNITS;
-
-  /**
-   * The feature id for the '<em><b>YUnits</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR__YUNITS = ITEM__YUNITS;
-
-  /**
-   * The feature id for the '<em><b>Fill</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR__FILL = ITEM__FILL;
-
-  /**
-   * The number of structural features of the '<em>Door</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOOR_FEATURE_COUNT = ITEM_FEATURE_COUNT + 0;
+  int FXML_INCLUDE_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.bestsolution.lego.lego.impl.AssemblyImpl <em>Assembly</em>}' class.
@@ -562,7 +654,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAssembly()
    * @generated
    */
-  int ASSEMBLY = 12;
+  int ASSEMBLY = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -599,7 +691,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAssemblyItem()
    * @generated
    */
-  int ASSEMBLY_ITEM = 13;
+  int ASSEMBLY_ITEM = 15;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' reference.
@@ -611,13 +703,41 @@ public interface LegoPackage extends EPackage
   int ASSEMBLY_ITEM__ELEMENT = 0;
 
   /**
+   * The number of structural features of the '<em>Assembly Item</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSEMBLY_ITEM_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.RasterAssemblyItemImpl <em>Raster Assembly Item</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.bestsolution.lego.lego.impl.RasterAssemblyItemImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRasterAssemblyItem()
+   * @generated
+   */
+  int RASTER_ASSEMBLY_ITEM = 16;
+
+  /**
+   * The feature id for the '<em><b>Element</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RASTER_ASSEMBLY_ITEM__ELEMENT = ASSEMBLY_ITEM__ELEMENT;
+
+  /**
    * The feature id for the '<em><b>XUnits</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSEMBLY_ITEM__XUNITS = 1;
+  int RASTER_ASSEMBLY_ITEM__XUNITS = ASSEMBLY_ITEM_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>YUnits</b></em>' containment reference.
@@ -626,7 +746,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSEMBLY_ITEM__YUNITS = 2;
+  int RASTER_ASSEMBLY_ITEM__YUNITS = ASSEMBLY_ITEM_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>ZUnits</b></em>' containment reference.
@@ -635,7 +755,7 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSEMBLY_ITEM__ZUNITS = 3;
+  int RASTER_ASSEMBLY_ITEM__ZUNITS = ASSEMBLY_ITEM_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Transform</b></em>' attribute.
@@ -644,16 +764,98 @@ public interface LegoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSEMBLY_ITEM__TRANSFORM = 4;
+  int RASTER_ASSEMBLY_ITEM__TRANSFORM = ASSEMBLY_ITEM_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>Assembly Item</em>' class.
+   * The number of structural features of the '<em>Raster Assembly Item</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSEMBLY_ITEM_FEATURE_COUNT = 5;
+  int RASTER_ASSEMBLY_ITEM_FEATURE_COUNT = ASSEMBLY_ITEM_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.MountedAssemblyItemImpl <em>Mounted Assembly Item</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.bestsolution.lego.lego.impl.MountedAssemblyItemImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getMountedAssemblyItem()
+   * @generated
+   */
+  int MOUNTED_ASSEMBLY_ITEM = 17;
+
+  /**
+   * The feature id for the '<em><b>Element</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM__ELEMENT = ASSEMBLY_ITEM__ELEMENT;
+
+  /**
+   * The feature id for the '<em><b>XUnits</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM__XUNITS = ASSEMBLY_ITEM_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>YUnits</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM__YUNITS = ASSEMBLY_ITEM_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>ZUnits</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM__ZUNITS = ASSEMBLY_ITEM_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Rotate X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM__ROTATE_X = ASSEMBLY_ITEM_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Rotate Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM__ROTATE_Y = ASSEMBLY_ITEM_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Rotate Z</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM__ROTATE_Z = ASSEMBLY_ITEM_FEATURE_COUNT + 5;
+
+  /**
+   * The number of structural features of the '<em>Mounted Assembly Item</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM_FEATURE_COUNT = ASSEMBLY_ITEM_FEATURE_COUNT + 6;
 
 
   /**
@@ -742,47 +944,56 @@ public interface LegoPackage extends EPackage
   EAttribute getLegoElement_Name();
 
   /**
-   * Returns the meta object for class '{@link at.bestsolution.lego.lego.Item <em>Item</em>}'.
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.RasterItem <em>Raster Item</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Item</em>'.
-   * @see at.bestsolution.lego.lego.Item
+   * @return the meta object for class '<em>Raster Item</em>'.
+   * @see at.bestsolution.lego.lego.RasterItem
    * @generated
    */
-  EClass getItem();
+  EClass getRasterItem();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.Item#getXUnits <em>XUnits</em>}'.
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.MountedPart <em>Mounted Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>XUnits</em>'.
-   * @see at.bestsolution.lego.lego.Item#getXUnits()
-   * @see #getItem()
+   * @return the meta object for class '<em>Mounted Part</em>'.
+   * @see at.bestsolution.lego.lego.MountedPart
    * @generated
    */
-  EReference getItem_XUnits();
+  EClass getMountedPart();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.Item#getYUnits <em>YUnits</em>}'.
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.RepostoryItem <em>Repostory Item</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>YUnits</em>'.
-   * @see at.bestsolution.lego.lego.Item#getYUnits()
-   * @see #getItem()
+   * @return the meta object for class '<em>Repostory Item</em>'.
+   * @see at.bestsolution.lego.lego.RepostoryItem
    * @generated
    */
-  EReference getItem_YUnits();
+  EClass getRepostoryItem();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.Item#getFill <em>Fill</em>}'.
+   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.RepostoryItem#getFill <em>Fill</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Fill</em>'.
-   * @see at.bestsolution.lego.lego.Item#getFill()
-   * @see #getItem()
+   * @see at.bestsolution.lego.lego.RepostoryItem#getFill()
+   * @see #getRepostoryItem()
    * @generated
    */
-  EReference getItem_Fill();
+  EReference getRepostoryItem_Fill();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.RepostoryItem#getSource <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Source</em>'.
+   * @see at.bestsolution.lego.lego.RepostoryItem#getSource()
+   * @see #getRepostoryItem()
+   * @generated
+   */
+  EReference getRepostoryItem_Source();
 
   /**
    * Returns the meta object for class '{@link at.bestsolution.lego.lego.Color <em>Color</em>}'.
@@ -901,6 +1112,28 @@ public interface LegoPackage extends EPackage
   EClass getBrick();
 
   /**
+   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.Brick#getXUnits <em>XUnits</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>XUnits</em>'.
+   * @see at.bestsolution.lego.lego.Brick#getXUnits()
+   * @see #getBrick()
+   * @generated
+   */
+  EReference getBrick_XUnits();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.Brick#getYUnits <em>YUnits</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>YUnits</em>'.
+   * @see at.bestsolution.lego.lego.Brick#getYUnits()
+   * @see #getBrick()
+   * @generated
+   */
+  EReference getBrick_YUnits();
+
+  /**
    * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.Brick#getZUnits <em>ZUnits</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -910,17 +1143,6 @@ public interface LegoPackage extends EPackage
    * @generated
    */
   EReference getBrick_ZUnits();
-
-  /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.Brick#getSource <em>Source</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Source</em>'.
-   * @see at.bestsolution.lego.lego.Brick#getSource()
-   * @see #getBrick()
-   * @generated
-   */
-  EReference getBrick_Source();
 
   /**
    * Returns the meta object for class '{@link at.bestsolution.lego.lego.Source <em>Source</em>}'.
@@ -933,6 +1155,82 @@ public interface LegoPackage extends EPackage
   EClass getSource();
 
   /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Source#getOriginX <em>Origin X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Origin X</em>'.
+   * @see at.bestsolution.lego.lego.Source#getOriginX()
+   * @see #getSource()
+   * @generated
+   */
+  EAttribute getSource_OriginX();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Source#getOriginY <em>Origin Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Origin Y</em>'.
+   * @see at.bestsolution.lego.lego.Source#getOriginY()
+   * @see #getSource()
+   * @generated
+   */
+  EAttribute getSource_OriginY();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Source#getOriginZ <em>Origin Z</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Origin Z</em>'.
+   * @see at.bestsolution.lego.lego.Source#getOriginZ()
+   * @see #getSource()
+   * @generated
+   */
+  EAttribute getSource_OriginZ();
+
+  /**
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.Generated <em>Generated</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Generated</em>'.
+   * @see at.bestsolution.lego.lego.Generated
+   * @generated
+   */
+  EClass getGenerated();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Generated#getWidth <em>Width</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Width</em>'.
+   * @see at.bestsolution.lego.lego.Generated#getWidth()
+   * @see #getGenerated()
+   * @generated
+   */
+  EAttribute getGenerated_Width();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Generated#getHeight <em>Height</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Height</em>'.
+   * @see at.bestsolution.lego.lego.Generated#getHeight()
+   * @see #getGenerated()
+   * @generated
+   */
+  EAttribute getGenerated_Height();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Generated#getDepth <em>Depth</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Depth</em>'.
+   * @see at.bestsolution.lego.lego.Generated#getDepth()
+   * @see #getGenerated()
+   * @generated
+   */
+  EAttribute getGenerated_Depth();
+
+  /**
    * Returns the meta object for class '{@link at.bestsolution.lego.lego.FxmlInclude <em>Fxml Include</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -941,17 +1239,6 @@ public interface LegoPackage extends EPackage
    * @generated
    */
   EClass getFxmlInclude();
-
-  /**
-   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getSource2d <em>Source2d</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Source2d</em>'.
-   * @see at.bestsolution.lego.lego.FxmlInclude#getSource2d()
-   * @see #getFxmlInclude()
-   * @generated
-   */
-  EAttribute getFxmlInclude_Source2d();
 
   /**
    * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getSource3d <em>Source3d</em>}'.
@@ -963,49 +1250,6 @@ public interface LegoPackage extends EPackage
    * @generated
    */
   EAttribute getFxmlInclude_Source3d();
-
-  /**
-   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getOriginX <em>Origin X</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Origin X</em>'.
-   * @see at.bestsolution.lego.lego.FxmlInclude#getOriginX()
-   * @see #getFxmlInclude()
-   * @generated
-   */
-  EAttribute getFxmlInclude_OriginX();
-
-  /**
-   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getOriginY <em>Origin Y</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Origin Y</em>'.
-   * @see at.bestsolution.lego.lego.FxmlInclude#getOriginY()
-   * @see #getFxmlInclude()
-   * @generated
-   */
-  EAttribute getFxmlInclude_OriginY();
-
-  /**
-   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.FxmlInclude#getOriginZ <em>Origin Z</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Origin Z</em>'.
-   * @see at.bestsolution.lego.lego.FxmlInclude#getOriginZ()
-   * @see #getFxmlInclude()
-   * @generated
-   */
-  EAttribute getFxmlInclude_OriginZ();
-
-  /**
-   * Returns the meta object for class '{@link at.bestsolution.lego.lego.Door <em>Door</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Door</em>'.
-   * @see at.bestsolution.lego.lego.Door
-   * @generated
-   */
-  EClass getDoor();
 
   /**
    * Returns the meta object for class '{@link at.bestsolution.lego.lego.Assembly <em>Assembly</em>}'.
@@ -1050,48 +1294,134 @@ public interface LegoPackage extends EPackage
   EReference getAssemblyItem_Element();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.AssemblyItem#getXUnits <em>XUnits</em>}'.
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.RasterAssemblyItem <em>Raster Assembly Item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Raster Assembly Item</em>'.
+   * @see at.bestsolution.lego.lego.RasterAssemblyItem
+   * @generated
+   */
+  EClass getRasterAssemblyItem();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.RasterAssemblyItem#getXUnits <em>XUnits</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>XUnits</em>'.
-   * @see at.bestsolution.lego.lego.AssemblyItem#getXUnits()
-   * @see #getAssemblyItem()
+   * @see at.bestsolution.lego.lego.RasterAssemblyItem#getXUnits()
+   * @see #getRasterAssemblyItem()
    * @generated
    */
-  EReference getAssemblyItem_XUnits();
+  EReference getRasterAssemblyItem_XUnits();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.AssemblyItem#getYUnits <em>YUnits</em>}'.
+   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.RasterAssemblyItem#getYUnits <em>YUnits</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>YUnits</em>'.
-   * @see at.bestsolution.lego.lego.AssemblyItem#getYUnits()
-   * @see #getAssemblyItem()
+   * @see at.bestsolution.lego.lego.RasterAssemblyItem#getYUnits()
+   * @see #getRasterAssemblyItem()
    * @generated
    */
-  EReference getAssemblyItem_YUnits();
+  EReference getRasterAssemblyItem_YUnits();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.AssemblyItem#getZUnits <em>ZUnits</em>}'.
+   * Returns the meta object for the containment reference '{@link at.bestsolution.lego.lego.RasterAssemblyItem#getZUnits <em>ZUnits</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>ZUnits</em>'.
-   * @see at.bestsolution.lego.lego.AssemblyItem#getZUnits()
-   * @see #getAssemblyItem()
+   * @see at.bestsolution.lego.lego.RasterAssemblyItem#getZUnits()
+   * @see #getRasterAssemblyItem()
    * @generated
    */
-  EReference getAssemblyItem_ZUnits();
+  EReference getRasterAssemblyItem_ZUnits();
 
   /**
-   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.AssemblyItem#getTransform <em>Transform</em>}'.
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.RasterAssemblyItem#getTransform <em>Transform</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Transform</em>'.
-   * @see at.bestsolution.lego.lego.AssemblyItem#getTransform()
-   * @see #getAssemblyItem()
+   * @see at.bestsolution.lego.lego.RasterAssemblyItem#getTransform()
+   * @see #getRasterAssemblyItem()
    * @generated
    */
-  EAttribute getAssemblyItem_Transform();
+  EAttribute getRasterAssemblyItem_Transform();
+
+  /**
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.MountedAssemblyItem <em>Mounted Assembly Item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Mounted Assembly Item</em>'.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem
+   * @generated
+   */
+  EClass getMountedAssemblyItem();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.MountedAssemblyItem#getXUnits <em>XUnits</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>XUnits</em>'.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem#getXUnits()
+   * @see #getMountedAssemblyItem()
+   * @generated
+   */
+  EAttribute getMountedAssemblyItem_XUnits();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.MountedAssemblyItem#getYUnits <em>YUnits</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>YUnits</em>'.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem#getYUnits()
+   * @see #getMountedAssemblyItem()
+   * @generated
+   */
+  EAttribute getMountedAssemblyItem_YUnits();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.MountedAssemblyItem#getZUnits <em>ZUnits</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>ZUnits</em>'.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem#getZUnits()
+   * @see #getMountedAssemblyItem()
+   * @generated
+   */
+  EAttribute getMountedAssemblyItem_ZUnits();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.MountedAssemblyItem#getRotateX <em>Rotate X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Rotate X</em>'.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem#getRotateX()
+   * @see #getMountedAssemblyItem()
+   * @generated
+   */
+  EAttribute getMountedAssemblyItem_RotateX();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.MountedAssemblyItem#getRotateY <em>Rotate Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Rotate Y</em>'.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem#getRotateY()
+   * @see #getMountedAssemblyItem()
+   * @generated
+   */
+  EAttribute getMountedAssemblyItem_RotateY();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.MountedAssemblyItem#getRotateZ <em>Rotate Z</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Rotate Z</em>'.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem#getRotateZ()
+   * @see #getMountedAssemblyItem()
+   * @generated
+   */
+  EAttribute getMountedAssemblyItem_RotateZ();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1187,30 +1517,34 @@ public interface LegoPackage extends EPackage
     EAttribute LEGO_ELEMENT__NAME = eINSTANCE.getLegoElement_Name();
 
     /**
-     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.ItemImpl <em>Item</em>}' class.
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.RasterItemImpl <em>Raster Item</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see at.bestsolution.lego.lego.impl.ItemImpl
-     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getItem()
+     * @see at.bestsolution.lego.lego.impl.RasterItemImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRasterItem()
      * @generated
      */
-    EClass ITEM = eINSTANCE.getItem();
+    EClass RASTER_ITEM = eINSTANCE.getRasterItem();
 
     /**
-     * The meta object literal for the '<em><b>XUnits</b></em>' containment reference feature.
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.MountedPartImpl <em>Mounted Part</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see at.bestsolution.lego.lego.impl.MountedPartImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getMountedPart()
      * @generated
      */
-    EReference ITEM__XUNITS = eINSTANCE.getItem_XUnits();
+    EClass MOUNTED_PART = eINSTANCE.getMountedPart();
 
     /**
-     * The meta object literal for the '<em><b>YUnits</b></em>' containment reference feature.
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.RepostoryItemImpl <em>Repostory Item</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see at.bestsolution.lego.lego.impl.RepostoryItemImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRepostoryItem()
      * @generated
      */
-    EReference ITEM__YUNITS = eINSTANCE.getItem_YUnits();
+    EClass REPOSTORY_ITEM = eINSTANCE.getRepostoryItem();
 
     /**
      * The meta object literal for the '<em><b>Fill</b></em>' containment reference feature.
@@ -1218,7 +1552,15 @@ public interface LegoPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ITEM__FILL = eINSTANCE.getItem_Fill();
+    EReference REPOSTORY_ITEM__FILL = eINSTANCE.getRepostoryItem_Fill();
+
+    /**
+     * The meta object literal for the '<em><b>Source</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REPOSTORY_ITEM__SOURCE = eINSTANCE.getRepostoryItem_Source();
 
     /**
      * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.ColorImpl <em>Color</em>}' class.
@@ -1319,20 +1661,28 @@ public interface LegoPackage extends EPackage
     EClass BRICK = eINSTANCE.getBrick();
 
     /**
+     * The meta object literal for the '<em><b>XUnits</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BRICK__XUNITS = eINSTANCE.getBrick_XUnits();
+
+    /**
+     * The meta object literal for the '<em><b>YUnits</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BRICK__YUNITS = eINSTANCE.getBrick_YUnits();
+
+    /**
      * The meta object literal for the '<em><b>ZUnits</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference BRICK__ZUNITS = eINSTANCE.getBrick_ZUnits();
-
-    /**
-     * The meta object literal for the '<em><b>Source</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BRICK__SOURCE = eINSTANCE.getBrick_Source();
 
     /**
      * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.SourceImpl <em>Source</em>}' class.
@@ -1345,6 +1695,64 @@ public interface LegoPackage extends EPackage
     EClass SOURCE = eINSTANCE.getSource();
 
     /**
+     * The meta object literal for the '<em><b>Origin X</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SOURCE__ORIGIN_X = eINSTANCE.getSource_OriginX();
+
+    /**
+     * The meta object literal for the '<em><b>Origin Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SOURCE__ORIGIN_Y = eINSTANCE.getSource_OriginY();
+
+    /**
+     * The meta object literal for the '<em><b>Origin Z</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SOURCE__ORIGIN_Z = eINSTANCE.getSource_OriginZ();
+
+    /**
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.GeneratedImpl <em>Generated</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.bestsolution.lego.lego.impl.GeneratedImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getGenerated()
+     * @generated
+     */
+    EClass GENERATED = eINSTANCE.getGenerated();
+
+    /**
+     * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GENERATED__WIDTH = eINSTANCE.getGenerated_Width();
+
+    /**
+     * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GENERATED__HEIGHT = eINSTANCE.getGenerated_Height();
+
+    /**
+     * The meta object literal for the '<em><b>Depth</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GENERATED__DEPTH = eINSTANCE.getGenerated_Depth();
+
+    /**
      * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.FxmlIncludeImpl <em>Fxml Include</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1355,54 +1763,12 @@ public interface LegoPackage extends EPackage
     EClass FXML_INCLUDE = eINSTANCE.getFxmlInclude();
 
     /**
-     * The meta object literal for the '<em><b>Source2d</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FXML_INCLUDE__SOURCE2D = eINSTANCE.getFxmlInclude_Source2d();
-
-    /**
      * The meta object literal for the '<em><b>Source3d</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute FXML_INCLUDE__SOURCE3D = eINSTANCE.getFxmlInclude_Source3d();
-
-    /**
-     * The meta object literal for the '<em><b>Origin X</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FXML_INCLUDE__ORIGIN_X = eINSTANCE.getFxmlInclude_OriginX();
-
-    /**
-     * The meta object literal for the '<em><b>Origin Y</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FXML_INCLUDE__ORIGIN_Y = eINSTANCE.getFxmlInclude_OriginY();
-
-    /**
-     * The meta object literal for the '<em><b>Origin Z</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FXML_INCLUDE__ORIGIN_Z = eINSTANCE.getFxmlInclude_OriginZ();
-
-    /**
-     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.DoorImpl <em>Door</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see at.bestsolution.lego.lego.impl.DoorImpl
-     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getDoor()
-     * @generated
-     */
-    EClass DOOR = eINSTANCE.getDoor();
 
     /**
      * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.AssemblyImpl <em>Assembly</em>}' class.
@@ -1441,12 +1807,22 @@ public interface LegoPackage extends EPackage
     EReference ASSEMBLY_ITEM__ELEMENT = eINSTANCE.getAssemblyItem_Element();
 
     /**
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.RasterAssemblyItemImpl <em>Raster Assembly Item</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.bestsolution.lego.lego.impl.RasterAssemblyItemImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRasterAssemblyItem()
+     * @generated
+     */
+    EClass RASTER_ASSEMBLY_ITEM = eINSTANCE.getRasterAssemblyItem();
+
+    /**
      * The meta object literal for the '<em><b>XUnits</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ASSEMBLY_ITEM__XUNITS = eINSTANCE.getAssemblyItem_XUnits();
+    EReference RASTER_ASSEMBLY_ITEM__XUNITS = eINSTANCE.getRasterAssemblyItem_XUnits();
 
     /**
      * The meta object literal for the '<em><b>YUnits</b></em>' containment reference feature.
@@ -1454,7 +1830,7 @@ public interface LegoPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ASSEMBLY_ITEM__YUNITS = eINSTANCE.getAssemblyItem_YUnits();
+    EReference RASTER_ASSEMBLY_ITEM__YUNITS = eINSTANCE.getRasterAssemblyItem_YUnits();
 
     /**
      * The meta object literal for the '<em><b>ZUnits</b></em>' containment reference feature.
@@ -1462,7 +1838,7 @@ public interface LegoPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ASSEMBLY_ITEM__ZUNITS = eINSTANCE.getAssemblyItem_ZUnits();
+    EReference RASTER_ASSEMBLY_ITEM__ZUNITS = eINSTANCE.getRasterAssemblyItem_ZUnits();
 
     /**
      * The meta object literal for the '<em><b>Transform</b></em>' attribute feature.
@@ -1470,7 +1846,65 @@ public interface LegoPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ASSEMBLY_ITEM__TRANSFORM = eINSTANCE.getAssemblyItem_Transform();
+    EAttribute RASTER_ASSEMBLY_ITEM__TRANSFORM = eINSTANCE.getRasterAssemblyItem_Transform();
+
+    /**
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.MountedAssemblyItemImpl <em>Mounted Assembly Item</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.bestsolution.lego.lego.impl.MountedAssemblyItemImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getMountedAssemblyItem()
+     * @generated
+     */
+    EClass MOUNTED_ASSEMBLY_ITEM = eINSTANCE.getMountedAssemblyItem();
+
+    /**
+     * The meta object literal for the '<em><b>XUnits</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MOUNTED_ASSEMBLY_ITEM__XUNITS = eINSTANCE.getMountedAssemblyItem_XUnits();
+
+    /**
+     * The meta object literal for the '<em><b>YUnits</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MOUNTED_ASSEMBLY_ITEM__YUNITS = eINSTANCE.getMountedAssemblyItem_YUnits();
+
+    /**
+     * The meta object literal for the '<em><b>ZUnits</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MOUNTED_ASSEMBLY_ITEM__ZUNITS = eINSTANCE.getMountedAssemblyItem_ZUnits();
+
+    /**
+     * The meta object literal for the '<em><b>Rotate X</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MOUNTED_ASSEMBLY_ITEM__ROTATE_X = eINSTANCE.getMountedAssemblyItem_RotateX();
+
+    /**
+     * The meta object literal for the '<em><b>Rotate Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MOUNTED_ASSEMBLY_ITEM__ROTATE_Y = eINSTANCE.getMountedAssemblyItem_RotateY();
+
+    /**
+     * The meta object literal for the '<em><b>Rotate Z</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MOUNTED_ASSEMBLY_ITEM__ROTATE_Z = eINSTANCE.getMountedAssemblyItem_RotateZ();
 
   }
 

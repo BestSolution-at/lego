@@ -15,7 +15,6 @@ import at.bestsolution.lego.lego.YUnit
 import at.bestsolution.lego.lego.Color
 import at.bestsolution.lego.lego.LegoElement
 import at.bestsolution.lego.lego.Brick
-import at.bestsolution.lego.lego.Door
 import java.io.FileReader
 
 import static extension com.google.common.io.CharStreams.*
@@ -31,10 +30,6 @@ class Util {
 	}
 	
 	def dispatch width(Brick e) {
-		return e.XUnits.toPixel
-	}
-	
-	def dispatch width(Door e) {
 		return e.XUnits.toPixel
 	}
 	
