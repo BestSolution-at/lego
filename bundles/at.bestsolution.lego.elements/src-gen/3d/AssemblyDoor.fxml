@@ -42,7 +42,15 @@
 		
 		<Group>
 			<Group>
-				<Box width="53.0" height="50.0" depth="2.0">
+				<Box width="53.0" height="50.0" depth="2.0" styleClass="actionable, action-OpenDoor,action-CloseDoor">
+				<properties
+				action-OpenDoor-type="rotate"
+				action-OpenDoor-axis="y"
+				action-OpenDoor-angle="80.0"
+				action-CloseDoor-type="rotate"
+				action-CloseDoor-axis="y"
+				action-CloseDoor-angle="180.0"
+				/>
 					<material>
 						<PhongMaterial diffuseColor="rgb(139, 69, 19)
 						"/>
@@ -57,7 +65,7 @@
 					<Rotate angle="0.0" >
 					 <axis><Point3D x="1" y="0" z="0"/></axis>
 					</Rotate>
-					<Rotate angle="160.0" >
+					<Rotate angle="180.0" >
 					 <axis><Point3D x="0" y="1" z="0"/></axis>
 					</Rotate>
 					<Rotate angle="0.0" >

@@ -3,7 +3,7 @@ assembly Assembly_Home_Cat_Dog {
 	AssemblyDoor							pos 0 -1 0 
 	DuploItems.Brick_2_2_2_light_green 		pos 4 -1 0 
 	DuploItems.Brick_2_4_1_light_blue		pos 6 -1 1
-	DuploItems.Brick_2_2_2_red 				pos 4 -5 0 
+	DuploItems.Brick_2_2_2_red 				pos 4 -5 0
 	DuploItems.Brick_2_2_2_orange 			pos 4 -3 0	
 	DuploItems.RBrick_2_2_2_red 			pos 2 -7 1 transform rotate180
 	DuploItems.RBrick_2_2_2_red 			pos 3 -7 0
