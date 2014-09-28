@@ -2,6 +2,7 @@
  */
 package at.bestsolution.lego.lego;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,6 +19,7 @@ package at.bestsolution.lego.lego;
  *   <li>{@link at.bestsolution.lego.lego.MountedAssemblyItem#getRotateX <em>Rotate X</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.MountedAssemblyItem#getRotateY <em>Rotate Y</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.MountedAssemblyItem#getRotateZ <em>Rotate Z</em>}</li>
+ *   <li>{@link at.bestsolution.lego.lego.MountedAssemblyItem#getActions <em>Actions</em>}</li>
  * </ul>
  * </p>
  *
@@ -208,5 +210,21 @@ public interface MountedAssemblyItem extends AssemblyItem
    * @generated
    */
   void setRotateZ(float value);
+
+  /**
+   * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
+   * The list contents are of type {@link at.bestsolution.lego.lego.Action}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Actions</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Actions</em>' containment reference list.
+   * @see at.bestsolution.lego.lego.LegoPackage#getMountedAssemblyItem_Actions()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Action> getActions();
 
 } // MountedAssemblyItem

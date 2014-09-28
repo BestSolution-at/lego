@@ -20,6 +20,14 @@
     </genClasses>
     <genClasses ecoreClass="Lego.ecore#//RasterItem"/>
     <genClasses ecoreClass="Lego.ecore#//MountedPart"/>
+    <genClasses ecoreClass="Lego.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Action/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Action/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Action/axis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Action/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Action/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//Action/soundfile"/>
+    </genClasses>
     <genClasses ecoreClass="Lego.ecore#//RepostoryItem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//RepostoryItem/fill"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//RepostoryItem/source"/>
@@ -76,6 +84,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//MountedAssemblyItem/rotateX"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//MountedAssemblyItem/rotateY"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Lego.ecore#//MountedAssemblyItem/rotateZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Lego.ecore#//MountedAssemblyItem/actions"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

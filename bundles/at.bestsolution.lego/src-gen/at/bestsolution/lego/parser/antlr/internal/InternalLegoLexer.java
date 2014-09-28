@@ -19,21 +19,28 @@ public class InternalLegoLexer extends Lexer {
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
+    public static final int T__33=33;
     public static final int T__12=12;
+    public static final int T__34=34;
     public static final int T__13=13;
+    public static final int T__35=35;
     public static final int T__14=14;
     public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_ID=4;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=6;
+    public static final int T__29=29;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=8;
     public static final int T__23=23;
-    public static final int RULE_FLOAT=6;
+    public static final int RULE_FLOAT=5;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__20=20;
@@ -138,10 +145,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:15:7: ( 'rgb' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:15:9: 'rgb'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:15:7: ( 'rotate' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:15:9: 'rotate'
             {
-            match("rgb"); 
+            match("rotate"); 
 
 
             }
@@ -159,11 +166,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:16:7: ( 'brick' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:16:9: 'brick'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:16:7: ( 'x' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:16:9: 'x'
             {
-            match("brick"); 
-
+            match('x'); 
 
             }
 
@@ -180,11 +186,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:17:7: ( 'units' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:17:9: 'units'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:17:7: ( 'y' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:17:9: 'y'
             {
-            match("units"); 
-
+            match('y'); 
 
             }
 
@@ -201,11 +206,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:18:7: ( 'generated' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:18:9: 'generated'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:18:7: ( 'z' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:18:9: 'z'
             {
-            match("generated"); 
-
+            match('z'); 
 
             }
 
@@ -222,10 +226,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:19:7: ( 'box' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:19:9: 'box'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:19:7: ( 'duration' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:19:9: 'duration'
             {
-            match("box"); 
+            match("duration"); 
 
 
             }
@@ -243,10 +247,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:20:7: ( 'origin' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:20:9: 'origin'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:20:7: ( 'sound-file' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:20:9: 'sound-file'
             {
-            match("origin"); 
+            match("sound-file"); 
 
 
             }
@@ -264,10 +268,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:21:7: ( 'fxml' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:21:9: 'fxml'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:21:7: ( 'rgb' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:21:9: 'rgb'
             {
-            match("fxml"); 
+            match("rgb"); 
 
 
             }
@@ -285,10 +289,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:22:7: ( 'assembly' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:22:9: 'assembly'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:22:7: ( 'brick' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:22:9: 'brick'
             {
-            match("assembly"); 
+            match("brick"); 
 
 
             }
@@ -306,10 +310,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:23:7: ( 'pos' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:23:9: 'pos'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:23:7: ( 'units' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:23:9: 'units'
             {
-            match("pos"); 
+            match("units"); 
 
 
             }
@@ -327,10 +331,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:24:7: ( 'transform' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:24:9: 'transform'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:24:7: ( 'generated' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:24:9: 'generated'
             {
-            match("transform"); 
+            match("generated"); 
 
 
             }
@@ -348,10 +352,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:25:7: ( 'rotate180' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:25:9: 'rotate180'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:25:7: ( 'box' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:25:9: 'box'
             {
-            match("rotate180"); 
+            match("box"); 
 
 
             }
@@ -369,10 +373,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:26:7: ( 'rotate90' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:26:9: 'rotate90'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:26:7: ( 'origin' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:26:9: 'origin'
             {
-            match("rotate90"); 
+            match("origin"); 
 
 
             }
@@ -390,10 +394,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:27:7: ( 'rotate270' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:27:9: 'rotate270'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:27:7: ( 'fxml' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:27:9: 'fxml'
             {
-            match("rotate270"); 
+            match("fxml"); 
 
 
             }
@@ -406,15 +410,162 @@ public class InternalLegoLexer extends Lexer {
     }
     // $ANTLR end "T__28"
 
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:28:7: ( 'assembly' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:28:9: 'assembly'
+            {
+            match("assembly"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__29"
+
+    // $ANTLR start "T__30"
+    public final void mT__30() throws RecognitionException {
+        try {
+            int _type = T__30;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:29:7: ( 'pos' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:29:9: 'pos'
+            {
+            match("pos"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__30"
+
+    // $ANTLR start "T__31"
+    public final void mT__31() throws RecognitionException {
+        try {
+            int _type = T__31;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:30:7: ( 'transform' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:30:9: 'transform'
+            {
+            match("transform"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__31"
+
+    // $ANTLR start "T__32"
+    public final void mT__32() throws RecognitionException {
+        try {
+            int _type = T__32;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:31:7: ( 'rotate180' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:31:9: 'rotate180'
+            {
+            match("rotate180"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__32"
+
+    // $ANTLR start "T__33"
+    public final void mT__33() throws RecognitionException {
+        try {
+            int _type = T__33;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:32:7: ( 'rotate90' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:32:9: 'rotate90'
+            {
+            match("rotate90"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__33"
+
+    // $ANTLR start "T__34"
+    public final void mT__34() throws RecognitionException {
+        try {
+            int _type = T__34;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:33:7: ( 'rotate270' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:33:9: 'rotate270'
+            {
+            match("rotate270"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__34"
+
+    // $ANTLR start "T__35"
+    public final void mT__35() throws RecognitionException {
+        try {
+            int _type = T__35;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:34:7: ( 'actions' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:34:9: 'actions'
+            {
+            match("actions"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__35"
+
     // $ANTLR start "RULE_INT"
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1424:10: ( ( '-' )? ( '0' .. '9' )+ )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1424:12: ( '-' )? ( '0' .. '9' )+
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1604:10: ( ( '-' )? ( '0' .. '9' )+ )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1604:12: ( '-' )? ( '0' .. '9' )+
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1424:12: ( '-' )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1604:12: ( '-' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -423,7 +574,7 @@ public class InternalLegoLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1424:12: '-'
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1604:12: '-'
                     {
                     match('-'); 
 
@@ -432,7 +583,7 @@ public class InternalLegoLexer extends Lexer {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1424:17: ( '0' .. '9' )+
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1604:17: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -446,7 +597,7 @@ public class InternalLegoLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1424:18: '0' .. '9'
+            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1604:18: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -478,10 +629,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = RULE_FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1426:12: ( ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )* )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1426:14: ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1606:12: ( ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )* )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1606:14: ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )*
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1426:14: ( '-' )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1606:14: ( '-' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -490,7 +641,7 @@ public class InternalLegoLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1426:14: '-'
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1606:14: '-'
                     {
                     match('-'); 
 
@@ -499,7 +650,7 @@ public class InternalLegoLexer extends Lexer {
 
             }
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1426:19: ( '0' .. '9' )+
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1606:19: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -513,7 +664,7 @@ public class InternalLegoLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1426:20: '0' .. '9'
+            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1606:20: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -530,7 +681,7 @@ public class InternalLegoLexer extends Lexer {
             } while (true);
 
             match('.'); 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1426:35: ( '0' .. '9' )*
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1606:35: ( '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -543,7 +694,7 @@ public class InternalLegoLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1426:36: '0' .. '9'
+            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1606:36: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -571,10 +722,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1428:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1428:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1608:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1608:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1428:11: ( '^' )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1608:11: ( '^' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -583,7 +734,7 @@ public class InternalLegoLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1428:11: '^'
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1608:11: '^'
                     {
                     match('^'); 
 
@@ -601,7 +752,7 @@ public class InternalLegoLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1428:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1608:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop7:
             do {
                 int alt7=2;
@@ -650,10 +801,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -671,10 +822,10 @@ public class InternalLegoLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -690,7 +841,7 @@ public class InternalLegoLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:21: '\\\\' .
+                    	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -698,7 +849,7 @@ public class InternalLegoLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -723,10 +874,10 @@ public class InternalLegoLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop9:
                     do {
                         int alt9=3;
@@ -742,7 +893,7 @@ public class InternalLegoLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:54: '\\\\' .
+                    	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -750,7 +901,7 @@ public class InternalLegoLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1430:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1610:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -793,12 +944,12 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1432:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1432:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1612:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1612:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1432:24: ( options {greedy=false; } : . )*
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1612:24: ( options {greedy=false; } : . )*
             loop11:
             do {
                 int alt11=2;
@@ -823,7 +974,7 @@ public class InternalLegoLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1432:52: .
+            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1612:52: .
             	    {
             	    matchAny(); 
 
@@ -853,12 +1004,12 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1434:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1434:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1614:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1614:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1434:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1614:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop12:
             do {
                 int alt12=2;
@@ -871,7 +1022,7 @@ public class InternalLegoLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1434:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1614:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -891,7 +1042,7 @@ public class InternalLegoLexer extends Lexer {
                 }
             } while (true);
 
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1434:40: ( ( '\\r' )? '\\n' )?
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1614:40: ( ( '\\r' )? '\\n' )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -900,9 +1051,9 @@ public class InternalLegoLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1434:41: ( '\\r' )? '\\n'
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1614:41: ( '\\r' )? '\\n'
                     {
-                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1434:41: ( '\\r' )?
+                    // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1614:41: ( '\\r' )?
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
@@ -911,7 +1062,7 @@ public class InternalLegoLexer extends Lexer {
                     }
                     switch (alt13) {
                         case 1 :
-                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1434:41: '\\r'
+                            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1614:41: '\\r'
                             {
                             match('\r'); 
 
@@ -943,10 +1094,10 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1436:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1436:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1616:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1616:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1436:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1616:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt15=0;
             loop15:
             do {
@@ -1000,8 +1151,8 @@ public class InternalLegoLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1438:16: ( . )
-            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1438:18: .
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1618:16: ( . )
+            // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1618:18: .
             {
             matchAny(); 
 
@@ -1016,8 +1167,8 @@ public class InternalLegoLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt16=25;
+        // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt16=32;
         alt16 = dfa16.predict(input);
         switch (alt16) {
             case 1 :
@@ -1140,56 +1291,105 @@ public class InternalLegoLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:112: RULE_INT
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:112: T__29
+                {
+                mT__29(); 
+
+                }
+                break;
+            case 19 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:118: T__30
+                {
+                mT__30(); 
+
+                }
+                break;
+            case 20 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:124: T__31
+                {
+                mT__31(); 
+
+                }
+                break;
+            case 21 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:130: T__32
+                {
+                mT__32(); 
+
+                }
+                break;
+            case 22 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:136: T__33
+                {
+                mT__33(); 
+
+                }
+                break;
+            case 23 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:142: T__34
+                {
+                mT__34(); 
+
+                }
+                break;
+            case 24 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:148: T__35
+                {
+                mT__35(); 
+
+                }
+                break;
+            case 25 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:154: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 19 :
-                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:121: RULE_FLOAT
+            case 26 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:163: RULE_FLOAT
                 {
                 mRULE_FLOAT(); 
 
                 }
                 break;
-            case 20 :
-                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:132: RULE_ID
+            case 27 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:174: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 21 :
-                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:140: RULE_STRING
+            case 28 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:182: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 22 :
-                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:152: RULE_ML_COMMENT
+            case 29 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:194: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 23 :
-                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:168: RULE_SL_COMMENT
+            case 30 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:210: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 24 :
-                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:184: RULE_WS
+            case 31 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:226: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 25 :
-                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:192: RULE_ANY_OTHER
+            case 32 :
+                // ../at.bestsolution.lego/src-gen/at/bestsolution/lego/parser/antlr/internal/InternalLego.g:1:234: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1203,124 +1403,153 @@ public class InternalLegoLexer extends Lexer {
 
     protected DFA16 dfa16 = new DFA16(this);
     static final String DFA16_eotS =
-        "\4\uffff\12\33\1\26\1\50\1\26\1\uffff\3\26\5\uffff\1\33\1\uffff\13\33\1\50\6\uffff\1\33\1\73\2\33\1\76\5\33\1\104\2\33\1\uffff\2\33\1\uffff\3\33\1\114\1\33\1\uffff\1\33\1\117\1\33\1\121\1\122\2\33\1\uffff\2\33\1\uffff\1\33\2\uffff\1\33\1\133\6\33\1\uffff\3\33\1\145\2\33\1\150\1\33\1\152\1\uffff\1\153\1\154\1\uffff\1\155\4\uffff";
+        "\4\uffff\2\40\1\43\1\44\1\45\12\40\1\33\1\63\1\33\1\uffff\3\33\5\uffff\1\40\1\uffff\2\40\3\uffff\14\40\1\63\6\uffff\2\40\1\112\3\40\1\116\6\40\1\125\3\40\1\uffff\3\40\1\uffff\3\40\1\137\2\40\1\uffff\1\40\1\143\3\40\1\147\1\150\2\40\1\uffff\3\40\1\uffff\1\161\1\40\3\uffff\1\40\1\164\6\40\1\uffff\2\40\1\uffff\1\40\1\176\2\40\1\u0081\1\40\1\u0083\1\40\1\u0085\1\uffff\1\40\1\u0087\1\uffff\1\u0088\1\uffff\1\u0089\1\uffff\1\u008a\4\uffff";
     static final String DFA16_eofS =
-        "\156\uffff";
+        "\u008b\uffff";
     static final String DFA16_minS =
-        "\1\0\3\uffff\1\160\1\147\1\157\1\156\1\145\1\162\1\170\1\163\1\157\1\162\1\60\1\56\1\101\1\uffff\2\0\1\52\5\uffff\1\141\1\uffff\1\142\1\164\1\151\1\170\1\151\1\156\1\151\1\155\2\163\1\141\1\56\6\uffff\1\162\1\60\1\141\1\143\1\60\1\164\1\145\1\147\1\154\1\145\1\60\1\156\1\164\1\uffff\1\164\1\153\1\uffff\1\163\1\162\1\151\1\60\1\155\1\uffff\1\163\1\60\1\145\2\60\1\141\1\156\1\uffff\1\142\1\146\1\uffff\1\61\2\uffff\1\164\1\60\1\154\1\157\1\70\1\60\1\67\1\145\1\uffff\1\171\1\162\3\60\1\144\1\60\1\155\1\60\1\uffff\2\60\1\uffff\1\60\4\uffff";
+        "\1\0\3\uffff\1\160\1\147\3\60\1\165\2\157\1\156\1\145\1\162\1\170\1\143\1\157\1\162\1\60\1\56\1\101\1\uffff\2\0\1\52\5\uffff\1\141\1\uffff\1\164\1\142\3\uffff\1\162\1\165\1\151\1\170\1\151\1\156\1\151\1\155\1\163\1\164\1\163\1\141\1\56\6\uffff\1\162\1\141\1\60\1\141\1\156\1\143\1\60\1\164\1\145\1\147\1\154\1\145\1\151\1\60\1\156\2\164\1\uffff\1\164\1\144\1\153\1\uffff\1\163\1\162\1\151\1\60\1\155\1\157\1\uffff\1\163\1\60\1\145\1\151\1\55\2\60\1\141\1\156\1\uffff\1\142\1\156\1\146\1\uffff\1\60\1\157\3\uffff\1\164\1\60\1\154\1\163\1\157\1\70\1\60\1\67\1\uffff\1\156\1\145\1\uffff\1\171\1\60\1\162\4\60\1\144\1\60\1\uffff\1\155\1\60\1\uffff\1\60\1\uffff\1\60\1\uffff\1\60\4\uffff";
     static final String DFA16_maxS =
-        "\1\uffff\3\uffff\1\160\1\157\1\162\1\156\1\145\1\162\1\170\1\163\1\157\1\162\2\71\1\172\1\uffff\2\uffff\1\57\5\uffff\1\141\1\uffff\1\142\1\164\1\151\1\170\1\151\1\156\1\151\1\155\2\163\1\141\1\71\6\uffff\1\162\1\172\1\141\1\143\1\172\1\164\1\145\1\147\1\154\1\145\1\172\1\156\1\164\1\uffff\1\164\1\153\1\uffff\1\163\1\162\1\151\1\172\1\155\1\uffff\1\163\1\172\1\145\2\172\1\141\1\156\1\uffff\1\142\1\146\1\uffff\1\71\2\uffff\1\164\1\172\1\154\1\157\1\70\1\60\1\67\1\145\1\uffff\1\171\1\162\1\60\1\172\1\60\1\144\1\172\1\155\1\172\1\uffff\2\172\1\uffff\1\172\4\uffff";
+        "\1\uffff\3\uffff\1\160\1\157\3\172\1\165\1\157\1\162\1\156\1\145\1\162\1\170\1\163\1\157\1\162\2\71\1\172\1\uffff\2\uffff\1\57\5\uffff\1\141\1\uffff\1\164\1\142\3\uffff\1\162\1\165\1\151\1\170\1\151\1\156\1\151\1\155\1\163\1\164\1\163\1\141\1\71\6\uffff\1\162\1\141\1\172\1\141\1\156\1\143\1\172\1\164\1\145\1\147\1\154\1\145\1\151\1\172\1\156\2\164\1\uffff\1\164\1\144\1\153\1\uffff\1\163\1\162\1\151\1\172\1\155\1\157\1\uffff\1\163\1\172\1\145\1\151\1\55\2\172\1\141\1\156\1\uffff\1\142\1\156\1\146\1\uffff\1\172\1\157\3\uffff\1\164\1\172\1\154\1\163\1\157\1\70\1\60\1\67\1\uffff\1\156\1\145\1\uffff\1\171\1\172\1\162\1\60\1\172\1\60\1\172\1\144\1\172\1\uffff\1\155\1\172\1\uffff\1\172\1\uffff\1\172\1\uffff\1\172\4\uffff";
     static final String DFA16_acceptS =
-        "\1\uffff\1\1\1\2\1\3\15\uffff\1\24\3\uffff\1\30\1\31\1\1\1\2\1\3\1\uffff\1\24\14\uffff\1\22\1\23\1\25\1\26\1\27\1\30\15\uffff\1\5\2\uffff\1\11\5\uffff\1\15\7\uffff\1\13\2\uffff\1\4\1\uffff\1\6\1\7\10\uffff\1\12\11\uffff\1\20\2\uffff\1\14\1\uffff\1\17\1\21\1\10\1\16";
+        "\1\uffff\1\1\1\2\1\3\22\uffff\1\33\3\uffff\1\37\1\40\1\1\1\2\1\3\1\uffff\1\33\2\uffff\1\6\1\7\1\10\15\uffff\1\31\1\32\1\34\1\35\1\36\1\37\21\uffff\1\13\3\uffff\1\17\6\uffff\1\23\11\uffff\1\21\3\uffff\1\4\2\uffff\1\12\1\14\1\15\10\uffff\1\5\2\uffff\1\20\11\uffff\1\30\2\uffff\1\26\1\uffff\1\11\1\uffff\1\22\1\uffff\1\25\1\27\1\16\1\24";
     static final String DFA16_specialS =
-        "\1\1\21\uffff\1\2\1\0\132\uffff}>";
+        "\1\1\26\uffff\1\2\1\0\162\uffff}>";
     static final String[] DFA16_transitionS = {
-            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\5\26\1\16\1\1\1\24\12\17\7\26\32\21\3\26\1\20\1\21\1\26\1\13\1\6\3\21\1\12\1\10\5\21\1\4\1\21\1\11\1\14\1\21\1\5\1\21\1\15\1\7\5\21\1\2\1\26\1\3\uff82\26",
+            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\27\4\33\1\30\5\33\1\23\1\1\1\31\12\24\7\33\32\26\3\33\1\25\1\26\1\33\1\20\1\13\1\26\1\11\1\26\1\17\1\15\5\26\1\4\1\26\1\16\1\21\1\26\1\5\1\12\1\22\1\14\2\26\1\6\1\7\1\10\1\2\1\33\1\3\uff82\33",
             "",
             "",
             "",
-            "\1\32",
-            "\1\34\7\uffff\1\35",
-            "\1\37\2\uffff\1\36",
-            "\1\40",
-            "\1\41",
-            "\1\42",
-            "\1\43",
-            "\1\44",
-            "\1\45",
+            "\1\37",
+            "\1\42\7\uffff\1\41",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\46",
-            "\12\47",
-            "\1\51\1\uffff\12\47",
-            "\32\33\4\uffff\1\33\1\uffff\32\33",
-            "",
-            "\0\52",
-            "\0\52",
-            "\1\53\4\uffff\1\54",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\56",
-            "",
-            "\1\57",
+            "\1\47",
+            "\1\51\2\uffff\1\50",
+            "\1\52",
+            "\1\53",
+            "\1\54",
+            "\1\55",
+            "\1\57\17\uffff\1\56",
             "\1\60",
             "\1\61",
-            "\1\62",
-            "\1\63",
-            "\1\64",
-            "\1\65",
-            "\1\66",
-            "\1\67",
-            "\1\70",
+            "\12\62",
+            "\1\64\1\uffff\12\62",
+            "\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\0\65",
+            "\0\65",
+            "\1\66\4\uffff\1\67",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\71",
-            "\1\51\1\uffff\12\47",
-            "",
-            "",
-            "",
-            "",
-            "",
             "",
             "\1\72",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\73",
+            "",
+            "",
+            "",
             "\1\74",
             "\1\75",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\76",
             "\1\77",
             "\1\100",
             "\1\101",
             "\1\102",
             "\1\103",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\104",
             "\1\105",
             "\1\106",
-            "",
             "\1\107",
+            "\1\64\1\uffff\12\62",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\110",
-            "",
             "\1\111",
-            "\1\112",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\113",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\114",
             "\1\115",
-            "",
-            "\1\116",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\117",
             "\1\120",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\121",
+            "\1\122",
             "\1\123",
             "\1\124",
-            "",
-            "\1\125",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\126",
+            "\1\127",
+            "\1\130",
             "",
-            "\1\127\1\131\6\uffff\1\130",
-            "",
-            "",
+            "\1\131",
             "\1\132",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\133",
+            "",
             "\1\134",
             "\1\135",
             "\1\136",
-            "\1\137",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\140",
             "\1\141",
             "",
             "\1\142",
-            "\1\143",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\144",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\145",
             "\1\146",
-            "\1\147",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\151",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\152",
             "",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\153",
+            "\1\154",
+            "\1\155",
             "",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\40\1\156\1\160\6\40\1\157\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\162",
+            "",
+            "",
+            "",
+            "\1\163",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\165",
+            "\1\166",
+            "\1\167",
+            "\1\170",
+            "\1\171",
+            "\1\172",
+            "",
+            "\1\173",
+            "\1\174",
+            "",
+            "\1\175",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\177",
+            "\1\u0080",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0082",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0084",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\1\u0086",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
             "",
             "",
@@ -1357,19 +1586,19 @@ public class InternalLegoLexer extends Lexer {
             this.transition = DFA16_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA16_19 = input.LA(1);
+                        int LA16_24 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA16_19>='\u0000' && LA16_19<='\uFFFF')) ) {s = 42;}
+                        if ( ((LA16_24>='\u0000' && LA16_24<='\uFFFF')) ) {s = 53;}
 
-                        else s = 22;
+                        else s = 27;
 
                         if ( s>=0 ) return s;
                         break;
@@ -1387,49 +1616,59 @@ public class InternalLegoLexer extends Lexer {
 
                         else if ( (LA16_0=='r') ) {s = 5;}
 
-                        else if ( (LA16_0=='b') ) {s = 6;}
+                        else if ( (LA16_0=='x') ) {s = 6;}
 
-                        else if ( (LA16_0=='u') ) {s = 7;}
+                        else if ( (LA16_0=='y') ) {s = 7;}
 
-                        else if ( (LA16_0=='g') ) {s = 8;}
+                        else if ( (LA16_0=='z') ) {s = 8;}
 
-                        else if ( (LA16_0=='o') ) {s = 9;}
+                        else if ( (LA16_0=='d') ) {s = 9;}
 
-                        else if ( (LA16_0=='f') ) {s = 10;}
+                        else if ( (LA16_0=='s') ) {s = 10;}
 
-                        else if ( (LA16_0=='a') ) {s = 11;}
+                        else if ( (LA16_0=='b') ) {s = 11;}
 
-                        else if ( (LA16_0=='p') ) {s = 12;}
+                        else if ( (LA16_0=='u') ) {s = 12;}
 
-                        else if ( (LA16_0=='t') ) {s = 13;}
+                        else if ( (LA16_0=='g') ) {s = 13;}
 
-                        else if ( (LA16_0=='-') ) {s = 14;}
+                        else if ( (LA16_0=='o') ) {s = 14;}
 
-                        else if ( ((LA16_0>='0' && LA16_0<='9')) ) {s = 15;}
+                        else if ( (LA16_0=='f') ) {s = 15;}
 
-                        else if ( (LA16_0=='^') ) {s = 16;}
+                        else if ( (LA16_0=='a') ) {s = 16;}
 
-                        else if ( ((LA16_0>='A' && LA16_0<='Z')||LA16_0=='_'||(LA16_0>='c' && LA16_0<='e')||(LA16_0>='h' && LA16_0<='l')||LA16_0=='n'||LA16_0=='q'||LA16_0=='s'||(LA16_0>='v' && LA16_0<='z')) ) {s = 17;}
+                        else if ( (LA16_0=='p') ) {s = 17;}
 
-                        else if ( (LA16_0=='\"') ) {s = 18;}
+                        else if ( (LA16_0=='t') ) {s = 18;}
 
-                        else if ( (LA16_0=='\'') ) {s = 19;}
+                        else if ( (LA16_0=='-') ) {s = 19;}
 
-                        else if ( (LA16_0=='/') ) {s = 20;}
+                        else if ( ((LA16_0>='0' && LA16_0<='9')) ) {s = 20;}
 
-                        else if ( ((LA16_0>='\t' && LA16_0<='\n')||LA16_0=='\r'||LA16_0==' ') ) {s = 21;}
+                        else if ( (LA16_0=='^') ) {s = 21;}
 
-                        else if ( ((LA16_0>='\u0000' && LA16_0<='\b')||(LA16_0>='\u000B' && LA16_0<='\f')||(LA16_0>='\u000E' && LA16_0<='\u001F')||LA16_0=='!'||(LA16_0>='#' && LA16_0<='&')||(LA16_0>='(' && LA16_0<=',')||(LA16_0>=':' && LA16_0<='@')||(LA16_0>='[' && LA16_0<=']')||LA16_0=='`'||LA16_0=='|'||(LA16_0>='~' && LA16_0<='\uFFFF')) ) {s = 22;}
+                        else if ( ((LA16_0>='A' && LA16_0<='Z')||LA16_0=='_'||LA16_0=='c'||LA16_0=='e'||(LA16_0>='h' && LA16_0<='l')||LA16_0=='n'||LA16_0=='q'||(LA16_0>='v' && LA16_0<='w')) ) {s = 22;}
+
+                        else if ( (LA16_0=='\"') ) {s = 23;}
+
+                        else if ( (LA16_0=='\'') ) {s = 24;}
+
+                        else if ( (LA16_0=='/') ) {s = 25;}
+
+                        else if ( ((LA16_0>='\t' && LA16_0<='\n')||LA16_0=='\r'||LA16_0==' ') ) {s = 26;}
+
+                        else if ( ((LA16_0>='\u0000' && LA16_0<='\b')||(LA16_0>='\u000B' && LA16_0<='\f')||(LA16_0>='\u000E' && LA16_0<='\u001F')||LA16_0=='!'||(LA16_0>='#' && LA16_0<='&')||(LA16_0>='(' && LA16_0<=',')||(LA16_0>=':' && LA16_0<='@')||(LA16_0>='[' && LA16_0<=']')||LA16_0=='`'||LA16_0=='|'||(LA16_0>='~' && LA16_0<='\uFFFF')) ) {s = 27;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA16_18 = input.LA(1);
+                        int LA16_23 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA16_18>='\u0000' && LA16_18<='\uFFFF')) ) {s = 42;}
+                        if ( ((LA16_23>='\u0000' && LA16_23<='\uFFFF')) ) {s = 53;}
 
-                        else s = 22;
+                        else s = 27;
 
                         if ( s>=0 ) return s;
                         break;

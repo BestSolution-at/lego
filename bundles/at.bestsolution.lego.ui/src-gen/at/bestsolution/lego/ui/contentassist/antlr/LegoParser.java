@@ -40,6 +40,7 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getAlternatives(), "rule__Model__Alternatives");
 					put(grammarAccess.getLegoElementAccess().getAlternatives(), "rule__LegoElement__Alternatives");
 					put(grammarAccess.getRasterItemAccess().getAlternatives(), "rule__RasterItem__Alternatives");
+					put(grammarAccess.getActionAccess().getAxisAlternatives_2_0(), "rule__Action__AxisAlternatives_2_0");
 					put(grammarAccess.getRepostoryItemAccess().getAlternatives(), "rule__RepostoryItem__Alternatives");
 					put(grammarAccess.getSourceAccess().getAlternatives(), "rule__Source__Alternatives");
 					put(grammarAccess.getAssemblyItemAccess().getAlternatives(), "rule__AssemblyItem__Alternatives");
@@ -48,6 +49,8 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getItemRepositoryAccess().getGroup(), "rule__ItemRepository__Group__0");
 					put(grammarAccess.getMountedPartAccess().getGroup(), "rule__MountedPart__Group__0");
+					put(grammarAccess.getActionAccess().getGroup(), "rule__Action__Group__0");
+					put(grammarAccess.getActionAccess().getGroup_6(), "rule__Action__Group_6__0");
 					put(grammarAccess.getColorAccess().getGroup(), "rule__Color__Group__0");
 					put(grammarAccess.getBrickAccess().getGroup(), "rule__Brick__Group__0");
 					put(grammarAccess.getGeneratedAccess().getGroup(), "rule__Generated__Group__0");
@@ -60,6 +63,7 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRasterAssemblyItemAccess().getGroup_5(), "rule__RasterAssemblyItem__Group_5__0");
 					put(grammarAccess.getMountedAssemblyItemAccess().getGroup(), "rule__MountedAssemblyItem__Group__0");
 					put(grammarAccess.getMountedAssemblyItemAccess().getGroup_5(), "rule__MountedAssemblyItem__Group_5__0");
+					put(grammarAccess.getMountedAssemblyItemAccess().getGroup_6(), "rule__MountedAssemblyItem__Group_6__0");
 					put(grammarAccess.getModelAccess().getRepoAssignment_0(), "rule__Model__RepoAssignment_0");
 					put(grammarAccess.getModelAccess().getAssemblyAssignment_1(), "rule__Model__AssemblyAssignment_1");
 					put(grammarAccess.getItemRepositoryAccess().getNameAssignment_0(), "rule__ItemRepository__NameAssignment_0");
@@ -67,6 +71,12 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMountedPartAccess().getNameAssignment_1(), "rule__MountedPart__NameAssignment_1");
 					put(grammarAccess.getMountedPartAccess().getFillAssignment_2(), "rule__MountedPart__FillAssignment_2");
 					put(grammarAccess.getMountedPartAccess().getSourceAssignment_3(), "rule__MountedPart__SourceAssignment_3");
+					put(grammarAccess.getActionAccess().getNameAssignment_0(), "rule__Action__NameAssignment_0");
+					put(grammarAccess.getActionAccess().getTypeAssignment_1(), "rule__Action__TypeAssignment_1");
+					put(grammarAccess.getActionAccess().getAxisAssignment_2(), "rule__Action__AxisAssignment_2");
+					put(grammarAccess.getActionAccess().getAngleAssignment_3(), "rule__Action__AngleAssignment_3");
+					put(grammarAccess.getActionAccess().getDurationAssignment_5(), "rule__Action__DurationAssignment_5");
+					put(grammarAccess.getActionAccess().getSoundfileAssignment_6_1(), "rule__Action__SoundfileAssignment_6_1");
 					put(grammarAccess.getColorAccess().getRAssignment_1(), "rule__Color__RAssignment_1");
 					put(grammarAccess.getColorAccess().getGAssignment_2(), "rule__Color__GAssignment_2");
 					put(grammarAccess.getColorAccess().getBAssignment_3(), "rule__Color__BAssignment_3");
@@ -104,6 +114,7 @@ public class LegoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMountedAssemblyItemAccess().getRotateXAssignment_5_1(), "rule__MountedAssemblyItem__RotateXAssignment_5_1");
 					put(grammarAccess.getMountedAssemblyItemAccess().getRotateYAssignment_5_2(), "rule__MountedAssemblyItem__RotateYAssignment_5_2");
 					put(grammarAccess.getMountedAssemblyItemAccess().getRotateZAssignment_5_3(), "rule__MountedAssemblyItem__RotateZAssignment_5_3");
+					put(grammarAccess.getMountedAssemblyItemAccess().getActionsAssignment_6_1(), "rule__MountedAssemblyItem__ActionsAssignment_6_1");
 				}
 			};
 		}

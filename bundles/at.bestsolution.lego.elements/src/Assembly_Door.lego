@@ -2,7 +2,7 @@ assembly AssemblyDoor {
 	DuploItems.DoorBrick_4_6_2_yellow 				pos 0 0 0
 	DuploItems.Door_brown 							pos 50.0 -5.0 -8.0 transform 0.0 180.0 0.0
 		actions 
-			OpenDoor rotate y 80.0
-			CloseDoor rotate y 180.0
+			OpenDoor rotate y 80.0 		duration 3000 sound-file "squeaking-door.mp3"
+			CloseDoor rotate y 180.0	duration 2000 sound-file "slam-door.mp3"
 
-} 
+}

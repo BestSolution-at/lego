@@ -42,6 +42,10 @@ MountedPart:
 	'mpart' name=ValidID fill=Color source=Source
 ;
 
+Action:
+	name=ID type='rotate' axis=('x'|'y'|'z') angle=FLOAT 'duration' duration=INT ('sound-file' soundfile=STRING)?
+;
+
 RepostoryItem:
 	Brick | MountedPart
 ;
@@ -95,7 +99,7 @@ RasterAssemblyItem:
 
 MountedAssemblyItem:
 	element=[MountedPart|QualifiedName] 'pos' xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT 
-		( 'transform' rotateX=FLOAT rotateY=FLOAT rotateZ=FLOAT  )?	
+		( 'transform' rotateX=FLOAT rotateY=FLOAT rotateZ=FLOAT  )?	( 'actions' actions+=Action+  )?
 ;
 
 terminal INT returns ecore::EInt:

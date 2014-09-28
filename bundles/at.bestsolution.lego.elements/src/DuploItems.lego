@@ -14,5 +14,4 @@ DuploItems {
 
 	brick DoorBrick_4_6_2_yellow	units 4 6 2 rgb 255 255 0  		fxml "/Users/tomschindl/git/lego/bundles/at.bestsolution.lego.elements/src/4x6x2_doorframe.fxml" origin -7.8 0. 23.8
 	mpart Door_brown				rgb 139 69 19					generated	box 53.0 50.0 2.0 origin 25.0 -25.0 0.0
-//	door Door_4_6 					units 4 6 	rgb 139 69 19
 } 

@@ -348,6 +348,164 @@ ruleMountedPart returns [EObject current=null]
 
 
 
+// Entry rule entryRuleAction
+entryRuleAction returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getActionRule()); }
+	 iv_ruleAction=ruleAction 
+	 { $current=$iv_ruleAction.current; } 
+	 EOF 
+;
+
+// Rule Action
+ruleAction returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_name_0_0=RULE_ID
+		{
+			newLeafNode(lv_name_0_0, grammarAccess.getActionAccess().getNameIDTerminalRuleCall_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"ID");
+	    }
+
+)
+)(
+(
+		lv_type_1_0=	'rotate' 
+    {
+        newLeafNode(lv_type_1_0, grammarAccess.getActionAccess().getTypeRotateKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionRule());
+	        }
+       		setWithLastConsumed($current, "type", lv_type_1_0, "rotate");
+	    }
+
+)
+)(
+(
+(
+		lv_axis_2_1=	'x' 
+    {
+        newLeafNode(lv_axis_2_1, grammarAccess.getActionAccess().getAxisXKeyword_2_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionRule());
+	        }
+       		setWithLastConsumed($current, "axis", lv_axis_2_1, null);
+	    }
+
+    |		lv_axis_2_2=	'y' 
+    {
+        newLeafNode(lv_axis_2_2, grammarAccess.getActionAccess().getAxisYKeyword_2_0_1());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionRule());
+	        }
+       		setWithLastConsumed($current, "axis", lv_axis_2_2, null);
+	    }
+
+    |		lv_axis_2_3=	'z' 
+    {
+        newLeafNode(lv_axis_2_3, grammarAccess.getActionAccess().getAxisZKeyword_2_0_2());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionRule());
+	        }
+       		setWithLastConsumed($current, "axis", lv_axis_2_3, null);
+	    }
+
+)
+
+)
+)(
+(
+		lv_angle_3_0=RULE_FLOAT
+		{
+			newLeafNode(lv_angle_3_0, grammarAccess.getActionAccess().getAngleFLOATTerminalRuleCall_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"angle",
+        		lv_angle_3_0, 
+        		"FLOAT");
+	    }
+
+)
+)	otherlv_4='duration' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getActionAccess().getDurationKeyword_4());
+    }
+(
+(
+		lv_duration_5_0=RULE_INT
+		{
+			newLeafNode(lv_duration_5_0, grammarAccess.getActionAccess().getDurationINTTerminalRuleCall_5_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"duration",
+        		lv_duration_5_0, 
+        		"INT");
+	    }
+
+)
+)(	otherlv_6='sound-file' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getActionAccess().getSoundFileKeyword_6_0());
+    }
+(
+(
+		lv_soundfile_7_0=RULE_STRING
+		{
+			newLeafNode(lv_soundfile_7_0, grammarAccess.getActionAccess().getSoundfileSTRINGTerminalRuleCall_6_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"soundfile",
+        		lv_soundfile_7_0, 
+        		"STRING");
+	    }
+
+)
+))?)
+;
+
+
+
+
+
 // Entry rule entryRuleRepostoryItem
 entryRuleRepostoryItem returns [EObject current=null] 
 	:
@@ -1414,7 +1572,29 @@ ruleMountedAssemblyItem returns [EObject current=null]
 	    }
 
 )
-))?)
+))?(	otherlv_9='actions' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getMountedAssemblyItemAccess().getActionsKeyword_6_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getMountedAssemblyItemAccess().getActionsActionParserRuleCall_6_1_0()); 
+	    }
+		lv_actions_10_0=ruleAction		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMountedAssemblyItemRule());
+	        }
+       		add(
+       			$current, 
+       			"actions",
+        		lv_actions_10_0, 
+        		"Action");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)+)?)
 ;
 
 

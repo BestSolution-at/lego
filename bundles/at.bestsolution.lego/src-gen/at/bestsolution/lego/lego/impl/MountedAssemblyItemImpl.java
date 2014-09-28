@@ -2,16 +2,25 @@
  */
 package at.bestsolution.lego.lego.impl;
 
+import at.bestsolution.lego.lego.Action;
 import at.bestsolution.lego.lego.LegoPackage;
 import at.bestsolution.lego.lego.MountedAssemblyItem;
 import at.bestsolution.lego.lego.MountedPart;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link at.bestsolution.lego.lego.impl.MountedAssemblyItemImpl#getRotateX <em>Rotate X</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.impl.MountedAssemblyItemImpl#getRotateY <em>Rotate Y</em>}</li>
  *   <li>{@link at.bestsolution.lego.lego.impl.MountedAssemblyItemImpl#getRotateZ <em>Rotate Z</em>}</li>
+ *   <li>{@link at.bestsolution.lego.lego.impl.MountedAssemblyItemImpl#getActions <em>Actions</em>}</li>
  * </ul>
  * </p>
  *
@@ -163,6 +173,16 @@ public class MountedAssemblyItemImpl extends AssemblyItemImpl implements Mounted
    * @ordered
    */
   protected float rotateZ = ROTATE_Z_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getActions()
+   * @generated
+   * @ordered
+   */
+  protected EList<Action> actions;
 
   /**
    * <!-- begin-user-doc -->
@@ -371,6 +391,36 @@ public class MountedAssemblyItemImpl extends AssemblyItemImpl implements Mounted
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Action> getActions()
+  {
+    if (actions == null)
+    {
+      actions = new EObjectContainmentEList<Action>(Action.class, this, LegoPackage.MOUNTED_ASSEMBLY_ITEM__ACTIONS);
+    }
+    return actions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ACTIONS:
+        return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -391,6 +441,8 @@ public class MountedAssemblyItemImpl extends AssemblyItemImpl implements Mounted
         return getRotateY();
       case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ROTATE_Z:
         return getRotateZ();
+      case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ACTIONS:
+        return getActions();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -400,6 +452,7 @@ public class MountedAssemblyItemImpl extends AssemblyItemImpl implements Mounted
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -425,6 +478,10 @@ public class MountedAssemblyItemImpl extends AssemblyItemImpl implements Mounted
         return;
       case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ROTATE_Z:
         setRotateZ((Float)newValue);
+        return;
+      case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ACTIONS:
+        getActions().clear();
+        getActions().addAll((Collection<? extends Action>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -461,6 +518,9 @@ public class MountedAssemblyItemImpl extends AssemblyItemImpl implements Mounted
       case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ROTATE_Z:
         setRotateZ(ROTATE_Z_EDEFAULT);
         return;
+      case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ACTIONS:
+        getActions().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -489,6 +549,8 @@ public class MountedAssemblyItemImpl extends AssemblyItemImpl implements Mounted
         return rotateY != ROTATE_Y_EDEFAULT;
       case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ROTATE_Z:
         return rotateZ != ROTATE_Z_EDEFAULT;
+      case LegoPackage.MOUNTED_ASSEMBLY_ITEM__ACTIONS:
+        return actions != null && !actions.isEmpty();
     }
     return super.eIsSet(featureID);
   }

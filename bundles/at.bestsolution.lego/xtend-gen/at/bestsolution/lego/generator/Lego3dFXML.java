@@ -140,7 +140,7 @@ public class Lego3dFXML implements IGenerator {
     return (_multiply - (2 * this.off));
   }
   
-  public CharSequence generatedAssembly(final Assembly a) {
+  public CharSequence generatedAssembly(final Assembly a, final boolean root) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("<Group>");
     _builder.newLine();
@@ -148,8 +148,14 @@ public class Lego3dFXML implements IGenerator {
       EList<AssemblyItem> _items = a.getItems();
       for(final AssemblyItem x : _items) {
         _builder.append("\t");
-        _builder.append("<Group>");
-        _builder.newLine();
+        _builder.append("<Group ");
+        {
+          if (root) {
+            _builder.append("styleClass=\"component\"");
+          }
+        }
+        _builder.append(">");
+        _builder.newLineIfNotEmpty();
         {
           if ((x instanceof RasterAssemblyItem)) {
             {
@@ -157,17 +163,41 @@ public class Lego3dFXML implements IGenerator {
               if ((_element instanceof Brick)) {
                 _builder.append("\t");
                 _builder.append("\t");
-                RasterItem _element_1 = ((RasterAssemblyItem)x).getElement();
-                CharSequence _createBrick = this.createBrick(((Brick) _element_1));
+                {
+                  if (root) {
+                    _builder.append("<id>");
+                    RasterItem _element_1 = ((RasterAssemblyItem)x).getElement();
+                    String _name = ((Brick) _element_1).getName();
+                    _builder.append(_name, "\t\t");
+                    _builder.append("</id>");
+                  }
+                }
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t");
+                _builder.append("\t");
+                RasterItem _element_2 = ((RasterAssemblyItem)x).getElement();
+                CharSequence _createBrick = this.createBrick(((Brick) _element_2));
                 _builder.append(_createBrick, "\t\t");
                 _builder.newLineIfNotEmpty();
               } else {
-                RasterItem _element_2 = ((RasterAssemblyItem)x).getElement();
-                if ((_element_2 instanceof Assembly)) {
+                RasterItem _element_3 = ((RasterAssemblyItem)x).getElement();
+                if ((_element_3 instanceof Assembly)) {
                   _builder.append("\t");
                   _builder.append("\t");
-                  RasterItem _element_3 = ((RasterAssemblyItem)x).getElement();
-                  Object _generatedAssembly = this.generatedAssembly(((Assembly) _element_3));
+                  {
+                    if (root) {
+                      _builder.append("<id>");
+                      RasterItem _element_4 = ((RasterAssemblyItem)x).getElement();
+                      String _name_1 = ((Assembly) _element_4).getName();
+                      _builder.append(_name_1, "\t\t");
+                      _builder.append("</id>");
+                    }
+                  }
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  RasterItem _element_5 = ((RasterAssemblyItem)x).getElement();
+                  Object _generatedAssembly = this.generatedAssembly(((Assembly) _element_5), false);
                   _builder.append(_generatedAssembly, "\t\t");
                   _builder.newLineIfNotEmpty();
                 }
@@ -280,8 +310,20 @@ public class Lego3dFXML implements IGenerator {
               _builder.newLineIfNotEmpty();
               _builder.append("\t");
               _builder.append("\t");
-              MountedPart _element_4 = xm.getElement();
-              CharSequence _createMPart = this.createMPart(_element_4);
+              {
+                if (root) {
+                  _builder.append("<id>");
+                  MountedPart _element_6 = xm.getElement();
+                  String _name_2 = _element_6.getName();
+                  _builder.append(_name_2, "\t\t");
+                  _builder.append("</id>");
+                }
+              }
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("\t");
+              MountedPart _element_7 = xm.getElement();
+              CharSequence _createMPart = this.createMPart(_element_7, xm);
               _builder.append(_createMPart, "\t\t");
               _builder.newLineIfNotEmpty();
               _builder.append("\t");
@@ -379,7 +421,7 @@ public class Lego3dFXML implements IGenerator {
     return _builder;
   }
   
-  public CharSequence createMPart(final MountedPart object) {
+  public CharSequence createMPart(final MountedPart object, final MountedAssemblyItem mi) {
     StringConcatenation _builder = new StringConcatenation();
     {
       Source _source = object.getSource();
@@ -390,7 +432,11 @@ public class Lego3dFXML implements IGenerator {
         _builder.append("<Group>");
         _builder.newLine();
         _builder.append("\t");
-        _builder.append("<Box width=\"");
+        _builder.append("<Box styleClass=\"shape\" id=\"dynamic_");
+        MountedPart _element = mi.getElement();
+        String _name = _element.getName();
+        _builder.append(_name, "\t");
+        _builder.append("\" width=\"");
         float _width = s.getWidth();
         _builder.append(_width, "\t");
         _builder.append("\" height=\"");
@@ -536,7 +582,7 @@ public class Lego3dFXML implements IGenerator {
     _builder.append("</transforms>");
     _builder.newLine();
     _builder.append("\t\t\t\t");
-    CharSequence _generatedAssembly = this.generatedAssembly(a);
+    CharSequence _generatedAssembly = this.generatedAssembly(a, true);
     _builder.append(_generatedAssembly, "\t\t\t\t");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
@@ -875,11 +921,8 @@ public class Lego3dFXML implements IGenerator {
           Source _source_1 = brick.getSource();
           final FxmlInclude fxml = ((FxmlInclude) _source_1);
           _builder.newLineIfNotEmpty();
-          _builder.append("<Group id=\"");
-          String _name = brick.getName();
-          _builder.append(_name, "");
-          _builder.append("\">");
-          _builder.newLineIfNotEmpty();
+          _builder.append("<Group>");
+          _builder.newLine();
           _builder.append("\t");
           String _source3d = fxml.getSource3d();
           FileReader _fileReader = new FileReader(_source3d);
@@ -908,12 +951,12 @@ public class Lego3dFXML implements IGenerator {
           _builder.newLine();
         } else {
           _builder.append("<Group id=\"");
-          String _name_1 = brick.getName();
-          _builder.append(_name_1, "");
+          String _name = brick.getName();
+          _builder.append(_name, "");
           _builder.append("\">");
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
-          _builder.append("<Box width=\"");
+          _builder.append("<Box styleClass=\"shape\" width=\"");
           double _width = this.width(brick);
           _builder.append(_width, "\t");
           _builder.append("\" depth=\"");
@@ -979,7 +1022,7 @@ public class Lego3dFXML implements IGenerator {
                 IntegerRange _upTo_1 = new IntegerRange(1, _units_1);
                 for(final Integer iZ : _upTo_1) {
                   _builder.append("\t");
-                  _builder.append("<Cylinder radius=\"");
+                  _builder.append("<Cylinder styleClass=\"shape\" radius=\"");
                   _builder.append(this.r, "\t");
                   _builder.append("\" height=\"");
                   _builder.append(this.rh, "\t");
@@ -1062,11 +1105,21 @@ public class Lego3dFXML implements IGenerator {
     _builder.newLine();
     _builder.append("<?import javafx.scene.paint.*?>");
     _builder.newLine();
+    _builder.append("<?language javascript?>");
+    _builder.newLine();
     _builder.newLine();
     _builder.append("<Group xmlns:fx=\"http://javafx.com/fxml/1\">");
     _builder.newLine();
     _builder.append("\t");
-    CharSequence _generatedAssembly = this.generatedAssembly(a);
+    _builder.append("<fx:script>");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("</fx:script>");
+    _builder.newLine();
+    _builder.append("\t");
+    CharSequence _generatedAssembly = this.generatedAssembly(a, true);
     _builder.append(_generatedAssembly, "\t");
     _builder.newLineIfNotEmpty();
     _builder.append("</Group>");

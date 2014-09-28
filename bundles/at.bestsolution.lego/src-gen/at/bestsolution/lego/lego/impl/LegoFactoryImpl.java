@@ -69,6 +69,7 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
       case LegoPackage.LEGO_ELEMENT: return createLegoElement();
       case LegoPackage.RASTER_ITEM: return createRasterItem();
       case LegoPackage.MOUNTED_PART: return createMountedPart();
+      case LegoPackage.ACTION: return createAction();
       case LegoPackage.REPOSTORY_ITEM: return createRepostoryItem();
       case LegoPackage.COLOR: return createColor();
       case LegoPackage.XUNIT: return createXUnit();
@@ -140,6 +141,17 @@ public class LegoFactoryImpl extends EFactoryImpl implements LegoFactory
   {
     MountedPartImpl mountedPart = new MountedPartImpl();
     return mountedPart;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Action createAction()
+  {
+    ActionImpl action = new ActionImpl();
+    return action;
   }
 
   /**

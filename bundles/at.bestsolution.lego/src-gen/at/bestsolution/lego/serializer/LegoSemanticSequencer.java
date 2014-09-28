@@ -1,5 +1,6 @@
 package at.bestsolution.lego.serializer;
 
+import at.bestsolution.lego.lego.Action;
 import at.bestsolution.lego.lego.Assembly;
 import at.bestsolution.lego.lego.Brick;
 import at.bestsolution.lego.lego.Color;
@@ -37,6 +38,12 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == LegoPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case LegoPackage.ACTION:
+				if(context == grammarAccess.getActionRule()) {
+					sequence_Action(context, (Action) semanticObject); 
+					return; 
+				}
+				else break;
 			case LegoPackage.ASSEMBLY:
 				if(context == grammarAccess.getAssemblyRule() ||
 				   context == grammarAccess.getLegoElementRule() ||
@@ -129,6 +136,22 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         type='rotate' 
+	 *         (axis='x' | axis='y' | axis='z') 
+	 *         angle=FLOAT 
+	 *         duration=INT 
+	 *         soundfile=STRING?
+	 *     )
+	 */
+	protected void sequence_Action(EObject context, Action semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -237,7 +260,14 @@ public class LegoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (element=[MountedPart|QualifiedName] xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT (rotateX=FLOAT rotateY=FLOAT rotateZ=FLOAT)?)
+	 *     (
+	 *         element=[MountedPart|QualifiedName] 
+	 *         xUnits=FLOAT 
+	 *         yUnits=FLOAT 
+	 *         zUnits=FLOAT 
+	 *         (rotateX=FLOAT rotateY=FLOAT rotateZ=FLOAT)? 
+	 *         actions+=Action*
+	 *     )
 	 */
 	protected void sequence_MountedAssemblyItem(EObject context, MountedAssemblyItem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

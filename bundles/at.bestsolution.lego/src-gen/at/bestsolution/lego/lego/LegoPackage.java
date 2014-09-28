@@ -185,7 +185,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRepostoryItem()
    * @generated
    */
-  int REPOSTORY_ITEM = 5;
+  int REPOSTORY_ITEM = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -270,6 +270,79 @@ public interface LegoPackage extends EPackage
   int MOUNTED_PART_FEATURE_COUNT = REPOSTORY_ITEM_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link at.bestsolution.lego.lego.impl.ActionImpl <em>Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.bestsolution.lego.lego.impl.ActionImpl
+   * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAction()
+   * @generated
+   */
+  int ACTION = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION__TYPE = 1;
+
+  /**
+   * The feature id for the '<em><b>Axis</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION__AXIS = 2;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION__ANGLE = 3;
+
+  /**
+   * The feature id for the '<em><b>Duration</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION__DURATION = 4;
+
+  /**
+   * The feature id for the '<em><b>Soundfile</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION__SOUNDFILE = 5;
+
+  /**
+   * The number of structural features of the '<em>Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_FEATURE_COUNT = 6;
+
+  /**
    * The meta object id for the '{@link at.bestsolution.lego.lego.impl.ColorImpl <em>Color</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -277,7 +350,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 6;
+  int COLOR = 7;
 
   /**
    * The feature id for the '<em><b>R</b></em>' attribute.
@@ -323,7 +396,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getXUnit()
    * @generated
    */
-  int XUNIT = 7;
+  int XUNIT = 8;
 
   /**
    * The feature id for the '<em><b>Units</b></em>' attribute.
@@ -351,7 +424,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getYUnit()
    * @generated
    */
-  int YUNIT = 8;
+  int YUNIT = 9;
 
   /**
    * The feature id for the '<em><b>Units</b></em>' attribute.
@@ -379,7 +452,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getZUnit()
    * @generated
    */
-  int ZUNIT = 9;
+  int ZUNIT = 10;
 
   /**
    * The feature id for the '<em><b>Units</b></em>' attribute.
@@ -407,7 +480,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getBrick()
    * @generated
    */
-  int BRICK = 10;
+  int BRICK = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -480,7 +553,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getSource()
    * @generated
    */
-  int SOURCE = 11;
+  int SOURCE = 12;
 
   /**
    * The feature id for the '<em><b>Origin X</b></em>' attribute.
@@ -526,7 +599,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getGenerated()
    * @generated
    */
-  int GENERATED = 12;
+  int GENERATED = 13;
 
   /**
    * The feature id for the '<em><b>Origin X</b></em>' attribute.
@@ -608,7 +681,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getFxmlInclude()
    * @generated
    */
-  int FXML_INCLUDE = 13;
+  int FXML_INCLUDE = 14;
 
   /**
    * The feature id for the '<em><b>Origin X</b></em>' attribute.
@@ -663,7 +736,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAssembly()
    * @generated
    */
-  int ASSEMBLY = 14;
+  int ASSEMBLY = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -700,7 +773,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAssemblyItem()
    * @generated
    */
-  int ASSEMBLY_ITEM = 15;
+  int ASSEMBLY_ITEM = 16;
 
   /**
    * The number of structural features of the '<em>Assembly Item</em>' class.
@@ -719,7 +792,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getRasterAssemblyItem()
    * @generated
    */
-  int RASTER_ASSEMBLY_ITEM = 16;
+  int RASTER_ASSEMBLY_ITEM = 17;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' reference.
@@ -783,7 +856,7 @@ public interface LegoPackage extends EPackage
    * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getMountedAssemblyItem()
    * @generated
    */
-  int MOUNTED_ASSEMBLY_ITEM = 17;
+  int MOUNTED_ASSEMBLY_ITEM = 18;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' reference.
@@ -849,13 +922,22 @@ public interface LegoPackage extends EPackage
   int MOUNTED_ASSEMBLY_ITEM__ROTATE_Z = ASSEMBLY_ITEM_FEATURE_COUNT + 6;
 
   /**
+   * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOUNTED_ASSEMBLY_ITEM__ACTIONS = ASSEMBLY_ITEM_FEATURE_COUNT + 7;
+
+  /**
    * The number of structural features of the '<em>Mounted Assembly Item</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MOUNTED_ASSEMBLY_ITEM_FEATURE_COUNT = ASSEMBLY_ITEM_FEATURE_COUNT + 7;
+  int MOUNTED_ASSEMBLY_ITEM_FEATURE_COUNT = ASSEMBLY_ITEM_FEATURE_COUNT + 8;
 
 
   /**
@@ -962,6 +1044,82 @@ public interface LegoPackage extends EPackage
    * @generated
    */
   EClass getMountedPart();
+
+  /**
+   * Returns the meta object for class '{@link at.bestsolution.lego.lego.Action <em>Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Action</em>'.
+   * @see at.bestsolution.lego.lego.Action
+   * @generated
+   */
+  EClass getAction();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Action#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see at.bestsolution.lego.lego.Action#getName()
+   * @see #getAction()
+   * @generated
+   */
+  EAttribute getAction_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Action#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see at.bestsolution.lego.lego.Action#getType()
+   * @see #getAction()
+   * @generated
+   */
+  EAttribute getAction_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Action#getAxis <em>Axis</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Axis</em>'.
+   * @see at.bestsolution.lego.lego.Action#getAxis()
+   * @see #getAction()
+   * @generated
+   */
+  EAttribute getAction_Axis();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Action#getAngle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Angle</em>'.
+   * @see at.bestsolution.lego.lego.Action#getAngle()
+   * @see #getAction()
+   * @generated
+   */
+  EAttribute getAction_Angle();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Action#getDuration <em>Duration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Duration</em>'.
+   * @see at.bestsolution.lego.lego.Action#getDuration()
+   * @see #getAction()
+   * @generated
+   */
+  EAttribute getAction_Duration();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.bestsolution.lego.lego.Action#getSoundfile <em>Soundfile</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Soundfile</em>'.
+   * @see at.bestsolution.lego.lego.Action#getSoundfile()
+   * @see #getAction()
+   * @generated
+   */
+  EAttribute getAction_Soundfile();
 
   /**
    * Returns the meta object for class '{@link at.bestsolution.lego.lego.RepostoryItem <em>Repostory Item</em>}'.
@@ -1446,6 +1604,17 @@ public interface LegoPackage extends EPackage
   EAttribute getMountedAssemblyItem_RotateZ();
 
   /**
+   * Returns the meta object for the containment reference list '{@link at.bestsolution.lego.lego.MountedAssemblyItem#getActions <em>Actions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Actions</em>'.
+   * @see at.bestsolution.lego.lego.MountedAssemblyItem#getActions()
+   * @see #getMountedAssemblyItem()
+   * @generated
+   */
+  EReference getMountedAssemblyItem_Actions();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1557,6 +1726,64 @@ public interface LegoPackage extends EPackage
      * @generated
      */
     EClass MOUNTED_PART = eINSTANCE.getMountedPart();
+
+    /**
+     * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.ActionImpl <em>Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.bestsolution.lego.lego.impl.ActionImpl
+     * @see at.bestsolution.lego.lego.impl.LegoPackageImpl#getAction()
+     * @generated
+     */
+    EClass ACTION = eINSTANCE.getAction();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION__NAME = eINSTANCE.getAction_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION__TYPE = eINSTANCE.getAction_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Axis</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION__AXIS = eINSTANCE.getAction_Axis();
+
+    /**
+     * The meta object literal for the '<em><b>Angle</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION__ANGLE = eINSTANCE.getAction_Angle();
+
+    /**
+     * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION__DURATION = eINSTANCE.getAction_Duration();
+
+    /**
+     * The meta object literal for the '<em><b>Soundfile</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION__SOUNDFILE = eINSTANCE.getAction_Soundfile();
 
     /**
      * The meta object literal for the '{@link at.bestsolution.lego.lego.impl.RepostoryItemImpl <em>Repostory Item</em>}' class.
@@ -1943,6 +2170,14 @@ public interface LegoPackage extends EPackage
      * @generated
      */
     EAttribute MOUNTED_ASSEMBLY_ITEM__ROTATE_Z = eINSTANCE.getMountedAssemblyItem_RotateZ();
+
+    /**
+     * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MOUNTED_ASSEMBLY_ITEM__ACTIONS = eINSTANCE.getMountedAssemblyItem_Actions();
 
   }
 

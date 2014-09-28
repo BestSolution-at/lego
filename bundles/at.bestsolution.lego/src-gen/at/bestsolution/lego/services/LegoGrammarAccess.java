@@ -202,6 +202,90 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getSourceSourceParserRuleCall_3_0() { return cSourceSourceParserRuleCall_3_0; }
 	}
 
+	public class ActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Action");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cTypeRotateKeyword_1_0 = (Keyword)cTypeAssignment_1.eContents().get(0);
+		private final Assignment cAxisAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cAxisAlternatives_2_0 = (Alternatives)cAxisAssignment_2.eContents().get(0);
+		private final Keyword cAxisXKeyword_2_0_0 = (Keyword)cAxisAlternatives_2_0.eContents().get(0);
+		private final Keyword cAxisYKeyword_2_0_1 = (Keyword)cAxisAlternatives_2_0.eContents().get(1);
+		private final Keyword cAxisZKeyword_2_0_2 = (Keyword)cAxisAlternatives_2_0.eContents().get(2);
+		private final Assignment cAngleAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cAngleFLOATTerminalRuleCall_3_0 = (RuleCall)cAngleAssignment_3.eContents().get(0);
+		private final Keyword cDurationKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cDurationAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDurationINTTerminalRuleCall_5_0 = (RuleCall)cDurationAssignment_5.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cSoundFileKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cSoundfileAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cSoundfileSTRINGTerminalRuleCall_6_1_0 = (RuleCall)cSoundfileAssignment_6_1.eContents().get(0);
+		
+		//Action:
+		//	name=ID type="rotate" axis=("x" | "y" | "z") angle=FLOAT "duration" duration=INT ("sound-file" soundfile=STRING)?;
+		public ParserRule getRule() { return rule; }
+
+		//name=ID type="rotate" axis=("x" | "y" | "z") angle=FLOAT "duration" duration=INT ("sound-file" soundfile=STRING)?
+		public Group getGroup() { return cGroup; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//type="rotate"
+		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+
+		//"rotate"
+		public Keyword getTypeRotateKeyword_1_0() { return cTypeRotateKeyword_1_0; }
+
+		//axis=("x" | "y" | "z")
+		public Assignment getAxisAssignment_2() { return cAxisAssignment_2; }
+
+		//"x" | "y" | "z"
+		public Alternatives getAxisAlternatives_2_0() { return cAxisAlternatives_2_0; }
+
+		//"x"
+		public Keyword getAxisXKeyword_2_0_0() { return cAxisXKeyword_2_0_0; }
+
+		//"y"
+		public Keyword getAxisYKeyword_2_0_1() { return cAxisYKeyword_2_0_1; }
+
+		//"z"
+		public Keyword getAxisZKeyword_2_0_2() { return cAxisZKeyword_2_0_2; }
+
+		//angle=FLOAT
+		public Assignment getAngleAssignment_3() { return cAngleAssignment_3; }
+
+		//FLOAT
+		public RuleCall getAngleFLOATTerminalRuleCall_3_0() { return cAngleFLOATTerminalRuleCall_3_0; }
+
+		//"duration"
+		public Keyword getDurationKeyword_4() { return cDurationKeyword_4; }
+
+		//duration=INT
+		public Assignment getDurationAssignment_5() { return cDurationAssignment_5; }
+
+		//INT
+		public RuleCall getDurationINTTerminalRuleCall_5_0() { return cDurationINTTerminalRuleCall_5_0; }
+
+		//("sound-file" soundfile=STRING)?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"sound-file"
+		public Keyword getSoundFileKeyword_6_0() { return cSoundFileKeyword_6_0; }
+
+		//soundfile=STRING
+		public Assignment getSoundfileAssignment_6_1() { return cSoundfileAssignment_6_1; }
+
+		//STRING
+		public RuleCall getSoundfileSTRINGTerminalRuleCall_6_1_0() { return cSoundfileSTRINGTerminalRuleCall_6_1_0; }
+	}
+
 	public class RepostoryItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RepostoryItem");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -707,14 +791,18 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRotateYFLOATTerminalRuleCall_5_2_0 = (RuleCall)cRotateYAssignment_5_2.eContents().get(0);
 		private final Assignment cRotateZAssignment_5_3 = (Assignment)cGroup_5.eContents().get(3);
 		private final RuleCall cRotateZFLOATTerminalRuleCall_5_3_0 = (RuleCall)cRotateZAssignment_5_3.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cActionsKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cActionsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cActionsActionParserRuleCall_6_1_0 = (RuleCall)cActionsAssignment_6_1.eContents().get(0);
 		
 		//MountedAssemblyItem:
 		//	element=[MountedPart|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT
-		//	rotateY=FLOAT rotateZ=FLOAT)?;
+		//	rotateY=FLOAT rotateZ=FLOAT)? ("actions" actions+=Action+)?;
 		public ParserRule getRule() { return rule; }
 
 		//element=[MountedPart|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT
-		//rotateY=FLOAT rotateZ=FLOAT)?
+		//rotateY=FLOAT rotateZ=FLOAT)? ("actions" actions+=Action+)?
 		public Group getGroup() { return cGroup; }
 
 		//element=[MountedPart|QualifiedName]
@@ -770,6 +858,18 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 
 		//FLOAT
 		public RuleCall getRotateZFLOATTerminalRuleCall_5_3_0() { return cRotateZFLOATTerminalRuleCall_5_3_0; }
+
+		//("actions" actions+=Action+)?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"actions"
+		public Keyword getActionsKeyword_6_0() { return cActionsKeyword_6_0; }
+
+		//actions+=Action+
+		public Assignment getActionsAssignment_6_1() { return cActionsAssignment_6_1; }
+
+		//Action
+		public RuleCall getActionsActionParserRuleCall_6_1_0() { return cActionsActionParserRuleCall_6_1_0; }
 	}
 	
 	
@@ -780,6 +880,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	private final LegoElementElements pLegoElement;
 	private final RasterItemElements pRasterItem;
 	private final MountedPartElements pMountedPart;
+	private final ActionElements pAction;
 	private final RepostoryItemElements pRepostoryItem;
 	private final ColorElements pColor;
 	private final XUnitElements pXUnit;
@@ -812,6 +913,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pLegoElement = new LegoElementElements();
 		this.pRasterItem = new RasterItemElements();
 		this.pMountedPart = new MountedPartElements();
+		this.pAction = new ActionElements();
 		this.pRepostoryItem = new RepostoryItemElements();
 		this.pColor = new ColorElements();
 		this.pXUnit = new XUnitElements();
@@ -924,6 +1026,16 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getMountedPartRule() {
 		return getMountedPartAccess().getRule();
+	}
+
+	//Action:
+	//	name=ID type="rotate" axis=("x" | "y" | "z") angle=FLOAT "duration" duration=INT ("sound-file" soundfile=STRING)?;
+	public ActionElements getActionAccess() {
+		return pAction;
+	}
+	
+	public ParserRule getActionRule() {
+		return getActionAccess().getRule();
 	}
 
 	//RepostoryItem:
@@ -1050,7 +1162,7 @@ public class LegoGrammarAccess extends AbstractGrammarElementFinder {
 
 	//MountedAssemblyItem:
 	//	element=[MountedPart|QualifiedName] "pos" xUnits=FLOAT yUnits=FLOAT zUnits=FLOAT ("transform" rotateX=FLOAT
-	//	rotateY=FLOAT rotateZ=FLOAT)?;
+	//	rotateY=FLOAT rotateZ=FLOAT)? ("actions" actions+=Action+)?;
 	public MountedAssemblyItemElements getMountedAssemblyItemAccess() {
 		return pMountedAssemblyItem;
 	}

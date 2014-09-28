@@ -2,6 +2,7 @@
  */
 package at.bestsolution.lego.lego.impl;
 
+import at.bestsolution.lego.lego.Action;
 import at.bestsolution.lego.lego.Assembly;
 import at.bestsolution.lego.lego.AssemblyItem;
 import at.bestsolution.lego.lego.Brick;
@@ -72,6 +73,13 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * @generated
    */
   private EClass mountedPartEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass actionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -325,6 +333,76 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
   public EClass getMountedPart()
   {
     return mountedPartEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAction()
+  {
+    return actionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAction_Name()
+  {
+    return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAction_Type()
+  {
+    return (EAttribute)actionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAction_Axis()
+  {
+    return (EAttribute)actionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAction_Angle()
+  {
+    return (EAttribute)actionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAction_Duration()
+  {
+    return (EAttribute)actionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAction_Soundfile()
+  {
+    return (EAttribute)actionEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -782,6 +860,16 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMountedAssemblyItem_Actions()
+  {
+    return (EReference)mountedAssemblyItemEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LegoFactory getLegoFactory()
   {
     return (LegoFactory)getEFactoryInstance();
@@ -821,6 +909,14 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     rasterItemEClass = createEClass(RASTER_ITEM);
 
     mountedPartEClass = createEClass(MOUNTED_PART);
+
+    actionEClass = createEClass(ACTION);
+    createEAttribute(actionEClass, ACTION__NAME);
+    createEAttribute(actionEClass, ACTION__TYPE);
+    createEAttribute(actionEClass, ACTION__AXIS);
+    createEAttribute(actionEClass, ACTION__ANGLE);
+    createEAttribute(actionEClass, ACTION__DURATION);
+    createEAttribute(actionEClass, ACTION__SOUNDFILE);
 
     repostoryItemEClass = createEClass(REPOSTORY_ITEM);
     createEReference(repostoryItemEClass, REPOSTORY_ITEM__FILL);
@@ -879,6 +975,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ROTATE_X);
     createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ROTATE_Y);
     createEAttribute(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ROTATE_Z);
+    createEReference(mountedAssemblyItemEClass, MOUNTED_ASSEMBLY_ITEM__ACTIONS);
   }
 
   /**
@@ -937,6 +1034,14 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
 
     initEClass(mountedPartEClass, MountedPart.class, "MountedPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAction_Type(), ecorePackage.getEString(), "type", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAction_Axis(), ecorePackage.getEString(), "axis", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAction_Angle(), ecorePackage.getEFloat(), "angle", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAction_Soundfile(), ecorePackage.getEString(), "soundfile", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(repostoryItemEClass, RepostoryItem.class, "RepostoryItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRepostoryItem_Fill(), this.getColor(), null, "fill", null, 0, 1, RepostoryItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRepostoryItem_Source(), this.getSource(), null, "source", null, 0, 1, RepostoryItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -994,6 +1099,7 @@ public class LegoPackageImpl extends EPackageImpl implements LegoPackage
     initEAttribute(getMountedAssemblyItem_RotateX(), ecorePackage.getEFloat(), "rotateX", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMountedAssemblyItem_RotateY(), ecorePackage.getEFloat(), "rotateY", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMountedAssemblyItem_RotateZ(), ecorePackage.getEFloat(), "rotateZ", null, 0, 1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMountedAssemblyItem_Actions(), this.getAction(), null, "actions", null, 0, -1, MountedAssemblyItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

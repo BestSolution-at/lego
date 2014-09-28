@@ -49,7 +49,7 @@ class Lego3dFXML implements IGenerator {
 			m.repo.elementList.forEach[
 				fsa.generateFile("3d/" + it.name+".fxml", it.generateFXML)
 			]
-		}		
+		}	
 	}
 	
 	def rowIndex(int idx) {
@@ -75,15 +75,17 @@ class Lego3dFXML implements IGenerator {
 	}
 	
 	
-	def generatedAssembly(Assembly a) '''
+	def generatedAssembly(Assembly a, boolean root) '''
 	<Group>
 		«FOR x : a.items»
-			<Group>
+			<Group «IF root»styleClass="component"«ENDIF»>
 				«IF x instanceof RasterAssemblyItem»
 					«IF x.element instanceof Brick»
+						«IF root»<id>«(x.element as Brick).name»</id>«ENDIF»
 						«createBrick(x.element as Brick)»
 					«ELSEIF x.element instanceof Assembly»
-						«generatedAssembly(x.element as Assembly)»
+						«IF root»<id>«(x.element as Assembly).name»</id>«ENDIF»
+						«generatedAssembly(x.element as Assembly, false)»
 					«ENDIF»
 					
 					<transforms>
@@ -105,7 +107,8 @@ class Lego3dFXML implements IGenerator {
 					</transforms>
 				«ELSEIF x instanceof MountedAssemblyItem»
 					«val xm = x as MountedAssemblyItem»
-					«createMPart(xm.element)»
+					«IF root»<id>«xm.element.name»</id>«ENDIF»
+					«createMPart(xm.element,xm)»
 					<transforms>
 						<Translate x="«xm.XUnits»" y="«xm.YUnits»" z="«xm.ZUnits»" />
 							<Rotate angle="«xm.rotateX»" >
@@ -126,11 +129,12 @@ class Lego3dFXML implements IGenerator {
 	</Group>
 	'''
 	
-	def createMPart(MountedPart object) '''
+	def createMPart(MountedPart object, MountedAssemblyItem mi) '''
 	«IF object.source instanceof Generated»
 	«val s = object.source as Generated»
 	<Group>
-		<Box width="«s.width»" height="«s.height»" depth="«s.depth»">
+«««	FIXME The value is not unique
+		<Box styleClass="shape" id="dynamic_«mi.element.name»" width="«s.width»" height="«s.height»" depth="«s.depth»">
 			<material>
 				<PhongMaterial diffuseColor="«object.toColor()»"/>
 			</material>
@@ -178,7 +182,7 @@ class Lego3dFXML implements IGenerator {
 						<transforms>
 							<Scale x="«scale»" y="«scale»" z="«scale»" />
 						</transforms>
-						«generatedAssembly(a)»
+						«generatedAssembly(a,true)»
 					</Group>
 				</root>
 			</SubScene>
@@ -301,7 +305,7 @@ class Lego3dFXML implements IGenerator {
 	def createBrick(Brick brick) '''
 	«IF brick.source instanceof FxmlInclude»
 	«val fxml = brick.source as FxmlInclude»
-	<Group id="«brick.name»">
+	<Group>
 		«fxml.load(new FileReader(fxml.source3d))»
 		<transforms>
 			««« to origin
@@ -310,7 +314,7 @@ class Lego3dFXML implements IGenerator {
 	</Group>
 	«ELSE»
 	<Group id="«brick.name»">
-		<Box width="«brick.width»" depth="«brick.depth»" height="«brick.height»">
+		<Box styleClass="shape" width="«brick.width»" depth="«brick.depth»" height="«brick.height»">
 			<material>
 				<PhongMaterial diffuseColor="«brick.toColor()»"/>
 			</material>
@@ -323,7 +327,7 @@ class Lego3dFXML implements IGenerator {
 		</Box>
 		«FOR iX : (1..brick.XUnits.units)»
 			«FOR iZ : (1..brick.ZUnits.units)»
-				<Cylinder radius="«r»" height="«rh»">
+				<Cylinder styleClass="shape" radius="«r»" height="«rh»">
 					<material>
 						<PhongMaterial diffuseColor="«brick.toColor()»"/>
 					</material>
@@ -346,9 +350,13 @@ class Lego3dFXML implements IGenerator {
 	<?import javafx.scene.transform.*?>
 	<?import javafx.geometry.*?>
 	<?import javafx.scene.paint.*?>
+	<?language javascript?>
 	
 	<Group xmlns:fx="http://javafx.com/fxml/1">
-		«generatedAssembly(a)»
+		<fx:script>
+		
+		</fx:script>
+		«generatedAssembly(a,true)»
 	</Group>
 	'''
 	
